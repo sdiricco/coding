@@ -1,0 +1,41 @@
+site_name: Javascript course
+
+copyright: Copyright 2020 Simone Di Ricco
+
+repo_url: https://github.com/squidfunk/mkdocs-material
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sdiricco1
+
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums_style: pymdownx-inline
+  - pymdownx.superfences
+
+theme:
+  font:
+    text: Roboto
+
+  name: material
+  
+  palette:
+    - scheme: default
+      primary: blue #red pink purple deep purple indigo blue light blue cyan teal green light green lime yellow amber orange deep orange brown grey blue grey black white
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate 
+      primary: blue #red pink purple deep purple indigo blue light blue cyan teal green light green lime yellow amber orange deep orange brown grey blue grey black white
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.instant
+
+
