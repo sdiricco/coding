@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VH & VW (Viewport hight, viewport wheight)</title>
+    <style>
+        /* Ricordiamo che l'*' seleziona tutti gli elementi. Quuesto di sotto è un semplice RESET di tutti i margini e spazi.*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Una pagina html è divisa in 100 parti in altezza e 100 parti in larghezza. Nell'esempio sotto ci sono 3 stili diversi per la classe header:
+        Nel primo commentato non è stato impostato il vh e quindi il background occuperà soltanto la parte necessaria per il div.
+        Nel secondo attivo invece è stata imposta una height di 100vh. Questo significa che lo stile prenderà tutta la pagina:
+        Se mettessi una height di 90vh andrebbe a prendere 9 parti su 10 in altezza e così via
+        Per cosa può essere utile?
+        In certi siti troviamo questo pattern molto frequentemente. Un header con una height di 100vh e.. tutto il resto
+        Quello che succede è che mettendo elementi dopo l'header che ha una height di 100vh compariranno solo dopu uno scrolling
+        Nota che impostanto 100vh lo stile coprirà l'intera pagina a prescindere dalle dimensioni quindi è responsive.
+        Se provi a mettere una 50vh vedi che rimmarrà sempre 50vh anche ridimensionando la pagina
+        Stessa cosa vale impostando width con un valore epresso con vw. E' un po' meno frequente ma a volte può far comodo*/
+        /*
+        .header {
+            background: burlywood;
+        }
+        */
+        .header {
+            background: burlywood;
+            height: 100vh;
+            /*width: 50vw;*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Benvenuti</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni error tempora, quia quo quos harum excepturi
+            nulla beatae consequatur nobis ipsam vitae labore alias earum repellat expedita. Ullam, eaque iste.</p>
+    </div>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis, minima.
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum veniam modi dignissimos quaerat quos, enim
+        quibusdam. In natus molestias voluptas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque suscipit doloribus repudiandae cum dicta obcaecati
+        esse porro, tempore accusantium, vitae dolores? Unde animi autem veritatis, qui reprehenderit eius et
+        perferendis!</p>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Align</title>
+    <style>
+        /*La proprietà justify-content permette l'allineamento degli item del flexbox in orizzontale. Ad esempio mettendo come attributo "center" si posizionano al centro
+        Se mettiamo invece "flex-start" si posizionano all'inizio (a sinistra) e se mettiamo "flex-end" alla fine (cioè a destra) però è più giusto parlare di inizio e fine
+        quando siamo all'interno di un flexbox oppure ad eempio c'è "space-around" che ti permette di inserire degli spazi tra gli elementi in modo che siano tutti equidistanti
+        dai bordi e tra di loro e poi c'è space between che posiziona il primo su start e l'ultimo su end e poi gli altri a spazi equidistanti e poi c'è space-evenly che lascia
+        spazi uguali a partire da start fino a end */
+
+        /*
+        #container {
+            display: flex;
+            justify-content: space-between;
+            height: 500px;
+            background: coral;
+        }
+        */
+
+        /*La proprietà align-items invece permette l'allineamento degli item del flexbox in verticale. Per visualizzare qualcosa però dobbiamo forzare un'altezza
+        altirmenti il div si prende lo spazio necessario e non vediamo nulla. Imposto anche un background per vedere cosa si prende
+        Altri attributi di align-items sono sempre i soliti "start", "end" ma poi c'è anche "stretch" che fa si che gli item si prendano lo spazio del flex-box
+        Tra l'altro questo attributo è quello di default*/
+
+        /*se volessimo gli elementi disposti centralmente basta mettere align-items e justify -content impostati su center.
+        Se non metto "flex-wrap" e inserisco tanti elementi, questi poi sforano*/
+
+        /*
+        #container {
+            display: flex;
+            align-items: center;
+            height: 500px;
+            background: coral;
+            flex-wrap: wrap;
+        }
+        */
+
+        /*align-content invece permette l'allineamento verticale degli elementi secondo un certo criterio "center", "space-between". No chiarissima la differenza tra
+        align-items e align-content in realtà ..
+
+        La differenza sembra che "align-items" centra l'elemento all'interno del box considerando proprio le dimensioni dell'elemento mentre align-content considera un item
+        come un blocchetto da centrare rispetto agli altri e non si occupa della centratura dell'elemento rispetto al box*/
+        #container {
+            display: flex;
+            align-items:center;
+            height: 500px;
+            width: 500px;
+            overflow: auto;
+            background: coral;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            background: cadetblue;
+            padding: 1rem;
+            text-align: center;
+            margin: 1rem;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="item" id="item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item" id="item-3">
+            <h3>Item 3</h3>
+        </div>
+        <div class="item" id="item-4">
+            <h3>Item 4</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item" id="item-3">
+            <h3>Item 3</h3>
+        </div>
+        <div class="item" id="item-4">
+            <h3>Item 4</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item" id="item-3">
+            <h3>Item 3</h3>
+        </div>
+        <div class="item" id="item-4">
+            <h3>Item 4</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item" id="item-3">
+            <h3>Item 3</h3>
+        </div>
+        <div class="item" id="item-4">
+            <h3>Item 4</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item" id="item-3">
+            <h3>Item 3</h3>
+        </div>
+        <div class="item" id="item-4">
+            <h3>Item 4</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+body{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: cornsilk;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 100px;
+    width: 500px;
+    height: 500px;
+}
+
+.linesVertical{
+    border-right: 4px rgb(216, 210, 188) solid;
+    border-left: 4px rgb(216, 210, 188) solid;
+}
+
+.linesOrizontal{
+    border-top: 4px rgb(216, 210, 188) solid;
+    border-bottom: 4px rgb(216, 210, 188) solid;   
+}
+

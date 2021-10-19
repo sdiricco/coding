@@ -1,0 +1,14 @@
+/*App.css*/
+.Cnt{
+  text-align: center;
+}
+
+.Post{
+  border: 1px solid #555;
+  border-radius: 5px;
+  margin: 5px 5px 0px 5px;
+  display: flexbox;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+};

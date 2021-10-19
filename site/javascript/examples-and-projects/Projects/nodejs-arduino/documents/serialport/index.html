@@ -1,0 +1,1976 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>Libreria node.js SerialPort - Javascript course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:""}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("../../../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#libreria-nodejs-serialport" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../../.." title="Javascript course" class="md-header__button md-logo" aria-label="Javascript course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Javascript course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Libreria node.js SerialPort
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/squidfunk/mkdocs-material/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../../.." title="Javascript course" class="md-nav__button md-logo" aria-label="Javascript course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Javascript course
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/squidfunk/mkdocs-material/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../.." class="md-nav__link">
+        Learn
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Android
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Android" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../android/" class="md-nav__link">
+        Android
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Arduino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Arduino" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Arduino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../arduino/" class="md-nav__link">
+        Arduino
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Cpp
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Cpp" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../cpp/" class="md-nav__link">
+        C++ per esempi
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Css
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Css" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Espruino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Espruino" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Espruino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../espruino/" class="md-nav__link">
+        Espruino
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Github pages jekyll
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Github pages jekyll" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Github pages jekyll
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../github-pages-jekyll/" class="md-nav__link">
+        Crea il tuo sito tramite GitHub Pages e jekyll
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Html
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Html" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Html
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+      
+      <label class="md-nav__link" for="__nav_8_1">
+        Progetti
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Progetti" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          Progetti
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_1" type="checkbox" id="__nav_8_1_1" >
+      
+      <label class="md-nav__link" for="__nav_8_1_1">
+        myPersonalWebPage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="myPersonalWebPage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          myPersonalWebPage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../html/Progetti/myPersonalWebPage/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Java
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../java/" class="md-nav__link">
+        Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      <label class="md-nav__link" for="__nav_9_2">
+        Java basic module
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java basic module" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Java basic module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../java/java-basic-module/" class="md-nav__link">
+        Java - write once, run anywhere
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+      
+      <label class="md-nav__link" for="__nav_9_3">
+        Java oop module
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java oop module" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Java oop module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../java/java-oop-module/" class="md-nav__link">
+        Java OOP
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      <label class="md-nav__link" for="__nav_10">
+        Javascript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Javascript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../READMEV2/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" checked>
+      
+      <label class="md-nav__link" for="__nav_10_3">
+        Examples and projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples and projects" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          Examples and projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1" type="checkbox" id="__nav_10_3_1" checked>
+      
+      <label class="md-nav__link" for="__nav_10_3_1">
+        Projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Projects" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1_1" type="checkbox" id="__nav_10_3_1_1" checked>
+      
+      <label class="md-nav__link" for="__nav_10_3_1_1">
+        Nodejs arduino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Nodejs arduino" data-md-level="4">
+        <label class="md-nav__title" for="__nav_10_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Nodejs arduino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1_1_1" type="checkbox" id="__nav_10_3_1_1_1" checked>
+      
+      <label class="md-nav__link" for="__nav_10_3_1_1_1">
+        Documents
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Documents" data-md-level="5">
+        <label class="md-nav__title" for="__nav_10_3_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Documents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Libreria node.js SerialPort
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Libreria node.js SerialPort
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#link-utili" class="md-nav__link">
+    Link utili
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primo-script" class="md-nav__link">
+    Primo script
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      <label class="md-nav__link" for="__nav_11">
+        Nas
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Nas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Nas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../nas/readme/" class="md-nav__link">
+        Nas e TrueNAS (FreeNAS)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      <label class="md-nav__link" for="__nav_12">
+        Python
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      <label class="md-nav__link" for="__nav_13">
+        Raspberry pi pico
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Raspberry pi pico" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Raspberry pi pico
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../raspberry-pi-pico/readme/" class="md-nav__link">
+        Raspberry pi pico e Micropython
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      <label class="md-nav__link" for="__nav_14">
+        React js
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="React js" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          React js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../react-js/" class="md-nav__link">
+        React.js
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2" type="checkbox" id="__nav_14_2" >
+      
+      <label class="md-nav__link" for="__nav_14_2">
+        Test
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_2">
+          <span class="md-nav__icon md-icon"></span>
+          Test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_1" type="checkbox" id="__nav_14_2_1" >
+      
+      <label class="md-nav__link" for="__nav_14_2_1">
+        My app
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="My app" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          My app
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../react-js/test/my-app/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_2" type="checkbox" id="__nav_14_2_2" >
+      
+      <label class="md-nav__link" for="__nav_14_2_2">
+        My app 2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="My app 2" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          My app 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../react-js/test/my-app-2/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_3" type="checkbox" id="__nav_14_2_3" >
+      
+      <label class="md-nav__link" for="__nav_14_2_3">
+        Shoppy world
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Shoppy world" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Shoppy world
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../react-js/test/shoppy-world/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" >
+      
+      <label class="md-nav__link" for="__nav_15">
+        Reg expr
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reg expr" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Reg expr
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../reg-expr/" class="md-nav__link">
+        Regular Expression
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" >
+      
+      <label class="md-nav__link" for="__nav_16">
+        Sw dev methods
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sw dev methods" data-md-level="1">
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          Sw dev methods
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../sw-dev-methods/" class="md-nav__link">
+        Metodologie di sviluppo software
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" >
+      
+      <label class="md-nav__link" for="__nav_17">
+        Text editor
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Text editor" data-md-level="1">
+        <label class="md-nav__title" for="__nav_17">
+          <span class="md-nav__icon md-icon"></span>
+          Text editor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../text-editor/readme/" class="md-nav__link">
+        Quale editor di testo?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_18" type="checkbox" id="__nav_18" >
+      
+      <label class="md-nav__link" for="__nav_18">
+        Typescript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Typescript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_18">
+          <span class="md-nav__icon md-icon"></span>
+          Typescript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../typescript/" class="md-nav__link">
+        Typescript
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#link-utili" class="md-nav__link">
+    Link utili
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primo-script" class="md-nav__link">
+    Primo script
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/squidfunk/mkdocs-material/edit/master/docs/javascript/examples-and-projects/Projects/nodejs-arduino/documents/serialport.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="libreria-nodejs-serialport">Libreria node.js SerialPort</h1>
+<ul>
+<li><a href="#libreria-nodejs-serialport">Libreria node.js SerialPort</a></li>
+<li><a href="#link-utili">Link utili</a></li>
+<li><a href="#primo-script">Primo script</a></li>
+<li><a href="#leggere-dati-dalla-seriale-con-serialport">Leggere dati dalla seriale con SerialPort</a></li>
+<li><a href="#script-lato-nodejs">Script lato nodejs</a><ul>
+<li><a href="#costruttore-serialport">Costruttore SerialPort()</a></li>
+<li><a href="#parametro-path">parametro <code>path</code></a></li>
+<li><a href="#parametro--openoptions">parametro [, openOptions]</a></li>
+<li><a href="#parametro--opencallback">parametro [, openCallback]</a></li>
+<li><a href="#eventi-serialport">Eventi SerialPort</a></li>
+<li><a href="#evento-open">Evento open</a></li>
+<li><a href="#evento-data">Evento data</a></li>
+</ul>
+</li>
+<li><a href="#sketch-lato-arduino">Sketch lato Arduino</a></li>
+<li><a href="#serialport-parser">SerialPort parser</a></li>
+<li><a href="#parseint-applicato-al-buffer-serialport">parseInt applicato al Buffer SerialPort</a><ul>
+<li><a href="#lato-arduino">Lato Arduino</a></li>
+<li><a href="#lato-nodejs">Lato node.js</a></li>
+<li><a href="#endianess">Endianess?</a></li>
+</ul>
+</li>
+<li><a href="#trasmettere-dati-dalla-seriale-con-serialport">Trasmettere dati dalla seriale con SerialPort</a></li>
+<li><a href="#serialportwrite">SerialPort.write()</a><ul>
+<li><a href="#esempio-semplice-di-trasmissione-dati-con-serialport">Esempio semplice di trasmissione dati con SerialPort</a></li>
+<li><a href="#esempio-avanzato-di-trasmissione-dati-con-serialport">Esempio avanzato di trasmissione dati con SerialPort</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="link-utili">Link utili</h2>
+<ul>
+<li><a href="https://serialport.io/docs/">Documentazione ufficiale</a></li>
+<li><a href="https://serialport.io/docs/api-stream">Stream Interface</a></li>
+<li><a href="https://github.com/codeadamca/arduino-to-nodejs">Arduino &amp; nodejs</a></li>
+</ul>
+<h2 id="primo-script">Primo script</h2>
+<p>Il seguente script stamperà una lista delle porte disponibili</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">)</span>
+<span class="c1">//Il metodo SerialPort.list() ritorna una promise che restituisce un array di PortInfo</span>
+<span class="c1">//SerialPort.list(): Promise&lt;PortInfo[]&gt;</span>
+<span class="kd">const</span> <span class="nx">USBarray</span> <span class="o">=</span> <span class="nx">SerialPort</span><span class="p">.</span><span class="nx">list</span><span class="p">();</span>
+
+<span class="nx">USBarray</span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="o">[</span>
+  <span class="o">{</span>
+      path: <span class="s1">&#39;COM3&#39;</span>,
+      manufacturer: <span class="s1">&#39;Arduino LLC (www.arduino.cc)&#39;</span>,
+      serialNumber: <span class="s1">&#39;A413937353035101F0E0&#39;</span>,
+      pnpId: <span class="s1">&#39;USB\\VID_2341&amp;PID_0042\\A413937353035101F0E0&#39;</span>,
+      locationId: <span class="s1">&#39;Port_#0001.Hub_#0002&#39;</span>,
+      vendorId: <span class="s1">&#39;2341&#39;</span>,
+      productId: <span class="s1">&#39;0042&#39;</span>
+  <span class="o">}</span>
+<span class="o">]</span>
+</code></pre></div>
+<p>Potrebbe essere utilizzato per verificare che sia collegato arduino alla porta USB</p>
+<h1 id="leggere-dati-dalla-seriale-con-serialport">Leggere dati dalla seriale con SerialPort</h1>
+<p>Uno script semplice per leggere dati dalla seriale è il seguente:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<span class="p">});</span>
+
+<span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Come trasmettitore uso Arduino con il seguente sketch:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_8</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xA031</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w">  </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">number_16</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">number_8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Il risultato che vedrai sarà:</p>
+<p><div class="highlight"><pre><span></span><code>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+..
+</code></pre></div>
+Anche se a volte potrai vedere una cosa del tipo:</p>
+<div class="highlight"><pre><span></span><code>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span>&gt;
+Data: &lt;Buffer a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+</code></pre></div>
+<p>Spieghierò tutto in dettaglio qui sotto</p>
+<h2 id="script-lato-nodejs">Script lato nodejs</h2>
+<p>Riprendiamo lo script</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<span class="p">});</span>
+
+<span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="costruttore-serialport">Costruttore SerialPort()</h3>
+<p>In questo script chiamo il costruttore <code>SerialPort()</code> che ha una sintassi del tipo:</p>
+<div class="highlight"><pre><span></span><code><span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="nx">path</span> <span class="p">[,</span> <span class="nx">openOptions</span><span class="p">]</span> <span class="p">[,</span> <span class="nx">openCallback</span><span class="p">])</span>
+</code></pre></div>
+<h4 id="parametro-path">parametro <code>path</code></h4>
+<p>E' una <code>string</code> che rappresenta la porta che vuoi aprire. Nei sistemi Linux o Mac sarà qualcosa del tipo <code>/dev/tty.XXX</code> mentre nei sistemi Windows sarà qualcosa del tipo <code>COM1</code>.</p>
+<p>Nel nostro caso, la porta è <code>COM3</code>. Per verificare quale sia la porta puoi usare <code>SerialPort.list()</code> e trovi uno script funzionante <a href="#primo-script">qui</a> oppure puoi verificarla all'interno dell'IDE arduino in <code>Strumenti/porta</code> oppure ancora dallo strumento <code>Gestione dispositivi</code> di windows</p>
+<h4 id="parametro-openoptions">parametro [, openOptions]</h4>
+<p>E' un oggetto con le seguenti proprietà:</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * @typedef {Object} openOptions</span>
+<span class="cm"> * @property {boolean} [autoOpen=true] Automatically opens the port on `nextTick`.</span>
+<span class="cm"> * @property {number=} [baudRate=9600] The baud rate of the port to be opened. This should match one of the commonly available baud rates, such as 110, 300, 1200, 2400, 4800, 9600, 14400, 19200, 38400, 57600, or 115200. Custom rates are supported best effort per platform. The device connected to the serial port is not guaranteed to support the requested baud rate, even if the port itself supports that baud rate.</span>
+<span class="cm"> * @property {number} [dataBits=8] Must be one of these: 8, 7, 6, or 5.</span>
+<span class="cm"> * @property {number} [highWaterMark=65536] The size of the read and write buffers defaults to 64k.</span>
+<span class="cm"> * @property {boolean} [lock=true] Prevent other processes from opening the port. Windows does not currently support `false`.</span>
+<span class="cm"> * @property {number} [stopBits=1] Must be one of these: 1 or 2.</span>
+<span class="cm"> * @property {string} [parity=none] Must be one of these: &#39;none&#39;, &#39;even&#39;, &#39;mark&#39;, &#39;odd&#39;, &#39;space&#39;.</span>
+<span class="cm"> * @property {boolean} [rtscts=false] flow control setting</span>
+<span class="cm"> * @property {boolean} [xon=false] flow control setting</span>
+<span class="cm"> * @property {boolean} [xoff=false] flow control setting</span>
+<span class="cm"> * @property {boolean} [xany=false] flow control setting</span>
+<span class="cm"> * @property {object=} bindingOptions sets binding-specific options</span>
+<span class="cm"> * @property {Binding=} Binding The hardware access binding. `Bindings` are how Node-Serialport talks to the underlying system. Will default to the static property `Serialport.Binding`.</span>
+<span class="cm"> * @property {number} [bindingOptions.vmin=1] see [`man termios`](http://linux.die.net/man/3/termios) LinuxBinding and DarwinBinding</span>
+<span class="cm"> * @property {number} [bindingOptions.vtime=0] see [`man termios`](http://linux.die.net/man/3/termios) LinuxBinding and DarwinBinding</span>
+<span class="cm"> */</span>
+</code></pre></div>
+<p>A noi interessa in questa fase solo la propietà: <code>baudRate</code>, quindi dovrò passare un oggetto che sarà fatto in questo modo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Naturalmente il baud rate dovrà essere sincronizzato con quello impostato lato trasmettitore che in questo caso è Arduino.</p>
+<h4 id="parametro-opencallback">parametro [, openCallback]</h4>
+<p>E' una callback che è chiamata quando è stabilità la conessione. Noi non utilizziamo in questo momento la callback ma più avanti prevedo di utilizzarla per segnalare che la connessione è stabilita</p>
+<div class="highlight"><pre><span></span><code><span class="nx">type</span> <span class="nx">openCallback</span> <span class="o">=</span> <span class="p">(</span><span class="ne">Error</span><span class="o">|</span><span class="kc">null</span><span class="p">)</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre></div>
+<h3 id="eventi-serialport">Eventi SerialPort</h3>
+<p>La libreria SerialPort espone gli eventi <code>open</code>, <code>error</code>, <code>close</code>, <code>data</code>, <code>drain</code>. In node.js per mettersi in ascolto di un evento si utilizza il metodo <code>.on()</code> applicato alla classe <code>EventEmitter</code>. Nell'esempio, che riporto qui sotto mi metto in ascolto dell'evento <code>data</code> che restituisce come parametro della callback un <code>Buffer</code> che è un array di dati.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Vediamo adesso in dettaglio gli eventi utili come <code>open</code> e <code>data</code></p>
+<h4 id="evento-open">Evento open</h4>
+<p>L'evento <code>open</code> si verifica quando la porta è aperta e quest si può verificare subito dopo l'invocazione del costruttore <code>SerialPort()</code> attraverso l'opzione <code>autoOpen</code> che di default è impostata a <code>true</code> oppure dopo il metodo manuale <code>open()</code> in caso <code>autoOpen</code> sia <code>false</code></p>
+<h4 id="evento-data">Evento data</h4>
+<p>Scatta questo evento quando vengono ricevuti dei dati. I dati sono un oggetto <code>Buffer</code></p>
+<h2 id="sketch-lato-arduino">Sketch lato Arduino</h2>
+<p>Riporto lo sketch</p>
+<div class="highlight"><pre><span></span><code><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_8</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xA031</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w">  </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">number_16</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">number_8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Lato Arduino viene inizializzata la porta seriale con un <code>baud rate</code> di <code>115200</code> e vengono trasmessi una coppia di byte attraverso <code>Serial.write()</code>. Avrei potuto inviare una stringa tramite <code>Serial.print()</code> ma per questa applicazione ho la necessità di trattare i dati di basso livello. Inoltre ho simulato una situazione in cui devo poter inviare dati numerici con una rappresentazione maggiore di 8 bit. In questo caso ho inviato un dato a 16 bit come un array di due byte</p>
+<h2 id="serialport-parser">SerialPort parser</h2>
+<p>Riporto lo script lato node.js</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<span class="p">});</span>
+
+<span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>A volte può capitare di vedere una cosa del tipo:</p>
+<div class="highlight"><pre><span></span><code>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span>&gt;
+Data: &lt;Buffer a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+</code></pre></div>
+<p>Questo accade perchè lato ricezione non si conosce quanto è lungo il frame.
+Il seguente script, fa uso di un <code>parser</code> che raggruppa i byte con una lunghezza stabilita attraverso <code>ByteLenght</code></p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">ByteLength</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@serialport/parser-byte-length&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<span class="p">});</span>
+
+<span class="kd">const</span> <span class="nx">parser</span> <span class="o">=</span> <span class="nx">port</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="ow">new</span> <span class="nx">ByteLength</span><span class="p">({</span><span class="nx">length</span><span class="o">:</span> <span class="mf">2</span><span class="p">}))</span>
+<span class="nx">parser</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>In questo modo si è sicuri si quanti byte si attendono e il risultato all'interno del Buffer sarà quello atteso:</p>
+<div class="highlight"><pre><span></span><code>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0&gt;
+</code></pre></div>
+<p>Se provi a cambiare la proprietà <code>lenght</code> e metti ad esempio <code>8</code> vedrai:</p>
+<div class="highlight"><pre><span></span><code>Data: &lt;Buffer <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0&gt;
+Data: &lt;Buffer <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0&gt;
+</code></pre></div>
+<p>Attenzione però che riceverai i dati ogni <code>4</code> secondi dal momento che Arduino invia due byte ogni secondo</p>
+<h2 id="parseint-applicato-al-buffer-serialport">parseInt applicato al Buffer SerialPort</h2>
+<p>Abbiamo visto come inviare e ricevere dei byte Arduino/node.js.
+Adesso voglio inviare da Arduino un numero intero a 16bit <code>50321</code> e voglio interpretarlo come intero lato nodejs, in pratica voglio inviare e ricevere un intero a 16 bit.</p>
+<h3 id="lato-arduino">Lato Arduino</h3>
+<p>Lato Arduino non cambia quasi niente. 
+- Ho sostituito <code>number_16</code> con un numero rappresentato in decimale anzichè in esadecimle.
+- Ho invertito la codifica della parte alta e della parte bassa, questo per motivi di endianess che spiegherò più avanti</p>
+<div class="highlight"><pre><span></span><code><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_8</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50321</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w">  </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//number_8[0] = number_16 &amp; 0xFF;</span>
+<span class="w">  </span><span class="c1">//number_8[1] = (number_16 &gt;&gt; 8);</span>
+<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">number_16</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">number_8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="lato-nodejs">Lato node.js</h3>
+<p>Lato node.js ho applicato il metodo <code>parseInt</code> al buffer.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">ByteLength</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@serialport/parser-byte-length&#39;</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<span class="p">});</span>
+
+<span class="kd">const</span> <span class="nx">parser</span> <span class="o">=</span> <span class="nx">port</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="ow">new</span> <span class="nx">ByteLength</span><span class="p">({</span><span class="nx">length</span><span class="o">:</span> <span class="mf">2</span><span class="p">}))</span>
+<span class="nx">parser</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">),</span> <span class="mf">16</span><span class="p">));</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Adesso vedrai stampato:</p>
+<div class="highlight"><pre><span></span><code>Data: <span class="m">50321</span>
+Data: <span class="m">50321</span>
+Data: <span class="m">50321</span>
+Data: <span class="m">50321</span>
+Data: <span class="m">50321</span>
+Data: <span class="m">50321</span>
+Data: <span class="m">50321</span>
+Data: <span class="m">50321</span>
+Data: <span class="m">50321</span>
+Data: <span class="m">50321</span>
+</code></pre></div>
+<p>Ovvero il valore trasmesso da Arduino.</p>
+<h3 id="endianess">Endianess?</h3>
+<p>Quando trasmetti e ricevi dei byte su un canale di trasmissione devi sempre assicurarti di fare le cose in maniera corretta. Mi riferisco all'ordine dei byte in trasmissione e di conseguenza di ricezione. E' naturale pensare che l'ordine debba essere coerente altrimenti in ricezione non è possibile ricostruire i dati.</p>
+<p>Per questo mi sono reso conto, sbagliando (per fortuna!) che l'endianess era sbagliato solo inviando un intero e reinterpretandolo. Ho dovuto invertire quindi (lato Arduino) la parte bassa con la parte alta</p>
+<h1 id="trasmettere-dati-dalla-seriale-con-serialport">Trasmettere dati dalla seriale con SerialPort</h1>
+<p>Per la trasmissione dati, si usa il metodo <code>.write()</code>.</p>
+<p><code>.write()</code> scrive i dati sulla porta seriale specificata. Memorizza i dati scritti se la porta non è aperta e li scrive dopo l'apertura della porta. L'operazione di scrittura non è bloccante. Quando ritorna, i dati potrebbero non essere ancora stati scritti sulla porta seriale.</p>
+<p><strong>Nota 1 - Apertura di una connessione e Arduino</strong>
+Molti dispositivi come Arduino si ripristinano quando apri una connessione ad essi. In questi casi, la scrittura immediata sul dispositivo causerà la perdita dei dati trasmessi poiché i dispositivi non saranno pronti a ricevere i dati. Questo viene spesso aggirato facendo in modo che Arduino invii un byte "pronto" che il programma Node attende prima di scrivere. Spesso puoi anche farla franca aspettando un importo prestabilito, circa 400 ms. Vedere <code>ReadyParser</code> per una soluzione a questo problema.</p>
+<p><strong>Nota 2 -  Gestione degli errori</strong>
+Se una porta viene disconnessa durante una scrittura, la scrittura produrrà un errore oltre all'evento <code>close</code></p>
+<p><strong>Nota 3 - Gestione degli errori</strong>
+Se si verifica un errore, il callback può o meno essere chiamato con l'errore come primo argomento. Per rilevare in modo affidabile gli errori di scrittura, aggiungi un listener per l'evento "errore".</p>
+<h2 id="serialportwrite">SerialPort.write()</h2>
+<p>Prototipo del metodo <code>.write()</code>:
+<div class="highlight"><pre><span></span><code><span class="nx">serialport</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="o">:</span> <span class="nx">string</span><span class="o">|</span><span class="nx">Buffer</span><span class="o">|</span><span class="nb">Array</span><span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">encoding</span><span class="o">?:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">callback</span><span class="o">?:</span> <span class="nx">error</span> <span class="p">=&gt;</span> <span class="p">{})</span><span class="o">:</span> <span class="kr">boolean</span>
+</code></pre></div></p>
+<p><strong>Parametri:</strong></p>
+<ul>
+<li><code>data</code>: Può essere una <code>string</code>, un <code>Buffer</code> o <code>Array</code> di <code>number</code>.</li>
+<li><code>encoding</code>: E' un parametro opzionale di tipo <code>string</code> e rappresenta la codifica che può essere <code>utf8</code>, <code>ascii</code>, <code>base64</code>, <code>binary</code>, <code>hex</code></li>
+<li><code>callback</code>: E' un parametro opzionale che rappresenta la callback chiamata al termine dell'operazione di scrittura. I dati potrebbero non essere ancora drenati nella porta sottostante.</li>
+</ul>
+<p><strong>Tipo di ritorno</strong></p>
+<p>Restituisce <code>false</code> se lo stream desidera che il codice chiamante attenda l'emissione dell'evento drain prima di continuare a scrivere dati aggiuntivi; altrimenti <code>vero</code>.</p>
+<h3 id="esempio-semplice-di-trasmissione-dati-con-serialport">Esempio semplice di trasmissione dati con SerialPort</h3>
+<p>Vediamo un esempio semplice di trasmissione dati con SerialPort. 
+- Creo un <code>Buffer</code> che contiene un solo <code>byte</code> del valore di <code>65</code>.
+- Per aggirare il problema del <strong>reset di Arduino all'apertura della connessione</strong>, vedi anche <a href="#trasmettere-dati-dalla-seriale-con-serialport">qui</a>, mi metto in ascolto di un <em>qualsiasi</em> dato da Arduino aspettando l'evento <code>data</code> che poi stampo a video.
+- Solo in questo momento posso considerare stabilita la connessione quindi scrivo un dato, o meglio un byte dell'oggetto <code>Buffer</code></p>
+<p>Naturalmente non è una gestione ottimale ma volevo mantenere uno script semplice lato node.js</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">serialport</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;serialport&quot;</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">buf</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">([</span><span class="mf">65</span><span class="p">]);</span>
+
+<span class="kd">var</span> <span class="nx">sp</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">serialport</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="nx">sp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;connection estabilished&#39;</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">),</span> <span class="mf">16</span><span class="p">));</span>
+    <span class="nx">sp</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">buf</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Lato Arduino invece trasmetto il dato <code>233</code> finchè non verrà letto da node.js che rappresenta lo stato <code>READY</code> di Arduino. Quando node.js legge il dato mandato da Arduino e invia il byte <code>65</code>. Arduino riceve il dato, smette di trasmettere il dato <code>233</code> e valuta il dato ricevuto da node.js. Se è <code>65</code> accende il LED, se non è <code>65</code> spegna il LED</p>
+<div class="highlight"><pre><span></span><code><span class="n">byte</span><span class="w"> </span><span class="n">incomingByte</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// for incoming serial data</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">isReadyTransimetted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"> </span><span class="c1">// opens serial port, sets data rate to 9600 bps</span>
+<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// send data only when you receive data:</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">isReadyTransimetted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// read the incoming byte:</span>
+<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">readBytes</span><span class="p">(</span><span class="n">incomingByte</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">incomingByte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">65</span><span class="p">){</span><span class="w"></span>
+<span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isReadyTransimetted</span><span class="p">){</span><span class="w"></span>
+<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">233</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h3 id="esempio-avanzato-di-trasmissione-dati-con-serialport">Esempio avanzato di trasmissione dati con SerialPort</h3>
+<p>Questo esempio sarà un po' più interessante rispetto all'esempio precedente. Con node.js farò blinkare il LED di Arduino.
+Lato node.js ho creato due funzioni...</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">serialport</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;serialport&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">byteFromArduino</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">connectionEstabilished</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">varToggle</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">buf</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">([</span><span class="mf">65</span><span class="p">]);</span>
+<span class="kd">const</span> <span class="nx">buf2</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">([</span><span class="mf">66</span><span class="p">]);</span>
+
+<span class="kd">var</span> <span class="nx">sp</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">serialport</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="kd">function</span> <span class="nx">write</span><span class="p">()</span> <span class="c1">//for writing</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">connectionEstabilished</span><span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">varToggle</span><span class="p">){</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;LED ON, pin 13&#39;</span><span class="p">);</span>
+      <span class="nx">sp</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">buf</span><span class="p">);</span>
+      <span class="nx">varToggle</span> <span class="o">=</span> <span class="o">!</span><span class="nx">varToggle</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;LED OFF, pin 13&#39;</span><span class="p">);</span>
+      <span class="nx">sp</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">buf2</span><span class="p">);</span>
+      <span class="nx">varToggle</span> <span class="o">=</span> <span class="o">!</span><span class="nx">varToggle</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">waitForConnection</span><span class="p">(){</span>
+  <span class="nx">sp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> 
+  <span class="p">{</span>
+    <span class="nx">byteFromArduino</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">),</span> <span class="mf">16</span><span class="p">);</span> 
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">byteFromArduino</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">byteFromArduino</span> <span class="o">===</span> <span class="mf">233</span><span class="p">){</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;connection estabilished&#39;</span><span class="p">);</span>
+      <span class="nx">connectionEstabilished</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;connection not estabilished&#39;</span><span class="p">);</span>
+      <span class="nx">connectionEstabilished</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">sp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;open&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> 
+<span class="p">{</span>
+    <span class="c1">// execute your functions</span>
+    <span class="nx">waitForConnection</span><span class="p">();</span>
+    <span class="nx">setInterval</span><span class="p">(</span><span class="nx">write</span><span class="p">,</span><span class="mf">1000</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../../../../READMEV2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Javascript" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Javascript
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../../../../nas/readme/" class="md-footer__link md-footer__link--next" aria-label="Next: Nas e TrueNAS (FreeNAS)" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Nas e TrueNAS (FreeNAS)
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright 2020 Simone Di Ricco
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/sdiricco1" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../../../..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+    
+  </body>
+</html>

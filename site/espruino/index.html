@@ -1,0 +1,2236 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>Espruino - Javascript course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:""}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#espruino" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Javascript course" class="md-header__button md-logo" aria-label="Javascript course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Javascript course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Espruino
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/squidfunk/mkdocs-material/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Javascript course" class="md-nav__button md-logo" aria-label="Javascript course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Javascript course
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/squidfunk/mkdocs-material/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Learn
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Android
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Android" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android/" class="md-nav__link">
+        Android
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Arduino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Arduino" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Arduino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arduino/" class="md-nav__link">
+        Arduino
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Cpp
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Cpp" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp/" class="md-nav__link">
+        C++ per esempi
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Css
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Css" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        Espruino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Espruino" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Espruino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Espruino
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Espruino
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#esp8266" class="md-nav__link">
+    ESP8266
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installazione-del-firmware-espruino-su-esp8266" class="md-nav__link">
+    Installazione del firmware espruino su ESP8266
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-flashare-un-file-js-su-un-microcontrollore-espruino" class="md-nav__link">
+    Come flashare un file js su un microcontrollore espruino
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primi-passi-con-javascript-ed-espruino" class="md-nav__link">
+    Primi passi con javascript ed espruino
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandi-basilari" class="md-nav__link">
+    Comandi basilari
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#led-blink" class="md-nav__link">
+    Led blink
+  </a>
+  
+    <nav class="md-nav" aria-label="Led blink">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orologio-con-display-nokia-5110" class="md-nav__link">
+    Orologio con display NOKIA 5110
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snake" class="md-nav__link">
+    Snake
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Github pages jekyll
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Github pages jekyll" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Github pages jekyll
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-pages-jekyll/" class="md-nav__link">
+        Crea il tuo sito tramite GitHub Pages e jekyll
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Html
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Html" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Html
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+      
+      <label class="md-nav__link" for="__nav_8_1">
+        Progetti
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Progetti" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          Progetti
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_1" type="checkbox" id="__nav_8_1_1" >
+      
+      <label class="md-nav__link" for="__nav_8_1_1">
+        myPersonalWebPage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="myPersonalWebPage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          myPersonalWebPage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/Progetti/myPersonalWebPage/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Java
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/" class="md-nav__link">
+        Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      <label class="md-nav__link" for="__nav_9_2">
+        Java basic module
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java basic module" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Java basic module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/java-basic-module/" class="md-nav__link">
+        Java - write once, run anywhere
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+      
+      <label class="md-nav__link" for="__nav_9_3">
+        Java oop module
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java oop module" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Java oop module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/java-oop-module/" class="md-nav__link">
+        Java OOP
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        Javascript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Javascript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/READMEV2/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
+      
+      <label class="md-nav__link" for="__nav_10_3">
+        Examples and projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples and projects" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          Examples and projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1" type="checkbox" id="__nav_10_3_1" >
+      
+      <label class="md-nav__link" for="__nav_10_3_1">
+        Projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Projects" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1_1" type="checkbox" id="__nav_10_3_1_1" >
+      
+      <label class="md-nav__link" for="__nav_10_3_1_1">
+        Nodejs arduino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Nodejs arduino" data-md-level="4">
+        <label class="md-nav__title" for="__nav_10_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Nodejs arduino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1_1_1" type="checkbox" id="__nav_10_3_1_1_1" >
+      
+      <label class="md-nav__link" for="__nav_10_3_1_1_1">
+        Documents
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Documents" data-md-level="5">
+        <label class="md-nav__title" for="__nav_10_3_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Documents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/examples-and-projects/Projects/nodejs-arduino/documents/serialport/" class="md-nav__link">
+        Libreria node.js SerialPort
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      <label class="md-nav__link" for="__nav_11">
+        Nas
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Nas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Nas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nas/readme/" class="md-nav__link">
+        Nas e TrueNAS (FreeNAS)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      <label class="md-nav__link" for="__nav_12">
+        Python
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      <label class="md-nav__link" for="__nav_13">
+        Raspberry pi pico
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Raspberry pi pico" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Raspberry pi pico
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raspberry-pi-pico/readme/" class="md-nav__link">
+        Raspberry pi pico e Micropython
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      <label class="md-nav__link" for="__nav_14">
+        React js
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="React js" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          React js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/" class="md-nav__link">
+        React.js
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2" type="checkbox" id="__nav_14_2" >
+      
+      <label class="md-nav__link" for="__nav_14_2">
+        Test
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_2">
+          <span class="md-nav__icon md-icon"></span>
+          Test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_1" type="checkbox" id="__nav_14_2_1" >
+      
+      <label class="md-nav__link" for="__nav_14_2_1">
+        My app
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="My app" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          My app
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/test/my-app/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_2" type="checkbox" id="__nav_14_2_2" >
+      
+      <label class="md-nav__link" for="__nav_14_2_2">
+        My app 2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="My app 2" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          My app 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/test/my-app-2/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_3" type="checkbox" id="__nav_14_2_3" >
+      
+      <label class="md-nav__link" for="__nav_14_2_3">
+        Shoppy world
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Shoppy world" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Shoppy world
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/test/shoppy-world/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" >
+      
+      <label class="md-nav__link" for="__nav_15">
+        Reg expr
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reg expr" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Reg expr
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reg-expr/" class="md-nav__link">
+        Regular Expression
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" >
+      
+      <label class="md-nav__link" for="__nav_16">
+        Sw dev methods
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sw dev methods" data-md-level="1">
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          Sw dev methods
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sw-dev-methods/" class="md-nav__link">
+        Metodologie di sviluppo software
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" >
+      
+      <label class="md-nav__link" for="__nav_17">
+        Text editor
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Text editor" data-md-level="1">
+        <label class="md-nav__title" for="__nav_17">
+          <span class="md-nav__icon md-icon"></span>
+          Text editor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-editor/readme/" class="md-nav__link">
+        Quale editor di testo?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_18" type="checkbox" id="__nav_18" >
+      
+      <label class="md-nav__link" for="__nav_18">
+        Typescript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Typescript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_18">
+          <span class="md-nav__icon md-icon"></span>
+          Typescript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../typescript/" class="md-nav__link">
+        Typescript
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#esp8266" class="md-nav__link">
+    ESP8266
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installazione-del-firmware-espruino-su-esp8266" class="md-nav__link">
+    Installazione del firmware espruino su ESP8266
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#come-flashare-un-file-js-su-un-microcontrollore-espruino" class="md-nav__link">
+    Come flashare un file js su un microcontrollore espruino
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primi-passi-con-javascript-ed-espruino" class="md-nav__link">
+    Primi passi con javascript ed espruino
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandi-basilari" class="md-nav__link">
+    Comandi basilari
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#led-blink" class="md-nav__link">
+    Led blink
+  </a>
+  
+    <nav class="md-nav" aria-label="Led blink">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orologio-con-display-nokia-5110" class="md-nav__link">
+    Orologio con display NOKIA 5110
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snake" class="md-nav__link">
+    Snake
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/squidfunk/mkdocs-material/edit/master/docs/espruino/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="espruino">Espruino</h1>
+<p><img alt="espruino" src="images/espruino.png" /></p>
+<p><a href="https://www.espruino.com/">Espruino</a> è un interprete JavaScript open source per microcontrollori.</p>
+<p>Le board ufficialmente sviluppate da espruino le puoi trovare su <a href="https://shop.espruino.com/espruino-boards">Espruino - shop</a>.</p>
+<h2 id="esp8266">ESP8266</h2>
+<p>In questa guida vedremo come installare il firmware espruino sul microcontrollore <a href="https://www.espressif.com/en/products/socs/esp8266">ESP8266</a>.</p>
+<p><img alt="iot" src="images/iot.jpg" /></p>
+<p>L'ESP8266 è un chip con Wi-Fi integrato a basso costo, con supporto completo al protocollo TCP/IP e funzionalità da microcontrollore prodotto dall'azienda cinese di Shanghai Espressif Systems. Il chip è spesso utilizzato in molti prodotti IOT</p>
+<h2 id="installazione-del-firmware-espruino-su-esp8266">Installazione del firmware espruino su ESP8266</h2>
+<p>Strumenti necessari:</p>
+<ul>
+<li><a href="https://www.python.org/">python</a>, necessario per lanciare lo script <a href="https://github.com/espressif/esptool">esptool</a>.</li>
+<li><a href="https://github.com/espressif/esptool">esptool</a>, uno script python in grado di eseguire il flash del firmware espruino su ESP8266.</li>
+<li><a href="https://www.espruino.com/Download">firmware</a>, l'interprete javascript da installa su ESP8266 per permettere l'esecuzione di file <code>js</code></li>
+</ul>
+<p>Procedura.</p>
+<ol>
+<li>Installa <a href="https://www.python.org/">python</a> per il tuo sistema operativo. Puoi verificare che sia stato installato attraverso il comando <code>python3 --version</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; python3 --version
+
+Python 3.8.6
+</code></pre></div>
+<ol>
+<li>Installa il gestore dei pacchetti python <a href="https://pypi.org/project/pip/">pip</a>. Puoi verificare che sia stato installato attraverso il comando <code>pip --version</code></li>
+</ol>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; pip --version
+
+pip <span class="m">20</span>.1.1 from /usr/lib/python3/dist-packages/pip <span class="o">(</span>python <span class="m">3</span>.8<span class="o">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Su linux puoi installare python e pip lanciando i comandi:
+<div class="highlight"><pre><span></span><code>sudo apt-get install python3
+sudo apt-get install python3-pip
+</code></pre></div></p>
+<ol>
+<li>Installa il pacchetto <a href="https://github.com/espressif/esptool">esptool</a> tramite il comando:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>pip install esptool
+</code></pre></div>
+<p>Per verificare che sia stato installato correttamente digita <code>python3 -m esptool version</code></p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; python3 -m esptool version
+
+esptool.py v3.0
+3.0
+</code></pre></div>
+<p>Digitando <code>python3 -m esptool</code> puoi accedere a tutti i comandi forniti da esptool</p>
+<div class="highlight"><pre><span></span><code>esptool.py v3.0
+usage: esptool <span class="o">[</span>-h<span class="o">]</span> <span class="o">[</span>--chip <span class="o">{</span>auto,esp8266,esp32,esp32s2,esp32s3beta2,esp32c3<span class="o">}]</span> <span class="o">[</span>--port PORT<span class="o">]</span> <span class="o">[</span>--baud BAUD<span class="o">]</span> <span class="o">[</span>--before <span class="o">{</span>default_reset,no_reset,no_reset_no_sync<span class="o">}]</span>
+               <span class="o">[</span>--after <span class="o">{</span>hard_reset,soft_reset,no_reset<span class="o">}]</span> <span class="o">[</span>--no-stub<span class="o">]</span> <span class="o">[</span>--trace<span class="o">]</span> <span class="o">[</span>--override-vddsdio <span class="o">[{</span><span class="m">1</span>.8V,1.9V,OFF<span class="o">}]]</span> <span class="o">[</span>--connect-attempts CONNECT_ATTEMPTS<span class="o">]</span>
+               <span class="o">{</span>load_ram,dump_mem,read_mem,write_mem,write_flash,run,image_info,make_image,elf2image,read_mac,chip_id,flash_id,read_flash_status,write_flash_status,read_flash,verify_flash,erase_flash,erase_region,version,get_security_info<span class="o">}</span>
+               ...
+
+esptool.py v3.0 - ESP8266 ROM Bootloader Utility
+
+positional arguments:
+  <span class="o">{</span>load_ram,dump_mem,read_mem,write_mem,write_flash,run,image_info,make_image,elf2image,read_mac,chip_id,flash_id,read_flash_status,write_flash_status,read_flash,verify_flash,erase_flash,erase_region,version,get_security_info<span class="o">}</span>
+                        Run esptool <span class="o">{</span>command<span class="o">}</span> -h <span class="k">for</span> additional <span class="nb">help</span>
+    load_ram            Download an image to RAM and execute
+    dump_mem            Dump arbitrary memory to disk
+    read_mem            Read arbitrary memory location
+    write_mem           Read-modify-write to arbitrary memory location
+    write_flash         Write a binary blob to flash
+    run                 Run application code <span class="k">in</span> flash
+    image_info          Dump headers from an application image
+    make_image          Create an application image from binary files
+    elf2image           Create an application image from ELF file
+    read_mac            Read MAC address from OTP ROM
+    chip_id             Read Chip ID from OTP ROM
+    flash_id            Read SPI flash manufacturer and device ID
+    read_flash_status   Read SPI flash status register
+    write_flash_status  Write SPI flash status register
+    read_flash          Read SPI flash content
+    verify_flash        Verify a binary blob against flash
+    erase_flash         Perform Chip Erase on SPI flash
+    erase_region        Erase a region of the flash
+    version             Print esptool version
+    get_security_info   Get some security-related data
+
+optional arguments:
+  -h, --help            show this <span class="nb">help</span> message and <span class="nb">exit</span>
+  --chip <span class="o">{</span>auto,esp8266,esp32,esp32s2,esp32s3beta2,esp32c3<span class="o">}</span>, -c <span class="o">{</span>auto,esp8266,esp32,esp32s2,esp32s3beta2,esp32c3<span class="o">}</span>
+                        Target chip <span class="nb">type</span>
+  --port PORT, -p PORT  Serial port device
+  --baud BAUD, -b BAUD  Serial port baud rate used when flashing/reading
+  --before <span class="o">{</span>default_reset,no_reset,no_reset_no_sync<span class="o">}</span>
+                        What to <span class="k">do</span> before connecting to the chip
+  --after <span class="o">{</span>hard_reset,soft_reset,no_reset<span class="o">}</span>, -a <span class="o">{</span>hard_reset,soft_reset,no_reset<span class="o">}</span>
+                        What to <span class="k">do</span> after esptool.py is finished
+  --no-stub             Disable launching the flasher stub, only talk to ROM bootloader. Some features will not be available.
+  --trace, -t           Enable trace-level output of esptool.py interactions.
+  --override-vddsdio <span class="o">[{</span><span class="m">1</span>.8V,1.9V,OFF<span class="o">}]</span>
+                        Override ESP32 VDDSDIO internal voltage regulator <span class="o">(</span>use with care<span class="o">)</span>
+  --connect-attempts CONNECT_ATTEMPTS
+                        Number of attempts to connect, negative or <span class="m">0</span> <span class="k">for</span> infinite. Default: <span class="m">7</span>.
+</code></pre></div>
+<ol>
+<li>Connetti ESP8266 al PC e digita <code>python3 -m esptool  flash_id</code>. Dovrebber risponderti con alcune informazioni riguardo il tipo del chip.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>python3 -m esptool  flash_id
+
+esptool.py v3.0
+Found <span class="m">1</span> serial ports
+Serial port /dev/ttyUSB0
+Connecting.....
+Detecting chip type... ESP8266
+Chip is ESP8266EX
+Features: WiFi
+Crystal is 26MHz
+MAC: ec:fa:bc:32:cd:a6
+Uploading stub...
+Running stub...
+Stub running...
+Manufacturer: ef
+Device: <span class="m">4016</span>
+Detected flash size: 4MB
+Hard resetting via RTS pin...
+</code></pre></div>
+<p>Di queste informazioni, memorizza <code>Serial port</code> che indica la porta seriale a cui è connesso <code>ESP8266</code>, in questo caso è <code>/dev/ttyUSB0</code>, <code>Device</code> che identifica il nome del dispositivo che in questo caso è il <code>4016</code> e <code>Detected flash size</code> che rappresenta la memoria flash, che in questo caso vale <code>4MB</code>.</p>
+<ol>
+<li>
+<p>Scarica il firmware dal sito ufficiale di <a href="https://www.espruino.com/Download">espruino</a>. Puoi scegliere tra:</p>
+</li>
+<li>
+<p>Cutting Edge build: <code>espruino_2v08.191_esp8266.tgz</code></p>
+</li>
+<li>Cutting Edge build: <code>espruino_2v08.191_esp8266_4mb.tgz</code></li>
+</ol>
+<p>La differenza tra i due firmware la puoi trovare <a href="http://www.espruino.com/EspruinoESP8266#firmware-updates">qua</a>.</p>
+<table>
+<thead>
+<tr>
+<th>content *)</th>
+<th>espruino_2v00_esp8266</th>
+<th>espruino_2v00_esp8266_4mb</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modules</td>
+<td>NET, TELNET, CRYPTO, only SHA1, NEOPIXEL, Storage</td>
+<td>NET, TELNET, GRAPHICS, CRYPTO only SHA1, NEOPIXEL,Storage</td>
+</tr>
+<tr>
+<td>JS variables</td>
+<td>1700</td>
+<td>1600</td>
+</tr>
+<tr>
+<td>save pages</td>
+<td>4 x 4096 byte</td>
+<td>48 x 4096 byte</td>
+</tr>
+<tr>
+<td>getState()</td>
+<td>{"sdkVersion": "2.2.1(6ab97e9), "cpuFrequency": 160, "freeHeap": 10672, "maxCon": 10, "flashMap": "512KB:256/256","flashKB": 512,"flashChip": "0xXX 0x4013"}</td>
+<td>{"sdkVersion": "2.2.1(6ab97e9)", "cpuFrequency": 160, "freeHeap": 12416, "maxCon": 10, "flashMap": "4MB:1024/1024", "flashKB": 4096,"flashChip": "0xXX 0x4016"}</td>
+</tr>
+<tr>
+<td>getFreeFlash()</td>
+<td>use 'Storage' module to save data</td>
+<td>[{ "addr": 2097152, "length": 1048576 }, { "addr": 3145728, "length": 262144 }, { "addr": 3407872, "length": 262144}, { "addr": 3670016, "length": 262144 }, { "addr": 3932160, "length": 262144 }]</td>
+</tr>
+<tr>
+<td>chip_id and flash_size</td>
+<td>4013-4015 use --flash_size 512KB</td>
+<td>4016-4018 use</td>
+</tr>
+<tr>
+<td>--flash_size 4MB-c1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>max image size</td>
+<td>468 KB</td>
+<td>812 KB</td>
+</tr>
+</tbody>
+</table>
+<p>In breve il firmware <code>espruino_2v00_esp8266_4mb</code> contiene la libreria <code>GRAPHICS</code> rispetto al firmware <code>espruino_2v00_esp8266</code>. Da notare tuttavia che a seconda del <code>chip_id</code> è necessario installare un firmware piuttosto di un altro. In particolare dal momento che il mio ESP8266 è un <code>4016</code> posso installare il firmware <code>espruino_2v00_esp8266_4mb</code></p>
+<ol>
+<li>
+<p>Una volta scelto il firmware giusto scompatta il file scaricato. Nel mio caso, installerò il firmware <code>espruino_2v00_esp8266_4mb</code>.</p>
+</li>
+<li>
+<p>Cancella la flash. Il seguente comando cancellerà il contenuto della flash. Assicurati di riportere il nome della porta corretto, nel mio caso è <code>/dev/ttyUSB0</code>(Ricorda che puoi ricevere informazioni sul tuo ESP8266 connesso digitando <code>python3 -m esptool  flash_id</code>). </p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>&gt; python3 -m esptool --port /dev/ttyUSB0 --baud <span class="m">115200</span> erase_flash
+
+esptool.py v3.0
+Serial port /dev/ttyUSB0
+Connecting....
+Detecting chip type... ESP8266
+Chip is ESP8266EX
+Features: WiFi
+Crystal is 26MHz
+MAC: ec:fa:bc:32:cd:a6
+Uploading stub...
+Running stub...
+Stub running...
+Erasing flash <span class="o">(</span>this may take a <span class="k">while</span><span class="o">)</span>...
+Chip erase completed successfully <span class="k">in</span> <span class="m">6</span>.0s
+Hard resetting via RTS pin...
+</code></pre></div>
+<ol>
+<li>Esegui il flash del firmware. Posizionati all'interno della cartella appena scaricata e scampattata del firmware espruino per ESP8266, nel mio caso <code>espruino_2v08.191_esp8266_4mb</code>. Per flashare questo firmware digita:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>python3 -m esptool --port /dev/ttyUSB0 --baud <span class="m">115200</span> write_flash --flash_freq 80m --flash_mode qio --flash_size 4MB 0x0000 <span class="s2">&quot;boot_v1.6.bin&quot;</span> 0x1000 espruino_esp8266_user1.bin 0x3FC000 esp_init_data_default.bin 0x3FE000 blank.bin
+</code></pre></div>
+<p>Ricordati di controllare il nome della porta seriale.</p>
+<div class="highlight"><pre><span></span><code>python3 -m esptool --port /dev/ttyUSB0 --baud <span class="m">115200</span> write_flash --flash_freq 80m --flash_mode qio --flash_size 4MB 0x0000 <span class="s2">&quot;boot_v1.6.bin&quot;</span> 0x1000 espruino_esp8266_user1.bin 0x3FC000 esp_init_data_default.bin 0x3FE000 blank.bin
+
+esptool.py v3.0
+Serial port /dev/ttyUSB0
+Connecting....
+Detecting chip type... ESP8266
+Chip is ESP8266EX
+Features: WiFi
+Crystal is 26MHz
+MAC: ec:fa:bc:32:cd:a6
+Uploading stub...
+Running stub...
+Stub running...
+Configuring flash size...
+Flash params <span class="nb">set</span> to 0x004f
+Compressed <span class="m">3856</span> bytes to <span class="m">2763</span>...
+Wrote <span class="m">3856</span> bytes <span class="o">(</span><span class="m">2763</span> compressed<span class="o">)</span> at 0x00000000 <span class="k">in</span> <span class="m">0</span>.2 seconds <span class="o">(</span>effective <span class="m">124</span>.8 kbit/s<span class="o">)</span>...
+Hash of data verified.
+Compressed <span class="m">533716</span> bytes to <span class="m">350945</span>...
+Wrote <span class="m">533716</span> bytes <span class="o">(</span><span class="m">350945</span> compressed<span class="o">)</span> at 0x00001000 <span class="k">in</span> <span class="m">30</span>.9 seconds <span class="o">(</span>effective <span class="m">138</span>.0 kbit/s<span class="o">)</span>...
+Hash of data verified.
+Compressed <span class="m">128</span> bytes to <span class="m">75</span>...
+Wrote <span class="m">128</span> bytes <span class="o">(</span><span class="m">75</span> compressed<span class="o">)</span> at 0x003fc000 <span class="k">in</span> <span class="m">0</span>.0 seconds <span class="o">(</span>effective <span class="m">92</span>.7 kbit/s<span class="o">)</span>...
+Hash of data verified.
+Compressed <span class="m">4096</span> bytes to <span class="m">26</span>...
+Wrote <span class="m">4096</span> bytes <span class="o">(</span><span class="m">26</span> compressed<span class="o">)</span> at 0x003fe000 <span class="k">in</span> <span class="m">0</span>.0 seconds <span class="o">(</span>effective <span class="m">4906</span>.3 kbit/s<span class="o">)</span>...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Se vuoi flashare il firmare <code>espruino_2v08.191_esp8266</code> devi digitare:</p>
+<div class="highlight"><pre><span></span><code>python3 -m esptool --port /dev/ttyUSB0 --baud <span class="m">115200</span> write_flash --flash_freq 40m --flash_mode qio --flash_size 4m 0x0000 <span class="s2">&quot;boot_v1.6.bin&quot;</span> 0x1000 espruino_esp8266_user1.bin 0x7C000 esp_init_data_default.bin 0x7E000 blank.bin
+</code></pre></div>
+<p>Una guida completa su questi comandi la puoi trovare su <a href="http://www.espruino.com/ESP8266_Flashing">ESP8266 - Flashing</a></p>
+<p>Vedi anche <a href="http://www.espruino.com/Quick+Start+USB">Quick start USB</a></p>
+<h2 id="come-flashare-un-file-js-su-un-microcontrollore-espruino">Come flashare un file js su un microcontrollore espruino</h2>
+<p>Per vedere tutte le opzioni di programmazione di espruino ti consiglio di dare un'occhiata alla sezione di programmazione sul <a href="https://www.espruino.com/Programming">sito ufficiale</a>.</p>
+<p>Puoi usare:</p>
+<ul>
+<li><a href="https://www.espruino.com/ide/">Espuino IDE</a>, ma solo con google chrome. Con chromium non funziona.</li>
+<li>[]</li>
+</ul>
+<h2 id="primi-passi-con-javascript-ed-espruino">Primi passi con javascript ed espruino</h2>
+<p>Puoi dare un'occhiata al <a href="https://www.espruino.com/Quick+Start+Code">tutorial</a></p>
+<h2 id="comandi-basilari">Comandi basilari</h2>
+<div class="highlight"><pre><span></span><code><span class="mf">1</span><span class="o">+</span><span class="mf">2</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">//set D16 pin to high</span>
+<span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">//read D16 pin</span>
+<span class="nx">digitalRead</span><span class="p">(</span><span class="nx">D16</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>  <span class="c1">//Set D16 to high</span>
+  <span class="c1">//after 200ms Set D16 to low</span>
+  <span class="kd">function</span> <span class="nx">flash</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span>
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span>
+    <span class="p">},</span> <span class="mf">200</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">flash</span><span class="p">();</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">flash</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span>
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span>
+  <span class="p">},</span> <span class="mf">200</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">digitalRead</span><span class="p">(</span><span class="nx">D15</span><span class="p">))</span> <span class="nx">flash</span><span class="p">();</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">//When press D15, flash will be executed  </span>
+
+<span class="kd">function</span> <span class="nx">flash</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span>
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span>
+  <span class="p">},</span> <span class="mf">200</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">digitalRead</span><span class="p">(</span><span class="nx">D15</span><span class="p">))</span> <span class="nx">flash</span><span class="p">();</span>
+<span class="p">},</span> <span class="mf">500</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">Hh</span><span class="p">,</span> <span class="nx">Mm</span><span class="p">,</span> <span class="nx">Ss</span><span class="p">,</span> <span class="nx">mm</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">initOLED</span><span class="p">(){</span>
+  <span class="nx">oled</span><span class="p">.</span><span class="nx">setFont8x12</span><span class="p">();</span>
+  <span class="nx">oled</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;init OLDED 789&quot;</span><span class="p">);</span>
+  <span class="nx">oled</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="nx">require</span><span class="p">(</span><span class="s2">&quot;Font8x12&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">Graphics</span><span class="p">);</span>
+<span class="nx">I2C1</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span> <span class="nx">scl</span><span class="o">:</span> <span class="nx">D5</span><span class="p">,</span> <span class="nx">sda</span><span class="o">:</span> <span class="nx">D4</span> <span class="p">});</span>
+<span class="kd">var</span> <span class="nx">oled</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;SSD1306&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">I2C1</span><span class="p">,</span> <span class="nx">initOLED</span><span class="p">,</span> <span class="p">{</span> <span class="nx">rst</span><span class="o">:</span> <span class="nx">D16</span><span class="p">,</span> <span class="nx">height</span> <span class="o">:</span> <span class="mf">32</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span><span class="mf">128</span> <span class="p">});</span>
+
+<span class="kd">function</span> <span class="nx">orario</span><span class="p">(){</span>
+  <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="ow">new</span> <span class="nb">Date</span><span class="p">();</span>
+  <span class="nx">Hh</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">;</span>
+  <span class="nx">Mm</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">;</span>
+  <span class="nx">Ss</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">getSeconds</span><span class="p">();</span>
+  <span class="nx">oled</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+  <span class="nx">oled</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;Ora:&quot;</span><span class="p">);</span> 
+  <span class="nx">oled</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">Hh</span> <span class="o">+</span> <span class="nx">Mm</span> <span class="o">+</span> <span class="nx">Ss</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">16</span><span class="p">);</span> 
+  <span class="nx">oled</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="nx">setInterval</span><span class="p">(</span><span class="nx">orario</span><span class="p">,</span><span class="mf">1000</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="led-blink">Led blink</h2>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span>  <span class="nx">on</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">pin</span> <span class="o">=</span> <span class="nx">D16</span><span class="p">;</span>
+<span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">on</span> <span class="o">=</span> <span class="o">!</span><span class="nx">on</span><span class="p">;</span>
+  <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">pin</span><span class="p">,</span> <span class="nx">on</span><span class="p">);</span>
+<span class="p">},</span> <span class="mf">500</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">function</span> <span class="nx">start</span><span class="p">(){</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">setFont8x12</span><span class="p">();</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;Ciao mondo&quot;</span><span class="p">);</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getFonts</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="nx">require</span><span class="p">(</span><span class="s2">&quot;Font4x4Numeric&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">Graphics</span><span class="p">);</span>
+<span class="nx">require</span><span class="p">(</span><span class="s2">&quot;Font8x12&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">Graphics</span><span class="p">);</span>
+<span class="nx">I2C1</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span> <span class="nx">scl</span><span class="o">:</span> <span class="nx">D5</span><span class="p">,</span> <span class="nx">sda</span><span class="o">:</span> <span class="nx">D4</span> <span class="p">});</span>
+<span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;SSD1306&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">I2C1</span><span class="p">,</span> <span class="nx">start</span><span class="p">,</span> <span class="p">{</span> <span class="nx">rst</span><span class="o">:</span> <span class="nx">D16</span><span class="p">,</span> <span class="nx">height</span> <span class="o">:</span> <span class="mf">32</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span><span class="mf">128</span>   <span class="p">});</span>
+</code></pre></div>
+<h3 id="orologio-con-display-nokia-5110">Orologio con display NOKIA 5110</h3>
+<p>Puoi trovare il progetto <a href="https://www.espruino.com/Pico+Clock">qua</a>. Riporto comunque il codice completo che comprende l'adattamento NodeMCU.</p>
+<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
+<span class="cm">GND GND GND</span>
+<span class="cm">LIGHT   Any GND (backlight on)</span>
+<span class="cm">VCC 3.3v    3.3</span>
+<span class="cm">CLK SPI SCK D3</span>
+<span class="cm">DIN SPI MOSI    D5</span>
+<span class="cm">DC  Any D6</span>
+<span class="cm">CE  Any D7</span>
+<span class="cm">RST Any D8</span>
+<span class="cm">*/</span>
+
+<span class="kd">var</span> <span class="nx">g</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">MONTHS</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s2">&quot;Jan&quot;</span><span class="p">,</span><span class="s2">&quot;Feb&quot;</span><span class="p">,</span><span class="s2">&quot;Mar&quot;</span><span class="p">,</span><span class="s2">&quot;Apr&quot;</span><span class="p">,</span><span class="s2">&quot;May&quot;</span><span class="p">,</span><span class="s2">&quot;Jun&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;Jul&quot;</span><span class="p">,</span><span class="s2">&quot;Aug&quot;</span><span class="p">,</span><span class="s2">&quot;Sep&quot;</span><span class="p">,</span><span class="s2">&quot;Oct&quot;</span><span class="p">,</span><span class="s2">&quot;Nov&quot;</span><span class="p">,</span><span class="s2">&quot;Dec&quot;</span>
+  <span class="p">];</span>
+
+<span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+  <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="ow">new</span> <span class="nb">Date</span><span class="p">();</span>
+  <span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="nx">t</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="nx">MONTHS</span><span class="p">[</span><span class="nx">t</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()]</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="nx">t</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">();</span>
+  <span class="kd">var</span> <span class="nx">time</span> <span class="o">=</span> <span class="nx">t</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot;:&quot;</span> <span class="o">+</span>
+       <span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="o">+</span><span class="nx">t</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">()).</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mf">2</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">secs</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="o">+</span><span class="nx">t</span><span class="p">.</span><span class="nx">getSeconds</span><span class="p">()).</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mf">2</span><span class="p">);</span>
+  <span class="c1">// top left date</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">setFontBitmap</span><span class="p">();</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span>
+  <span class="c1">// middle time</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">setFontVector</span><span class="p">(</span><span class="mf">20</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">timeWidth</span> <span class="o">=</span> <span class="nx">g</span><span class="p">.</span><span class="nx">stringWidth</span><span class="p">(</span><span class="nx">time</span><span class="p">);</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">time</span><span class="p">,(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">-</span><span class="nx">timeWidth</span><span class="o">-</span><span class="mf">12</span><span class="p">)</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="mf">10</span><span class="p">);</span>
+  <span class="c1">// seconds over to the right</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">setFontBitmap</span><span class="p">();</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">secs</span><span class="p">,(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">+</span><span class="nx">timeWidth</span><span class="o">-</span><span class="mf">8</span><span class="p">)</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="mf">26</span><span class="p">);</span>
+  <span class="c1">// send to LCD</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">onInit</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">clearInterval</span><span class="p">();</span>
+  <span class="c1">// Setup SPI</span>
+  <span class="kd">var</span> <span class="nx">spi</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SPI</span><span class="p">();</span>
+  <span class="nx">spi</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span> <span class="nx">sck</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D3</span><span class="p">,</span> <span class="nx">mosi</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D5</span> <span class="p">});</span>
+  <span class="c1">// Initialise the LCD</span>
+  <span class="nx">g</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;PCD8544&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">spi</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D6</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D7</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D8</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// When it&#39;s initialised, set up an animation at 20fps (50ms per frame)</span>
+    <span class="nx">setInterval</span><span class="p">(</span><span class="nx">draw</span><span class="p">,</span> <span class="mf">1000</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">onInit</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="snake">Snake</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Setup SPI</span>
+<span class="kd">var</span> <span class="nx">spi</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SPI</span><span class="p">();</span>
+<span class="c1">// Graphics</span>
+<span class="kd">var</span> <span class="nx">g</span><span class="p">;</span>
+<span class="c1">// Current score</span>
+<span class="kd">var</span> <span class="nx">score</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="c1">// Snake position and direction</span>
+<span class="kd">var</span> <span class="nx">pos</span><span class="p">,</span> <span class="nx">dir</span><span class="p">;</span>
+<span class="c1">// previous snake positions</span>
+<span class="kd">var</span> <span class="nx">history</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="c1">//initial snake lenght</span>
+<span class="kd">var</span> <span class="nx">snakeLength</span> <span class="o">=</span> <span class="mf">5</span><span class="p">;</span>
+<span class="c1">// a list of apple locations (that the snake can eat)</span>
+<span class="kd">var</span> <span class="nx">apples</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="c1">//initial speed</span>
+<span class="kd">var</span> <span class="nx">speed</span> <span class="o">=</span> <span class="mf">120</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">idOnFrame</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">beep</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span>
+  <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D4</span><span class="p">,</span> <span class="nx">state</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">updateSnake</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// remove old score...</span>
+  <span class="nx">beep</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">setColor</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>  
+  <span class="nx">g</span><span class="p">.</span><span class="nx">fillRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">(),</span><span class="mf">5</span><span class="p">);</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">setColor</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">score</span><span class="p">);</span>
+  <span class="nx">beep</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+  <span class="nx">clearInterval</span><span class="p">();</span>
+  <span class="nx">speed</span> <span class="o">=</span> <span class="p">(</span><span class="nx">speed</span> <span class="o">&lt;=</span> <span class="mf">20</span><span class="p">)</span> <span class="o">?</span> <span class="mf">20</span><span class="o">:</span> <span class="nx">speed</span><span class="o">-</span><span class="mf">5</span><span class="p">;</span>
+  <span class="nx">idOnFrame</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">onFrame</span><span class="p">,</span> <span class="nx">speed</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">newApple</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">p</span><span class="p">;</span>
+  <span class="c1">// keep coming up with random locations until there</span>
+  <span class="c1">// is nothing drawn where we want to put the apple</span>
+  <span class="k">do</span> <span class="p">{</span>
+    <span class="nx">p</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span> <span class="o">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()),</span>
+          <span class="nx">y</span> <span class="o">:</span> <span class="mf">6</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">-</span><span class="mf">6</span><span class="p">))</span> <span class="p">};</span>
+  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getPixel</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">p</span><span class="p">.</span><span class="nx">y</span><span class="p">));</span>
+  <span class="c1">// draw the apple, and save it inthe array</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">p</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+  <span class="nx">apples</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">start</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// clear screen</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">drawRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">-</span><span class="mf">1</span><span class="p">,</span> <span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span>
+
+  <span class="nx">speed</span> <span class="o">=</span> <span class="mf">150</span><span class="p">;</span>
+  <span class="c1">// Setup snake position</span>
+  <span class="nx">pos</span> <span class="o">=</span> <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">/</span><span class="mf">2</span><span class="p">};</span> <span class="c1">// centre of the screen</span>
+  <span class="nx">history</span> <span class="o">=</span> <span class="p">[[</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">]];</span> <span class="c1">// reset the &#39;history&#39; list</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+  <span class="nx">dir</span> <span class="o">=</span> <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="mf">0</span><span class="p">};</span> <span class="c1">// the direction of the snake</span>
+  <span class="c1">// Now add randomly positioned apples</span>
+  <span class="nx">apples</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="mf">10</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="nx">newApple</span><span class="p">();</span>
+  <span class="c1">// update the screen  </span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
+
+  <span class="c1">// reset score</span>
+  <span class="nx">score</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+  <span class="nx">updateSnake</span><span class="p">();</span> 
+  <span class="c1">// When a button is pressed, rotate the snake</span>
+  <span class="nx">setWatch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span>
+  <span class="p">},</span> <span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D1</span><span class="p">,</span> <span class="p">{</span> <span class="nx">repeat</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span> <span class="nx">edge</span><span class="o">:</span><span class="s2">&quot;rising&quot;</span><span class="p">,</span> <span class="nx">debounce</span><span class="o">:</span> <span class="mf">10</span><span class="p">});</span>
+  <span class="nx">setWatch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">rotate</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+  <span class="p">},</span> <span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D2</span><span class="p">,</span> <span class="p">{</span> <span class="nx">repeat</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span> <span class="nx">edge</span><span class="o">:</span><span class="s2">&quot;rising&quot;</span><span class="p">,</span> <span class="nx">debounce</span><span class="o">:</span> <span class="mf">10</span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// When Espruino starts up...</span>
+<span class="kd">function</span> <span class="nx">onInit</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">clearInterval</span><span class="p">();</span>
+  <span class="nx">clearWatch</span><span class="p">();</span>
+  <span class="c1">// Setup SPI</span>
+  <span class="nx">spi</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span> <span class="nx">sck</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D3</span><span class="p">,</span> <span class="nx">mosi</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D5</span> <span class="p">});</span>
+  <span class="c1">// Initialise the LCD</span>
+  <span class="nx">g</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;PCD8544&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">spi</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D6</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D7</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D8</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="c1">// When it&#39;s initialised, clear it and write some text</span>
+    <span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+    <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span>
+    <span class="c1">// send the graphics to the display</span>
+    <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
+    <span class="nx">start</span><span class="p">();</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">gameOver</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// stop the game</span>
+  <span class="nx">beep</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+  <span class="nx">clearWatch</span><span class="p">();</span>
+  <span class="nx">clearInterval</span><span class="p">();</span>
+  <span class="c1">// write &#39;game over&#39; on the screen</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+  <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">&quot;Game Over!&quot;</span><span class="p">;</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span> <span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">-</span><span class="nx">g</span><span class="p">.</span><span class="nx">stringWidth</span><span class="p">(</span><span class="nx">s</span><span class="p">))</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">/</span><span class="mf">2</span><span class="o">-</span><span class="mf">4</span><span class="p">);</span>
+  <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
+  <span class="nx">beep</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+  <span class="c1">// when the button is pressed, restart</span>
+  <span class="nx">setWatch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">start</span><span class="p">();</span>
+  <span class="p">},</span> <span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D2</span><span class="p">,</span> <span class="p">{</span> <span class="nx">edge</span><span class="o">:</span><span class="s2">&quot;rising&quot;</span><span class="p">,</span> <span class="nx">debounce</span><span class="o">:</span> <span class="mf">20</span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">// called every &#39;frame&#39; of the game</span>
+<span class="kd">function</span> <span class="nx">onFrame</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">pos</span><span class="p">.</span><span class="nx">x</span> <span class="o">+=</span> <span class="nx">dir</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
+  <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span> <span class="o">+=</span> <span class="nx">dir</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span>
+  <span class="c1">// remove tail</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">history</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;=</span><span class="nx">snakeLength</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">history</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span> <span class="c1">// remove first item from list</span>
+    <span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">p</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="nx">p</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span> <span class="mf">0</span><span class="p">);</span> <span class="c1">// clear that pixel</span>
+  <span class="p">}</span>
+  <span class="c1">// add current position onto the end</span>
+  <span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">]);</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getPixel</span><span class="p">(</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">))</span> <span class="p">{</span>
+    <span class="c1">// check for apples</span>
+    <span class="kd">var</span> <span class="nx">wasApple</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="ow">in</span> <span class="nx">apples</span><span class="p">)</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">apples</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">x</span><span class="o">==</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span> <span class="o">&amp;&amp;</span> <span class="nx">apples</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">y</span><span class="o">==</span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">wasApple</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="c1">// delete this apple</span>
+        <span class="nx">apples</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span>
+        <span class="c1">// add a new apple</span>
+        <span class="nx">newApple</span><span class="p">();</span>
+        <span class="c1">// change score and increase snake length</span>
+        <span class="nx">snakeLength</span> <span class="o">+=</span> <span class="mf">1</span><span class="p">;</span>
+        <span class="nx">score</span> <span class="o">+=</span> <span class="mf">10</span><span class="p">;</span>
+        <span class="nx">updateSnake</span><span class="p">();</span>
+        <span class="c1">// break out so we don&#39;t check any more apples</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">wasApple</span><span class="p">)</span>
+      <span class="nx">gameOver</span><span class="p">();</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+
+<span class="kd">function</span> <span class="nx">rotate</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">dir</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">dir</span> <span class="o">=</span> <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">0</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="nx">d</span><span class="o">*</span><span class="nx">dir</span><span class="p">.</span><span class="nx">x</span><span class="p">};</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">dir</span> <span class="o">=</span> <span class="p">{</span><span class="nx">x</span><span class="o">:-</span><span class="nx">d</span><span class="o">*</span><span class="nx">dir</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="mf">0</span><span class="p">};</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">onInit</span><span class="p">();</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../css/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CSS" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              CSS
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../github-pages-jekyll/" class="md-footer__link md-footer__link--next" aria-label="Next: Crea il tuo sito tramite GitHub Pages e jekyll" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Crea il tuo sito tramite GitHub Pages e jekyll
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright 2020 Simone Di Ricco
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/sdiricco1" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+    
+  </body>
+</html>

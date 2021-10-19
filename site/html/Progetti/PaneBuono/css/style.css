@@ -1,0 +1,375 @@
+/*General*/
+/*Reset dei bordi del box element*/
+/***********************************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Scrivendo gli elementi separati da virgola seleziono più elementi*/
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Mettendo text-decoration: none, tolgo tutti gli tili standard html e quindi rimane soltanto testo*/
+a {
+    color: ivory;
+    text-decoration: none;
+}
+/***********************************************************************************************/
+
+/*Utility*/
+/***********************************************************************************************/
+/*La sezione utility è utilizzata in genere per diversi scopi. Ad esempio, abbiamo creato la classe "btn"
+per tutti i tasti. Cio' significa che nell'utility ci stanno elementi trasversali alle pagine e alle sezioni*/
+
+.btn {
+    display: inline-block;
+    font-size: 1rem;
+    color:ivory;
+    background: #333;
+    padding: 13px 18px;
+    border: none
+
+}
+
+.btn-light {
+    display: inline-block;
+    font-size: 1rem;
+    color: black;
+    background: ivory;
+    padding: 13px 18px;
+    border: none
+}
+
+.btn-light:hover {
+    background: orange;
+    color: ivory;
+}
+
+.btn:hover {
+    background:orange;
+    color: black;
+}
+
+.text-center {
+    text-align: center;
+}
+/***********************************************************************************************/
+
+/*Header*/
+/***********************************************************************************************/
+#navbar {
+    background: #333;
+}
+
+/*Mettendo display:flex si sta dichiarando un allineamnto a flexbox*/
+/*Con justify-content: space-between mette gli elementi della classe container quindi l'<h1> e l'<ul> agli estremi della pagina*/
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline-end:10px;
+    margin-inline-start: 10px;
+}
+
+/*I padding servono per creare spazi in modo uniforme attorno agli elementi */
+#navbar .container ul {
+    display: flex;
+    padding-right: 1rem;
+}
+
+/*La proprietà text-transform: uppercase trasforma il testo in maiuscolo*/
+#navbar .container h1 {
+    text-transform: uppercase;
+    padding-left:20px;
+}
+
+/*Mettendo list-style:none per una lista di elementi toglie anche i pallini in testa ad ogni elemento*/
+/*Questo è il modo migliore per andare a elezionare elemento per elemento. Ovvero si parte dall'elemento che lo contiene fino a quello che vogliamo stilizzare.
+In questo modo, se abbiamo fatto le cose come si deve, selezioneremo soltanto quello che vogliamo*/
+#navbar .container ul li{
+    list-style: none;
+}
+
+/*Mettendo display:block si consente di trattarlo come un unico blocco quindi impedire che l'elemento venga spezzato o formattato diversamente*/
+#navbar .container ul li a{
+    padding: 20px;
+    display: block;
+}
+
+/* in un <a> tag l'hover è quella proprietà che permette di aggiungere stile all'elemento <a> tag quando ci passo sopra il mouse
+Di solito mettiamo un background in modo da avere un effetto di evidenziatura*/
+#navbar ul li a:hover,
+#navbar ul li .current {
+    background: #555;
+    color: orange;
+}
+/***********************************************************************************************/
+
+/*Section 1*/
+/***********************************************************************************************/
+#showcase-1 .container {
+    display: flex;
+    /*flex-direction: column; in una flexbox mette gli elementi in colonna quindi uno sotto l'altro. Di default infatti sono posti orizzontalmente*/
+    flex-direction: column;
+    /*La misura 70vh permette di prendere 70 parti su 100 della grandezza della pagina ed è responsive*/
+    height: 70vh;
+    /*background: url() è una funzione che permette di inserire un'immagine sia locale sia tramite indirizzo direttamente nel CSS con alcune proprietà*/
+    /*https://unsplash.com/s/photos/bread*/
+    background: url(../images/miti-qYreP9QOdrk-unsplash.jpg) no-repeat center center/cover;
+    /*justify-content: center; introduce un allineamento orizzontale mentre align-items: center; un allineamento verticale. Mettendoli entrambi
+    si avrà un allineamento degli elementi esattamente al centro della pagina*/
+    justify-content: center;
+    align-items: center;
+}
+
+#showcase-1 .container h1 {
+    font-size: 3rem;
+    color: ivory;
+    padding: 20px;
+}
+
+#showcase-1 .container p {
+    font-size: 1.5rem;
+    color: ivory;
+    padding: 20px;
+}
+
+.color-primary {
+    color: orange;
+}
+/***********************************************************************************************/
+
+/*Section 2*/
+/***********************************************************************************************/
+#showcase-2 .container {
+    display: flex;
+    height: 400px;
+}
+
+/*flex: 1 - Lascia che tutti gli elementi flessibili abbiano la stessa lunghezza, indipendentemente dal contenuto
+E' necesario metterlo altrimenti l'immagine non appare..*/
+#showcase-2 .container .image {
+    background: url(../images/Pane_01.jpg) no-repeat center center/cover;
+    flex: 1;
+}
+
+#showcase-2 .container .section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background: #333;
+    color: ivory;
+    padding: 20px;
+}
+
+#showcase-2 .container .section-text p {
+    margin-bottom: 20px;
+}
+
+#showcase-2 .container .section-text h1 {
+    padding: 20px;
+}
+/***********************************************************************************************/
+
+/*Section 3*/
+/***********************************************************************************************/
+#showcase-3 {
+    display:flex;
+    flex-direction: row;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.box-white {
+    background: ivory;
+}
+
+.box-orange {
+    background: orange;
+}
+
+#showcase-3 i {
+    padding: 20px;
+}
+
+#showcase-3 h3 {
+    padding: 20px;
+} 
+/***********************************************************************************************/
+
+/* Section about-info */
+/***********************************************************************************************/
+#about-info .container {
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+
+    padding-inline-end: 5%;
+    padding-inline-start:5%;
+    background: cornsilk;
+    margin: 10px
+}
+
+#about-info .container .info-left {
+    flex: 1;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about-info .container .info-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#about-info .container .info-left h1 {
+    font-size: 2rem;
+    padding: 2% 0;
+}
+
+#about-info .container .info-left p {
+    text-align: justify;
+    padding: 2% 0;
+    width: 100%;
+}
+
+#about-info .container img {
+    margin: 10px;
+    width: 80%;
+    border-radius: 50%;
+}
+
+/* Section testimonials */
+/***********************************************************************************************/
+#testimonials {
+
+    background: url(../images/Pane_04.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#testimonials .container {
+    width:100%;
+    height:100%;
+    background-color: black;
+    opacity: 0.8;
+}
+
+
+#testimonials .container h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: ivory;
+    padding-top: 5%;
+}
+
+#testimonials .container .testimonial {
+    padding: 1%;
+    margin: 3%;
+    border-radius: 5px;
+    background: orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#testimonials .container .testimonial img {
+    width: 50px;
+    border-radius:50%;
+}
+
+#testimonials .container .testimonial p {
+    width: 90%;
+    color: black;
+}
+
+/* Contact */
+/***********************************************************************************************/
+
+#contact-form {
+    margin: 3%;
+}
+
+#contact-form p{
+    padding-bottom: 10px;
+}
+
+#contact-form h1{
+    font-size: 2rem;
+    padding: 30px 0;
+}
+
+
+
+#contact-form input,
+#contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius:10px;
+}
+
+#contact-form label {
+    margin: 5px 0;;
+    display: block;
+}
+
+#contact-form textarea {
+    height: 180px;
+    margin-bottom: 10px;
+}
+
+
+/*Esprimendo border-radius in % considera tutto il box, esprimendolo in px lo applica ai bordi*/
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: orange;
+    border-radius:10px;
+
+}
+
+/*Contact-info*/
+/***********************************************************************************************/
+#contact-info .container{
+    color: ivory;
+    background: #555;
+    display: flex;
+    height: 200px;
+}
+
+#contact-info .container i{
+    margin: 20px;
+}
+
+
+/*Footer*/
+/***********************************************************************************************/
+#footer {
+    color: ivory;
+    background: #333;
+    padding: 20px;
+    text-align: center;
+}
+/***********************************************************************************************/
+
+
+
+

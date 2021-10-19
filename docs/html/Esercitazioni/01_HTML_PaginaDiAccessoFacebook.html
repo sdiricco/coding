@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<head>
+    <title>FacciaLibro</title>
+</head>
+<body>
+
+    <h1>Crea un nuovo account</h1>
+    <p>
+        è gratis e tanto ti spio comunque
+    </p>
+
+    <form>
+        <label for="nome"></label>
+        <input id="nome" type="text" placeholder="Nome" required>
+        <label for="cognome"></label>
+        <input id="cognome" type="text" placeholder="Cognome" required>
+        <!-- per mettere l'elemento sotto è possibile usare <div> (metodo corretto) o <p> (meno corretto). Usando <p> tuttavia è possibile notare che aggiunge uno spazio che sta a indicare che fa parte di un'altro contesto-->
+        <!-- In generale si usa div per raggruppare gli elementi-->
+        <div>
+            <label for="email"></label>
+            <input id="email" type="email" placeholder="email" required>
+        </div>
+        <div>
+            <label for="password"></label>
+            <!--<input id="password" type="password" placeholder="nuova password" minlength="5" maxlength="10" required>-->
+            <input id="password" type="password" placeholder="nuova password" pattern=".{5,10}" required title="5-10 caratteri" required>
+        </div>
+        
+        <p>
+            Data di Nascita:
+        </p>
+
+        <div>
+            <label for="giorno"></label>
+            <select id="giorno" required>
+                <option disabled selected>Giorno</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+            </select>
+    
+            <label for="mese"></label>
+            <select id="mese" required>
+                <option disabled selected>Mese</option>
+                <option>Gennaio</option>
+                <option>Febbraio</option>
+                <option>Marzo</option>
+                <option>Aprile</option>
+                <option>Maggio</option>
+                <option>Giugno</option>
+                <option>Luglio</option>
+                <option>Agosto</option>
+                <option>Settembre</option>
+                <option>Ottobre</option>
+                <option>Novembre</option>
+                <option>Dicembre</option>
+            </select>
+    
+            <label for="anno"></label>
+            <select id="anno" required>
+                <option disabled selected>Anno</option>
+                <option>1990</option>
+                <option>1991</option>
+                <option>1992</option>
+                <option>1993</option>
+                <option>1994</option>
+                <option>1995</option>
+                <option>1996</option>
+                <option>1997</option>
+                <option>1998</option>
+                <option>1999</option>
+                <option>2000</option>
+                <option>2001</option>
+                <option>2002</option>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="uomo">Uomo</label>
+            <input name="genere" id="uomo" type="radio" required>
+            <label for="femmina">Femmina</label>
+            <input name="genere" id="femmina" type="radio" required>
+        </div>
+
+        <div>
+            <label for="condizioni">Accetto le condizioni di utilizzo</label>
+            <input type="checkbox" name="codizioni" id="condizioni" required>
+        </div>
+
+        <div>
+            <button>Iscriviti</button>
+        </div>
+    
+    </form>
+</body>
+</html>

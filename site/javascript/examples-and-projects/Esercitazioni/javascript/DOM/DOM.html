@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h3>evento JS</h3>
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <strong>Doloremque, modi?</strong></p>
+        <ul>
+            <!-- #region Importante mettere '#' come valore di href perchè evita il comportamento di default del link che come ricordiamo
+            tenderebbe a raggiungere il link specificato da href ma nel caso di un bottone premuto voglio stabilirlo io cosa
+            deve accadere-->
+            <li id="ciao" class="myClass">elemento UNO <a href="#">click me</a></li>
+            <li class="classe">elemento DUE</li>
+            <li class="classe">elemento TRE</li>
+        </ul>
+        <form id='form' action="">
+            <table>
+                <tr>
+                    <td>Cognome</td>
+                    <td> <input type="text"> </td>
+                </tr>
+                <tr>
+                    <td>Eta</td>
+                    <td><input type="text" id="eta" size="3", maxlength="3"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script src="08_mainDOM.js"></script>
+</body>
+</html>

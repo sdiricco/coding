@@ -1,0 +1,2373 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>CSS - Javascript course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:""}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#css" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Javascript course" class="md-header__button md-logo" aria-label="Javascript course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Javascript course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CSS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/squidfunk/mkdocs-material/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Javascript course" class="md-nav__button md-logo" aria-label="Javascript course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Javascript course
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/squidfunk/mkdocs-material/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Learn
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Android
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Android" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android/" class="md-nav__link">
+        Android
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Arduino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Arduino" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Arduino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arduino/" class="md-nav__link">
+        Arduino
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Cpp
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Cpp" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp/" class="md-nav__link">
+        C++ per esempi
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Css
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Css" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        CSS
+      </a>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Espruino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Espruino" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Espruino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../espruino/" class="md-nav__link">
+        Espruino
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Github pages jekyll
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Github pages jekyll" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Github pages jekyll
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-pages-jekyll/" class="md-nav__link">
+        Crea il tuo sito tramite GitHub Pages e jekyll
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Html
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Html" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Html
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+      
+      <label class="md-nav__link" for="__nav_8_1">
+        Progetti
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Progetti" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          Progetti
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_1" type="checkbox" id="__nav_8_1_1" >
+      
+      <label class="md-nav__link" for="__nav_8_1_1">
+        myPersonalWebPage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="myPersonalWebPage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          myPersonalWebPage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/Progetti/myPersonalWebPage/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Java
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/" class="md-nav__link">
+        Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      <label class="md-nav__link" for="__nav_9_2">
+        Java basic module
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java basic module" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Java basic module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/java-basic-module/" class="md-nav__link">
+        Java - write once, run anywhere
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+      
+      <label class="md-nav__link" for="__nav_9_3">
+        Java oop module
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java oop module" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Java oop module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/java-oop-module/" class="md-nav__link">
+        Java OOP
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        Javascript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Javascript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/READMEV2/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
+      
+      <label class="md-nav__link" for="__nav_10_3">
+        Examples and projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples and projects" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          Examples and projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1" type="checkbox" id="__nav_10_3_1" >
+      
+      <label class="md-nav__link" for="__nav_10_3_1">
+        Projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Projects" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1_1" type="checkbox" id="__nav_10_3_1_1" >
+      
+      <label class="md-nav__link" for="__nav_10_3_1_1">
+        Nodejs arduino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Nodejs arduino" data-md-level="4">
+        <label class="md-nav__title" for="__nav_10_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Nodejs arduino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1_1_1" type="checkbox" id="__nav_10_3_1_1_1" >
+      
+      <label class="md-nav__link" for="__nav_10_3_1_1_1">
+        Documents
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Documents" data-md-level="5">
+        <label class="md-nav__title" for="__nav_10_3_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Documents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/examples-and-projects/Projects/nodejs-arduino/documents/serialport/" class="md-nav__link">
+        Libreria node.js SerialPort
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      <label class="md-nav__link" for="__nav_11">
+        Nas
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Nas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Nas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nas/readme/" class="md-nav__link">
+        Nas e TrueNAS (FreeNAS)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      <label class="md-nav__link" for="__nav_12">
+        Python
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      <label class="md-nav__link" for="__nav_13">
+        Raspberry pi pico
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Raspberry pi pico" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Raspberry pi pico
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raspberry-pi-pico/readme/" class="md-nav__link">
+        Raspberry pi pico e Micropython
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      <label class="md-nav__link" for="__nav_14">
+        React js
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="React js" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          React js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/" class="md-nav__link">
+        React.js
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2" type="checkbox" id="__nav_14_2" >
+      
+      <label class="md-nav__link" for="__nav_14_2">
+        Test
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_2">
+          <span class="md-nav__icon md-icon"></span>
+          Test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_1" type="checkbox" id="__nav_14_2_1" >
+      
+      <label class="md-nav__link" for="__nav_14_2_1">
+        My app
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="My app" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          My app
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/test/my-app/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_2" type="checkbox" id="__nav_14_2_2" >
+      
+      <label class="md-nav__link" for="__nav_14_2_2">
+        My app 2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="My app 2" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          My app 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/test/my-app-2/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_3" type="checkbox" id="__nav_14_2_3" >
+      
+      <label class="md-nav__link" for="__nav_14_2_3">
+        Shoppy world
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Shoppy world" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Shoppy world
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/test/shoppy-world/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" >
+      
+      <label class="md-nav__link" for="__nav_15">
+        Reg expr
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reg expr" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Reg expr
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reg-expr/" class="md-nav__link">
+        Regular Expression
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" >
+      
+      <label class="md-nav__link" for="__nav_16">
+        Sw dev methods
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sw dev methods" data-md-level="1">
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          Sw dev methods
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sw-dev-methods/" class="md-nav__link">
+        Metodologie di sviluppo software
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" >
+      
+      <label class="md-nav__link" for="__nav_17">
+        Text editor
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Text editor" data-md-level="1">
+        <label class="md-nav__title" for="__nav_17">
+          <span class="md-nav__icon md-icon"></span>
+          Text editor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-editor/readme/" class="md-nav__link">
+        Quale editor di testo?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_18" type="checkbox" id="__nav_18" >
+      
+      <label class="md-nav__link" for="__nav_18">
+        Typescript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Typescript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_18">
+          <span class="md-nav__icon md-icon"></span>
+          Typescript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../typescript/" class="md-nav__link">
+        Typescript
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/squidfunk/mkdocs-material/edit/master/docs/css/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="css">CSS</h1>
+<ul>
+<li><a href="#css">CSS</a></li>
+<li><a href="#lezione-01">Lezione 01</a></li>
+<li><a href="#dove-inserire-il-codice-css">Dove inserire il codice CSS?</a></li>
+<li><a href="#inserire-css-allinterno-della-pagina-html">Inserire CSS all'interno della pagina HTML</a></li>
+<li><a href="#inserire-css-in-un-file-esterno-allhtml">Inserire CSS in un file esterno all'HTML</a></li>
+<li><a href="#lezione-02">Lezione 02</a></li>
+<li><a href="#alcune-proprietà-css">Alcune proprietà CSS</a></li>
+<li><a href="#colori-in-css">Colori in CSS</a></li>
+<li><a href="#colore-css-esadecimale">Colore CSS Esadecimale</a></li>
+<li><a href="#perchè-è-utile-questo-metodo">Perchè è utile questo metodo?</a></li>
+<li><a href="#colore-css-rgbrgba">Colore CSS RGB/RGBA</a></li>
+<li><a href="#lezione-03">Lezione 03</a></li>
+<li><a href="#background-css">Background CSS</a></li>
+<li><a href="#background-repeat-no-repeat"><code>background-repeat: no-repeat;</code></a></li>
+<li><a href="#background-size-cover"><code>background-size: cover;</code></a></li>
+<li><a href="#bordi-css">Bordi CSS</a></li>
+<li><a href="#quindi">Quindi</a></li>
+<li><a href="#lezione-04">Lezione 04</a></li>
+<li><a href="#se-volessi-stilizzare-in-modo-diverso-un-elemento-appartenente-alla-stessa-categoria">Se volessi stilizzare in modo diverso un elemento appartenente alla stessa categoria?</a><ul>
+<li><a href="#si-può-fare-attraverso-lid">Si può fare attraverso l'id</a></li>
+<li><a href="#si-può-fare-anche-attraverso-luso-di-una-classe">Si può fare anche attraverso l'uso di una classe</a></li>
+</ul>
+</li>
+<li><a href="#-lezione-05">## Lezione 05</a><ul>
+<li><a href="#altri-selettori-css">Altri selettori CSS</a></li>
+<li><a href="#-selector"><code>*</code> Selector</a></li>
+<li><a href="#descendant-selector">Descendant Selector.</a></li>
+<li><a href="#attribute-selector">Attribute selector.</a></li>
+</ul>
+</li>
+<li><a href="#-lezione-06">## Lezione 06</a></li>
+<li><a href="#google-developer-tool">Google developer tool</a></li>
+<li><a href="#eredità-e-specificità-in-css">Eredità e Specificità in CSS</a><ul>
+<li><a href="#eredità">Eredità</a></li>
+<li><a href="#specificità">Specificità</a></li>
+</ul>
+</li>
+<li><a href="#-lezione-07">## Lezione 07</a></li>
+<li><a href="#css-fonts">CSS Fonts</a><ul>
+<li><a href="#google-fonts">Google fonts</a></li>
+</ul>
+</li>
+<li><a href="#-lezione-08">## Lezione 08</a><ul>
+<li><a href="#css-box-model">CSS Box Model</a></li>
+</ul>
+</li>
+<li><a href="#alcune-estensioni-per-vscode">Alcune Estensioni per VSCode</a></li>
+<li><a href="#block-element">Block element</a></li>
+<li><a href="#responsive-deign">Responsive Deign</a></li>
+<li><a href="#em--rem">Em / Rem</a></li>
+<li><a href="#vhvw">VH/VW</a></li>
+<li><a href="#flexbox">FLEXBOX</a></li>
+<li><a href="#web-hosting">WEB HOSTING</a><ul>
+<li><a href="#shared-hosting">Shared Hosting</a></li>
+<li><a href="#vps-virtual-private-server">VPS (Virtual Private Server)</a></li>
+<li><a href="#dedicated-server">Dedicated Server</a></li>
+</ul>
+</li>
+<li><a href="#cloud-hosting">Cloud Hosting</a></li>
+<li><a href="#static-hosting">Static Hosting</a></li>
+</ul>
+<h1 id="lezione-01">Lezione 01</h1>
+<p>Come abbiamo già detto, CSS sta per Cascading Style Sheet e serve quindi per "abbellire" lo stile nativo della pagina HTML. Vediamo la struttura del codice CSS:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">selettore</span><span class="p">{</span>
+    <span class="n">proprietà1</span><span class="p">:</span> <span class="n">valore</span><span class="p">;</span>
+    <span class="n">proprietà2</span><span class="p">:</span> <span class="n">valore</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Esempi:</p>
+<p>Nell'esempio seguente attribuirò al selettore <code>h1</code> il colore "blue" e un font di "30 pixel".
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+In questo esempio invece all'attributo immagine associerò un bordo giallo di grandezza di 3 pixel.
+<div class="highlight"><pre><span></span><code><span class="nt">img</span><span class="p">{</span>
+    <span class="k">border-color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
+    <span class="k">border-width</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="dove-inserire-il-codice-css">Dove inserire il codice CSS?</h2>
+<p>E' possibile aggiungere il codice CSS sia all'interno del file HTML, sia in un file esterno.</p>
+<h2 id="inserire-css-allinterno-della-pagina-html">Inserire CSS all'interno della pagina HTML</h2>
+<p>Per questo metodo ci sono due modi:</p>
+<ul>
+<li>Inserire la stilizzazione CSS all'interno della riga da stilizzare con l'attributo <code>style</code>. Questo metodo è sconsigliato, si faceva una volta quando il CSS non esisteva ma oggi è ancora valido.
+<br></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: red;&quot;</span><span class="p">&gt;</span>
+    sono un paragrafo rosso
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p style="color: red;">
+    sono un paragrafo rosso
+</p>
+
+<ul>
+<li>Inserire la stilizzazione CSS con il tag <code>&lt;style&gt;&lt;/style&gt;</code> messo all'interno del tag <code>&lt;head&gt;&lt;/head&gt;</code> del boilerplate html. Questo è consigliato poichè in questo modo avremo tutto ciò che riguarda lo stile all'interno di questo tag.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
+    <span class="nt">h1</span><span class="p">{</span>
+        <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ciao, sono un h1<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="inserire-css-in-un-file-esterno-allhtml">Inserire CSS in un file esterno all'HTML</h2>
+<p><strong>Questa è sicuramente la soluzione migliore</strong>, è la più pulita e ordinata poichè separa il contenuto HTML che stabilisce la struttura della pagina dallo stile della stessa tramite CSS.</p>
+<p>Una volta creato poi sarà necessario creare un collegamento tra i due file usando il <code>&lt;link&gt;</code> tag.</p>
+<p>Ecco un esempio: <br>
+<code>File CSS (06_HTML_CSS_Style.css)</code>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span>
+    <span class="k">background</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">li</span><span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">forestgreen</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<code>File HTML (06_HTML_CSS_ElementiBaseCSSEsterniAdHTML.html)</code>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML - CSS Elementi Base<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;06_HTML_CSS_Style.css&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>HTML - CSS Elementi Base<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Primo ELemento<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Secondo Elemento<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<!DOCTYPE html>
+<p><html lang="en">
+<head>
+    <title>HTML - CSS Elementi Base</title>
+    <style type="text/css">
+        #h1_0 {
+            color: black;
+            background: yellow;
+        }
+        #ul_0 li{
+            color: green;
+        }
+    </style>
+</head></p>
+<body>
+    <h1 id="h1_0">HTML - CSS Elementi Base</h1>
+    <ul id="ul_0">
+        <li>Primo ELemento</li>
+        <li>Secondo Elemento</li>
+    </ul>
+</body>
+<p></html>
+Notare il <code>&lt;link&gt;</code> tag con <code>&lt;href&gt;</code> che linka il file CSS. Questa è sicuramente la soluzione migliore.</p>
+<h1 id="lezione-02">Lezione 02</h1>
+<h2 id="alcune-proprieta-css">Alcune proprietà CSS</h2>
+<p>In questo esempio riporterò alcune proprietà come l'inserimento di colori, bordi, immagini di background. Alcune proprietà sono rappresentate in modo diverso ma equivalenti.</p>
+<h2 id="colori-in-css">Colori in CSS</h2>
+<p>Vediamo come è possibile esprimere i colori in CSS.
+Il metodo che abbiamo visto per adesso è un metodo "amatoriale" ma non è il metodo che i programmatori utilizzano.</p>
+<p>Un altro metodo è utilizzare il <em>valore corrispondente esadecimale del colore</em>.</p>
+<h2 id="colore-css-esadecimale">Colore CSS Esadecimale</h2>
+<p>Ogni colore può essere espresso tramite una terna di valori esadecimali: <br>
+<div class="highlight"><pre><span></span><code><span class="nt">RED-GREEN-BLUE</span>
+<span class="nt">a1</span> <span class="nt">-</span> <span class="nt">f6</span> <span class="nt">-</span> <span class="nt">18</span>
+</code></pre></div></p>
+<p>Ad ogni elemento della terna sono associati due numeri esadecimali in modo tale che il numero vada da 0 a 255. Cio' esprime l'intensità del colore appartenente alla terna.</p>
+<p>Con tale terna è possibile rappresentare ogni tipo di colore.</p>
+<p>Per rappresentare in CSS il colore in esadecimale è necessario anteporre al numero di sei cifre che rappresenta il colore il simbolo <code>#</code></p>
+<p>Es: <code>red = #ff0000</code> (ovviamente)</p>
+<h2 id="perche-e-utile-questo-metodo">Perchè è utile questo metodo?</h2>
+<p>Supponiamo di voler un colore specifico da creare utilizzando un qualsiasi color picker</p>
+<p><img alt="alt" src="images/README03.png" /></p>
+<p>Scegliendo tramite il color picker il colore desiderato e prelevando il valore esadecimale è possibile ottenere esattamente il valore creato. <br>
+Molto utile e versatile rispetto a una serie di colori preimpostati.</p>
+<h2 id="colore-css-rgbrgba">Colore CSS RGB/RGBA</h2>
+<p>Un altro metodo è utilizzare la terna <code>rgb()</code> . Funziona in modo molto simile ai colori in esadecimale, solo che in questo caso inseriremo una terna decimale nel range <code>0 -255</code>. Esempio: <code>rgb(173, 255, 47)</code>.</p>
+<p>La funzione <code>rgba()</code> invece introduce l'elemento trasparenza (alpha). L'ultimo elemento infatti va da <code>0.0 - 1.0</code>
+e rappresenta la trasparenza dell'elemento. Esempio: <code>rgba(34, 139, 34, 0.2)</code>, in questo caso la trasparenza sarà al 20%.</p>
+<h1 id="lezione-03">Lezione 03</h1>
+<h2 id="background-css">Background CSS</h2>
+<p>Con la proprietà <code>background</code> è possibile specificare il colore del background dell'elemento.</p>
+<p>Utile la proprietà <code>background</code> per impostare un colore della pagina. Per far ciò è possibile impostare la proprietà <code>background</code> per l'elemento <code>body</code>:</p>
+<p>E' possibile impostare anche un'immagine. Per far ciò si usa la funzione <code>url()</code>. All'interno della funzione url inseriamo il link dell'immagine che vogliamo rappresentare come sfondo background della pagina.</p>
+<p>E' possibile impostare anche alcune proprietà aggiuntiva come la <code>background-reapeat</code> o la <code>background-size</code>.</p>
+<h2 id="background-repeat-no-repeat"><code>background-repeat: no-repeat;</code></h2>
+<p>Con questa proprietà è possibile specificare se ripetere o meno l'immagine. Infatti di default, se l'immagine è piccola viene ripetuta, se è grande viene adattata alla pagina. Con questa proprietà  quindi possibile specificare se ripetere o meno l'immagine.</p>
+<h2 id="background-size-cover"><code>background-size: cover;</code></h2>
+<p>Con questa proprietà l'immagine selezionata andrà a riempire tutto lo schermo e se è piu' piccola la adatterà.</p>
+<h2 id="bordi-css">Bordi CSS</h2>
+<p>Per inserire il bordo all'elemento html è necessario introdurre la proprità <code>border</code>. Sarà necessario impostare almeno <code>border-color</code> per inserire il colore del bordo, <code>border-width</code> per la grandezza del bordo e <code>border-style</code> per scegliere lo stile del bordo.</p>
+<p>Oppure è possibile inserire la proprità bordo tramite una terna di valori che comprendono la grandezza, lo stile e il colore direttamente con la proprietà <code>border</code></p>
+<h2 id="quindi">Quindi</h2>
+<p>Abbiamo imparato a stilizzare modificando proprietà come la grandezza del font, il colore, inserendo un bordo, un'immagine di proprietà e abbiamo visto che ciò si applica ad ogni elemento appartenente alla stessa categoria (detta anche classe), ad esempio l'elemento <code>&lt;li&gt;</code>. Questo significa che se assegnerò certe proprietà all'elemento <code>&lt;li&gt;</code> queste verranno applicate a tutti gli elementi <code>&lt;li&gt;</code></p>
+<p><code>File style.css</code>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">darkslategray</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="nb">rgb</span><span class="p">(</span><span class="mi">173</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">47</span><span class="p">)</span> <span class="kc">solid</span><span class="p">;</span>
+    <span class="k">background</span><span class="p">:</span> <span class="kc">grey</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">li</span><span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">34</span><span class="p">,</span> <span class="mi">139</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
+    <span class="k">border-color</span><span class="p">:</span> <span class="mh">#000000</span><span class="p">;</span>
+    <span class="k">border-width</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border-style</span><span class="p">:</span> <span class="kc">groove</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">body</span><span class="p">{</span>
+    <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">https://i.pinimg.com/originals/60/19/89/601989ff441ddc92bc0fa2e05040f9e7.jpg</span><span class="p">);</span>
+    <span class="k">background-repeat</span><span class="p">:</span> <span class="kc">no-repeat</span><span class="p">;</span>
+    <span class="k">background-size</span><span class="p">:</span> <span class="kc">cover</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<code>File index.html</code>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML - CSS Elementi Base<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>HTML - CSS Elementi Base<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Primo ELemento<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Secondo Elemento<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<!DOCTYPE html>
+<p><html lang="en">
+<head>
+    <title>HTML - CSS Elementi Base</title>
+    <style type="text/css">
+        #h1_01 {
+            color: darkslategray;
+            border: 2px rgb(173, 255, 47) solid;
+            background: grey;
+        }
+        #ul li{
+            color: rgba(34, 139, 34, 0.5);
+            border-color: #000000;
+            border-width: 2px;
+            border-style: groove;
+        }
+        #body_01{
+            background: url(https://i.pinimg.com/originals/60/19/89/601989ff441ddc92bc0fa2e05040f9e7.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+        }
+    </style>
+</head></p>
+<body>
+    <div id="body_01">
+    <h1 id="h1_01">HTML - CSS Elementi Base</h1>
+    <ul id="ul">
+        <li>Primo ELemento</li>
+        <li>Secondo Elemento</li>
+    </ul>
+    </div>
+</body>
+<p></html></p>
+<h1 id="lezione-04">Lezione 04</h1>
+<h2 id="se-volessi-stilizzare-in-modo-diverso-un-elemento-appartenente-alla-stessa-categoria">Se volessi stilizzare in modo diverso un elemento appartenente alla stessa categoria?</h2>
+<p>Supponiamo quindi ad esempio di scegliere uno stile di default per l'elemento <code>&lt;li&gt;</code> ma di voler cambiare lo stile di un particolare elemento. Come si fa?</p>
+<h3 id="si-puo-fare-attraverso-lid">Si può fare attraverso l'id</h3>
+<p>Ecco un esempio: <br>
+ <code>File HTML</code>
+ ```HTML</p>
+<ul>
+    <li>Primo ELemento</li>
+    <li id="speciale">Secondo Elemento speciale</li>
+</ul>
+<p><code>`File CSS`</code>CSS</p>
+<h1 id="speciale">speciale {</h1>
+<div class="highlight"><pre><span></span><code>color: red;
+</code></pre></div>
+<p>}
+ <code>``
+In questo modo, solo cio' che avrà l'id</code>speciale` avrà quella classe di proprietà.
+Nota che l'id deve essere unico nel codice! Il nome simbolico che fornisco deve essere unico per tutto il codice</p>
+<h3 id="si-puo-fare-anche-attraverso-luso-di-una-classe">Si può fare anche attraverso l'uso di una classe</h3>
+<p>Questo è un metodo migliore. In questo caso attribuendo un elemento a una classe con un certo nome è possibile impostare lo stile solo agli elementi di quella data classe.</p>
+<p><code>File HTML</code>
+ ```HTML</p>
+<ul>
+    <li>Primo ELemento non appartenente a nessuna classe</li>
+    <li class="bluColor">Secondo Elemento appartenente alla classe "bluColor"</li>
+    <li class="bluColor">Terzo Elemento appartenente alla classe "bluColor"</li>
+</ul>
+<p><code>`File CSS`</code>CSS
+.bluColor {
+    color: blue;
+}
+ ```
+In questo caso verrano colorati di colore "indigo" solo gli elementi appartenenti alla classe "bluColor". <br></p>
+<p><strong>Nota</strong> In CSS gli <code>id</code> si identificano inserendo <code>#</code> + il nome dell' <code>id</code> mentre le classi si identidicano tramite <code>.</code> seguito dal nome della classe.</p>
+<p><code>File CSS</code>
+<div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">speciale</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">bluColor</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<code>File HTML</code>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>HTML - CSS Elementi Base<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>HTML - CSS Elementi Base<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Primo ELemento<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Secondo Elemento<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Primo ELemento<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;speciale&quot;</span><span class="p">&gt;</span>Secondo Elemento speciale<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Primo ELemento non appartenente a nessuna classe<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bluColor&quot;</span><span class="p">&gt;</span>Secondo Elemento appartenente alla classe &quot;bluColor&quot;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bluColor&quot;</span><span class="p">&gt;</span>Terzo Elemento appartenente alla classe &quot;bluColor&quot;<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p><head>
+    <title>HTML - CSS Elementi Base</title>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+        <style type="text/css">
+            #speciale {
+                color: red;
+            }
+            .bluColor {
+                color: blue;
+            }
+    </style>
+</head></p>
+<body>
+    <h1 id>HTML - CSS Elementi Base</h1>
+    <ul class = "ul_02">
+        <li>Primo ELemento</li>
+        <li>Secondo Elemento</li>
+    </ul>
+    <ul .class = "ul_02">
+        <li>Primo ELemento</li>
+        <li id="speciale">Secondo Elemento speciale</li>
+    </ul>
+    <ul .class = "ul_02">
+        <li>Primo ELemento non appartenente a nessuna classe</li>
+        <li class="bluColor">Secondo Elemento appartenente alla classe "bluColor"</li>
+        <li class="bluColor">Terzo Elemento appartenente alla classe "bluColor"</li>
+    </ul>
+</body>
+
+<p><br>
+<br></p>
+<h2 id="lezione-05">Lezione 05</h2>
+<hr />
+<h3 id="altri-selettori-css">Altri selettori CSS</h3>
+<p>Ricordiamo che il selettore permette appunto di selezionare l'elemento ch vogliamo stilizzare.</p>
+<p>Per adesso abbiamo visto i selettori generici per ogni elemento html, i selettori definiti da una classe e da un id ma ne esistono altri.</p>
+<h3 id="selector"><code>*</code> Selector</h3>
+<p>Con questo selettore è possibile selezionare ogni elemento della pagina HTML.</p>
+<h3 id="descendant-selector">Descendant Selector.</h3>
+<p>Con questo selettore è possibile selezionare elementi complessi ovvero elementi contenuti in altri elementi, elementi discentendi da altri appunto. Immaginiamo di creare una lista di elementi e immaginiamo che ogni elemento è un anchor tag. Con questo selettore è possibile selezionare solo gli anchor tag all'interno del list item. Sono possibili diverse combinazioni.</p>
+<h3 id="attribute-selector">Attribute selector.</h3>
+<p>Con questo selettore è poissibile scegliere un elemento tramite un attributo ed avere quindi anche in questo caso una selezione più specifica.</p>
+<div class="highlight"><pre><span></span><code><span class="c">/* &quot;*&quot; Selector */</span>
+<span class="o">*</span><span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgb</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">112</span><span class="p">)</span> <span class="kc">solid</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/*Descendant selector*/</span>
+<span class="nt">li</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">lavenderblush</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/*Attribute selector*/</span>
+<span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">=</span><span class="s2">&quot;https://git-scm.com/&quot;</span><span class="o">]</span><span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">lightskyblue</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span> <span class="kc">khaki</span> <span class="kc">outset</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="o">]</span><span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="mh">#f5f5dc</span> <span class="kc">dotted</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="o">]</span><span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="kc">gold</span> <span class="kc">dotted</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ci sono moltissimi altri selettori in CSS espressi in questo formato:
+<div class="highlight"><pre><span></span><code><span class="nt">a</span><span class="p">:</span><span class="nd">visited</span><span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">green</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+l'operatore <code>:</code> ci permette di accedere alla classe <code>a</code> per l'anchor tag e di selezionare l'elemento <code>visited</code>. In poche parole questo selettore colorerà di verde soltanto i siti già visitati. Vedremo che con l'operatore <code>:</code> o l'operatore <code>::</code> è possibile entrare in elementi e funzioni specifiche della classe. Molte di queste verranno suggerite dallo stesso editor di testo.</p>
+<p>Vediamo un esempio piuttosto completo di questi tipi di selettori</p>
+<p><code>File CSS</code>
+<div class="highlight"><pre><span></span><code><span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">=</span><span class="s2">&quot;https://git-scm.com/&quot;</span><span class="o">]</span>
+<span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">lightskyblue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">=</span><span class="s2">&quot;https://git-scm.com/&quot;</span><span class="o">]</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;email&quot;</span><span class="o">]</span><span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="mh">#f5f5dc</span> <span class="kc">dotted</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;password&quot;</span><span class="o">]</span><span class="p">{</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="kc">gold</span> <span class="kc">dotted</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<code>File HTML</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;email&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;password&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;email&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">required</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://git-scm.com/&quot;</span><span class="p">&gt;</span>git<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<style type="text/css">
+    a[href="https://git-scm.com/"]
+    {
+        color: lightskyblue;
+    }
+    a[href="https://git-scm.com/"]:hover {
+        color: red;
+    }
+    input[type="email"]{
+        border: 4px #f5f5dc dotted;
+    }
+    input[type="password"]{
+        border: 4px gold dotted;
+    }
+</style>
+<form>
+    <label for="email"></label>
+    <input id="email" type="email" placeholder="email" required>
+    <label for="password"></label>
+    <input id="email" type="password" placeholder="password" required>
+</form>
+<p><a href="https://git-scm.com/">git</a></p>
+<p><br>
+<br></p>
+<h2 id="lezione-06">Lezione 06</h2>
+<hr />
+<h2 id="google-developer-tool">Google developer tool</h2>
+<p>Un importante strumento di debug e studio di codice html è il tasto "Ispeziona elemento" presente su browser google chrome.</p>
+<p>Con questo tasto è possibile vedere e modificare il codice html come il testo, il font, il colore, la formattazione e tutto quello che riguarda html/css.</p>
+<p><strong>Nota:</strong> Tutte le modifiche che vengono fatte con questo strumento rimangono temporanee.</p>
+<p>Una volta aperto lo strumento si aprirà una finestra con cui è possibile visualizzare il codice.</p>
+<p><img alt="alt" src="images/README04.png" /></p>
+<p>Premendo sul tasto "select an element to inspect.. " Lo strumento diventa ancora piu' interattivo. cliccando sugli elementi della pagina verranno evidenziati nel codice e viceversa.</p>
+<h2 id="eredita-e-specificita-in-css">Eredità e Specificità in CSS</h2>
+<h3 id="eredita">Eredità</h3>
+<p>Spiega le regole con cui, in CSS, vengono ereditate le proprietà. Ad esempio, se assegno come proprietà il colore rosso all'elemento <code>ul</code> ogni elemento della <code>ul</code> avrà il colore rosso poichè la proprietà è ereditata dalla classe <code>ul</code> visto che è di livello superiore.
+Un esempio simile può essere fatto applicando questo concetto al <code>body</code>. Se assegno una certa proprietà al <code>body</code> verrà applicata a tutti gli elementi all'interno del <code>body</code>, cioè tutta la pagina html. Questo è per dire che certe proprietà non importa specificarle perchè verranno ereditate da altre.</p>
+<h3 id="specificita">Specificità</h3>
+<p>Spiega le regole con cui, in CSS, vengono applicate le proprietà in base alla priorità. Meglio far riferimento ad un esempio.
+<div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">gold</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">ul</span><span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">grey</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Consideriamo l'esempio di sopra. In questo esempio lo stile degli elementi <code>ul</code> è in conflitto con lo stile del <code>body</code> che ricordiamo raggruppa tutti gli elementi della pagina html. Allora quale colore "vince"?
+Vince il colore dell'elemento <code>ul</code> poichè è più specifico. Quindi la regola dice che più l'elemento è specifico più ha priorità per la stilizzazione. Elementi di specificità sono anche le classi e gli id.
+<strong>Nota</strong>: Gli id sono quelli a priorità piu' alta in termini di specificità.</p>
+<p><br>
+<br></p>
+<h2 id="lezione-07">Lezione 07</h2>
+<hr />
+<h2 id="css-fonts">CSS Fonts</h2>
+<p>Vediamo alcune proprietà per i font CSS.</p>
+<ul>
+<li>font-family</li>
+<li>font-weight</li>
+<li>font-size</li>
+<li>line-height</li>
+<li>text-align</li>
+<li>text-decoration</li>
+</ul>
+<p>Con queste proprietà è possibile impostare il font, lo spessore, la distanza tra le linee testuali, la grandezza del font, la formattazone testuale e alcune elementi decorativi testuali come ad esempio la sottolineatura. E' possibile trovare qualche esempio nelle esercitazioni.</p>
+<p><code>File CSS</code>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">par1</span><span class="p">{</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="n">Impact</span><span class="p">,</span> <span class="n">Haettenschweiler</span><span class="p">,</span> <span class="s1">&#39;Arial Narrow Bold&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/*line-height seleziona la distanza, lo spazio che ci deve essere sia sopra che sotto dell&#39;elemento, in questo caso della linea del paragrafo*/</span>
+<span class="p">.</span><span class="nc">par2</span><span class="p">{</span>
+    <span class="k">line-height</span><span class="p">:</span> <span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/*font-weight seleziona lo spessore del font, range 100-900*/</span>
+<span class="p">.</span><span class="nc">par3</span><span class="p">{</span>
+    <span class="k">font-weight</span><span class="p">:</span> <span class="mi">900</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/*font-size invece va a impostare la grandezza del font*/</span>
+<span class="p">.</span><span class="nc">par4</span><span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">100</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/*text-align imposta la formattazione del testo: a destra, a sinistra, centrale..*/</span>
+<span class="p">.</span><span class="nc">par5</span><span class="p">{</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/*text-decoration può essere utile per inserire testo sottolineato o altre decorazioni..*/</span>
+<span class="p">.</span><span class="nc">par6</span><span class="p">{</span>
+    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">underline</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<code>File HTML</code>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;par1&quot;</span><span class="p">&gt;</span>
+    sono un paragrafo della classe par1
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;par2&quot;</span><span class="p">&gt;</span>
+    sono un paragrafo della classe par2
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;par3&quot;</span><span class="p">&gt;</span>
+    sono un paragrafo della classe par3
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;par3&quot;</span><span class="p">&gt;</span>
+    Anch&#39;io sono un paragrafo della classe par3
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;par4&quot;</span><span class="p">&gt;</span>
+    Io invece sono un paragrafo della classe par4
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;par5&quot;</span><span class="p">&gt;</span>
+    Io invece sono un paragrafo della classe par5
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;par6&quot;</span><span class="p">&gt;</span>
+    Io invece dovrei essere del testo sottolineato
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<style type="text/css">
+    .par1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    /*line-height seleziona la distanza, lo spazio che ci deve essere sia sopra che sotto dell'elemento, in questo caso della linea del paragrafo*/
+    .par2{
+        line-height: 100px;
+    }
+    /*font-weight seleziona lo spessore del font, range 100-900*/
+    .par3{
+        font-weight: 900;
+    }
+    /*font-size invece va a impostare la grandezza del font*/
+    .par4{
+        font-size: 10px;
+    }
+    /*text-align imposta la formattazione del testo: a destra, a sinistra, centrale..*/
+    .par5{
+        text-align: right;
+    }
+    /*text-decoration può essere utile per inserire testo sottolineato o altre decorazioni..*/
+    .par6{
+        text-decoration: underline;
+}
+</style>
+<p class="par1">
+    sono un paragrafo della classe par1
+</p>
+<p class="par2">
+    sono un paragrafo della classe par2
+</p>
+<p class="par3">
+    sono un paragrafo della classe par3
+</p>
+<p class="par4">
+    Io invece sono un paragrafo della classe par4
+</p>
+<p class="par5">
+    Io invece sono un paragrafo della classe par5
+</p>
+<p class="par6">
+    Io invece dovrei essere del testo sottolineato
+</p>
+
+<h3 id="google-fonts">Google fonts</h3>
+<p>I font forniti di default sono pochi e poco interessanti. Vediamo un modo per linkare fonts esterni come nel caso di "google fonts".
+Da https://fonts.google.com/ è possibile per prima cosa scegliere un font che ci piace. E' possibile filtrare in base alle proprietà del font che stiamo cercando.</p>
+<p><img alt="alt" src="images/README05.png" /></p>
+<p>Una volta scelto un font è possibile scaricarlo, verrà scaricata una cartella zip oppure linkarlo. Un volta entrati all'interno del font desiderato, in alto a destra è possibile selezionare "Download Family" oppure, accanto si aprirà un quadratino con le istruzioni per linkarlo.</p>
+<p><img alt="alt" src="images/README06.png" /></p>
+<p><img alt="alt" src="images/README07.png" /></p>
+<p><img alt="alt" src="images/README08.png" /></p>
+<p>In pratica si tratta di aggiungere un link nell <code>&lt;head&gt;</code> del codice html e di inserire il font nella sezione CSS che adesso lo riconoscerà.</p>
+<p><code>File CSS</code>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">par7</span><span class="p">{</span>
+    <span class="k">background</span><span class="p">:</span> <span class="kc">brown</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">whitesmoke</span><span class="p">;</span>
+    <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Staatliches&#39;</span><span class="p">,</span> <span class="kc">cursive</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><code>File HTML</code>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;par7&quot;</span><span class="p">&gt;</span>
+    Io invece dovrei essere un font diverso, preso da google fonts
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p><head>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .par7{
+            background: brown;
+            color: whitesmoke;
+            font-family: 'Staatliches', cursive;
+        }
+    </style>
+</head></p>
+<p class="par7">
+    Io invece dovrei essere un font diverso, preso da google fonts
+</p>
+
+<p><br>
+<br></p>
+<h2 id="lezione-08">Lezione 08</h2>
+<hr />
+<h3 id="css-box-model">CSS Box Model</h3>
+<p>Ogni elemento in html presenta questa struttura:
+<img alt="alt" src="images/box-model.png" />
+C'è quindi un contenuto (<code>content</code>), un bordo (<code>border</code>), uno spazio tra contenuto e bordo (<code>Padding</code>) e uno spazio tra il bordo e gli altri elementi (<code>Margin</code>).
+Questo box-model può essere modificando andando a impostare queste proprietà:</p>
+<p><code>File CSS</code>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">par8</span> <span class="p">{</span>
+    <span class="k">background</span><span class="p">:</span> <span class="kc">brown</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+    <span class="c">/*Box model*/</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="kc">yellow</span> <span class="kc">solid</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><code>File HTML</code>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;par8&quot;</span><span class="p">&gt;</span>
+    Con questo paragrafo mi piacerebbe giocare con il box model.
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<style type="text/css">
+    .par8 {
+        background: brown;
+        color: white;
+        /*Box model*/
+        border: 4px yellow solid;
+        padding: 40px;
+        margin: 60px;
+    }
+</style>
+<p class="par8">
+    Con questo paragrafo mi piacerebbe giocare con il box model.
+</p>
+
+<p>Inoltre è possibile impostare la grandezza del box tramite <code>width</code>, grandezza che può essere espressa in modo relativo o percentuale e l'altezza del box attraverso <code>height</code>.</p>
+<p>E' possibile avere una granularità superiore andando a impostare anche, per ogni elemento del box, la dimensione di ogni lato del box.</p>
+<p>E' infatti possibile avere proprietà come <code>border-right</code> o <code>margin-bottom</code> che andranno a impostare rispettivamente il bordo destro e il margine basso del box. Con questo si presenta infatti un altro modo per la formattazione del testo tramite il suo box.</p>
+<p>Usare <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, <code>margin-left</code> è utile per selezionare spazi e formattare il contenuto dell'elemento da stilizzare. Esiste un modo per inserirli tutti e 4 insieme. Scrivendo direttamente <code>margin</code> è possibile infatti inserire ogni grandezza del margin a partire dal <code>margin-top</code> e terminando con <code>margin-left</code> cioè seguendo il bordo box in senso orario.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">,</span> <span class="mi">2</span><span class="kt">px</span><span class="p">,</span> <span class="mi">4</span><span class="kt">px</span><span class="p">,</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Equivale a:
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Oppure se vogliamo il <code>margin-top</code> / <code>margin-bottom</code> uguali e <code>margin-right</code> / <code>margin-left</code> uguali è possibile utilizzare sempre la proprietà <code>margin</code> con due parametri. In questo caso, il primo parametro verrà interpretato come il <code>margin-top</code> / <code>margin-bottom</code> mentre il secondo parametro verrà interpretato come il <code>margin-right</code> / <code>margin-left</code></p>
+<p><div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">,</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Equivale a:
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+Un ulteriore importante attributo del <code>margin</code> è l'attributo <code>auto</code>. Con auto è possibile centrare l'elemento.
+Nell'esempio sotto, visto che <code>margin-top</code> / <code>margin-bottom</code> è pari a <code>0px</code> e visto che <code>margin-right</code> / <code>margin-left</code> è impostato su <code>auto</code>, il paragrafo verrà centrato in alto.
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="kt">px</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+E' importante tuttavia impostare la grandezza del box tramite la proprietà <code>width</code> per dar modo di centrare rispetto alle dimensioni del box. E' chiaro che se il box ha una dimensione del 100% e quindi occupa tutta la pagina l'effetto di centratura non si ha perchè di fatto il box è già centrato.</p>
+<h2 id="alcune-estensioni-per-vscode">Alcune Estensioni per VSCode</h2>
+<ul>
+<li>
+<p>Live Server: Permette di aprire la pagina HTML e aggiornare automaticamente le modifiche salvando il file</p>
+</li>
+<li>
+<p>Prettier: Permette di formattare il testo</p>
+</li>
+</ul>
+<h2 id="block-element">Block element</h2>
+<p>Gli elementi html hanno degli attributi di default che dipendono dal tipo di elemento.</p>
+<p>Si distinguono in:</p>
+<ul>
+<li>
+<p>Block-level Elements: Elementi che partono sempre su una nuova riga. Alcuni tra questi che conosciamo sono <code>&lt;div&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;h1&gt; - &lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;table&gt;</code>.</p>
+</li>
+<li>
+<p>Inline Elements: Sono elementi che non partono in una nuova riga. Tra questi troviamo ad esempio <code>&lt;bottom&gt;</code>, <code>&lt;select&gt;</code></p>
+</li>
+</ul>
+<h2 id="responsive-deign">Responsive Deign</h2>
+<p>Come faccio ad ottenere una pagina che a seconda del dispositivo in uso ha una render diverso? <br>
+Le pagine internet fatte come si deve hanno stili diversi che si tratti di uno smartphone, un PC o un tablet. Vediamo come si fa.
+Questo problema si risolve con le "media queries". Con "@media" è possibile inserire delle proprietà come "max-width" o "min-width che definiscono lo stile solo per particolari dimensioni della pagina. E' quindi possibile creare dei range e definire diversi stili a seconda della pagina.</p>
+<div class="highlight"><pre><span></span><code>@media (max-width: 500px){
+    /*inserisco lo stile che preferisco*/
+}
+</code></pre></div>
+<p>Dove e come si mettono le media queries?
+Possomo metterle all'interno della pagina HTML dove sta lo stile, quindi nell'<code>&lt;head&gt;</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">501px</span><span class="o">)</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span><span class="p">{</span>
+            <span class="c">/*stile per tablet (ad esempio)*/</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Oppure posso inserirle in un file ".css" esterno <strong>metodo consigliato</strong>.
+Nel file ".css" dovrò solo specificare lo stile mentre nella pagina HTML dovrò specificare la regola secondo questa sintassi.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="o">...</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;screen and (max-width:500px)&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="em-rem">Em / Rem</h2>
+<p>Em/ Rem sono strumenti utili per regolare a piacimento il font senza dover per forza inserire dei valori assoluti. Ci aiutano quindi a mantenere le proporzioni partendo da un font assoluto e regolando tutti gli altri in modo "relativo". Esmprimendo la grandezza del font in "em" anzichè in "px" si avrà una misura relativa rispetto al valore di default</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="p">#</span><span class="nn">box-1</span><span class="p">{</span>
+            <span class="k">font-size</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="p">#</span><span class="nn">box-1</span> <span class="nt">p</span><span class="p">{</span>
+            <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.5</span><span class="kt">em</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Nell'esempio di sopra avremo quindi che poichè l'elemento con id "box-1" ha un font-size di 20px e il paragrafo all'interno dell'elemento con id "box-1" ha un font-size di 1.5em il risultato è che il testo del paragrafo risulterà di 30px cioè 1 volta e mezzo il suo valore di default.</p>
+<p><strong>Nota</strong> Tutte le grandezze (margin, padding) del box dell'elemento <code>&lt;p&gt;</code> all'interno del "box-1" subiranno il fattore di 1,5.</p>
+<p>Di default gli elementi HTML hanno determinati valori di "em".  Principalmente valgono 1em ma a volte troviamo valori strani come ad esempio per
+h1, h2, h3. Ad esempio per h3 troviamo 1.17em.</p>
+<p>Osservare come i valori assoluti cambino al variare del font-size mentre i valori relativi (em) rimangano tali.
+E' possibile inoltre analizzare e capire in dettaglio "em" con l'aiuto dell'elemento "Inspect" di google chrome.</p>
+<p>Con l'elemento rem invece si introduce un moltiplicatore rispetto al font-size root html. Il font-size root html è il font che di default ha l'html e vale 16px.
+E' possibile cambiarlo in questo modo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="nt">html</span> <span class="p">{</span>
+            <span class="k">font-size</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Di fatto quando in google chrome cambiamo il font della pagina, non viene fatto altro che cambiare il font-size.</p>
+<p>Esprimendo quindi una grandezza nell'unità di misura rem è possibile cambiarne il font a partire da tale elemento.</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="nt">html</span> <span class="p">{</span>
+            <span class="k">font-size</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="p">#</span><span class="nn">box-1</span> <span class="nt">h3</span> <span class="p">{</span>
+            <span class="k">font-size</span><span class="p">:</span> <span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+l'elemento h3 con id "box-1" avrà quindi font-size pari a 20px.</p>
+<p>Considerazione finale em/rem:</p>
+<ul>
+<li>Le misure espressse in rem dipendono soltanto dal font-size root.</li>
+<li>Le misure espresse in em dipendono dal font-size stabilito per quel box. Se per quel box non è stato stabilito nessuno font-size, anch'esse dipendono dal font size root html.</li>
+</ul>
+<h2 id="vhvw">VH/VW</h2>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="p">.</span><span class="nc">header</span> <span class="p">{</span>
+            <span class="k">background</span><span class="p">:</span> <span class="kc">burlywood</span><span class="p">;</span>
+            <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+            <span class="k">width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">vw</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Una pagina html è divisa in 100 parti in altezza e 100 parti in larghezza. Nell'esempio è stato impostata una height di 100vh. Questo significa che lo stile prenderà tutta la pagina:
+Se mettessi una height di 90vh andrebbe a prendere 9 parti su 10 in altezza e così via
+Per cosa può essere utile?In certi siti troviamo questo pattern molto frequentemente.
+Un header con una height di 100vh e.. tutto il resto.
+Quello che succede è che mettendo elementi dopo l'header che ha una height di 100vh compariranno solo dopu uno scrolling
+Nota che impostanto 100vh lo stile coprirà l'intera pagina a prescindere dalle dimensioni quindi è responsive.
+Se provi a mettere una 50vh vedi che la classe si prenderà 50 parti su 100 in altezza, quindi metà pagina a prescidere dalle dimensioni
+Stessa cosa vale impostando width con un valore epresso con vw. In questo caso ovviamente va a selezionare le parti in orizzontale. E' un po' meno frequente ma a volte può far comodo</p>
+<h2 id="flexbox">FLEXBOX</h2>
+<p>E' per creare un layout. Ordina gli elementi in orizzontale e in verticale. E' utile per responsive design, è molto moderno.</p>
+<p><img alt="" src="images/README09.png" /></p>
+<p>Supponiamo di prendere un elemento "div". Consideriamo il flexbox come tutto il contenitore contenente il Div, per far ciò dobbiamo impostare la proprietà display a flex.</p>
+<p>Gli elementi all'interno del div sono i flex item</p>
+<h2 id="web-hosting">WEB HOSTING</h2>
+<p>Il web hosting è uno spazio, un cloud online dove poter ospitare il nostro sito web. Per poter pubblicare online il nostro sito c'è bisogno di un server, cioè un computer costantemente connesso alla rete che permette a un browser di trovare il proprio sito grazie all'indirizzo.</p>
+<p>Ecco le alternative possibili:</p>
+<ul>
+<li>Shared Hosting</li>
+<li>VPS Hosting</li>
+<li>Dedicated Server</li>
+<li>Cloud Hosting</li>
+<li>Static Hosting</li>
+</ul>
+<h3 id="shared-hosting">Shared Hosting</h3>
+<ul>
+<li>Il più economico: dai 3 ai 15 euro al mese.</li>
+<li>Ospita diversi account sullo stesso server</li>
+<li>Può essere usato per piccoli siti web</li>
+<li>Ricco di features: Puoi caricare file tramite FTP (FIle transfer protocol)</li>
+</ul>
+<h3 id="vps-virtual-private-server">VPS (Virtual Private Server)</h3>
+<ul>
+<li>COsto: 15 - 100 euro al mese</li>
+<li>Ci sono meno persone sullo stesso server in cui ognuno è nel proprio ambiente.</li>
+<li>E' piu' sicuro per questo e ci sono meno problemi.</li>
+<li>Ci sono più privilegi (SSH)</li>
+<li>Ha le stesse features dello shared hosting</li>
+</ul>
+<h3 id="dedicated-server">Dedicated Server</h3>
+<ul>
+<li>Costo: 100 - 400 euro al mese</li>
+<li>E' un server personale, non ospita nessun altro, si affitta proprio una macchina fisica</li>
+<li>Si ha pieno accesso e privilegi perchè è di fatto una macchina personale</li>
+<li>E' usato per grandi siti web e grandi applicazioni</li>
+<li>E' molto potente ma anche molto difficile da usare</li>
+</ul>
+<h2 id="cloud-hosting">Cloud Hosting</h2>
+<ul>
+<li>Costo: paghi a seconda del bisogno cioè a seconda della quantità di dati che usi</li>
+<li>Usato per web apps</li>
+<li>Scalabile e adatto anche per grandi applicazioni</li>
+<li>Piu' difficile da usare rispetto a shared hosting</li>
+</ul>
+<h2 id="static-hosting">Static Hosting</h2>
+<ul>
+<li>COsto: Gratis ma paghi gli extra</li>
+<li>Pochi strumenti disponibili</li>
+<li>SI carica il sito web con GIT</li>
+<li>Adatto per siti web statici</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../cpp/" class="md-footer__link md-footer__link--prev" aria-label="Previous: C++ per esempi" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              C++ per esempi
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../espruino/" class="md-footer__link md-footer__link--next" aria-label="Next: Espruino" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Espruino
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright 2020 Simone Di Ricco
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/sdiricco1" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+    
+  </body>
+</html>

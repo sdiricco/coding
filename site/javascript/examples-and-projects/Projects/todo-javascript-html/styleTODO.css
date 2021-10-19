@@ -1,0 +1,214 @@
+* {
+    /*Margin e padding*/
+    margin: 0;
+    padding: 0;
+
+    /*Style*/
+    /*L'outline è il bordo che si evidenzia quando clicchiamo su un elemento*/
+    outline: 0;
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    /*Da vedere la proprietà box-sizing;*/
+    /*Defines how the width and height of an element are calculated:
+    should they include padding and borders, or not.*/
+    /*box-sizing: content-box (default):
+    Width and height only apply to the content of the element:*/
+    /*box-sizing: border-box:
+    Width and height apply to all parts of the element: content, padding and borders:*/
+    /*box-sizing: border-box;*/
+    box-sizing: border-box;
+}
+
+
+
+/*Utility*/
+/********************************************************************************/
+.btn {
+    /*Grandezza del container*/
+    width: 100px;
+    height: 40px;
+
+    /*Style*/
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    /*Style*/
+    background-color: white;
+}
+
+/*green hover*/
+.btn-white:hover{
+    /*Style*/
+    background-color: rgba(0, 250, 154, 1) ;
+    font-size: 1.1rem;
+}
+
+.btn-red {
+    /*Style*/
+    background-color: rgba(255, 99, 71, 0.6);
+}
+
+/*red hover*/
+.btn-red:hover{
+    /*Style*/
+    background-color: rgba(255, 99, 71, 1);
+    font-size: 1.1rem;
+}
+
+/********************************************************************************/
+
+.container {
+    /*Grandezza del container*/
+    /*Impostando questi valori di vh e vw ridimensionando la pagina i container si dimensioneranno di conseguenza poichè
+    le suddivisioni si riducono in proporzione*/
+    height: 100vh;
+    width: 100vw;
+
+    /*Imposto l'altezza minima in caso di ridimensionamento della pagina.
+    Una volta raggiunta la dimensione di 600px la grandezza del container si ferma e inizia lo scroll della pagina*/
+    min-height: 600px;
+
+    /*Disposizione degli elementi*/
+    /*Uso flex per centrare tutta la card-container al centro della pagina*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .card-container {
+    /*Grandezza del container*/
+    width: 95vw;
+    height: 95vh;
+    /*impostando min-height di .card-container pari a min-height di container si ha che una volta raggiunta tale min-height di 600px
+    la card-container prenderà tutta la pagina
+    */
+    min-height: 600px;
+
+    /*Utilizzo flex per posizionare input-container e task-container utilizzando justify-content: space-between
+    che ricordiamo mette gli elementi agli estremi del box*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /*Style*/
+    background: rgba(255, 237, 138, 0.95);
+    /*box-shadow -> Aggiunge l'ombra ai contorni del box. E' possibile selezionare lo spessore di ogni bordo e
+    inserire un colore tramire rgba
+    */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.container .card-container .input-container {
+
+    height: 30vh;
+
+    /*Suddivido input-container e task-container in parti uguali (300px) una volta che la finestra viene ridimensionata e diventa inferiore ai
+    600px ovvero la min-height di card-container*/
+    min-height: 300px;
+
+    /*Disposizione degli elementi*/
+    /*Utilizzo flex per posizionare gli elementi all'interno dell'input-container quindi <h1>, <input>, <bottom>
+    centrati orizzontalmente (align-items: center) ma posizionati in alto verticalmente (justify-content: flex-start)*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container .card-container .input-container h1 {
+    /*Disposizione degli elementi*/
+    text-align: center;
+
+    /*Margin e padding*/
+    margin: 40px;
+
+    /*Style*/
+    font-size: 32px;
+}
+
+.container .card-container .input-container input {
+    /*Grandezza del container*/
+    width: 90%;
+
+    /*Margin e padding*/
+    margin-bottom: 20px;
+    padding: 10px;
+
+    /*Style*/
+    background: rgba(255, 99, 71, 0);
+    border-bottom: 2px solid white;
+}
+
+
+.task-container {
+    /*Grandezza del container*/
+    height: 60vh;
+    width: 100%;
+    /*Suddivido input-container e task-container in parti uguali (300px) una volta che la finestra viene ridimensionata e diventa inferiore ai
+    600px ovvero la min-height di card-container*/
+    min-height: 300px;
+
+    /*Disposizione degli elementi*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*Margin e padding*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /*Style*/
+    background: rgba(255, 215, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.task-container h1 {
+    font-size: 32px;
+}
+
+.task-container #task-list {
+    /*Grandezza del container*/
+    width: 100%;
+
+    /*Disposizione degli elementi*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    /*Se gli elementi non entrano più in questo container (in prticolare gli elementi <li> della lista <ul>)
+    si attiva una barra laterale per lo scroll */
+    overflow: auto;
+}
+
+#task-list li {
+    /*Grandezza del container*/
+    width: 90%;
+
+    /*Disposizione degli elementi*/
+    display: flex;
+    align-items: center;
+    /*In questo caso gli elementi da ordinare sono <li> e <a> ponendoli quindi agli estremi*/
+    justify-content: space-between;
+    text-align: justify;
+
+    /*Margin e padding*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    /*Style*/
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#task-list li button {
+    margin-left: 10px;
+}

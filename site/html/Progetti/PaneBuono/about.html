@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Il successivo link punta a "https://fontawesome.com/icons/hotel?style=solid" utilizzato per le icone
+        E' sempre necessario metterlo se vogliamo usare le icone da questo sito -->
+    <script src="https://kit.fontawesome.com/dcfa927e27.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" media="screen and (max-width: 750px)" href="css/mobile.css">
+    <title>Pane Buono | Contattaci</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+    <!-- header è un tag che rappresenta la parte superiore -->
+    <!-- L'elemento <header> rappresenta un contenitore per il contenuto introduttivo o un insieme di collegamenti di navigazione.
+    Un elemento <header> in genere contiene:
+    *   uno o più elementi di intestazione (<h1> - <h6>)
+    *   logo o icona
+    *   informazioni sulla paternità-->
+    <header>
+        <!--  <nav> rappresenta una sezione di una pagina che contiene link (collegamenti) ad altre pagine o a parti interne dello stesso documento;
+        quindi, in breve, una sezione contenente link di navigazione. -->
+        <nav id="navbar">
+            <!-- L'elemento HTML Content Division (<div>) è un contenitore generico per contenuti di flusso. Non ha alcun effetto sui contenuti
+            fin quando non viene stilizzato attraverso CSS. In quanto contenitore "puro", l'elemento <div> di suo non rappresenta nulla.
+            E' utilizzato piuttosto per raggruppare contenuti in modo da essere facilmente stilizzato attraverso gli attributi class o id,
+            o per contrassegnare una sezione di un documento scritta in una lingua diversa (utilizzando l'attributo lang), e così via. -->
+            <div class="container">
+                <!-- Il titolo, che è anche il logo, riporta alla pagina iniziale, quindi sarà necessario inserire un <a> tag con 
+                href che punta alla pagina iniziale, quindi "index.html" -->
+                <h1 class="logo"><a href="index.html">pane buono</a></h1>
+                <ul>
+                    <!-- La classe "current" serve per identificare "dove siamo"-->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a class="current" href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+    <!-- Section about-info -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+    <section id="about-info">
+        <div class="container">
+            <div class="info-left">
+                <h1><span class="color-primary">About</span> Pane buono</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio est at labore iure deleniti
+                    molestiae alias officia perferendis. Nulla, ullam.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis quae quia modi soluta beatae
+                    vitae.</p>
+            </div>
+            <div class="info-right">
+                <img src="./images/Pane_01.jpg" alt="">
+            </div>
+        </div>
+    </Section>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+    <!-- Section testimonials -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>Cosa dicono i nostri clienti</h2>
+            <div class="testimonial">
+                <img src="./images/faccia-1.jpg" alt="persona1">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum sed dignissimos accusantium dicta
+                    ullam? Iste aspernatur iusto provident odio architecto.</p>
+            </div>
+            <div class="testimonial">
+                <img src="./images/faccia-2.jpg" alt="persona2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat blanditiis pariatur dolorum magnam
+                    expedita voluptatum optio quia culpa tempore commodi, itaque deserunt ab eaque, nisi ipsa porro est?
+                    Ipsam, saepe!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+    <footer id="footer">
+        <p>Pane Buono &copy; 2020, All right reserved</p>
+    </footer>
+</body>
+
+</html>

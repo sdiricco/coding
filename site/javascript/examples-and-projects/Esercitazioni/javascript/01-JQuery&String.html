@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 1px dashed black;
+            padding: 10px;
+            margin: 10px, 0px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Esercizio su JQuery e stringhe</h3>
+    <p>Il testo scritto nella casella "Testo" viene forzato in maiuscolo quando
+        si verifica l'evento "blur" della casella "Testo"</p>
+    <table>
+        <tr>
+            <td>Testo</td>
+            <td> <input type="text" id="testo" placeholder="inserisci un testo"> </td>
+        </tr>
+        <tr>
+            <td>Numero</td>
+            <td> <input type="text"> </td>
+        </tr>
+    </table>
+
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+
+    <script>
+        //& è un alias è e vale "JQuery"
+        //&()         >>> permette di selezionare un elemento html tramite l'id, la classe, un attributo, uno stato ..
+        //&("#testo") >>> Seleziona l'elemento con id="testo"
+        //il metodo &().val() ritorna il valore, quindi il contenuto di "value" dell'elemento
+        function forzaMaiuscolo(){
+            //Sempre meglio "convertire" in stringa il contenuto ricevuto per evitare problemi
+            let testo = String( $("#testo").val() );
+            $("#testo").val( testo.toUpperCase() );
+        }
+        //$( function() {//code} ); //è necessario racchiudere l'evento all'interno di questa funzione anonima 
+        //per assicurarci che il DOM sia stato caricato correttamente prima che parta javascript
+        $( function(){
+            //il metodo &().blur() associa l'evento <esci dal focus> all'elemento
+            $("#testo").blur(forzaMaiuscolo);
+        });
+    </script>
+</body>
+</html>

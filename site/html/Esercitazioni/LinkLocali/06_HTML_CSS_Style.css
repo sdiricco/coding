@@ -1,0 +1,101 @@
+
+/*
+Selettore * : Seleziona tutti gli elementi e applica lo stile ad ogni elemento della pagina
+*{
+    border: 1px rgb(25, 25, 112) solid;
+}
+
+*/
+
+
+/* Selettore h1: E' un selettore per tutti gli elementi h1*/
+h1{
+    color:ivory;
+    border: 4px rgb(25, 25, 112) solid;
+    background: rgba(25, 25, 112, 0.2);;
+}
+
+/* Selettore li: E' un selettore per tutti gli elementi list item*/
+li{
+    color:beige;
+    border-color:#f5f5dc;
+    border-width: 2px;
+    border-style: ridge;
+}
+
+/*Selettore body: E' un selettore per tutto. Utile per impostare il colore o immagine di background*/
+body{
+    background: url(http://www.classicaviva.com/videolezioni/wp-content/uploads/2016/03/Abstract-Geometric-1920x1080-wallpaper-5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Selettore identificato tramite "#" seguito da un nome : Selezione un id specifico*/
+#speciale {
+    color: chartreuse;
+}
+
+/* Selettore identificato tramite "." seguito da un nome : Selezione una classe*/
+.bluColor {
+    color: cyan;
+}
+
+/* Questo è un selettore particolare. Stilizza solo tutti gli <a> anchor tag all'interno di list item, <li>. Tutti gli altri anchor tag non vengono stilizzati*/
+/* Si può usare ovviamente qualsiasi combinazione*/
+li a {
+    color: lavenderblush;
+}
+
+/* QUesto è un altro selettore molto particolare. Andrà a stilizzare soltanto gli anchor tag che hanno quel particolare "href" */
+a[href="https://git-scm.com/"]{
+    color: lightskyblue;
+    border: 2px black outset;
+}
+input[type="email"]{
+    border: 4px #f5f5dc dotted;
+}
+input[type="password"]{
+    border: 4px gold dotted;
+}
+
+/*font-family seleziona un font*/
+/*ci sono diversi font perchè sono le varie altrnative a seconda dei motori di ricerca*/
+.par1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/*line-height seleziona la distanza, lo spazio che ci deve essere sia sopra che sotto dell'elemento, in questo caso della linea del paragrafo*/
+.par2{
+    line-height: 60px;
+}
+/*font-weight seleziona lo spessore del font, range 100-900*/
+.par3{
+    font-weight: 900;
+}
+/*font-size invece va a impostare la grandezza del font*/
+.par4{
+    font-size: 100px;
+}
+/*text-align imposta la formattazione del testo: a destra, a sinistra, centrale..*/
+.par5{
+    text-align: right;
+}
+/*text-decoration può essere utile per inserire testo sottolineato o altre decorazioni..*/
+.par6{
+    text-decoration: underline;
+}
+
+.par7{
+    color: whitesmoke;
+    font-family: 'Staatliches', cursive;
+}
+
+.par8{
+    border: 2px yellow solid;
+    padding: 10px;
+    margin: 60px;
+    /*width rappresenta la grandezza del box. Può essere espressa in numero % (quindi relativa) o in pixel e quindi in misura assoluta*/
+    width: 50%;
+    /*Rappresenta l'altezza del box*/
+    height: 40px;
+
+}

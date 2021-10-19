@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Parola da trovare</h3>
+    <p>cerca una certa parola nel testo</p>
+    <table>
+        <tr>
+            <td>Testo</td>
+        </tr>
+        <tr>
+            <td><textarea cols="30" rows="10" id="myText" ></textarea></td>
+        </tr>
+        <tr>
+            <td>Cerca:</td>
+        <tr>
+            <td> <input type="text" id="wordToFind"> </td>
+        </tr>
+        <tr>
+            <td>Risultato:</td>
+        <tr>
+        <tr>
+            <td> <input type="text" id="result"> </td>
+        </tr>
+
+    </table>
+
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+
+    <script>
+        
+        function find(){
+
+            let wordToFind = String( $("#wordToFind").val() ).toLowerCase();
+            let myText = String( $("#myText").val() ).toLowerCase();
+
+            myText.includes(wordToFind) ? $("#result").val( "trovata!") : $("#result").val( "non trovata!")
+
+        }
+        $( function(){
+            $("#wordToFind").keypress(find);
+            $("#myText").keypress(find);
+        });
+    </script>
+</body>
+</html>

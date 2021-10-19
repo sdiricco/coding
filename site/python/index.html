@@ -1,0 +1,2916 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>Python - Javascript course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:""}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Javascript course" class="md-header__button md-logo" aria-label="Javascript course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Javascript course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/squidfunk/mkdocs-material/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Javascript course" class="md-nav__button md-logo" aria-label="Javascript course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Javascript course
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/squidfunk/mkdocs-material/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Learn
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Android
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Android" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android/" class="md-nav__link">
+        Android
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Arduino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Arduino" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Arduino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arduino/" class="md-nav__link">
+        Arduino
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Cpp
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Cpp" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Cpp
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cpp/" class="md-nav__link">
+        C++ per esempi
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Css
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Css" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Css
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../css/" class="md-nav__link">
+        CSS
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Espruino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Espruino" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Espruino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../espruino/" class="md-nav__link">
+        Espruino
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Github pages jekyll
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Github pages jekyll" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Github pages jekyll
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github-pages-jekyll/" class="md-nav__link">
+        Crea il tuo sito tramite GitHub Pages e jekyll
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Html
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Html" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Html
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+      
+      <label class="md-nav__link" for="__nav_8_1">
+        Progetti
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Progetti" data-md-level="2">
+        <label class="md-nav__title" for="__nav_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          Progetti
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1_1" type="checkbox" id="__nav_8_1_1" >
+      
+      <label class="md-nav__link" for="__nav_8_1_1">
+        myPersonalWebPage
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="myPersonalWebPage" data-md-level="3">
+        <label class="md-nav__title" for="__nav_8_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          myPersonalWebPage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html/Progetti/myPersonalWebPage/" class="md-nav__link">
+        Index
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Java
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/" class="md-nav__link">
+        Java
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      <label class="md-nav__link" for="__nav_9_2">
+        Java basic module
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java basic module" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Java basic module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/java-basic-module/" class="md-nav__link">
+        Java - write once, run anywhere
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_3" type="checkbox" id="__nav_9_3" >
+      
+      <label class="md-nav__link" for="__nav_9_3">
+        Java oop module
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Java oop module" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_3">
+          <span class="md-nav__icon md-icon"></span>
+          Java oop module
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java/java-oop-module/" class="md-nav__link">
+        Java OOP
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      <label class="md-nav__link" for="__nav_10">
+        Javascript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Javascript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Javascript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/READMEV2/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3" type="checkbox" id="__nav_10_3" >
+      
+      <label class="md-nav__link" for="__nav_10_3">
+        Examples and projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Examples and projects" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_3">
+          <span class="md-nav__icon md-icon"></span>
+          Examples and projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1" type="checkbox" id="__nav_10_3_1" >
+      
+      <label class="md-nav__link" for="__nav_10_3_1">
+        Projects
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Projects" data-md-level="3">
+        <label class="md-nav__title" for="__nav_10_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1_1" type="checkbox" id="__nav_10_3_1_1" >
+      
+      <label class="md-nav__link" for="__nav_10_3_1_1">
+        Nodejs arduino
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Nodejs arduino" data-md-level="4">
+        <label class="md-nav__title" for="__nav_10_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Nodejs arduino
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10_3_1_1_1" type="checkbox" id="__nav_10_3_1_1_1" >
+      
+      <label class="md-nav__link" for="__nav_10_3_1_1_1">
+        Documents
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Documents" data-md-level="5">
+        <label class="md-nav__title" for="__nav_10_3_1_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Documents
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../javascript/examples-and-projects/Projects/nodejs-arduino/documents/serialport/" class="md-nav__link">
+        Libreria node.js SerialPort
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      <label class="md-nav__link" for="__nav_11">
+        Nas
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Nas" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Nas
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nas/readme/" class="md-nav__link">
+        Nas e TrueNAS (FreeNAS)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" checked>
+      
+      <label class="md-nav__link" for="__nav_12">
+        Python
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Python
+      </a>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      <label class="md-nav__link" for="__nav_13">
+        Raspberry pi pico
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Raspberry pi pico" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Raspberry pi pico
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raspberry-pi-pico/readme/" class="md-nav__link">
+        Raspberry pi pico e Micropython
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" type="checkbox" id="__nav_14" >
+      
+      <label class="md-nav__link" for="__nav_14">
+        React js
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="React js" data-md-level="1">
+        <label class="md-nav__title" for="__nav_14">
+          <span class="md-nav__icon md-icon"></span>
+          React js
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/" class="md-nav__link">
+        React.js
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2" type="checkbox" id="__nav_14_2" >
+      
+      <label class="md-nav__link" for="__nav_14_2">
+        Test
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Test" data-md-level="2">
+        <label class="md-nav__title" for="__nav_14_2">
+          <span class="md-nav__icon md-icon"></span>
+          Test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_1" type="checkbox" id="__nav_14_2_1" >
+      
+      <label class="md-nav__link" for="__nav_14_2_1">
+        My app
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="My app" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          My app
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/test/my-app/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_2" type="checkbox" id="__nav_14_2_2" >
+      
+      <label class="md-nav__link" for="__nav_14_2_2">
+        My app 2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="My app 2" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          My app 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/test/my-app-2/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14_2_3" type="checkbox" id="__nav_14_2_3" >
+      
+      <label class="md-nav__link" for="__nav_14_2_3">
+        Shoppy world
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Shoppy world" data-md-level="3">
+        <label class="md-nav__title" for="__nav_14_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Shoppy world
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../react-js/test/shoppy-world/" class="md-nav__link">
+        Getting Started with Create React App
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" >
+      
+      <label class="md-nav__link" for="__nav_15">
+        Reg expr
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reg expr" data-md-level="1">
+        <label class="md-nav__title" for="__nav_15">
+          <span class="md-nav__icon md-icon"></span>
+          Reg expr
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reg-expr/" class="md-nav__link">
+        Regular Expression
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" type="checkbox" id="__nav_16" >
+      
+      <label class="md-nav__link" for="__nav_16">
+        Sw dev methods
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sw dev methods" data-md-level="1">
+        <label class="md-nav__title" for="__nav_16">
+          <span class="md-nav__icon md-icon"></span>
+          Sw dev methods
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sw-dev-methods/" class="md-nav__link">
+        Metodologie di sviluppo software
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" >
+      
+      <label class="md-nav__link" for="__nav_17">
+        Text editor
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Text editor" data-md-level="1">
+        <label class="md-nav__title" for="__nav_17">
+          <span class="md-nav__icon md-icon"></span>
+          Text editor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-editor/readme/" class="md-nav__link">
+        Quale editor di testo?
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_18" type="checkbox" id="__nav_18" >
+      
+      <label class="md-nav__link" for="__nav_18">
+        Typescript
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Typescript" data-md-level="1">
+        <label class="md-nav__title" for="__nav_18">
+          <span class="md-nav__icon md-icon"></span>
+          Typescript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../typescript/" class="md-nav__link">
+        Typescript
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/squidfunk/mkdocs-material/edit/master/docs/python/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="python">Python</h1>
+<h1 id="lezione-01">Lezione 01</h1>
+<h2 id="prerequisiti">Prerequisiti</h2>
+<p>Conoscenza di un linguaggio qualsiasi OOP come C++ o Javascript</p>
+<h2 id="corso-python">Corso Python</h2>
+<p>Python è un linguaggio di programmazione di più "alto livello" rispetto alla maggior parte degli altri linguaggi, orientato a oggetti, adatto, tra gli altri usi, a sviluppare applicazioni distribuite, scripting, computazione numerica e system testing.</p>
+<p>Ideato da Guido van Rossum all'inizio degli anni novanta, il nome fu scelto per la passione dello stesso inventore verso i Monty Python e per la loro serie televisiva Monty Python's Flying Circus ed è spesso paragonato a Ruby, Tcl, Perl, JavaScript, Visual Basic o Scheme</p>
+<p><a href="https://it.wikipedia.org/wiki/Python">Wikipedia - Python</a></p>
+<h2 id="installazione-e-setup">Installazione e setup</h2>
+<p>Collegati alla pagina ufficiale di <a href="https://www.python.org/downloads/">Python</a> e installa la versione per il tuo sistema operativo.</p>
+<h2 id="installazione-e-setup-linux">Installazione e setup - Linux</h2>
+<p>Per i sistemi su base linux è sufficiente digitare i seguenti comandi:
+<div class="highlight"><pre><span></span><code>sudo apt-get install python3
+sudo apt-get install python3-pip
+</code></pre></div></p>
+<p><strong>Nota:</strong> Il modulo <em>pip</em> di Python permette la gestione e l'installazione di moduli esterni</p>
+<p>Per verificare la corretta installazione dell'interprete python digitare da terminale <code>python3</code>. In questo modo apriremo inoltre la shell interattiva di python in cui sarà possibile inserire direttamente del codice ed avere una risposta simultanea </p>
+<p><img alt="" src="images/install-python.gif" /></p>
+<h2 id="configurazione-di-un-ide">Configurazione di un IDE</h2>
+<p>Un ottimo ambiente di sviluppo per Python è <a href="https://www.jetbrains.com/pycharm/download/">Pycharm</a>.<br>
+Per questo corso ho preferito non utilizzare un IDE specifico come Pycharm ma uno con un target più ad uso generale come <a href="https://code.visualstudio.com/">Visual Studio Code</a> con l'ausilio di un'estensione che possa supportare gli emmet (abbreviazioni intelligenti) per il linguaggio python e opzioni per il debug del codice. L'estension che ho installato si chiama <em>Python</em> ed è quella che riporto nell'immagine animata qua sotto.</p>
+<p><img alt="" src="images/python-extension-vscode.gif" /></p>
+<h1 id="lezione-02">Lezione 02</h1>
+<h2 id="primo-script">Primo script</h2>
+<p>Ogni file python ha un'estensione <code>.py</code>.</p>
+<p>Per l'esecuzione di uno script python è possibile lanciare il file creato con l'estensione <code>.py</code> (esempio <code>test.py</code>) direttamente dal terminale digitando il comando per l'invocazione dell'interprete python <code>python3</code> ad esempio <code>python3 test.py</code> all'interno della cartella contenente il file <code>test.py</code> oppure attraverso l'estensione appena installata per VS code <code>Run/Start Debugging</code></p>
+<p>Ecco l'esecuzione del primo script python
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ciao mondo&#39;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><img alt="" src="images/ciao-mondo-python.gif" /></p>
+<h2 id="aggiunta-di-moduli">Aggiunta di moduli</h2>
+<p>Per l'aggiunta di un modulo che rientra nella libreria standard python basta semplicemente digitare:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="o">&lt;</span><span class="n">nomeModulo</span><span class="o">&gt;</span>
+</code></pre></div>
+A volte tuttavia potremmo aver bisogno di un modulo non standard disponibile sul web. Per installarlo possiamo far ricorso al pacchetto <code>pip</code> che permette la gestione e l'installazione dei moduli aggiuntivi python.</p>
+<p>Supponiamo di voler scaricare il modulo <code>PyPDF2</code> per la gestione dei PDF. Digitare da terminale
+<div class="highlight"><pre><span></span><code>pip install PyPDF2
+</code></pre></div></p>
+<p>Qualora si avessero dubbi sul nome del modulo o sul comando esatto, niente paura, il browser ci è di supporto</p>
+<p><img alt="" src="images/pip-install.gif" />ù</p>
+<h1 id="lezione-03">Lezione 03</h1>
+<h2 id="introduzione-a-webbrowser">Introduzione a webbrowser</h2>
+<p>Il seguente script aprirà una località su google.maps digitata come input dall'utente.</p>
+<p>Utilizzeremo il comando <code>input()</code> che permette l'acquisizione dati da tastiera e la funzione <code>open</code> del modulo python <code>webbrowser</code>. <br>
+La funzione <code>open</code> permette di aprire un certo <code>url</code> specificato come parametro tra gli apici. Il parametro è quindi passato come una stringa e come tale valgono tutte le operazioni e i metodi applicabili su stringa tra cui l'operatore <code>+</code> utilizzato per concatenare due o più stringhe .</p>
+<ul>
+<li><code>input()</code>: consente l'acquisizione dati da tastiera dell'utente.</li>
+<li><code>webbrowser.open(myUrl)</code>: Apre l'indirizzo web specificato dal parametro <em>myUrl</em>. Il parametro specificato viene passato come stringa</li>
+<li><code>+</code>: Operatore di concatenazione stringhe</li>
+</ul>
+<p>Ecco lo script completo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">webbrowser</span>
+<span class="n">destinazione</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">webbrowser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://www.google.com/maps&#39;</span> <span class="o">+</span> <span class="s1">&#39;/place/&#39;</span> <span class="o">+</span> <span class="n">destinazione</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="images/maps-script.gif" /></p>
+<p>E' possibile ridurre ancora il codice</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">webbrowser</span>
+<span class="n">webbrowser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://www.google.com/maps&#39;</span> <span class="o">+</span> <span class="s1">&#39;/place/&#39;</span> <span class="o">+</span> <span class="nb">input</span><span class="p">())</span>
+</code></pre></div>
+<h2 id="come-rendo-eseguibile-un-file-python">Come rendo eseguibile un file python?</h2>
+<h2 id="linux">Linux</h2>
+<p>Aggiungere la seguente linea di codice in testa allo script:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+</code></pre></div>
+<p>Ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span> <span class="nn">webbrowser</span>
+<span class="n">webbrowser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;https://www.google.com/maps&#39;</span> <span class="o">+</span> <span class="s1">&#39;/place/&#39;</span> <span class="o">+</span> <span class="nb">input</span><span class="p">())</span>
+</code></pre></div>
+<p>E' sufficiente rendere il file <em>eseguibile</em> (all'interno delle proprietà del file sezione "permessi") e lanciarlo da terminale.</p>
+<p><img alt="" src="images/python-executable-linux.gif" /></p>
+<h2 id="commenti">Commenti</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># questo è un commento e verrà ignorato dall&#39;interprete</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ciao&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h1 id="lezione-04">Lezione 04</h1>
+<h2 id="introduzione-al-modulo-pypdf2">Introduzione al modulo PyPDF2</h2>
+<p>Il seguente script tratterà l'elaborazione di file pdf. Saremo in grado quindi di generare un file pdf con nome predefinito "Output.pdf" che è la copia della prima pagina di un pdf con nome "input.pdf" ricevuto in input</p>
+<p>Faremo uso del modulo aggiuntivo <a href="https://pythonhosted.org/PyPDF2/">PyPDF2</a> da installare da terminale tramite il comando <code>pip install PyPDF2</code></p>
+<p>Utilizzeremo le funzioni standard Python di apertuta e chiusura file:
+- <code>open(myFile, mode)</code>: apre un file e lo restituisce come oggetto.
+    - <code>myfile</code> indica il nome comprensivo del path del file da aprire
+    - <code>mode</code> indica la modalità di apertura del file
+        - <code>mode = "r"</code> modalità lettura
+        - <code>mode = "rb"</code> modalità lettura binaria
+        - <code>mode = "w"</code> modalità scrittura
+        - <code>mode = "wb"</code> modalità scrittura binaria
+- <code>close()</code>: chiude un file aperto. È necessario chiudere sempre i file aperti poichè in alcuni casi, a causa del buffering, le modifiche apportate a un file potrebbero non essere visualizzate finché non si chiude il file.</p>
+<p><a href="https://www.w3schools.com/python/ref_func_open.asp">w3schools - Python open() Function</a><br>
+<a href="https://www.w3schools.com/python/ref_file_close.asp">w3schools - Python close() Function</a><br></p>
+<p>Del modulo aggiuntivo <strong>PyPDF2</strong> utilizzeremo le classi:
+- <code>PdfFileReader(myPdf)</code>: Chiama il costruttore della classe <em>PdfFileReader</em> che inzializza in lettura il file oggetto pdf <em>myPdf</em> ricevuto come parametro e restituisce un'istanza della classe <em>PdfFileReader</em><br>
+<a href="https://pythonhosted.org/PyPDF2/PdfFileReader.html">The PdfFileReader Class</a><br>
+<strong>Metodi</strong><br>
+    - <code>getPage(pageNumber)</code>: restituisce una pagina in base al numero <em>pageNumber</em> passato come parametro<br></p>
+<ul>
+<li><code>PdfFileWriter()</code>: Chiama il costruttore della classe <em>PdfFileWriter()</em> che inizializza in scrittura un file oggetto pdf e restituisce un'istanza della classe <em>PdfFileWriter()</em><br>
+<a href="https://pythonhosted.org/PyPDF2/PdfFileWriter.html">The PdfFileWriter Class</a><br>
+<strong>Metodi</strong><br><ul>
+<li><code>addPage(page)</code>: Aggiunge una pagina PDF,  all'istanza della classe <em>PdfFileWriter</em> a cui si applica il metodo. La pagina viene solitamente acquisita da un'istanza di <em>PdfFileReader</em>.</li>
+<li><code>write(myPdf)</code>: Scrive (su disco, da ram a rom) la raccolta di pagine aggiunte a questo oggetto come file PDF, riceve come parametro l'oggetto pdf da scrivere, <em>myPdf</em>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Nota:</strong> Le "funzioni/classi" di un modulo devono essere invocate sempre specificando il nome del modulo.</p>
+<p>Esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">PyPDF2</span>
+<span class="n">pdfInput</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;pdf/input.pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<span class="c1">#PyPDF2 è il nome del modulo, PdfFileReader è il nome della classe del modulo PyPDF2</span>
+<span class="n">reader1</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileReader</span><span class="p">(</span><span class="n">pdfInput</span><span class="p">)</span> 
+</code></pre></div>
+<p>Script completo</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">PyPDF2</span>
+
+<span class="c1">#Apro il file &lt;input.pdf&gt; all&#39;interno della cartella &lt;pdf&gt; in modalità lettura binaria</span>
+<span class="c1">#Restituisco un oggetto all&#39;interno della variabile &lt;pdfInput&gt;</span>
+<span class="n">pdfInput</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;pdf/input.pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<span class="c1">#Restituisco un&#39;istanza della classe &lt;PdfFileReader&gt; all&#39;interno della variabile &lt;reader1&gt;</span>
+<span class="n">reader1</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileReader</span><span class="p">(</span><span class="n">pdfInput</span><span class="p">)</span> 
+
+<span class="c1">#apro un file &lt;Output.pdf&gt; all&#39;interno della cartella &lt;pdf&gt; in modalità scrittura binaria</span>
+<span class="c1">#Restituisco un oggetto all&#39;interno della variabile &lt;pdfOutput&gt;</span>
+<span class="n">pdfOutput</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;pdf/Output.pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span>
+<span class="c1">#Restituisco un&#39;istanza della classe &lt;PyPDF2.PdfFileWriter&gt; all&#39;interno della variabile &lt;writer1&gt;</span>
+<span class="n">writer1</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileWriter</span><span class="p">()</span> 
+
+<span class="c1">#Prelevo la pagina numero &lt;0&gt; e ritorno un oggetto pdf di una pagina all&#39;interno della variabile &lt;pag0&gt;</span>
+<span class="n">pag0</span> <span class="o">=</span> <span class="n">reader1</span><span class="o">.</span><span class="n">getPage</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">#Aggiungo in coda pag0 all&#39;istanza &lt;writer1&gt; (della classe PdfFileWriter) </span>
+<span class="c1">#Ripeto l&#39;operazione per tre volte</span>
+<span class="n">writer1</span><span class="o">.</span><span class="n">addPage</span><span class="p">(</span><span class="n">pag0</span><span class="p">)</span>
+<span class="n">writer1</span><span class="o">.</span><span class="n">addPage</span><span class="p">(</span><span class="n">pag0</span><span class="p">)</span>
+<span class="n">writer1</span><span class="o">.</span><span class="n">addPage</span><span class="p">(</span><span class="n">pag0</span><span class="p">)</span>
+
+<span class="c1">#Scrittura su disco dell&#39;istanza della classe &lt;writer1&gt; su &lt;pdfOutput&gt; l&#39;oggetto in scrittura corrispondente a &quot;Output.pdf&quot;</span>
+<span class="n">writer1</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">pdfOutput</span><span class="p">)</span>
+
+<span class="c1">#aChiudo i File</span>
+<span class="n">pdfInput</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">pdfOutput</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="" src="images/pdf-1.gif" /></p>
+<h1 id="lezione-05">Lezione 05</h1>
+<h2 id="costrutto-condizionale-ifelse">Costrutto condizionale <code>if...else</code></h2>
+<p>Le istruzioni condizionali vengono utilizzate per eseguire un blocco di codice solo nel caso in cui una condizione risulti <em>true</em> o <em>false</em></p>
+<p>Sintassi costrutto <code>if</code> esteso:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">condition1</span><span class="p">:</span>
+    <span class="c1">#code 01</span>
+    <span class="c1">#..</span>
+<span class="k">elif</span> <span class="n">condition2</span><span class="p">:</span>
+    <span class="c1">#code 02</span>
+    <span class="c1">#..</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1">#code 03</span>
+    <span class="c1">#..</span>
+</code></pre></div>
+<p>Esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inserisci due numeri..)</span>
+
+<span class="n">primoValore</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">secondoValore</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Il primo valore inserito, &quot;</span> <span class="o">+</span> <span class="n">primoValore</span> <span class="o">+</span> <span class="s2">&quot; è maggiore del secondo valore inserito, &quot;</span> <span class="o">+</span> <span class="n">secondoValore</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Il secondo valore inserito, &quot;</span> <span class="o">+</span> <span class="n">secondoValore</span> <span class="o">+</span> <span class="s2">&quot; è maggiore del primo valore inserito, &quot;</span> <span class="o">+</span> <span class="n">primoValore</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i due valori inseriti sono uguali&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Notare che per il costrutto <code>if</code> in python, la <code>condition</code> è priva di parentesi tonde <code>( )</code> comuni invece a molti altri linguaggi di programmazione; l'operatore <code>:</code> è usato come terminatore della <code>condition</code> e l'indentazione è necessaria per racchiudere la porzione di codice condizionato da <code>if</code>.</p>
+<h1 id="lezione-06">Lezione 06</h1>
+<h2 id="costrutto-iterativo-for">Costrutto iterativo <code>for</code></h2>
+<p>Un ciclo <code>for</code> viene utilizzato per iterare su una sequenza (che può essere una lista, una tupla, un dizionario, un insieme o una stringa).</p>
+<p>È meno simile alla <em>keyword</em> <code>for</code> in altri linguaggi di programmazione e funziona più come un metodo iteratore che si trova in altri linguaggi di programmazione orientati agli oggetti.</p>
+<p><a href="https://www.w3schools.com/python/python_for_loops.asp">w3schools - Python For Loops</a></p>
+<p>Sintassi:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#Sintassi 1:</span>
+<span class="k">for</span> <span class="n">target_list</span> <span class="ow">in</span> <span class="n">expression_list</span><span class="p">:</span>
+    <span class="c1">#code</span>
+</code></pre></div>
+<p>Esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">numero</span><span class="o">*</span><span class="n">numero</span><span class="p">)</span>
+
+<span class="c1"># 1</span>
+<span class="c1"># 4</span>
+<span class="c1"># 9</span>
+<span class="c1"># 16</span>
+<span class="c1"># 25</span>
+
+<span class="k">for</span> <span class="n">frutto</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="s2">&quot;pera&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">frutto</span><span class="p">)</span>
+
+<span class="c1"># banana</span>
+<span class="c1"># mela</span>
+<span class="c1"># pera</span>
+</code></pre></div>
+<h2 id="indentazione-python">Indentazione Python</h2>
+<p>Il linguaggio python, a differenza di altri linguaggi come C/C++, Javascript .. Non utilizza delimitatori di blocco codice come <code>{ }</code> ma si affida alla semplice <strong>indentazione</strong>. Rende quindi indispensabile l'uso di un buon editor di testo per evitare problemi di sintassi o semantica (in alcuni casi nemmeno troppo rari). Non utilizza neanche un terminatore di statement come il classico <code>;</code> ma si affida al carattere <code>a capo</code>. L'interprete python comunque è in grado di rilevare errori sintattici di indentazione e segnalarlo.</p>
+<h2 id="range-function">range() Function</h2>
+<p>Per iterare un insieme di codice un numero di volte specificato, possiamo usare la funzione <code>range ()</code>.
+La funzione  <code>range (number)</code> restituisce una sequenza di numeri, a partire da 0 per impostazione predefinita, incrementa di 1 (per impostazione predefinita) e termina con un numero specificato tramite il parametro <em>number</em>. In realtà termina con il numero <code>number - 1</code>.<br>
+La funzione <code>range ()</code> può accettare 1, 2 o 3 parametri:</p>
+<ul>
+<li><code>range(number)</code>: <strong>un parametro</strong>, genera una lista numerica incrementale nel range <code>0 - number-1</code> </li>
+<li><code>range(numberStart, numberEnd)</code>: <strong>due parametri</strong>, genera una lista numerica incrementale nel range <code>numberStart - numberEnd-1</code> </li>
+<li><code>range(numberStart, numberEnd, step)</code>: <strong>tre parametri</strong>, genera una lista numerica con incremento pari a <code>step</code> nel range <em>massimo</em> <code>numberStart - numberEnd-1</code> </li>
+</ul>
+<p><a href="https://www.w3schools.com/python/python_for_loops.asp">w3schools - The range() Function</a></p>
+<div class="highlight"><pre><span></span><code><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>       <span class="c1">#[0, 1, 2, 3, 4]</span>
+<span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>    <span class="c1">#[1, 2, 3, 4]</span>
+<span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">#[1, 3]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">target_list</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="c1">#code</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># range(number) costruisce una lista da 0 a number-1</span>
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">numero</span><span class="o">*</span><span class="n">numero</span><span class="p">)</span>
+
+<span class="c1"># 0</span>
+<span class="c1"># 1</span>
+<span class="c1"># 4</span>
+<span class="c1"># 9</span>
+<span class="c1"># 16</span>
+
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+
+<span class="c1"># 1</span>
+<span class="c1"># 3</span>
+</code></pre></div>
+<p>Nel seguente esempio specifico alla funzione <code>print()</code> di non utilizzare il terminatore di default <code>a capo</code> rendendo nullo l'attributo <code>end</code> </p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">numero</span><span class="o">*</span><span class="n">numero</span><span class="p">)</span>
+
+<span class="c1"># 0:0</span>
+<span class="c1"># 1:1</span>
+<span class="c1"># 2:4</span>
+<span class="c1"># 3:9</span>
+<span class="c1"># 4:16</span>
+</code></pre></div>
+<h1 id="lezione-07">Lezione 07</h1>
+<h2 id="pypdf2-copia-pdf">PyPDF2 - Copia PDF</h2>
+<p>Il seguente script prende in input un pdf "input.pdf" e ne produce una copia sul file "Output.pdf" 
+Faremo uso della proprietà della classe <em>PdfFileReader</em>:
+- <code>numPages</code>: Restituisce il numero delle pagine del file pdf dell'istanza (della classe <em>PdfFileReader</em>) si cui si legge la proprietà</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">PyPDF2</span>
+
+<span class="n">pdfInput</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;pdf/input.pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+
+<span class="n">reader1</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileReader</span><span class="p">(</span><span class="n">pdfInput</span><span class="p">)</span> 
+
+<span class="n">pdfOutput</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;pdf/Output.pdf&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span>
+
+<span class="n">writer1</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileWriter</span><span class="p">()</span> 
+
+<span class="c1">#Copia delle pagine dell&#39;oggetto (classe) pdf &lt;reader1&gt; nell&#39;oggetto (classe) pdf &lt;writer1&gt;</span>
+<span class="k">for</span> <span class="n">numeroPagina</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">reader1</span><span class="o">.</span><span class="n">numPages</span><span class="p">):</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="n">reader1</span><span class="o">.</span><span class="n">getPage</span><span class="p">(</span><span class="n">numeroPagina</span><span class="p">)</span>
+    <span class="n">writer1</span><span class="o">.</span><span class="n">addPage</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+
+<span class="n">writer1</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">pdfOutput</span><span class="p">)</span>
+
+<span class="c1">#aChiudo i File</span>
+<span class="n">pdfInput</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">pdfOutput</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="" src="images/pdf-2.gif" /></p>
+<h2 id="pypdf2-merge-all-pdf">PyPDF2 - Merge All pdf</h2>
+<p>Il seguente script unisce tutti i file pdf presenti nella root directory salvandoli con un nome stabilito dall'utente.
+Faremo uso di:
+- <strong>Modulo os</strong> è un modulo che contiene funzioni per interagire con il sistema operativo per la manipolazione di file e processi, <a href="https://docs.python.org/3/library/os.html">os — Miscellaneous operating system interfaces</a>.<br>
+<strong>Nota:</strong><br>
+Per questo esercizio importeremo solo il <em>metodo</em> <code>listdir()</code> del modulo os: 
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">listdir</span>
+</code></pre></div></p>
+<ul>
+<li>
+<p><code>listdir(path)</code>: Metodo del modulo <strong>os</strong>. Elenca file e cartelle specificate nella path-directory come parametro. Se non viene specificato nessun parametro restituisce i file della root-directory. Viene restituita una <strong>lista</strong> <br>
+<a href="w3big.com">Python3 os.listdir () method</a></p>
+</li>
+<li>
+<p><strong>Metodi su stringa</strong><br></p>
+</li>
+<li><code>endswith(myString)</code>: Restituisce <em>true</em> se la stringa a cui applichiamo il metodo termina con la stringa indicata come parametro, <em>myString</em></li>
+</ul>
+<p>Altre funzionalità del modulo <strong>PyPDF2</strong>.<br>
+- classe <code>PdfFileMerger</code>: Inizializza un oggetto <strong>PdfFileMerger</strong>. <strong>PdfFileMerger</strong> unisce più PDF in un unico PDF. 
+Restituisce un'istanza della classe <strong>PdfFileMerger</strong>, <a href="https://pythonhosted.org/PyPDF2/PdfFileMerger.html">PyPDF2 - The PdfFileMerger Class</a>.
+- metodo <code>append(myPDF)</code> della classe <code>PdfFileMerger</code>: Concatena tutte le pagine di un oggetto PDF passato come parametro, <em>myPDF</em>, alla fine del file PDF a cui si applica il metodo</p>
+<p>Riporto lo script completo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#Merge all pdf files</span>
+
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">listdir</span>
+<span class="kn">import</span> <span class="nn">PyPDF2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;**********************************************&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unisco i file pdf presenti in questa directory&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;**********************************************&quot;</span><span class="p">)</span>
+
+<span class="c1">#Non devo specificare &lt;os.listdir&gt; poichè ho spcificato l&#39;importazione &lt;from os import listdir&gt;</span>
+<span class="c1">#Se avessi usato &lt;import os&gt; avrei dovuto scrivere &lt;os.listdir&gt;</span>
+<span class="c1">#listdir restituisce file e cartelle in formato &lt;lista&gt;</span>
+<span class="n">listaFiles</span> <span class="o">=</span> <span class="n">listdir</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">nomeFile</span> <span class="ow">in</span> <span class="n">listaFiles</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">nomeFile</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.pdf&#39;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">nomeFile</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#chiedo all&#39;utente come vuole chiamare il file di output</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Salvo il risultato con il nome:&quot;</span><span class="p">)</span>
+<span class="n">nomeFileDestinazione</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="c1">#Apro il file in scrittura binaria</span>
+<span class="n">PDF_Destinazione</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">nomeFileDestinazione</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">merger</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileMerger</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Elaborazione di..&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">nomeFile</span> <span class="ow">in</span> <span class="n">listaFiles</span><span class="p">:</span>
+    <span class="c1">#Elaboro solo i file con estensione &quot;.pdf&quot;</span>
+    <span class="k">if</span> <span class="n">nomeFile</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.pdf&#39;</span><span class="p">):</span>
+        <span class="c1">#stampo il nome del file</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">nomeFile</span><span class="p">)</span>
+        <span class="c1">#lo apro in lettura binaria</span>
+        <span class="n">pdfFileInput</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">nomeFile</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+        <span class="c1">#creo un&#39;istanza della classe &lt;PdfFileReader&gt; sul file appena aperto</span>
+        <span class="n">PDF_Reader</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileReader</span><span class="p">(</span><span class="n">pdfFileInput</span><span class="p">)</span>
+        <span class="c1">#Appendo il file PDF in coda all&#39;oggetto merger</span>
+        <span class="n">merger</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PDF_Reader</span><span class="p">)</span>
+        <span class="c1">#chiudo il file aperto</span>
+        <span class="n">pdfFileInput</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#Operazione di scrittura</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scrittura su: &quot;</span> <span class="o">+</span> <span class="n">nomeFileDestinazione</span><span class="p">)</span>
+<span class="n">merger</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">PDF_Destinazione</span><span class="p">)</span>
+<span class="n">PDF_Destinazione</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finito..&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="images/mergeAllPdf.gif" /></p>
+<h1 id="lezione-08">Lezione 08</h1>
+<h2 id="liste">Liste</h2>
+<p>Abbiamo già visto implicitamente un'introduzione al tipo lista e in particolare come creare e iterare sugli elementi di una lista attraverso il ciclo <code>for</code> e la funzione <code>range()</code>. Il tipo dato lista è molto importante nel linguaggio python.</p>
+<p>Le liste sono un tipo di dato utilizzato per memorizzare diversi elementi in una singola variabile.</p>
+<p>Le liste sono uno dei 4 tipi di dati incorporati in Python utilizzati per memorizzare raccolte di dati, gli altri 3 sono Tuple, Set e Dictionary, tutti con qualità e utilizzo diversi.</p>
+<p>Vediamo le caratteristiche principali delle liste:</p>
+<ul>
+<li>Le liste possono contenere qualsiasi tipo di dato</li>
+<li>Gli elementi della lista sono indicizzati, il primo elemento ha indice [0], il secondo elemento ha indice [1] .. A differenza della maggior parte dei linguaggi si possono usare anche indici negativi, [-1] si riferisce all'ultimo elemento, [-2] si riferisce al penultimo elemento ecc.</li>
+<li>Gli elementi in una lista sono ordinati e l'ordine è stabilito dall'indice. </li>
+<li>Dopo la creazione, è possibile aggiungere elementi, cambiare il valore degli elementi già esistenti o rimuoverli </li>
+<li>Dal momento che le liste sono indicizzate è possibile avere elementi duplicati</li>
+<li>La funzione <code>len()</code> ritorna il numero degli elementi presenti in una lista</li>
+<li>L'operatore <code>[::]</code> permette lo <em>slicing</em> di liste ovvero la creazione di porzioni di liste a partire dalla lista a cui si applica l'operatore <code>[::]</code></li>
+</ul>
+<p><a href="https://www.w3schools.com/python/python_lists.asp">w3schools - Python Lists</a></p>
+<h2 id="accesso-agli-elementi-di-una-lista">Accesso agli elementi di una lista</h2>
+<p>L'accesso agli elementi di una lista si effettua tramite l'operatore <code>[]</code>
+<div class="highlight"><pre><span></span><code><span class="c1">#indici     0         1       2       3            4</span>
+<span class="c1">#indici    -5        -4      -3      -2           -1</span>
+<span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarino&quot;</span><span class="p">,</span> <span class="s2">&quot;cachi&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>  <span class="c1">#mela</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1">#cachi</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">myList</span><span class="p">))</span> <span class="c1">#5</span>
+</code></pre></div></p>
+<h2 id="modifica-del-valore-degli-elementi-in-una-lista">Modifica del valore degli elementi in una lista.</h2>
+<p>Per cambiare il valore degli elementi in una lista si utilizza l'operatore <code>[]</code> </p>
+<div class="highlight"><pre><span></span><code><span class="c1">#indici     0         1       2       3            4</span>
+<span class="c1">#indici    -5        -4      -3      -2           -1</span>
+<span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarino&quot;</span><span class="p">,</span> <span class="s2">&quot;cachi&quot;</span><span class="p">]</span>
+
+<span class="n">myList</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;arancia&quot;</span>
+<span class="n">myList</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;pera&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>
+
+<span class="n">myList</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;mandorla&quot;</span><span class="p">,</span> <span class="s2">&quot;nocciola&quot;</span><span class="p">]</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="aggiunta-di-elementi-in-una-lista">Aggiunta di elementi in una lista</h2>
+<p>Sono disponibili i metodi:</p>
+<ul>
+<li><code>append(elem)</code>: Appende <em>elem</em> in coda alla lista</li>
+<li><code>insert(index, elem)</code>: Inserisce (senza nessun replace) <em>elem</em> alla posizione <em>index</em> facendo scalare di una posizione gli elementi dalla posizione <em>index</em></li>
+<li><code>extend(otherList)</code>: Appende in coda gli elementi della lista passata come parametro, <em>otherList</em> </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarino&quot;</span><span class="p">,</span> <span class="s2">&quot;cachi&quot;</span><span class="p">]</span>
+<span class="n">myList2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;mandorla&quot;</span><span class="p">,</span> <span class="s2">&quot;nocciola&quot;</span><span class="p">,</span> <span class="s2">&quot;noce&quot;</span><span class="p">]</span>
+
+<span class="n">myList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;anguria&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;, &#39;anguria&#39;]</span>
+
+<span class="n">myList</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;melone&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;melone&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;, &#39;anguria&#39;]</span>
+
+<span class="n">myList</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">myList2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;melone&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;, &#39;anguria&#39;, &#39;mandorla&#39;, &#39;nocciola&#39;, &#39;noce&#39;]</span>
+</code></pre></div>
+<h2 id="rimozione-di-elementi-in-una-lista">Rimozione di elementi in una lista</h2>
+<p>Sono disponibili i metodi:</p>
+<ul>
+<li><code>remove(elem)</code> : Toglie <em>elem</em> dalla lista</li>
+<li><code>pop(?index)</code>: Toglie l'elemento corrispondente all'indice <em>index</em> passato come parametro opzionale. Se non viene passato nessun parametro toglie l'ultimo elemento. E' possibile ottenere questo risultato anche con il comando <code>del</code>, specificando l'elemento, <code>del myList[index]</code></li>
+<li><code>clear()</code>: Svuota la lista. La lista esiste ma è vuota. E' possibile ottenere questo risultato anche con il comando <code>del</code> specificando il nome della lista <code>del myList</code> ma in questo caso elimina anche l'identificatore</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;kiwi&#39;</span><span class="p">,</span> <span class="s1">&#39;melone&#39;</span><span class="p">,</span> <span class="s1">&#39;mela&#39;</span><span class="p">,</span> <span class="s1">&#39;mandarino&#39;</span><span class="p">,</span> <span class="s1">&#39;cachi&#39;</span><span class="p">,</span> <span class="s1">&#39;anguria&#39;</span><span class="p">,</span> <span class="s1">&#39;mandorla&#39;</span><span class="p">,</span> <span class="s1">&#39;nocciola&#39;</span><span class="p">,</span> <span class="s1">&#39;noce&#39;</span><span class="p">]</span>
+
+<span class="n">myList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;mandarino&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;melone&#39;, &#39;mela&#39;, &#39;cachi&#39;, &#39;anguria&#39;, &#39;mandorla&#39;, &#39;nocciola&#39;, &#39;noce&#39;]</span>
+
+<span class="n">myList</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;mela&#39;, &#39;cachi&#39;, &#39;anguria&#39;, &#39;mandorla&#39;, &#39;nocciola&#39;, &#39;noce&#39;]</span>
+<span class="n">myList</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;mela&#39;, &#39;cachi&#39;, &#39;anguria&#39;, &#39;mandorla&#39;, &#39;nocciola&#39;]</span>
+<span class="k">del</span> <span class="n">myList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span> <span class="c1">#[&#39;kiwi&#39;, &#39;mela&#39;, &#39;cachi&#39;, &#39;anguria&#39;, &#39;mandorla&#39;, &#39;nocciola&#39;]</span>
+
+<span class="n">myList</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span> <span class="c1">#[]</span>
+
+<span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;kiwi&#39;</span><span class="p">,</span> <span class="s1">&#39;melone&#39;</span><span class="p">,</span> <span class="s1">&#39;mela&#39;</span><span class="p">,</span> <span class="s1">&#39;mandarino&#39;</span><span class="p">,</span> <span class="s1">&#39;cachi&#39;</span><span class="p">,</span> <span class="s1">&#39;anguria&#39;</span><span class="p">,</span> <span class="s1">&#39;mandorla&#39;</span><span class="p">,</span> <span class="s1">&#39;nocciola&#39;</span><span class="p">,</span> <span class="s1">&#39;noce&#39;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">myList</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span> <span class="c1">#NameError: name &#39;myList&#39; is not defined</span>
+</code></pre></div>
+<h2 id="creazione-di-sotto-liste-slicing">Creazione di sotto liste, <strong>slicing</strong> <br></h2>
+<p>Sintassi:<br>
+<code>mySubList = myList[?startIndex: ?endIndex: ?Step]</code>: Ritorna una sotto lista a partire dalla lista a cui si applica lo slicing (<em>myList</em>). L'operatore <code>[]</code> può ricevere tre parametri opzionali separati da <code>:</code>. Il primo rappresenta l'indice di partenza (incluso), il secondo l'indice di fine (non incluso) e il terzo il passo. Se il primo parametro non è specificato si assume <code>0</code> come valore di partenza. Se il secondo parametro non è specificato si assume <code>len(myList) - 1</code> come valore di fine cioè l'ultimo elemento della lista. Se il terzo parametro non è specificato si assume un incremento positivo unitario</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#indici     0         1       2       3            4</span>
+<span class="c1">#indici    -5        -4      -3      -2           -1</span>
+<span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarino&quot;</span><span class="p">,</span> <span class="s2">&quot;cachi&quot;</span><span class="p">]</span>
+
+<span class="n">mySubList</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mySubList</span><span class="p">)</span>  <span class="c1">#[&#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;]</span>
+<span class="n">mySubList</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mySubList</span><span class="p">)</span> <span class="c1">#[&#39;mandarino&#39;, &#39;cachi&#39;]</span>
+
+<span class="n">mySubList</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mySubList</span><span class="p">)</span> <span class="c1">#[&#39;mela&#39;, &#39;mandarino&#39;]</span>
+
+<span class="n">mySubList</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mySubList</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;mela&#39;, &#39;cachi&#39;]</span>
+
+<span class="c1">#Restituisce una copia &lt;non profonda&gt; di una lista</span>
+<span class="c1">#Non valido per liste annidate</span>
+<span class="n">mySubList</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[:]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mySubList</span><span class="p">)</span> <span class="c1">#[&quot;banana&quot;, &quot;kiwi&quot;, &quot;mela&quot;, &quot;mandarino&quot;, &quot;cachi&quot;]</span>
+
+<span class="c1">#Ordinamento inverso</span>
+<span class="n">mySubList</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">mySubList</span><span class="p">)</span> <span class="c1">#[&#39;cachi&#39;, &#39;mandarino&#39;, &#39;mela&#39;, &#39;kiwi&#39;, &#39;banana&#39;]</span>
+</code></pre></div>
+<h1 id="lezione-09">Lezione 09</h1>
+<h2 id="copia-di-liste">Copia di Liste</h2>
+<p>Abbiamo visto nel paragrafo precedente che per la copia di liste è sufficiente utilizzare l'operatore <code>[:]</code> ma che non vale per liste annidate. In questa lezione approfondiremo l'operazione di copia di elementi.</p>
+<p>Copia semplice, valida per liste non annidate:
+<div class="highlight"><pre><span></span><code><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarino&quot;</span><span class="p">,</span> <span class="s2">&quot;cachi&quot;</span><span class="p">]</span>
+<span class="n">myList2</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[:]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>  <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList2</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;]</span>
+</code></pre></div></p>
+<p>Cosa succede se eseguo la copia tramite il semplice assegnamento?
+<div class="highlight"><pre><span></span><code><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarino&quot;</span><span class="p">,</span> <span class="s2">&quot;cachi&quot;</span><span class="p">]</span>
+<span class="n">myList2</span> <span class="o">=</span> <span class="n">myList</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>  <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList2</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;]</span>
+</code></pre></div></p>
+<p>Sfruttando quindi l'operatore di assegnamento <code>=</code> non ottengo una copia dei valori ma una copia dei riferimenti. In pratica in questo modo <em>myList</em> e <em>myList2</em> condividono gli stessi dati. Se modifico uno modifico anche l'altro</p>
+<div class="highlight"><pre><span></span><code><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarino&quot;</span><span class="p">,</span> <span class="s2">&quot;cachi&quot;</span><span class="p">]</span>
+<span class="n">myList2</span> <span class="o">=</span> <span class="n">myList</span>
+
+<span class="c1">#Togliendo l&#39;elemento da &quot;myList&quot; lo tolgo anche da &quot;myList2&quot; perchè condividono gli stessi elementi</span>
+<span class="n">myList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>  <span class="c1">#[&#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;]</span>
+<span class="c1"># !!!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList2</span><span class="p">)</span> <span class="c1">#[&#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;]</span>
+</code></pre></div>
+<p>Ciò non accade con la copia poichè diventano due liste indipendenti:</p>
+<div class="highlight"><pre><span></span><code><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarino&quot;</span><span class="p">,</span> <span class="s2">&quot;cachi&quot;</span><span class="p">]</span>
+<span class="n">myList2</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[:]</span>
+
+<span class="n">myList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>  <span class="c1">#[&#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList2</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;]</span>
+</code></pre></div>
+<p><strong>Attenzione!</strong> Per liste più complicate come liste annidate l'operatore <code>[:]</code> non può essere utilizzato per la copia perchè effettuerebbe una copia per riferimento degli elementi annidati. In generale per effettuare una copia ricorsiva e profonda è necessario utilizzare la funzione <code>deepcopy()</code> del modulo <code>copy</code>.</p>
+<p>Per liste annidate l'operatore <code>[:]</code> fallisce:
+<div class="highlight"><pre><span></span><code><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="s2">&quot;cachi&quot;</span><span class="p">]</span>
+<span class="n">myList2</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[:]</span>
+
+<span class="n">myList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">)</span>
+<span class="n">myList2</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="c1"># !!! la scrittura su myList2 ha scritto anche myList perchè la lista annidata è stata copiata per riferimento </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>  <span class="c1">#[&#39;kiwi&#39;, &#39;mela&#39;, [12, 2], &#39;cachi&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList2</span><span class="p">)</span> <span class="c1">#&#39;banana&#39;, &#39;kiwi&#39;, &#39;mela&#39;, [12, 2], &#39;cachi&#39;]</span>
+</code></pre></div></p>
+<h2 id="deepcopy">deepcopy()</h2>
+<p>Per la copia di liste e qualsiasi altro oggetto è possibile ed è consigliabile utilizzare una funzione <code>deepcopy()</code> del modulo <code>copy</code> che esegue una copia profonda quindi considera anche oggetti e liste annidate</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">copy</span>
+
+<span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarino&quot;</span><span class="p">,</span> <span class="s2">&quot;cachi&quot;</span><span class="p">]</span>
+<span class="n">myList2</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>
+
+<span class="n">myList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>  <span class="c1">#[&#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList2</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;mela&#39;, &#39;mandarino&#39;, &#39;cachi&#39;]</span>
+</code></pre></div>
+<p>La funzione <code>deepcopy()</code> è l'unica che eseegue in modo affidabile la copia di elementi considerando eventuali elementi annidati.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">copy</span>
+<span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="s2">&quot;cachi&quot;</span><span class="p">]</span>
+<span class="n">myList2</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>
+
+<span class="n">myList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">)</span>
+<span class="n">myList2</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span>  <span class="c1">#[&#39;kiwi&#39;, &#39;mela&#39;, [1, 2], &#39;cachi&#39;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myList2</span><span class="p">)</span> <span class="c1">#[&#39;banana&#39;, &#39;kiwi&#39;, &#39;mela&#39;, [12, 2], &#39;cachi&#39;]</span>
+</code></pre></div>
+<h1 id="lezione-10">Lezione 10</h1>
+<h2 id="le-stringe">Le stringe</h2>
+<p><strong>Le stringhe sono un tipo di dato immutabile in python</strong> <br></p>
+<p>Questo significa che la copia di stringhe può essere fatta attraverso l'assegnamento tra i nomi (contrariamente a quanto accade per altri linguaggi come C++) poichè quando viene creata una copia tramite l'assegnamento non viene copiato il riferimento della stringa ma l'intero oggetto stringa.</p>
+<div class="highlight"><pre><span></span><code><span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;ciao&quot;</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;ciaociao&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span> <span class="c1">#ciaociao</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span> <span class="c1">#ciao</span>
+</code></pre></div>
+<p>Ecco una dimostrazione approfondita andando ad scavare tra gli indirizzi in memoria con la funzione <code>id</code></p>
+<div class="highlight"><pre><span></span><code><span class="n">s1</span> <span class="o">=</span> <span class="s2">&quot;ciao&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">s1</span><span class="p">))</span> <span class="c1">#140440511029104</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">s2</span><span class="p">))</span> <span class="c1">#140440511029104</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="s2">&quot;ciaociao&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">s2</span><span class="p">))</span> <span class="c1">#140440511029168</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span> <span class="c1">#ciaociao</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span> <span class="c1">#ciao</span>
+</code></pre></div>
+<p><strong>Attenzione</strong> Eseguendo la copia <code>s2 = s1</code> ancora non si assegna ad <code>s2</code> un nuovo indirizzo in memoria per motivi di efficienza. Lo si assegna quando ad <code>s2</code> si assegna un nuovo valore</p>
+<h2 id="interpolazione-di-stringhe-metodo-format">Interpolazione di stringhe - Metodo <code>format()</code></h2>
+<p>Il metodo <code>format()</code> applicabile alle stringhe consente di inserire espressioni valutabili all'interno di stringhe
+<a href="https://www.w3schools.com/python/ref_string_format.asp">w3schools - Python String format() Method</a>.</p>
+<p>Il metodo <code>format()</code> formatta i valori specificati e li inserisce all'interno del segnaposto della stringa.
+Il segnaposto viene definito utilizzando le parentesi graffe: {}.</p>
+<p>Esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#sintassi 1</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="s2">&quot;1Kg di sale da cucina a solo </span><span class="si">{price}</span><span class="s2"> euro!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">price</span> <span class="o">=</span> <span class="mi">2</span><span class="p">))</span> <span class="c1">#1Kg di sale da cucina a solo 2 euro!</span>
+
+<span class="c1">#sintassi 2</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="s2">&quot;1Kg di sale da cucina a solo </span><span class="si">{0}</span><span class="s2"> euro! Rimasti </span><span class="si">{1}</span><span class="s2"> pezzi&quot;</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">500</span><span class="p">))</span> <span class="c1">#1Kg di sale da cucina a solo 2 euro! Rimasti 500 pezzi</span>
+</code></pre></div>
+<p>Esiste anche una sintassi leggermente diversa:</p>
+<div class="highlight"><pre><span></span><code><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;dentista&quot;</span><span class="p">,</span> <span class="s2">&quot;17:00&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Evento: </span><span class="si">{</span><span class="n">myList</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> - Ora: </span><span class="si">{</span><span class="n">myList</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">)</span> <span class="c1">#Evento: dentista - Ora: 17:00 </span>
+</code></pre></div>
+<h1 id="lezione-11">Lezione 11</h1>
+<h2 id="pypdf2-merge-all-pdf-v2">PyPDF2 - Merge All pdf v2</h2>
+<p>Questa è una versione migliorata dello script <em>Merge All pdf</em>. Aggiunge dei controlli sull'estensione del file e sulla natura del file. Controlla infatti se un file termina con formati "strani" come ".pdF", "PDf" considerandoli comunque validi e controlla eventuali falsi file trappola come cartella che termina con estensione ".pdf". <br>
+Faremo uso di:</p>
+<ul>
+<li><code>os.path.isfile(path+file)</code>: Ritorna <em>true</em> se il file specificato come parametro (eventualmente con un path relativo o assoluto) è realmente un file.</li>
+<li>Metodo su <strong>stringhe</strong> <code>.upper()</code>: Ritorna una <strong>copia</strong> della stringa a cui si applica il metodo in caratteri maiscoli</li>
+<li><strong>chaining</strong> condition <code>and</code>: Permette la concatenazione di condizioni logiche. Ritorna <em>true</em> se tutte le condizioni concatenate sono <em>true</em>  </li>
+</ul>
+<p>Script completo e migliorato</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">PyPDF2</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;**********************************************&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unisco i file pdf presenti in questa directory&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;**********************************************&quot;</span><span class="p">)</span>
+
+<span class="n">listaFiles</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">nomeFile</span> <span class="ow">in</span> <span class="n">listaFiles</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">nomeFile</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.pdf&#39;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">nomeFile</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#chiedo all&#39;utente come vuole chiamare il file di output</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Salvo il risultato con il nome:&quot;</span><span class="p">)</span>
+<span class="n">nomeFileDestinazione</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="c1">#Apro il file in scrittura binaria</span>
+<span class="n">PDF_Destinazione</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">nomeFileDestinazione</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">merger</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileMerger</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Elaborazione di..&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">nomeFile</span> <span class="ow">in</span> <span class="n">listaFiles</span><span class="p">:</span>
+    <span class="c1">#Elaboro solo i file con estensione &quot;.pdf&quot; o &quot;PDF&quot; o &quot;PdF&quot; ..</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">nomeFile</span><span class="p">)</span> <span class="ow">and</span> <span class="n">nomeFile</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.PDF&#39;</span><span class="p">):</span>
+        <span class="c1">#stampo il nome del file</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">nomeFile</span><span class="p">)</span>
+        <span class="c1">#lo apro in lettura binaria</span>
+        <span class="n">pdfFileInput</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">nomeFile</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+        <span class="c1">#creo un&#39;istanza della classe &lt;PdfFileReader&gt; sul file appena aperto</span>
+        <span class="n">PDF_Reader</span> <span class="o">=</span> <span class="n">PyPDF2</span><span class="o">.</span><span class="n">PdfFileReader</span><span class="p">(</span><span class="n">pdfFileInput</span><span class="p">)</span>
+        <span class="c1">#Appendo il file PDF in coda all&#39;oggetto merger</span>
+        <span class="n">merger</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PDF_Reader</span><span class="p">)</span>
+        <span class="c1">#chiudo il file aperto</span>
+        <span class="n">pdfFileInput</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1">#Operazione di scrittura</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scrittura su: &quot;</span> <span class="o">+</span> <span class="n">nomeFileDestinazione</span><span class="p">)</span>
+<span class="n">merger</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">PDF_Destinazione</span><span class="p">)</span>
+<span class="n">PDF_Destinazione</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finito..&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h1 id="lezione-12">Lezione 12</h1>
+<h2 id="introduzione-alla-manipolazione-dei-docx">Introduzione alla manipolazione dei docx</h2>
+<p>Con il seguente script inizieremo a manipolare i docx
+Da terminale puoi installare il modulo per la manipolazione dei docx con il comando:</p>
+<div class="highlight"><pre><span></span><code>pip install python-docx
+</code></pre></div>
+<p>Importa il modulo "python-docx" all'interno del tuo script con:
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">docx</span>
+</code></pre></div></p>
+<p>La documentazione ufficiale del modulo "python-docx" la puoi trovare su <a href="https://python-docx.readthedocs.io/en/latest/">docx - documentazione</a>.</p>
+<p>Del modulo "python-docx" utilizzeremo:</p>
+<ul>
+<li>
+<p><code>docx.Document(docxFile)</code>: Chiama il costruttore della classe <code>Document</code> passando come parametro di inizializzazione il file "docx" che intendiamo elaborare. Ritorna un'istanza della classe <code>Document</code></p>
+</li>
+<li>
+<p>Metodo <code>sections</code> della classe <code>Document</code>: applicato a un'istanza della classe <code>Document</code> restituisce le sezioni del documento "docx"-</p>
+</li>
+<li>
+<p>Metodo <code>paragraphs</code> della classe <code>Document</code>: applicato a un'istanza della classe <code>Document</code> restituisce una <strong>lista dell'oggetto</strong> <code>Paragraph</code></p>
+</li>
+<li>
+<p>Metodo <code>text</code> della classe <code>Paragraph</code>: applicato a un'istanza della classe <code>Paragraph</code> restituisce il testo di un paragrafo</p>
+</li>
+</ul>
+<p>Utilizzeremo anche l'operatore <code>*</code> su <strong>stringa</strong> che permette di generare una ripetizione della stringa a cui si applica l'operatore.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ciao &quot;</span><span class="o">*</span><span class="mi">2</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span> <span class="c1">#ciao ciao !</span>
+</code></pre></div>
+<p>Script completo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#Manipolazione docx</span>
+<span class="kn">import</span> <span class="nn">docx</span>
+
+<span class="n">divina</span> <span class="o">=</span> <span class="n">docx</span><span class="o">.</span><span class="n">Document</span><span class="p">(</span><span class="s2">&quot;divina1.docx&quot;</span><span class="p">)</span>
+
+<span class="n">sezioni</span> <span class="o">=</span> <span class="n">divina</span><span class="o">.</span><span class="n">sections</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il documento contine:&quot;</span><span class="p">)</span>
+
+<span class="c1">#Utile quando ci sono diversi valori da valutare</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- </span><span class="si">{0}</span><span class="s2"> sezioni&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sezioni</span><span class="p">)))</span> <span class="c1">#altrenativa &gt;&gt;&gt; print(str( len(sezioni) ) + &quot; sezioni&quot; ) </span>
+
+
+<span class="n">paragrafi</span> <span class="o">=</span> <span class="n">divina</span><span class="o">.</span><span class="n">paragraphs</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- </span><span class="si">{0}</span><span class="s2"> paragrafi&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">paragrafi</span><span class="p">)))</span> <span class="c1">#4 sezioni</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Stampo i paragrafi..&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="c1">#Per ogni elemento p estratto dalla lista paragrafi..</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">paragrafi</span><span class="p">:</span>
+    <span class="c1">#p.text restituisce il testo di un paragrafo</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="c1">#questo metodo su stringa genera una ripetizione </span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+</code></pre></div>
+<h1 id="lezione-13">Lezione 13</h1>
+<h2 id="python-while">Python <code>while()</code></h2>
+<p>Con il ciclo while possiamo eseguire un insieme di istruzioni fintanto che una condizione è vera.</p>
+<p><a href="https://www.w3schools.com/python/python_while_loops.asp">w3schools - Python While Loops</a></p>
+<p>Sintassi:</p>
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="c1">#code</span>
+</code></pre></div>
+<p>Esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>    <span class="c1">#1 &lt; 6, true   #2 &lt; 6, true   #3 &lt; 6, true   #4 &lt; 6, true    #5 &lt; 6, true    #6 &lt; 6, false -&gt; exit</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>    <span class="c1">#1             #2             #3             #4              #5                </span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>   <span class="c1">#i = 2         #i = 3         #i = 4         #i = 5          #i = 6          </span>
+
+<span class="c1"># 1</span>
+<span class="c1"># 2</span>
+<span class="c1"># 3</span>
+<span class="c1"># 4</span>
+<span class="c1"># 5</span>
+</code></pre></div>
+<h2 id="comando-break">Comando <code>break</code></h2>
+<p>Con l'istruzione <code>break</code> possiamo interrompere il ciclo anche se la condizione while è vera:</p>
+<p>Sintassi:</p>
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="c1">#code</span>
+    <span class="c1">#code</span>
+    <span class="c1">#..</span>
+    <span class="k">break</span> <span class="c1">#esce</span>
+</code></pre></div>
+<p>Esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>    <span class="c1">#1 &lt; 6, true   #2 &lt; 6, true   </span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>    <span class="c1">#1             #2                          </span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>   <span class="c1">#i = 2         #i = 3         </span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>  <span class="c1">#i = 2, false  #i = 3, true -&gt; exit</span>
+        <span class="k">break</span>
+
+<span class="c1"># 1</span>
+<span class="c1"># 2</span>
+</code></pre></div>
+<p>Con i cicli c'è sempre da tenere in considerazione <strong>quando</strong> viene effettuato il controllo delle condizioni di uscita ed entrata del ciclo e la sequenza con cui vengono eseguite le istruzioni all'interno del ciclo. Leggendo l'esempio di sopra non è chiaro se il programmatore con la condizione <code>i == 3</code> vuole che venga stampato il numero <code>3</code> oppure no. Un'ottima strategia è quella di inserire tutte le condizioni di uscita del ciclo all'inizio ed eventuali istruzioni di controllo ciclo alla fine. Al centro del ciclo andranno tutte le istruzioni che verranno eseguite nel caso <em>standard</em></p>
+<div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>    <span class="c1">#1 &lt; 6, true   #2 &lt; 6, true   #3 &lt; 6</span>
+    <span class="c1">#Condizione di uscita ciclo</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>  <span class="c1">#i = 1, false  #i = 2, false  #i = 3, true -&gt; exit</span>
+        <span class="k">break</span>  
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>    <span class="c1">#1             #2     </span>
+    <span class="c1">#Condizione di controllo ciclo                     </span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>   <span class="c1">#i = 2         #i = 3         </span>
+
+<span class="c1"># 1</span>
+<span class="c1"># 2</span>
+</code></pre></div>
+<h2 id="comando-continue">Comando <code>continue</code></h2>
+<p>Con l'istruzione <code>continue</code> possiamo interrompere l'iterazione corrente e continuare con la successiva</p>
+<p>Sintassi:</p>
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="c1">#code</span>
+    <span class="c1">#code</span>
+    <span class="c1">#..</span>
+    <span class="k">continue</span> <span class="c1">#esce</span>
+</code></pre></div>
+<p>Esempio</p>
+<div class="highlight"><pre><span></span><code><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>                 <span class="c1">#1 &lt; 6, true   #2 &lt; 6, true   #3 &lt; 6, true   #4 &lt; 6, true   #5 &lt; 6, true   #6 &lt; 6, false -&gt; exit</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>               <span class="c1">#i = 1, false  #i = 2, false  #i = 3, true   #i = 4, false  #i = 5, false </span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Numero &quot;</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span>                               <span class="c1">#Numero 3</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>                                          <span class="c1">#i = 4</span>
+        <span class="k">continue</span>                                           <span class="c1">#execute</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>                 <span class="c1">#1             #2                            #4             #5                   </span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>                <span class="c1">#i = 2         #i = 3                        #i = 4         #i = 5         #i = 6         </span>
+
+<span class="c1"># 1</span>
+<span class="c1"># 2</span>
+<span class="c1"># Numero 3</span>
+<span class="c1"># 4</span>
+<span class="c1"># 5</span>
+</code></pre></div>
+<h2 id="alcune-considerazioni-finali">Alcune considerazioni finali</h2>
+<p>Python ha due comandi di loop primitivi:</p>
+<ul>
+<li><code>while</code> loop</li>
+<li><code>for</code> loop</li>
+</ul>
+<p>E' normale chiedersi quando usare uno e quando usare l'altro.. Riporto quindi una serie di caratteristiche dei due cicli iterativi in Python</p>
+<ul>
+<li><code>for</code> loop è un ciclo enumerativo. Andrebbe utilizzato quando è noto a priori il numero di iterazioni totali</li>
+<li><code>while</code> loop è un ciclo indefinito. Andrebbe utilizzato quando non è noto a priori il numero di iterazioni totali</li>
+<li>I comandi <code>break</code> e <code>continue</code> possono essere utilizzati indistintamente sia sul ciclo <code>for</code> che sul ciclo <code>while</code></li>
+</ul>
+<h1 id="lezione-14">Lezione 14</h1>
+<h2 id="esercizio-asta-online-v1">Esercizio Asta online v1</h2>
+<p>Il seguente script vuole simulare l'andamento di un'asta online con la seguente regola:
+- L'asta verrà aggiudicata da chi avrà fatto un'offerta la più vicina alla media delle offerte degli altri</p>
+<p>L'utente dovrà inserire un'offerta in <em>bit coin</em> e una <em>email</em> che rappresenterà l'identificativo. E' consentita un'unica offerta per utente! In questa prima parte ci occuperemo dell'acquisizione dati da tastiera e della generazione di una struttura dati adeguata.</p>
+<div class="highlight"><pre><span></span><code><span class="n">offerte</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1">#dato booleano di controllo ciclo</span>
+<span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">while</span> <span class="n">altre_offerte</span><span class="p">:</span>
+    <span class="c1">#offerta contiene l&#39;offerte in bitcoin</span>
+    <span class="n">offerta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci l`offerta pervenuta (0 per terminare): &quot;</span><span class="p">)</span>
+
+    <span class="c1">#Converto il dato ricevuto da tastiera in intero</span>
+    <span class="n">offerta</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">offerta</span><span class="p">)</span>
+
+    <span class="c1">#Il valore &quot;0&quot; è il terminatore</span>
+    <span class="k">if</span> <span class="n">offerta</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">continue</span>
+
+
+    <span class="k">if</span> <span class="n">offerta</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non possono essere fatte offerte negative!&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="c1">#Se l&#39;offerta supera i controlli chiedo l&#39;email</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserire l`email dell`offerente: &quot;</span><span class="p">)</span>
+
+    <span class="c1">#Inserisco la coppia email-offerta nella lista delle offerte</span>
+    <span class="n">offerte</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">email</span><span class="p">,</span> <span class="n">offerta</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le offerte valide sono:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">offerte</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="images/asta-01.gif" /></p>
+<p>Che cosa succede se l'utente inserisce dei valori di input non atesi? Ad esempio, invece che inserire un numero inserisce una stringa o qualche carattere non previsto?</p>
+<p><img alt="" src="images/asta-02.gif" /></p>
+<p>Vedremo nel capito successivo come trattare questi errori tramite il costrutto <code>try Except</code></p>
+<h1 id="lezione-15">Lezione 15</h1>
+<h2 id="costrutto-try-except">Costrutto <code>try Except</code></h2>
+<p>Quando si verifica un errore (o un'eccezione),  Python normalmente si ferma e genera un messaggio di errore.</p>
+<p><a href="https://www.w3schools.com/python/python_try_except.asp">w3schools - Python Try Except</a></p>
+<p>Nell'esempio chiedo all'utente l'inserimento di un numero intero.. Fintanto che l'utente inserisce numeri interi tutto funziona correttamente ma quando per sbaglio l'utente inserisce un carattere non valido, un numero decimale o altro, che succede?</p>
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;inserisci un numero intero..&quot;</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#input() = 1</span>
+<span class="c1">#1</span>
+<span class="c1">#input() = 2</span>
+<span class="c1">#2</span>
+<span class="c1">#input() = dd</span>
+<span class="c1">#</span>
+<span class="c1">#Traceback (most recent call last):</span>
+<span class="c1">#  File &quot;test.py&quot;, line 3, in &lt;module&gt;</span>
+<span class="c1">#   x = int(input())</span>
+<span class="c1">#ValueError: invalid literal for int() with base 10: &#39;dd&#39;</span>
+</code></pre></div>
+<p><img alt="" src="images/try-except-01.gif" /></p>
+<p>Inserendo la stringa <code>"dd"</code> la conversione esplicita <code>int()</code> fallisce e restituisce un errore:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#Traceback (most recent call last):</span>
+<span class="c1">#  File &quot;test.py&quot;, line 3, in &lt;module&gt;</span>
+<span class="c1">#   x = int(input())</span>
+<span class="c1">#ValueError: invalid literal for int() with base 10: &#39;dd&#39;</span>
+</code></pre></div>
+<p>L'errore è di tipo <code>ValueError</code> e la descrizione è: <code>invalid literal for int() with base 10: 'dd'</code> che significa che la costante letterale <code>dd</code> inserita non è un tipo di dato valido per la conversione in base 10, cioè in un numero decimale.</p>
+<p><strong>Come gestisco queste situazioni di errore?</strong>
+Il costrutto <code>try Except</code> permette la gestione di queste situazioni.</p>
+<p>Sintassi:</p>
+<div class="highlight"><pre><span></span><code><span class="k">try</span><span class="p">:</span>
+    <span class="c1">#code1</span>
+<span class="k">except</span> <span class="c1">#typeError:</span>
+    <span class="c1">#code2</span>
+</code></pre></div>
+<p>Significa: <em>prova</em> (try) ad eseguire <code>code1</code>, se rilevi un'eccezione di tipo <code>typeError</code> esegui <code>code2</code> ed "ignora" <code>code1</code> ovvero fai finta che <code>code1</code> non sia mai stato eseguito. Se non rilevi nessun errore nella fase di <code>try</code> allora esegui <code>code1</code></p>
+<p>Esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inserisci un numero intero..&quot;</span><span class="p">)</span>        
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Non è un numero intero, riprova..&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Il numero inserito è: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="images/try-except-02.gif" /></p>
+<h1 id="lezione-16">Lezione 16</h1>
+<h2 id="introduzione-alle-espressioni-regolari-con-python">Introduzione alle espressioni regolari con Python</h2>
+<p>Una RegEx, o espressione regolare, è una sequenza di caratteri che forma un modello di ricerca.
+Le RegEx possono essere utilizzate per verificare se una stringa contiene il modello di ricerca specificato.
+Python ha un modulo integrato chiamato <code>re</code>, che può essere utilizzato per lavorare con le espressioni regolari.</p>
+<p><a href="https://www.w3schools.com/python/python_regex.asp">w3schools - Python RegEx</a></p>
+<h1 id="lezione-17">Lezione 17</h1>
+<h2 id="esercizio-asta-online-v2">Esercizio Asta online v2</h2>
+<p>Il seguente script vuole simulare l'andamento di un'asta online con la seguente regola:
+- L'asta verrà aggiudicata da chi avrà fatto un'offerta la più vicina alla media delle offerte degli altri</p>
+<p>L'utente dovrà inserire un'offerta in <em>bit coin</em> e una <em>email</em> che rappresenterà l'identificativo. E' consentita un'unica offerta per utente! In questa seconda parte ci occuperemo di inserire dei controlli aggiuntivi dei dati acquisiti.</p>
+<ul>
+<li>
+<p>Aggiungeremo la possibilità di inserire numeri decimali "floating point". Per far ciò utilizzeremo la funzione di conversione esplicita da stringa (l'input da tastiera) a numero decimale, <code>float()</code></p>
+</li>
+<li>
+<p>Rileveremo tutti gli errori legati ad un'inserimento di un dato <code>float</code> non valido come una stringa o qualche altro carattere (come ad esempio <strong>Invio</strong>) non interpretabile come numero decimale. Alla rivelazione dell'errore stamperemo il messaggio d'errore <code>"Formato non valido, riprova .."</code>. Utilizzeremo il costrutto <code>try-except</code></p>
+</li>
+<li>
+<p>Aggiungeremo un'espressione regolare abbastanza semplice per il controllo del formato dell'email. Per far ciò utilizzeremo la funzione <code>re.match(regExp, myVar)</code> del modulo <code>re</code>. L'espressione regolare controlla se la stringa (nel nostro caso l'email) inizia <code>^</code> con la sequenza di caratteri minuscoli <code>"a-z"</code>, maiuscoli <code>"A-Z"</code> o numerici <code>"0-9"</code> ripetuti. E' seguita dal carattere <code>@</code>, continua con la sequenza di caratteri minuscoli, maiuscoli o numerici, prosegue con il carattere <code>.</code> ed p seguita dal dominio che per noi sarà nuovamente una sequenza di caratteri minuscoli, maiuscoli o numerici.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">offerte</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">while</span> <span class="n">altre_offerte</span><span class="p">:</span>
+    <span class="n">offerta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci l`offerta pervenuta (0 per terminare): &quot;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">offerta</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">offerta</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Formato non valido, riprova ...&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="k">if</span> <span class="n">offerta</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">continue</span>
+
+    <span class="k">if</span> <span class="n">offerta</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non possono essere fatte offerte negative!&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="n">email</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserire l`email dell`offerente: &quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$&quot;</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Email non valida, riprova ...&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="n">nuova_offerta</span> <span class="o">=</span> <span class="p">[</span><span class="n">offerta</span><span class="p">,</span> <span class="n">email</span><span class="p">]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">offerte</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="images/asta-03.gif" /></p>
+<h1 id="lezione-18">Lezione 18</h1>
+<h2 id="costrutto-if-in">Costrutto <code>if ... in</code></h2>
+<p>Analogamente al costrutto <code>for ... in</code> il costrutto <code>if ... in</code> si applica a collezioni di elementi in cui si richiede la ricerca di un particolare elemento in una lista</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="c1">#code</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1">#code</span>
+</code></pre></div>
+<p>Esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="n">myFruitsList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mandarino&quot;</span><span class="p">,</span> <span class="s2">&quot;mela&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inserisci il nome di un frutto&quot;</span><span class="p">)</span>
+<span class="n">itemToSearch</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">itemToSearch</span> <span class="ow">in</span> <span class="n">myFruitsList</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C&#39;è almeno un/una: &quot;</span> <span class="o">+</span> <span class="n">itemToSearch</span> <span class="o">+</span> <span class="s2">&quot; nella lista&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non è presente nessuno/a &quot;</span> <span class="o">+</span> <span class="n">itemToSearch</span> <span class="o">+</span> <span class="s2">&quot; nella lista&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="images/if-in.gif" /></p>
+<h1 id="lezione-19">Lezione 19</h1>
+<h2 id="esercizio-asta-online-v3">Esercizio Asta online v3</h2>
+<p>Il seguente script vuole simulare l'andamento di un'asta online con la seguente regola:
+- L'asta verrà aggiudicata da chi avrà fatto un'offerta la più vicina alla media delle offerte degli altri</p>
+<p>L'utente dovrà inserire un'offerta in <em>bit coin</em> e una <em>email</em> che rappresenterà l'identificativo. E' consentita un'unica offerta per utente! In questa terza parte contrellero che la coppia utente/offerta sia unica utilizzando il costrutto <code>if ... in</code></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">offerte</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">while</span> <span class="n">altre_offerte</span><span class="p">:</span>
+    <span class="n">offerta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci l`offerta pervenuta (0 per terminare): &quot;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">offerta</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">offerta</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Formato non valido, riprova ...&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="k">if</span> <span class="n">offerta</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">continue</span>
+
+    <span class="k">if</span> <span class="n">offerta</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non possono essere fatte offerte negative!&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="n">email</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserire l`email dell`offerente: &quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$&quot;</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Email non valida, riprova ...&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+
+    <span class="n">nuova_offerta</span> <span class="o">=</span> <span class="p">[</span><span class="n">email</span><span class="p">,</span> <span class="n">offerta</span><span class="p">]</span>
+
+    <span class="c1"># controllo valido solo se viene fatta la stessa offerta con la stessa mail ... limitato!</span>
+    <span class="k">if</span> <span class="n">nuova_offerta</span> <span class="ow">in</span> <span class="n">offerte</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Questo utente ha già fatto la sua unica offerta ... respinto!&quot;</span><span class="p">)</span>
+        <span class="k">continue</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">offerte</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nuova_offerta</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le offerte valide sono:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">offerte</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="images/asta-04.gif" /></p>
+<p>Come si vede una coppia identica <em>utente/bit coin</em> viene catturata e rifiutata ma è ancora permesso che un utente possa fare più offerte</p>
+<h1 id="lezione-20">Lezione 20</h1>
+<h2 id="introduzione-alle-funzioni">Introduzione alle Funzioni</h2>
+<p>Le funzioni vanno definite prima di utilizzarle</p>
+<p>Una funzione è un blocco di codice che viene eseguito solo quando viene chiamata.
+È possibile passare dei valori, chiamati <strong>parametri</strong>, in una funzione.</p>
+<p>Una funzione può restituire dei valori come risultato.</p>
+<p>In Python una funzione viene definita utilizzando la parola chiave <code>def</code>.</p>
+<p><a href="https://www.w3schools.com/python/python_functions.asp">w3schools - Python Functions</a></p>
+<div class="highlight"><pre><span></span><code><span class="c1">#definizione di una funzione</span>
+<span class="k">def</span> <span class="nf">myFunc</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+    <span class="c1">#code</span>
+
+<span class="c1">#chiamata di una funzione</span>
+<span class="n">myFunc</span><span class="p">(</span><span class="n">value1</span><span class="p">)</span>
+</code></pre></div>
+<p>Esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">saluta</span><span class="p">(</span><span class="n">nome</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ciao: &quot;</span> <span class="o">+</span> <span class="n">nome</span> <span class="o">+</span><span class="s2">&quot;!&quot;</span><span class="p">)</span>
+
+<span class="n">saluta</span><span class="p">(</span><span class="s2">&quot;Emil&quot;</span><span class="p">)</span>
+<span class="n">saluta</span><span class="p">(</span><span class="s2">&quot;Tobias&quot;</span><span class="p">)</span>
+<span class="n">saluta</span><span class="p">(</span><span class="s2">&quot;Linus&quot;</span><span class="p">)</span>
+
+<span class="c1"># ciao: Emil!</span>
+<span class="c1"># ciao: Tobias!</span>
+<span class="c1"># ciao: Linus!</span>
+</code></pre></div>
+<h1 id="lezione-21">Lezione 21</h1>
+<h2 id="esercizio-asta-online-v4">Esercizio Asta online v4</h2>
+<p>Il seguente script vuole simulare l'andamento di un'asta online con la seguente regola:
+- L'asta verrà aggiudicata da chi avrà fatto un'offerta la più vicina alla media delle offerte degli altri</p>
+<p>L'utente dovrà inserire un'offerta in <em>bit coin</em> e una <em>email</em> che rappresenterà l'identificativo. In questa quarte parte introdurremo la funzione <code>stampa_lista(lista_offerte)</code> che riceve in ingresso la lista delle offerte e stampa il risultato secondo un formato specifico e la funzione <code>inserisci_offerte()</code> che rappresenta l'acquisizione dati da tastiera da parte dell'utente e il controllo sull'integrità dei dati ricevuti. Di fatto la complessità dello script si riduce alla chiamta di due funzioni: <code>inserisci_offerte()</code> e <code>stampa_lista</code></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">stampa_lista</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Email Offerente: </span><span class="si">{</span><span class="n">offerta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> - Offerta: </span><span class="si">{</span><span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">inserisci_offerte</span><span class="p">():</span>
+    <span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">while</span> <span class="n">altre_offerte</span><span class="p">:</span>
+        <span class="n">offerta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci l`offerta pervenuta (0 per terminare): &quot;</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">offerta</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">offerta</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Formato non valido, riprova ...&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">offerta</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># USCITA DAL CICLO</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">offerta</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non possono essere fatte offerte negative!&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="n">email</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserire l`email dell`offerente: &quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$&quot;</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Email non valida, riprova ...&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="n">nuova_offerta</span> <span class="o">=</span> <span class="p">[</span><span class="n">email</span><span class="p">,</span> <span class="n">offerta</span><span class="p">]</span>
+
+        <span class="c1"># controllo valido solo se viene fatta la stessa offerta con la stessa mail ... limitato!</span>
+        <span class="k">if</span> <span class="n">nuova_offerta</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Questo utente ha già fatto la sua unica offerta ... respinto!&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nuova_offerta</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">lista</span>
+
+
+<span class="c1"># grazie all`uso di funzioni la complessità del programma principale</span>
+<span class="c1"># è drasticamente ridotta</span>
+<span class="n">offerte</span> <span class="o">=</span> <span class="n">inserisci_offerte</span><span class="p">()</span>
+<span class="n">stampa_lista</span><span class="p">(</span><span class="n">offerte</span><span class="p">)</span>
+</code></pre></div>
+<h1 id="lezione-22">Lezione 22</h1>
+<h2 id="esercizio-asta-online-v5">Esercizio Asta online v5</h2>
+<p>Il seguente script vuole simulare l'andamento di un'asta online con la seguente regola:
+- L'asta verrà aggiudicata da chi avrà fatto un'offerta la più vicina alla media delle offerte degli altri</p>
+<p>L'utente dovrà inserire un'offerta in <em>bit coin</em> e una <em>email</em> che rappresenterà l'identificativo. In questa quinta parte introdurremo le funzioni:</p>
+<ul>
+<li>
+<p><code>trova_email(email, lista_offerte)</code>: Riceve come parametro una stringa digitata in input dall'utente che rappresenta l'identificativo utente, <em>email</em> e la lista di tutte le offerte, <em>lista_offerte</em>. Ritorna un <strong>boolean</strong> <em>True</em> se trova l'identificativo <em>email</em> ricevuto come parametro come identificativo nella <em>lista_offerte</em>. Questa funzione controlla quindi se un utente ha già fatto un'offerta.</p>
+</li>
+<li>
+<p><code>media_offerte(lista_offerte)</code>: Riceve come parametro la lista di tutte le offert <em>lista_offerte</em>, calcola la media dei valori delle offerte che rappresentano i <em>bit coin</em> e ne ritorna il valore. Ritorna quindi un valore <strong>float</strong></p>
+</li>
+<li>
+<p><code>minimo(lista_offerte)</code>: Riceve come parametro la lista di tutte le offert <em>lista_offerte</em>, calcola il minimo dei valori delle offerte che rappresentano i <em>bit coin</em> e ne ritorna il valore. Ritorna quindi un valore <strong>float</strong></p>
+</li>
+<li>
+<p><code>massimo(lista_offerte)</code>: Riceve come parametro la lista di tutte le offert <em>lista_offerte</em>, calcola il massimo dei valori delle offerte che rappresentano i <em>bit coin</em> e ne ritorna il valore. Ritorna quindi un valore <strong>float</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">trova_email</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="n">trovato</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">email</span><span class="p">:</span>
+            <span class="n">trovato</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">break</span>
+
+    <span class="k">return</span> <span class="n">trovato</span>
+
+
+<span class="k">def</span> <span class="nf">media_offerte</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="n">somma</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">:</span>
+        <span class="n">somma</span> <span class="o">+=</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">somma</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">)</span>
+
+
+<span class="c1"># si assume che la lista non sia vuota</span>
+<span class="k">def</span> <span class="nf">minimo</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="c1">#non si parte mai da un valore assoluto</span>
+    <span class="c1">#prelevo solo il valore numerico dell&#39;offerta</span>
+    <span class="c1">#min è un numero float</span>
+    <span class="nb">min</span> <span class="o">=</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="c1">#lista_offerte[1:] ritorna una lista dal primo elemento fino all&#39;ultimo</span>
+    <span class="c1">#Itero ogni elemento della lista lista_offerte a partire dal primo</span>
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="c1">#se trovo un elemento più piccolo dell&#39;attuale &lt;min&gt;, aggiorno min</span>
+        <span class="k">if</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nb">min</span><span class="p">:</span>
+            <span class="nb">min</span> <span class="o">=</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="nb">min</span>
+
+
+<span class="c1"># si assume che la lista non sia vuota</span>
+<span class="k">def</span> <span class="nf">massimo</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="nb">max</span> <span class="o">=</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">if</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nb">max</span><span class="p">:</span>
+            <span class="nb">max</span> <span class="o">=</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="nb">max</span>
+
+
+<span class="k">def</span> <span class="nf">stampa_lista</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Email Offerente: </span><span class="si">{</span><span class="n">offerta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> - Offerta: </span><span class="si">{</span><span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">inserisci_offerte</span><span class="p">():</span>
+    <span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">while</span> <span class="n">altre_offerte</span><span class="p">:</span>
+        <span class="n">offerta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci l`offerta pervenuta (0 per terminare): &quot;</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">offerta</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">offerta</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Formato non valido, riprova ...&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">offerta</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># USCITA DAL CICLO</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">offerta</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non possono essere fatte offerte negative!&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="n">email</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserire l`email dell`offerente: &quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$&quot;</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Email non valida, riprova ...&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="n">nuova_offerta</span> <span class="o">=</span> <span class="p">[</span><span class="n">email</span><span class="p">,</span> <span class="n">offerta</span><span class="p">]</span>
+
+        <span class="c1"># controllo valido solo se viene fatta la stessa offerta con la stessa mail ... limitato!</span>
+        <span class="c1"># if nuova_offerta in offerte:</span>
+        <span class="c1">#     print(&quot;Questo utente ha già fatto la sua unica offerta ... respinto!&quot;)</span>
+        <span class="c1">#     continue</span>
+        <span class="c1"># else:</span>
+        <span class="c1">#     offerte.append(nuova_offerta)</span>
+
+        <span class="k">if</span> <span class="n">trova_email</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="n">lista</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Questo utente ha già fatto la sua unica offerta ... respinto!&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nuova_offerta</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">lista</span>
+
+<span class="c1"># grazie all`uso di funzioni la complessità del programma principale</span>
+<span class="c1"># è drasticamente ridotta</span>
+<span class="n">offerte</span> <span class="o">=</span> <span class="n">inserisci_offerte</span><span class="p">()</span>
+<span class="n">stampa_lista</span><span class="p">(</span><span class="n">offerte</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Offerta Media: </span><span class="si">{</span><span class="n">media_offerte</span><span class="p">(</span><span class="n">offerte</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Offerta minima: </span><span class="si">{</span><span class="n">minimo</span><span class="p">(</span><span class="n">offerte</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="" src="images/asta-05.gif" /></p>
+<h1 id="lezione-23">Lezione 23</h1>
+<h2 id="python-list-comprehension">Python - List Comprehension</h2>
+<p><em>List Comprehension</em> offre una sintassi più breve quando si desidera creare un nuovo elenco basato sui valori di un elenco esistente.</p>
+<p><a href="https://www.w3schools.com/python/python_lists_comprehension.asp">w3schools - Python - List Comprehension</a></p>
+<p>E' una sorta di <strong>RegEx</strong> utilizzata per il tipo <strong>List</strong>.
+Sintassi.</p>
+<div class="highlight"><pre><span></span><code><span class="n">newlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">expression</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">iterable</span> <span class="k">if</span> <span class="n">condition</span> <span class="o">==</span> <span class="kc">True</span><span class="p">]</span>
+</code></pre></div>
+<p>Nell'esempio che segue costruisco una lista non utilizzando <em>List Comprehension</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="p">]</span>
+<span class="n">newlist</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1">#La nuova lista conterrà soltanto elementi che contengono il carattere &quot;a&quot;</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+  <span class="k">if</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="n">newlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">newlist</span><span class="p">)</span> <span class="c1">#[&quot;apple&quot;, &quot;banana&quot;, &quot;mango&quot;]</span>
+</code></pre></div>
+<p>Il solito esempio utilizzando <em>List Comprehension</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;kiwi&quot;</span><span class="p">,</span> <span class="s2">&quot;mango&quot;</span><span class="p">]</span>
+
+<span class="c1">#List Comprehension</span>
+<span class="n">newlist</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">fruits</span> <span class="k">if</span> <span class="s2">&quot;a&quot;</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">newlist</span><span class="p">)</span>
+</code></pre></div>
+<p>E' una sintassi molto vicina alla sintassi del linguaggio matematico.. Può essere infatti tradotto nel seguente modo: &lt;&lt; Cerca le "x" all'interno della lista "fruits" tali che il carattere "a" è contenuto in "x"&gt;&gt;</p>
+<p>Nel seguente esempio elenco i numeri dispari da 0 a 100 con una sola espressione <em>List Comprehension</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#Cerca le x da 0 a 100 tali che il risultato della divisione intera tra x e 2 moltiplicato successivamente per 2 sia diverso da x</span>
+<span class="c1">#es: 3/2 = 1 &gt;&gt; 1*2 = 2 &gt;&gt; 3!=2 &gt;&gt; print</span>
+<span class="c1">#es: 4/2 = 2 &gt;&gt; 2*2 = 4 &gt;&gt; 4=4 </span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">!=</span> <span class="n">x</span><span class="p">])</span>
+</code></pre></div>
+<h1 id="lezione-24">Lezione 24</h1>
+<h2 id="esercizio-asta-online-v6">Esercizio Asta online v6</h2>
+<p>Il seguente script vuole simulare l'andamento di un'asta online con la seguente regola:
+- L'asta verrà aggiudicata da chi avrà fatto un'offerta la più vicina alla media delle offerte degli altri</p>
+<p>L'utente dovrà inserire un'offerta in <em>bit coin</em> e una <em>email</em> che rappresenterà l'identificativo. In questa sesta e ultima parte introdurremo le funzioni:</p>
+<ul>
+<li>
+<p><code>offerta_minima(lista_offerte)</code>: riceve la <em>lista_offerte</em> come parametro e ne identifica la lista con l'offerta minima. E' simile alla funzione <code>minimo(lista_offerte)</code> solo che invece di ritornare il valore decimale dell'offerta minima ritorna una lista comprendente la coppia <em>email/offerta</em> con <em>offerta</em> minima.</p>
+</li>
+<li>
+<p><code>offerta_massima(lista_offerte)</code>: riceve la <em>lista_offerte</em> come parametro e ne identifica la lista con l'offerta massima. E' simile alla funzione <code>massimo(lista_offerte)</code> solo che invece di ritornare il valore decimale dell'offerta massima ritorna una lista comprendente la coppia <em>email/offerta</em> con <em>offerta</em> massima.</p>
+</li>
+</ul>
+<p>Lo script filtrerà inoltre le offerte che hanno una tolleranza del 10% calcolata sul valore medio.
+Infine, è stata definita una funzione <code>SIMULA_inserisci_offerte()</code> per evitare di inserire i dati da tastiera e testare lo script</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">SIMULA_inserisci_offerte</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s1">&#39;a@a.com&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;b@b.com&#39;</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;c@c.com&#39;</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;d@d.com&#39;</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;e@e.com&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+    <span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">trova_email</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="n">trovato</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">email</span><span class="p">:</span>
+            <span class="n">trovato</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">break</span>
+
+    <span class="k">return</span> <span class="n">trovato</span>
+
+<span class="k">def</span> <span class="nf">media_offerte</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="n">somma</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">:</span>
+        <span class="n">somma</span> <span class="o">+=</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">somma</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">)</span>
+
+<span class="c1"># si assume che la lista non sia vuota</span>
+<span class="k">def</span> <span class="nf">minimo</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="nb">min</span> <span class="o">=</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">if</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nb">min</span><span class="p">:</span>
+            <span class="nb">min</span> <span class="o">=</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="nb">min</span>
+
+<span class="c1"># invece del solo valore minimo restituisce</span>
+<span class="c1"># l`intera offerta [email, valore_offerta]</span>
+<span class="k">def</span> <span class="nf">offerta_minima</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="nb">min</span> <span class="o">=</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">if</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="nb">min</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="nb">min</span> <span class="o">=</span> <span class="n">offerta</span>
+    <span class="c1">#ritorna la coppia &lt;email, valore_offerta&gt; corrispondente al minimo di &quot;valore_offerta&quot;</span>
+    <span class="k">return</span> <span class="nb">min</span>
+
+
+<span class="c1"># si assume che la lista non sia vuota</span>
+<span class="k">def</span> <span class="nf">massimo</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="nb">max</span> <span class="o">=</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">if</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nb">max</span><span class="p">:</span>
+            <span class="nb">max</span> <span class="o">=</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="nb">max</span>
+
+
+<span class="c1"># invece del solo valore massimo restituisce</span>
+<span class="c1"># l`intera offerta [email, valore_offerta]</span>
+<span class="k">def</span> <span class="nf">offerta_massima</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="nb">max</span> <span class="o">=</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">if</span> <span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nb">max</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="nb">max</span> <span class="o">=</span> <span class="n">offerta</span>
+
+    <span class="k">return</span> <span class="nb">max</span>
+
+
+<span class="k">def</span> <span class="nf">stampa_lista</span><span class="p">(</span><span class="n">lista_offerte</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">offerta</span> <span class="ow">in</span> <span class="n">lista_offerte</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Email Offerente: </span><span class="si">{</span><span class="n">offerta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> - Offerta: </span><span class="si">{</span><span class="n">offerta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">inserisci_offerte</span><span class="p">():</span>
+    <span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">while</span> <span class="n">altre_offerte</span><span class="p">:</span>
+        <span class="n">offerta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserisci l`offerta pervenuta (0 per terminare): &quot;</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">offerta</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">offerta</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Formato non valido, riprova ...&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">offerta</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">altre_offerte</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># USCITA DAL CICLO</span>
+            <span class="k">continue</span>
+
+        <span class="k">if</span> <span class="n">offerta</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Non possono essere fatte offerte negative!&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="n">email</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserire l`email dell`offerente: &quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s2">&quot;^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$&quot;</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Email non valida, riprova ...&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+
+        <span class="n">nuova_offerta</span> <span class="o">=</span> <span class="p">[</span><span class="n">email</span><span class="p">,</span> <span class="n">offerta</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">trova_email</span><span class="p">(</span><span class="n">email</span><span class="p">,</span> <span class="n">lista</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Questo utente ha già fatto la sua unica offerta ... respinto!&quot;</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nuova_offerta</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">lista</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Il seguente script vuole simulare l</span><span class="se">\&#39;</span><span class="s2">andamento di un</span><span class="se">\&#39;</span><span class="s2">asta online con la seguente regola:</span>
+<span class="s2">&lt;&lt; L</span><span class="se">\&#39;</span><span class="s2">asta verrà aggiudicata da chi avrà fatto un&#39;offerta la più vicina alla media delle offerte degli altri.&gt;&gt;</span>
+<span class="s2">L&#39;utente dovrà inserire un&#39;offerta in bit coin e una email che rappresenterà l&#39;identificativo&quot;&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+
+<span class="c1"># grazie all`uso di funzioni la complessità del programma principale</span>
+<span class="c1"># è drasticamente ridotta</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Stampo una lista di offerte predefinite, evito l&#39;input da tastiera&quot;</span><span class="p">)</span>
+<span class="n">offerte</span> <span class="o">=</span> <span class="n">SIMULA_inserisci_offerte</span><span class="p">()</span>
+<span class="n">stampa_lista</span><span class="p">(</span><span class="n">offerte</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+
+<span class="c1"># eliminiamo l`offerta minima e massima</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Elimino l&#39;offerta più alta e l&#39;offerta più bassa&quot;</span><span class="p">)</span>
+<span class="n">offerte</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">offerta_minima</span><span class="p">(</span><span class="n">offerte</span><span class="p">))</span>
+<span class="n">offerte</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">offerta_massima</span><span class="p">(</span><span class="n">offerte</span><span class="p">))</span>
+<span class="n">stampa_lista</span><span class="p">(</span><span class="n">offerte</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+
+<span class="c1"># costruiamo una nuova lista con gli elementi rimasti</span>
+<span class="c1"># che non si discostano più del 10% dalla media dei rimasti</span>
+<span class="n">offerta_media</span> <span class="o">=</span> <span class="n">media_offerte</span><span class="p">(</span><span class="n">offerte</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Media: </span><span class="si">{</span><span class="n">offerta_media</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">tolleranza</span> <span class="o">=</span> <span class="n">offerta_media</span><span class="o">/</span><span class="mi">100</span><span class="o">*</span><span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tolleranza 10%: </span><span class="si">{</span><span class="n">tolleranza</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="o">*</span><span class="mi">40</span><span class="p">)</span>
+
+
+<span class="n">offerte_filtrate</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">offerte</span> <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">offerta_media</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">tolleranza</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Offerte filtrate in base alla tolleranza..&quot;</span><span class="p">)</span>
+<span class="n">stampa_lista</span><span class="p">(</span><span class="n">offerte_filtrate</span><span class="p">)</span>
+
+<span class="c1">#Il seguente script vuole simulare l&#39;andamento di un&#39;asta online con la seguente regola:</span>
+<span class="c1">#&lt;&lt; L&#39;asta verrà aggiudicata da chi avrà fatto un&#39;offerta la più vicina alla media delle offerte degli altri.&gt;&gt;</span>
+<span class="c1">#L&#39;utente dovrà inserire un&#39;offerta in bit coin e una email che rappresenterà l&#39;identificativo</span>
+<span class="c1">#----------------------------------------</span>
+<span class="c1">#</span>
+<span class="c1">#Stampo una lista di offerte predefinite, evito l&#39;input da tastiera</span>
+<span class="c1">#Email Offerente: a@a.com - Offerta: 1 </span>
+<span class="c1">#Email Offerente: b@b.com - Offerta: 3.3 </span>
+<span class="c1">#Email Offerente: c@c.com - Offerta: 4.1 </span>
+<span class="c1">#Email Offerente: d@d.com - Offerta: 3.8 </span>
+<span class="c1">#Email Offerente: e@e.com - Offerta: 12 </span>
+<span class="c1">#----------------------------------------</span>
+<span class="c1">#</span>
+<span class="c1">#Elimino l&#39;offerta più alta e l&#39;offerta più bassa</span>
+<span class="c1">#Email Offerente: b@b.com - Offerta: 3.3 </span>
+<span class="c1">#Email Offerente: c@c.com - Offerta: 4.1 </span>
+<span class="c1">#Email Offerente: d@d.com - Offerta: 3.8 </span>
+<span class="c1">#----------------------------------------</span>
+<span class="c1">#Media: 3.733333333333333</span>
+<span class="c1">#Tolleranza 10%: 0.3733333333333333</span>
+<span class="c1">#----------------------------------------</span>
+<span class="c1">#</span>
+<span class="c1">#Offerte filtrate in base alla tolleranza..</span>
+<span class="c1">#Email Offerente: c@c.com - Offerta: 4.1 </span>
+<span class="c1">#Email Offerente: d@d.com - Offerta: 3.8 </span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../nas/readme/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Nas e TrueNAS (FreeNAS)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Nas e TrueNAS (FreeNAS)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../raspberry-pi-pico/readme/" class="md-footer__link md-footer__link--next" aria-label="Next: Raspberry pi pico e Micropython" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Raspberry pi pico e Micropython
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright 2020 Simone Di Ricco
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/sdiricco1" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+    
+  </body>
+</html>

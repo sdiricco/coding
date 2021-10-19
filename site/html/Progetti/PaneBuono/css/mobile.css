@@ -1,0 +1,104 @@
+
+
+/*index.html*/
+/***********************************************************************************************/
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline-end: 1px;
+    margin-inline-start: 1px;
+}
+
+#navbar .container ul li a{
+    padding: 20px 10px;
+    display: block;
+}
+
+#showcase-2 .container .section-text {
+    text-align: center;
+}
+
+#showcase-3 {
+    display:flex;
+    flex-direction: column;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    text-align: center;
+    flex: 1;
+}
+
+#showcase-2 .container .image {
+    display: none;
+}
+
+/***********************************************************************************************/
+
+
+/*about.html*/
+/***********************************************************************************************/
+
+#about-info .container{
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#about-info .container img {
+    margin-bottom: 40px;
+    width: 80%;
+}
+
+#about-info .container .info-left {
+    flex: 1;
+    text-align: justify;
+}
+
+#about-info .container .info-right{
+    flex: 1;
+}
+
+
+#about-info .container .info-left p {
+    padding: 2% 0;
+    width: 100%;
+}
+
+
+#testimonials .container .testimonial {
+    padding: 1%;
+    margin: 20px 20px;
+    border-radius: 5px;
+    background: orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#testimonials .container .testimonial p {
+    text-align: justify;
+    padding: 5px 10px;
+    width: 100%;
+    color: black;
+}
+
+/*contact.html*/
+/***********************************************************************************************/
+
+#contact-info .container .box{
+    transform: scale(0.7);
+}
+
+#contact-info .container i{
+    margin: 10px;
+}

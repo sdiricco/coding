@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media queries 2</title>
+    <style>
+        body{
+            background: brown;
+        }
+        .container{
+            background: darkslategrey;
+        }
+        h1 {
+            color: bisque;
+            /*display: none; -> toglie la visualizzazione dell'elemento, quindi non caomparirà*/
+            display: none;
+        }
+
+    </style>
+    <!--serve per linkara il file "12_mobile.css solo quando lo schermo diventa inferiore ai 500px tramite la sintassi "media="screen and (max-width:500px)"-->
+    <link rel="stylesheet" media="screen and (max-width:500px)" href="LinkLocali/12_mobile.css">
+</head>
+
+<body>
+    <div class="container" id="smartphone"><h1>smartphone</h1></div>
+    <div class="container" id="tablet"><h1>tablet</h1></div>
+    <div class="container" id="normal"><h1>normal</h1></div>
+
+    <p>
+        In questo esempio vedremo come stilizzare a seconda del device che sia uno smartphone, un tablet o un PC.
+        Prova a ridimensionare la pagina e vedrai stili diversi.
+        Uno strumento molto interessante è "Toggle device toolbar" di google chrome. 
+        Cliccando su inspect, accando al pulsante "Select an element to inspect", si trova "Toggle device toolbar".
+        Con tale strumento si apre una barra dove è possibile selezionare il device tra quelli in lista e vedere quindi come apparirebbe la pagina.
+    </p>
+</body>
+
+</html>

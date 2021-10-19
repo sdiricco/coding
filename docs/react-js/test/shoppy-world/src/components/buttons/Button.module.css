@@ -1,0 +1,25 @@
+.BtnRounded{
+  padding: 0.5rem 4rem 0.5rem 4rem;
+  border-radius: 32px;
+  background-color: #e67327;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+
+}
+
+.BtnContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0rem 1rem 0rem;
+  background-color: white;
+  position: sticky;
+  left:0px;
+  top:0px;
+}
+
+.BtnRounded:hover{
+  background-color: #ff802b;
+}
