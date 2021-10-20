@@ -1,4 +1,4 @@
-# notes
+# wiki programming notes
 
 ## Installation
 
