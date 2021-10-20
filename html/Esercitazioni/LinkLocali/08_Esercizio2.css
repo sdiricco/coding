@@ -1,0 +1,31 @@
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+
+body{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: cornsilk;
+}
+
+
+table{
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 100px;
+    width: 500px;
+    height: 500px;
+}
+
+tr:nth-child(even){
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+}
+
+td[class=center]{
+    border-right: 1px black solid;
+    border-left: 1px black solid;
+}
+

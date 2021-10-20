@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        /*Impostando display a "flex" gli elementi vengono disposti all'interno di un flexbox, in particolare secondo il main asix, l'asse principale 
+        Questo può essere impostato tramite la proprietà "flex-direction" che di default vale "row" ma può essere impostata anche a column e in questo caso li mette in colonna
+        come poi sarebbe in originale senza il flex box
+        Un altro attributo della flex-direction è il "row-reverse" che li orienta a partire dalla destra della pagina mettendo prima l'item 2 poi l'item 1
+        Stessa cosa vale per il "column-reverse"*/
+        /*Flex-wrap?
+        Supponiamo di avere un sacco di elementi posti in orizzontale. Questi quando sforano il display, compare una barra orizzontale che permette di visualizzarli tutti
+        Se vogliamo invece che gli elementi vadano a capo, basta mettere "flex-wrap"    */
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            background: burlywood;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- mettendo tutti questi elementi, si riempe lo schermo orizzontalmente e compare la barra sotto-->
+    <div class="container">
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+        <div class="item" id="item-1">
+            <h3>Item1</h3>
+        </div>
+        <div class="item" id="item-2">
+            <h3>Item2</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+/*General*/
+/*Reset dei bordi del box element*/
+/***********************************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-size: 22px;
+    font-family: 'Oxygen Mono', monospace;
+    color: ivory;
+}
+
+a {
+    color: ivory;
+    text-decoration: none;
+}
+/***********************************************************************************************/
+
+/*Utility*/
+/***********************************************************************************************/
+.font-light {
+    color: ivory;
+}
+
+.font-red {
+    color: orangered;
+}
+
+.btn {
+    display: inline-block;
+    color: black;
+    background: rgba(255, 68, 0, 0.5);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 100px;
+}
+
+
+.btn:hover {
+    font-size: 1.2rem;
+    background: rgba(255, 68, 0, 1);
+    color: black;
+}
+/***********************************************************************************************/
+
+/*Header*/
+/***********************************************************************************************/
+
+#navbar {
+    background: url(../images/index01.jpg) no-repeat top center/cover;
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+}
+
+#navbar .container ul {
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+}
+
+#navbar .container ul li{
+    list-style: none;
+}
+
+#navbar .container ul li a{
+    padding: 0px 30px;
+    display: block;
+}
+
+#navbar ul li a:hover,
+#navbar ul li .current {
+    font-size: 1.2rem;
+    color: orangered;
+}
+/***********************************************************************************************/
+
+/*File: index.html*/
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+/*Section 1*/
+/***********************************************************************************************/
+#idexSection01 .container {
+    height: 70vh;
+    background: url(../images/index01.jpg) no-repeat center center/cover;
+}
+
+#idexSection01 .container h1 {
+    padding: 30px;
+}
+
+#idexSection01 .container {
+
+}
+
+
+/***********************************************************************************************/
+
+/*Section 2*/
+/***********************************************************************************************/
+
+#idexSection02 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+}
+
+#idexSection02 .container h1 {
+    text-align: center;
+    padding: 20px;
+    color: orangered;
+}
+
+#idexSection02 .container a {
+}
+/***********************************************************************************************/
+/***********************************************************************************************/
+
+/*File: index.html*/
+/***********************************************************************************************/
+/***********************************************************************************************/
+#CorsiSection01 .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/***********************************************************************************************/
+
+/*Footer*/
+/***********************************************************************************************/
+#footer {
+    display: flex;
+    height: 12vh;
+    color: ivory;
+    background: url(../images/index01.jpg) no-repeat bottom center/cover;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+/***********************************************************************************************/
+
+
+
+

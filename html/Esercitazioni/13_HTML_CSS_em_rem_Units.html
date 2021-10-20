@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em & rem units</title>
+    <style>
+        /*Questo serve per cambiare il font size default dell'html cioè quello dove poi nascono tutti gli altri font
+        in base all'elemento che sono
+        Importante: Quando su chrome scegliamo di impostare il font più grande in realtà lui cambia proprio l'html font-size*/
+        html {
+            font-size: 10px;
+        }
+        #box-1{
+            font-size: 20px;
+        }
+        /*Esprimendo il valore tramite "em" si avrà una grandezza relativa al Box a cui appartiene. Tutte le grandezze del box subiscono il fattore moltiplicativo*/
+        /*Gli elementi html di default hanno determinati valori di "em". principalmente valgono 1em ma a volte troviamo valori strani come ad esempio per 
+        h1, h2, h3. Ad esempio per h3 troviamo 1.17em*/
+        /*I valori assoluti degli elelmenti del box cambiano al variare del font-size ma quelli relativi rimangono tali*/
+        #box-1 p{
+            font-size: 1.5em;
+        }
+
+        /*L'unità di misura rem si basa come standard al root element. Di base in html lo standard è 16px quindi
+        srivendo 2rem si ha un font size pari a 32px*/
+        #box-2 h3 {
+            font-size: 2rem;
+
+        }
+        /*Considerazione importante em/rem
+        em: non dipende dal font-size html ma dipende solo dal font-size assoluto (che ha priorità) del box.
+        se cambio il font size html agli elementi em non succede nulla. Se però il box contenitore non ha una misura assoluta
+        ovvero non è specificato il font-size, il font se lo prende anch'esso dal root html
+        rem: è relativo solo al font size root html e quindi ne subisce le variazioni*/
+    </style>
+</head>
+
+<body>
+    <div id="box-1">
+        <h3>titolo 1</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quas, dicta laudantium earum, ullam cumque
+            quod sit tempora ipsam fuga inventore tempore totam saepe sunt ea aliquam quis unde odit.</p>
+    </div>
+    <div id="box-2">
+        <h3>titolo 2</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quas, dicta laudantium earum, ullam cumque
+            quod sit tempora ipsam fuga inventore tempore totam saepe sunt ea aliquam quis unde odit.</p>
+    </div>
+</body>
+
+</html>

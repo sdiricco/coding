@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media queries</title>
+    <style>
+        body{
+            background: brown;
+        }
+        .container{
+            background: darkslategrey;
+        }
+        h1 {
+            color: bisque;
+            /*display: none; -> toglie la visualizzazione dell'elemento, quindi non caomparirà*/
+            display: none;
+        }
+
+        /*@media (max-width: 500px) -> per gli schermi non più grandi di 500px .. applica il seguente stile*/
+        /*Questo significa che finchè la pagina rimarrà grande applicherà un certo stile, ma non appena la pagina diventa inferiore a 500px verrà applicato il seguente stile*/
+            @media (max-width: 500px){
+                body {
+                    background: darkcyan;
+                } 
+                #smartphone h1{
+                    display: block
+                }
+            }
+        /*ATT!! Devo mettere sia una grandezza minima che massima per ditinguere il tablet dallo smartphone altrimenti si sovrapporrebbero gli stili*/
+        @media (min-width: 501px) and (max-width: 768px){
+            body {
+                background: goldenrod;
+            } 
+            #tablet h1{
+                display: block
+            }
+        }
+        @media (min-width: 769px){
+            body {
+                background: sienna;
+            } 
+            #normal h1{
+                display: block
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="smartphone"><h1>smartphone</h1></div>
+    <div class="container" id="tablet"><h1>tablet</h1></div>
+    <div class="container" id="normal"><h1>normal</h1></div>
+
+    <p>
+        In questo esempio vedremo come stilizzare a seconda del device che sia uno smartphone, un tablet o un PC.
+        Prova a ridimensionare la pagina e vedrai stili diversi.
+        Uno strumento molto interessante è "Toggle device toolbar" di google chrome. 
+        Cliccando su inspect, accando al pulsante "Select an element to inspect", si trova "Toggle device toolbar".
+        Con tale strumento si apre una barra dove è possibile selezionare il device tra quelli in lista e vedere quindi come apparirebbe la pagina.
+    </p>
+</body>
+
+</html>

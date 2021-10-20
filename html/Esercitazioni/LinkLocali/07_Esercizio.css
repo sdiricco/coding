@@ -1,0 +1,74 @@
+/* - Segui le seguenti istruzioni
+- Non modificare html!
+- Scrivi solamente CSS */
+
+/*----------------------------------------*/
+
+/* Daii al body un background di #919191 */
+body{
+    background-color: #919191;
+}
+
+/* dai all'h1 un colore di #1200e2 */
+h1{
+    color: #1200e2;
+}
+
+/* rendi tutti tutti gli h2 gialli */
+h2{
+    color: yellow;
+}
+
+/* rendi tutti gli li verdi */
+li{
+    color: greenyellow;
+}
+
+/*dai a tutti gli input un border di 3px dotted blu */
+input{
+    border: 3px blue dotted;
+}
+
+/* dai a tutti gli elementi con la classe "classe" un background arancione*/
+.classe{
+    background-color: orange;
+}
+
+/* dai solo all'elemento ID "paragr" un basck ground rosso*/
+#ID1{
+    background-color: red;
+}
+
+/* rendi tutti gli <p> dentro i div viola */
+div p{
+    color: violet;
+}
+ 
+/* dai solo agli input di type "text" un border di 2px dotted red */
+input[type=text]{
+    border: 2px red dotted;
+}
+
+/* dai solo agli input con placeholder "email" un border di 1px dashed yellow */
+input[placeholder=email]{
+    border: 1px yellow dashed;
+}
+/*------------------------------------------*/
+                  /* BONUS */
+
+
+/*rendi i link già visitati verdi */
+a:link{
+    color: thistle;
+}
+a:visited{
+    color: tomato;
+}
+a:hover{
+    background: turquoise;
+}
+
+/*rendi la prima lettera di ogni paragrafo 30px (front-size: 30px) */
+p::first-letter{
+    font-size: 30px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table{
+            border: 2px solid gray;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        body {
+            font-size: 20px;
+        }
+        .cofficient{ 
+            text-align: right;
+        }
+        #resolve{
+            height: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Equazione di II grado</h1>
+    <table>
+        <tr>
+            <td>
+                <input type="text" placeholder="a" class="cofficient" id="a">
+                x<sup>2</sup> + 
+                <input type="text" placeholder="b" class="cofficient" id="b">
+                x + 
+                <input type="text" placeholder="c" class="cofficient" id="c">
+                = 0
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Risolvi" id="resolve"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" placeholder="---" id="ris-1">
+                x<sub>1</sub> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" placeholder="---" id="ris-2">
+                x<sub>2</sub> 
+            </td>
+        </tr>
+
+    </table>
+
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+
+    <script>
+        function ResolveEqIIgrado(){
+            //Prelievo il valore dell'elemento con id="myText" lo converto a stringa e lo assegno alla variabile testoInserito
+            let a = Number($("#a").val()); 
+            let b = Number($("#b").val());
+            let c = Number($("#c").val());
+
+            let delta = Math.sqrt(b**2 - 4*a*c);
+
+            if (isNaN(delta)) {
+                $("#ris-1").val("Soluzioni immaginarie");
+                $("#ris-2").val("Soluzioni immaginarie");
+            } 
+            else{
+                let ris1 = (-b - delta)/(2*a);
+                let ris2 = (-b + delta)/(2*a);
+                $("#ris-1").val(String(ris1));
+                $("#ris-2").val(String(ris2));
+            }
+        }
+
+        $( function(){ 
+            $("#resolve").click(ResolveEqIIgrado)
+        });
+    </script>
+</body>
+</html>
