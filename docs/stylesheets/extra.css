@@ -2,12 +2,12 @@
   --md-typeset-a-color: #88c8f0;
   --md-accent-fg-color: #d7e4ec;
 
-  --md-default-fg-color: #e8f0fd;
+  --md-default-fg-color: #e7e7e7;
   --md-primary-fg-color:        #2f5578;
-  --md-default-bg-color: #07101b;
+  --md-default-bg-color: #121c26; 
 
-  --md-footer-bg-color: #121c26;
-  --md-footer-bg-color--dark: #121c26;
+  --md-footer-bg-color: #07101b;
+  --md-footer-bg-color--dark: #07101b;
 
 }
 .md-footer{
