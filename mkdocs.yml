@@ -12,6 +12,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/sdiricco1
 
+
 # Extensions
 markdown_extensions:
   - pymdownx.highlight:
@@ -23,10 +24,13 @@ theme:
     text: Roboto
 
   name: material
+  custom_dir: overrides
   
   palette:
     - scheme: slate
   features:
     - navigation.instant
+
+
 
 
