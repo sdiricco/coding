@@ -24,12 +24,11 @@ theme:
     text: Roboto
 
   name: material
-  custom_dir: overrides
   
   palette:
     - scheme: slate
   features:
-    - navigation.instant
+    - navigation.tabs
 
 
 
