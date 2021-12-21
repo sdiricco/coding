@@ -1,20 +1,35 @@
 [data-md-color-scheme="slate"] {
-  --md-typeset-a-color: #88c8f0;
-  --md-accent-fg-color: #d7e4ec;
 
-  --md-default-fg-color: #e7e7e7;
-  --md-primary-fg-color:        #2f5578;
-  --md-default-bg-color: #121c26; 
+  --md-typeset-a-color: #539bf5;
+  --md-accent-fg-color: #539bf5;
 
-  --md-footer-bg-color: #07101b;
-  --md-footer-bg-color--dark: #07101b;
+  --md-default-fg-color--light: adbac7;
 
+  --md-text-font-family: "-apple-system,BlinkMacSystemFont","Segoe UI","Helvetica","Arial","sans-serif","Apple Color Emoji","Segoe UI Emoji";
+
+  --md-code-font-family: "Consolas","SFMono-Regular","Consolas","Menlo","monospace";
+
+  --md-default-fg-color: #adbac7;
+  --md-primary-fg-color: #161b22;
+  --md-default-bg-color: #0d1117; 
+
+  --md-footer-bg-color: #161b22;
+  --md-footer-bg-color--dark: #161b22;
+
+  --md-code-bg-color: #161b22;
 }
-.md-footer{
-  z-index: 1000;
+
+html {
+  font-size: 150%;
 }
 
-.md-sidebar__scrollwrap{
-  max-height: 70vh;
+.body-wrap {
+  background: #0d1117;
 }
+
+/*
+539bf5
+121c26
+121c26
+*/
 
