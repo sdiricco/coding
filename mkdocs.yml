@@ -25,7 +25,7 @@ theme:
   name: material
   
   palette:
-    - scheme: default
+    - scheme: slate
   features:
     - navigation.instant
 
