@@ -2,7 +2,7 @@ site_name: Wiki programming notes
 
 copyright: Copyright 2020 Simone Di Ricco
 
-repo_url: https://github.com/sdiricco1
+repo_url: https://github.com/sdiricco/wiki-programming-notes
 
 extra_css:
   - stylesheets/extra.css
@@ -10,7 +10,7 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/sdiricco1
+      link: https://github.com/sdiricco
 
 
 # Extensions

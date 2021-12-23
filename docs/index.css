@@ -68,3 +68,7 @@
 .a-custom{
     padding: 16px;
 }
+
+.md-container{
+    overflow-x: hidden;
+  }
