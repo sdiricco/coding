@@ -18,6 +18,16 @@
   --md-footer-bg-color--dark: #161b22;
 
   --md-code-bg-color: #161b22;
+
+  --md-code-hl-string-color: #D69D85;
+
+  --md-code-hl-comment-color: #A3DA8D;
+
+  --md-code-hl-variable-color: #56b6c2;
+
+  --md-code-hl-punctuation-color: #deb887;
+
+  --md-code-hl-operator-color: #5f9ea0;
 }
 
 html {
@@ -35,21 +45,24 @@ html {
   }
 }
 
-.md-footer-meta__inner.md-grid{
+.md-footer-meta__inner.md-grid {
   flex-direction: column;
   justify-content: center;
   padding-top: 24px;
   padding-bottom: 24px;
 }
 
-.md-copyright{
+.md-copyright {
   text-align: center;
 }
 
-.md-social{
+.md-social {
   text-align: center;
   padding: 0px;
+}
 
+code {
+  background: transparent;
 }
 
 /*
