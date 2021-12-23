@@ -2,7 +2,7 @@ site_name: Wiki programming notes
 
 copyright: Copyright 2020 Simone Di Ricco
 
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_url: https://github.com/sdiricco1
 
 extra_css:
   - stylesheets/extra.css
@@ -20,8 +20,6 @@ markdown_extensions:
   - pymdownx.superfences
 
 theme:
-  font:
-    text: Roboto
 
   name: material
   
@@ -29,6 +27,8 @@ theme:
     - scheme: slate
   features:
     - navigation.tabs
+
+
 
 
 
