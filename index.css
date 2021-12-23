@@ -1,0 +1,55 @@
+.md-container{ 
+    background-image: radial-gradient(ellipse closest-side at 50% 50%, #161b22, #161b22 25%, #0d1117);
+}
+
+.custom-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-txt{
+    text-align: center;
+    font-size: 36px;
+}
+
+.center-cropped {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .btn-group{
+      margin: 0px 16px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+.custom-btn{
+    margin: 2px;
+    font-size: 2em;
+    color: #adbac7;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    height: 100px;
+    width: 150px;
+    background: transparent;
+    border: 1px solid #adbac7;
+}
+
+.custom-btn:hover{
+    color: #adbac7;
+    background: #adbac7;
+    color: #161b22;
+
+}
+
+.a-custom{
+    padding: 16px;
+}
