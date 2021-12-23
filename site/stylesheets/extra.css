@@ -14,7 +14,7 @@
   --md-primary-fg-color: #161b22;
   --md-default-bg-color: #0d1117;
 
-  --md-footer-bg-color: #161b22;
+  --md-footer-bg-color: #0d1117;
   --md-footer-bg-color--dark: #161b22;
 
   --md-code-bg-color: #161b22;
@@ -36,7 +36,20 @@ html {
 }
 
 .md-footer-meta__inner.md-grid{
+  flex-direction: column;
   justify-content: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.md-copyright{
+  text-align: center;
+}
+
+.md-social{
+  text-align: center;
+  padding: 0px;
+
 }
 
 /*
