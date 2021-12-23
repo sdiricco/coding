@@ -1,9 +1,14 @@
 .md-container{ 
+    height: calc(100vh - 57.59px);
     background-image: radial-gradient(ellipse closest-side at 50% 50%, #161b22, #161b22 25%, #0d1117);
+}
+.md-footer-meta__inner.md-grid.custom{
+    justify-content: center;
 }
 
 .custom-container {
-    height: 100vh;
+    margin: 57.59px 16px;
+    height: inherit;
     display: flex;
     flex-direction: column;
     align-items: center;
