@@ -61,8 +61,8 @@ html {
   padding: 0px;
 }
 
-code {
-  background: transparent;
+.md-container{
+  overflow-x: hidden;
 }
 
 /*
