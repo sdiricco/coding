@@ -35,6 +35,10 @@ html {
   }
 }
 
+.md-footer-meta__inner.md-grid{
+  justify-content: center;
+}
+
 /*
 539bf5
 121c26
