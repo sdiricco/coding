@@ -1624,10 +1624,62 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Package.json
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Package.json
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#package-lockjson" class="md-nav__link">
+    Package-lock.json
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qualche-dettaglio-in-piu-sulle-versioni" class="md-nav__link">
+    Qualche dettaglio in più sulle versioni
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08/" class="md-nav__link">
+        08
+      </a>
     </li>
   
 
@@ -2075,6 +2127,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#package-lockjson" class="md-nav__link">
+    Package-lock.json
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qualche-dettaglio-in-piu-sulle-versioni" class="md-nav__link">
+    Qualche dettaglio in più sulle versioni
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2113,6 +2187,37 @@
 <span class="p">}</span>
 </code></pre></div>
 <p>A questo punto il progetto node è inizializzato correttamente e puoi passare alla creazione di file o scaricare pacchetti da npm.  </p>
+<h2 id="package-lockjson">Package-lock.json</h2>
+<p>Nel <code>package-lock.json</code> sono memorizzate le versioni esatte dei pacchetti utilizzate dal progetto, vediamo quando può essere utile. 
+Supponi di installare lodash. Nel <code>package.json</code> troverai il pacchetto installato tra le <code>dependecies</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;dependencies&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;lodash&quot;</span><span class="p">:</span> <span class="s2">&quot;^4.17.21&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>La nomenclatura <code>^xx.xx.xx</code> indica che la versione del pacchetto può essere <code>xx.xx.xx</code> o superiore.</p>
+<p>All'interno del <code>package-lock.json</code> trovi la versione esatta:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;node_modules/lodash&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;4.17.21&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;resolved&quot;</span><span class="p">:</span> <span class="s2">&quot;https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;integrity&quot;</span><span class="p">:</span> <span class="s2">&quot;sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Immagina adesso che il tuo progetto abbia diversi pacchetti e che sia in sviluppo da molto tempo. Finchè mantieni il <code>package-lock.json</code> le versioni rimangono quelle relative all'ultima volta che il pacchetto è stato installato. I pacchetti su npm tuttavia sono in constante aggiornamento quindi è probabile che installando nuovamente determinati pacchetti le versioni si aggiornino. Ora, se tu dovessi cancellare il <code>package-lock.json</code> e reinstallare tutti i pacchetti, verrebbero installate le ultime versioni. Nella maggior parte dei casi aggiornare un pacchetto o più pacchetti non rappresenta un problema ma in alcuni casi specifici potrebbe diventarlo dal momento che possono essere utilizzate delle vecchie sintassi considerate <code>deprecated</code> e, a volte, potrebbe compromettere il funzionamento del software. Il <code>package-lock.json</code> garantisce che l'installazione dei pacchetti sia relativa alla specifica versione riportata all'interno dello stesso. Quindi, al fine di ricostruire esattamente l'ambiente di sviluppo di un particolare progetto è necessario avere soltanto il <code>package.json</code> e il <code>package-lock.json</code>. La directory <code>node_modules</code> non è importante dal momento che con <code>npm i</code>, per mezzo del <code>package.json</code> e <code>package-lock.json</code> verrebbe esattamente ricostruita. Se il tuo progetto è sottoposto a versionamento (git, svn) la cartella <code>node_modules</code> va esclusa dai file da committare.</p>
+<h2 id="qualche-dettaglio-in-piu-sulle-versioni">Qualche dettaglio in più sulle versioni</h2>
+<p>Ogni pacchetto è rappresentato da un numero di versione che comprende tre cifre: <code>x.y.z</code></p>
+<ul>
+<li><code>x</code>: <strong>major update</strong>, aggiornamenti importanti. Potrebbero compromettere l'intera struttura del pacchetto ed essere non retrocompatibili</li>
+<li><code>y</code>: <strong>minor update</strong>, aggiornamenti minori. Potrebbero aggiungere funzionalità aggiuntive anche non completamente testate o risolvere alcuni bugfix ma garantiscono retrocompatibilità a parità di minor update</li>
+<li><code>z</code>: <strong>patch</strong>, bug fix, aggiornamenti minimi. Non compromettono la stabilità del pacchetto</li>
+</ul>
+<div class="highlight"><pre><span></span><code>x.y.z
+<span class="p">|</span> <span class="p">|</span> <span class="p">|</span>
+<span class="p">|</span> <span class="p">|</span> patch
+<span class="p">|</span> minor update
+major update
+</code></pre></div>
 
               
             </article>
@@ -2142,13 +2247,13 @@
       
       
         
-        <a href="../../python/" class="md-footer__link md-footer__link--next" aria-label="Next: Python" rel="next">
+        <a href="../08/" class="md-footer__link md-footer__link--next" aria-label="Next: 08" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Python
+              08
             </div>
           </div>
           <div class="md-footer__button md-icon">
