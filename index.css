@@ -3,9 +3,19 @@
     background-image: radial-gradient(ellipse closest-side at 50% 50%, #161b22, #161b22 25%, #0d1117);
 }
 .md-footer-meta__inner.md-grid.custom{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    flex-direction: column;
     justify-content: center;
 }
-
+.md-copyright{
+    text-align: center;
+  }
+  
+  .md-social{
+    text-align: center;
+    padding: 0px;
+  }
 .custom-container {
     margin: 57.59px 16px;
     height: inherit;
