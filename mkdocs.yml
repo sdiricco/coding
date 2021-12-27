@@ -20,13 +20,13 @@ markdown_extensions:
   - pymdownx.superfences
 
 theme:
-
   name: material
   
   palette:
     - scheme: slate
   features:
     - navigation.tabs
+
 
 
 
