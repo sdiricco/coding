@@ -1,6 +1,4 @@
-# wiki programming notes
-
-## Installation
+# Installation
 
 Install `mkdocs-material`
 
