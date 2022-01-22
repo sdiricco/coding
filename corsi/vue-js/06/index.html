@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.3">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
     
     
       
@@ -17,7 +17,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.edf004c2.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.cd566b2a.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -56,7 +56,7 @@
   
     
     
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)</script>
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -2852,7 +2852,7 @@
   
     <li class="md-nav__item">
       <a href="../29/" class="md-nav__link">
-        Vue CLI
+        Vue cli - template
       </a>
     </li>
   
@@ -2880,7 +2880,7 @@
   
     <li class="md-nav__item">
       <a href="../31/" class="md-nav__link">
-        Vue create
+        Vue cli scaffolder
       </a>
     </li>
   
@@ -2894,7 +2894,7 @@
   
     <li class="md-nav__item">
       <a href="../32/" class="md-nav__link">
-        I componenti con vue-cli
+        vue-cli - componenti
       </a>
     </li>
   
@@ -2922,7 +2922,7 @@
   
     <li class="md-nav__item">
       <a href="../34/" class="md-nav__link">
-        todo - app.vue
+        app todo - app.vue
       </a>
     </li>
   
@@ -2936,7 +2936,7 @@
   
     <li class="md-nav__item">
       <a href="../35/" class="md-nav__link">
-        todo - Componenti header e footer
+        App todo - Componenti header e footer
       </a>
     </li>
   
@@ -2950,7 +2950,7 @@
   
     <li class="md-nav__item">
       <a href="../36/" class="md-nav__link">
-        todo - Componente TodoInputField
+        App todo - Componente TodoInputField
       </a>
     </li>
   
@@ -2963,8 +2963,64 @@
   
   
     <li class="md-nav__item">
-      <a href="../37/" class="md-nav__link">
-        todo - Interazione tra App e TodoInputField
+      <a href="../37_00/" class="md-nav__link">
+        App todo - Interazione tra App e TodoInputField
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../37_01/" class="md-nav__link">
+        Composizione di componenti con gli Slot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../37_02/" class="md-nav__link">
+        Contenuto predefinito per gli slot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../37_03/" class="md-nav__link">
+        Named Slots
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../37_04/" class="md-nav__link">
+        Scoped slots in Vue.js: cosa sono e perché usarli
       </a>
     </li>
   
@@ -2992,7 +3048,7 @@
   
     <li class="md-nav__item">
       <a href="../39/" class="md-nav__link">
-        vue - beforeCreate(), created()
+        life cycle - beforeCreate(), created()
       </a>
     </li>
   
@@ -3006,7 +3062,77 @@
   
     <li class="md-nav__item">
       <a href="../40/" class="md-nav__link">
-        vue - beforeMount(), mounted()
+        life cycle - beforeMount(), mounted()
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../41/" class="md-nav__link">
+        life cycle - beforeUpdate(), updated()
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../42/" class="md-nav__link">
+        life cycle - beforeDestroy(), destroyed()
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../43/" class="md-nav__link">
+        Componenti dinamici in Vue.js - parte 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../44/" class="md-nav__link">
+        Componenti dinamici in Vue.js - parte 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../45/" class="md-nav__link">
+        Mantenere lo stato dei componenti dinamici con <keep-alive>
       </a>
     </li>
   
@@ -3064,8 +3190,8 @@
 <h1 id="modificatore-di-eventi">Modificatore di eventi</h1>
 <p>I modificatori di eventi rappresentano un modo alternativo e più veloce per semplificare la definizione dei metodi dell'istanza.</p>
 <p>Capita piuttosto frequentemente di dover invocare <code>event.preventDefault()</code> all'interno di un metodo. Il caso tipico è per bloccare il normale invio di un form ed eseguire invece delle chiamate AJAX.</p>
-<div class="highlight"><pre><span></span><code><span class="c">&lt;!-- usiamo il modificatore .prevent invece di invocare --&gt;</span>
-<span class="c">&lt;!-- event.preventDefault() nel metodo handleFormSubmission() --&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- usiamo il modificatore .prevent invece di invocare --&gt;</span>
+<span class="cm">&lt;!-- event.preventDefault() nel metodo handleFormSubmission() --&gt;</span>
 <span class="p">&lt;</span><span class="nt">form</span> <span class="err">@</span><span class="na">submit</span><span class="err">.</span><span class="na">prevent</span><span class="o">=</span><span class="s">&quot;handleFormSubmission&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Altri modificatori sono:</p>
@@ -3075,7 +3201,7 @@
 <li><code>.self</code>: invoca la funzione che gestisce l'evento solo se <code>event.target</code> coincide con l'elemento su cui è applicata la direttiva <code>v-on</code>. Vengono scartati gli eventi che si propagano dagli elementi discendenti</li>
 </ul>
 <p>E' possibile concatenare più modificatori</p>
-<div class="highlight"><pre><span></span><code><span class="c">&lt;!-- concatenare i modificatori --&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- concatenare i modificatori --&gt;</span>
 <span class="p">&lt;</span><span class="nt">a</span> <span class="err">@</span><span class="na">click</span><span class="err">.</span><span class="na">stop</span><span class="err">.</span><span class="na">prevent</span><span class="o">=</span><span class="s">&quot;handleClick&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 
@@ -3160,10 +3286,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.e1a181d9.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.01de222e.min.js"></script>
       
     
   </body>
