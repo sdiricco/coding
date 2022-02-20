@@ -16,6 +16,14 @@ For dev view launch
 mkdocs serve
 ```
 
+Or
+
+```bash
+python -m mkdocs serve
+```
+
+
+
 For publish this repository via GitHub you shall commit and push changes
 
 ```bash
@@ -31,3 +39,9 @@ mkdocs build
 mkdocs gh-deploy --force
 ```
 
+Or
+
+```bash
+python -m mkdocs build
+python -m mkdocs gh-deploy --force
+```
