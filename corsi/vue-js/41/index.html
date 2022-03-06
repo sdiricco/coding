@@ -3876,18 +3876,18 @@
 </a>
 
 
-<h1 id="life-cycle-beforeupdate-updated">life cycle - beforeUpdate(), updated()</h1>
-<h2 id="beforeupdate">beforeUpdate()</h2>
+<h1 id="life-cycle-beforeupdate-updated">life cycle - beforeUpdate(), updated()<a class="headerlink" href="#life-cycle-beforeupdate-updated" title="Permanent link">&para;</a></h1>
+<h2 id="beforeupdate">beforeUpdate()<a class="headerlink" href="#beforeupdate" title="Permanent link">&para;</a></h2>
 <p>Viene invocato quando vengono modificati dei dati che richiedono l'aggiornamento del DOM. In questo metodo è possibile accedere al DOM nello stato precedente alle modifiche in quanto il DOM non è stato ancora aggiornato.</p>
-<h2 id="updated">updated()</h2>
+<h2 id="updated">updated()<a class="headerlink" href="#updated" title="Permanent link">&para;</a></h2>
 <p>Il lifecycle hook <code>update()</code> viene invocato dopo <code>beforeUpdate()</code>. A questo punto il DOM è stato aggiornato ed è possibile accedere alle nuove informazioni ed eventualemente eseguire delle operazioni sul DOM che si trova in un nuovo stato.</p>
 <p><strong>È opportuno specificare che non conviene modificare lo stato di un componente in questo metodo ed è consiglitato utilizzare invece le computed properties o i watchers per intervenire in risposta a degli aggiornamenti</strong>.</p>
 <p>Come per il metodo mounted(), non è garantito che eventuali componenti figli sono stati completamente aggiornati nel DOM. Per lo stesso motivo specificato sopra è consigliato utilizzare il metodo this.$nextTick().</p>
-<div class="highlight"><pre><span></span><code><span class="nx">updated</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">$nextTick</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// Qui l&#39;intera view è stata aggiornata</span>
-  <span class="p">})</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">updated</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="k">this</span><span class="p">.</span><span class="nx">$nextTick</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="c1">// Qui l&#39;intera view è stata aggiornata</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="p">})</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
 </code></pre></div>
 
               

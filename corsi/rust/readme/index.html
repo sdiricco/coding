@@ -4002,80 +4002,80 @@
 </a>
 
 
-<h1 id="rust">Rust</h1>
-<h2 id="installa-rust">Installa Rust</h2>
+<h1 id="rust">Rust<a class="headerlink" href="#rust" title="Permanent link">&para;</a></h1>
+<h2 id="installa-rust">Installa Rust<a class="headerlink" href="#installa-rust" title="Permanent link">&para;</a></h2>
 <p>Dalla <a href="https://www.rust-lang.org/it/tools/install">pagina ufficiale</a>, installa rust per il tuo sistema operativo.</p>
 <p>Una volta installato verifica che la toolchain, il compilatore e il package manager siano raggiungibili da terminale</p>
 <ul>
 <li><strong>rustup</strong>: Rust toolchain manager</li>
 </ul>
-<div class="highlight"><pre><span></span><code>rustup --version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>rustup --version
 </code></pre></div>
 <ul>
 <li><strong>rustc</strong>: Rust compiler</li>
 </ul>
-<div class="highlight"><pre><span></span><code>rustc --version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>rustc --version
 </code></pre></div>
 <ul>
 <li><strong>cargo</strong>: Rust package manager</li>
 </ul>
-<div class="highlight"><pre><span></span><code>cargo --version
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cargo --version
 </code></pre></div>
-<h2 id="hello-rust">Hello Rust!</h2>
+<h2 id="hello-rust">Hello Rust!<a class="headerlink" href="#hello-rust" title="Permanent link">&para;</a></h2>
 <p>Ecco il primo programma <code>rust</code>. Crea un file con estensione <code>.rs</code> e stampa il tuo primo <strong>hello world</strong></p>
-<div class="highlight"><pre><span></span><code><span class="c1">//hello.rs</span>
-<span class="k">fn</span> <span class="nf">main</span><span class="p">(){</span><span class="w"></span>
-<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">//hello.rs</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">fn</span> <span class="nf">main</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;hello world&quot;</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Compila con:</p>
-<div class="highlight"><pre><span></span><code>rustc .<span class="se">\h</span>ello.rs
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>rustc .<span class="se">\h</span>ello.rs
 </code></pre></div>
 <p>Ed esegui il binario</p>
-<div class="highlight"><pre><span></span><code>.<span class="se">\h</span>ello
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>.<span class="se">\h</span>ello
 </code></pre></div>
-<h2 id="inizializza-un-progetto-con-cargo">Inizializza un progetto con cargo</h2>
+<h2 id="inizializza-un-progetto-con-cargo">Inizializza un progetto con cargo<a class="headerlink" href="#inizializza-un-progetto-con-cargo" title="Permanent link">&para;</a></h2>
 <p>Per inizializzare un progetto <code>rust</code> digita </p>
-<div class="highlight"><pre><span></span><code>cargo init
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>cargo init
 </code></pre></div>
 <p>Creerà un file <code>Cargo.toml</code> con il seguente contenuto</p>
-<div class="highlight"><pre><span></span><code><span class="k">[package]</span><span class="w"></span>
-<span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;rustlang&quot;</span><span class="w"></span>
-<span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.1.0&quot;</span><span class="w"></span>
-<span class="n">edition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;2021&quot;</span><span class="w"></span>
-
-<span class="c1"># See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html</span><span class="w"></span>
-
-<span class="k">[dependencies]</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">[package]</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;rustlang&quot;</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;0.1.0&quot;</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="n">edition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;2021&quot;</span><span class="w"></span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1"># See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html</span><span class="w"></span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="k">[dependencies]</span><span class="w"></span>
 </code></pre></div>
 <p>E una cartella <code>src</code> con l'entry file rust <code>main.rs</code></p>
 <p>Per lanciare l'applicazione con il comando</p>
-<div class="highlight"><pre><span></span><code>cargo run
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cargo run
 </code></pre></div>
 <p>Che compilerà, creerà una cartella <code>target</code> ed eseguirà il binario <code>target/rustlang.exe</code>. 
 Il nome dell'eseguibile viene preso dal file di configurazione di progetto <code>Cargo.toml</code> </p>
 <p>Per compilare un progetto</p>
-<div class="highlight"><pre><span></span><code>cargo build
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>cargo build
 </code></pre></div>
 <p>E per produrre una versione ottimizzata per la produzione:</p>
-<div class="highlight"><pre><span></span><code>cargo build --release
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cargo build --release
 </code></pre></div>
 <p>Troverai l'eseguibile in <code>target/release</code></p>
-<h2 id="moduli-rust">Moduli Rust</h2>
+<h2 id="moduli-rust">Moduli Rust<a class="headerlink" href="#moduli-rust" title="Permanent link">&para;</a></h2>
 <p>Puoi definire un modulo rust e importarlo all'interno del main con una sintassi semplice</p>
-<div class="highlight"><pre><span></span><code><span class="c1">//print.rs</span>
-<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">(){</span><span class="w"></span>
-<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;hello world from print.rs file&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1">//print.rs</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;hello world from print.rs file&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">//main.rs</span>
-<span class="k">mod</span> <span class="nn">print</span><span class="p">;</span><span class="w"></span>
-
-<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">print</span>::<span class="n">run</span><span class="p">();</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">//main.rs</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">mod</span> <span class="nn">print</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span><span class="n">print</span>::<span class="n">run</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h2 id="tutto-sulle-print">Tutto sulle print</h2>
+<h2 id="tutto-sulle-print">Tutto sulle print<a class="headerlink" href="#tutto-sulle-print" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Basic Formatting</li>
 <li>Positional Arguments</li>
@@ -4084,59 +4084,59 @@ Il nome dell'eseguibile viene preso dal file di configurazione di progetto <code
 <li>Placeholder for debug trait</li>
 <li>Basic math</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Print to console</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello from the print.rs file&quot;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Basic Formatting</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{} is from {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Brad&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mass&quot;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Positional Arguments</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;{0} is from {1} and {0} likes to {2}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;Brad&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mass&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;code&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Named Arguments</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;{name} likes to play {activity}&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">activity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Baseball&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Placeholder traits</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Binary: {:b} Hex: {:x} Octal: {:o}&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Placeholder for debug trait</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">));</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Basic math</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;10 + 10 = {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="c1">// Print to console</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Hello from the print.rs file&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">  </span><span class="c1">// Basic Formatting</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{} is from {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Brad&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mass&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">  </span><span class="c1">// Positional Arguments</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="s">&quot;{0} is from {1} and {0} likes to {2}&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span><span class="s">&quot;Brad&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mass&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;code&quot;</span><span class="w"></span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">  </span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">  </span><span class="c1">// Named Arguments</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">    </span><span class="s">&quot;{name} likes to play {activity}&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">    </span><span class="n">activity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Baseball&quot;</span><span class="w"></span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">  </span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="w">  </span><span class="c1">// Placeholder traits</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Binary: {:b} Hex: {:x} Octal: {:o}&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a><span class="w">  </span><span class="c1">// Placeholder for debug trait</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hello&quot;</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="w">  </span><span class="c1">// Basic math</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;10 + 10 = {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h2 id="le-variabili">Le variabili</h2>
+<h2 id="le-variabili">Le variabili<a class="headerlink" href="#le-variabili" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Variables hold primitive data or references to data</li>
 <li>Variables are immutable by default</li>
 <li>Rust is a block-scoped language</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Brad&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">37</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;My name is {} and I am {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">38</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;My name is {} and I am {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Define constant</span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">ID</span>: <span class="kt">i32</span> <span class="o">=</span><span class="w"> </span><span class="mi">001</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;ID: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ID</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Assign multiple vars</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">my_name</span><span class="p">,</span><span class="w"> </span><span class="n">my_age</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Brad&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{} is {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">my_name</span><span class="p">,</span><span class="w"> </span><span class="n">my_age</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Brad&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">37</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;My name is {} and I am {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">  </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">38</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;My name is {} and I am {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">  </span><span class="c1">// Define constant</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">ID</span>: <span class="kt">i32</span> <span class="o">=</span><span class="w"> </span><span class="mi">001</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;ID: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ID</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">  </span><span class="c1">// Assign multiple vars</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">my_name</span><span class="p">,</span><span class="w"> </span><span class="n">my_age</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Brad&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{} is {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">my_name</span><span class="p">,</span><span class="w"> </span><span class="n">my_age</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h2 id="i-tipi">I tipi</h2>
+<h2 id="i-tipi">I tipi<a class="headerlink" href="#i-tipi" title="Permanent link">&para;</a></h2>
 <p>Rust is a statically typed language, which means that it must know the types of all variables at compile time, however, the compiler can usually infer what type we want to use based on the value and how we use it</p>
 <ul>
 <li><strong>Integers</strong>: <code>u8</code>, <code>i8</code>, <code>u16</code>, <code>i16</code>, <code>u32</code>, <code>i32</code>, <code>u64</code>, <code>i64</code>, <code>u128</code>, <code>i128</code></li>
@@ -4146,163 +4146,163 @@ Il nome dell'eseguibile viene preso dal file di configurazione di progetto <code
 <li><strong>Tuples</strong></li>
 <li><strong>Arrays</strong></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Default is &quot;i32&quot;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Default is &quot;f64&quot;</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.5</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Add explicit type</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">z</span>: <span class="kt">i64</span> <span class="o">=</span><span class="w"> </span><span class="mi">4545445454545</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Find max size</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Max i32: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span>::<span class="kt">i32</span>::<span class="n">MAX</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Max i64: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span>::<span class="kt">i64</span>::<span class="n">MAX</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Boolean</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">is_active</span>: <span class="kt">bool</span> <span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Get boolean from expression</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">is_greater</span>: <span class="kt">bool</span> <span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\u{1F600}&#39;</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">is_active</span><span class="p">,</span><span class="w"> </span><span class="n">is_greater</span><span class="p">,</span><span class="w"> </span><span class="n">a1</span><span class="p">,</span><span class="w"> </span><span class="n">face</span><span class="p">));</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="c1">// Default is &quot;i32&quot;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="c1">// Default is &quot;f64&quot;</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.5</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">  </span><span class="c1">// Add explicit type</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">z</span>: <span class="kt">i64</span> <span class="o">=</span><span class="w"> </span><span class="mi">4545445454545</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">  </span><span class="c1">// Find max size</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Max i32: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span>::<span class="kt">i32</span>::<span class="n">MAX</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Max i64: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">std</span>::<span class="kt">i64</span>::<span class="n">MAX</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="w">  </span><span class="c1">// Boolean</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">is_active</span>: <span class="kt">bool</span> <span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>
+<a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a><span class="w">  </span><span class="c1">// Get boolean from expression</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">is_greater</span>: <span class="kt">bool</span> <span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>
+<a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">face</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\u{1F600}&#39;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>
+<a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">is_active</span><span class="p">,</span><span class="w"> </span><span class="n">is_greater</span><span class="p">,</span><span class="w"> </span><span class="n">a1</span><span class="p">,</span><span class="w"> </span><span class="n">face</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-15-25" name="__codelineno-15-25" href="#__codelineno-15-25"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h2 id="strings">Strings</h2>
+<h2 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Primitive str = Immutable fixed-length string somewhere in memory</li>
 <li>String = Growable, heap-allocated data structure - Use when you need to modify or own string data</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&quot;Hello &quot;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Get length</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Length: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">len</span><span class="p">());</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Push char</span>
-<span class="w">  </span><span class="n">hello</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="sc">&#39;W&#39;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Push string</span>
-<span class="w">  </span><span class="n">hello</span><span class="p">.</span><span class="n">push_str</span><span class="p">(</span><span class="s">&quot;orld!&quot;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Capacity in bytes</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Capacity: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">capacity</span><span class="p">());</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Check if empty</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Is Empty: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">is_empty</span><span class="p">());</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Contains</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Contains &#39;World&#39; {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">&quot;World&quot;</span><span class="p">));</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Replace</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Replace: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&quot;World&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There&quot;</span><span class="p">));</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Loop through string by whitespace</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">split_whitespace</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Create string with capacity</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">with_capacity</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="sc">&#39;b&#39;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Assertion testing</span>
-<span class="w">  </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">len</span><span class="p">());</span><span class="w"></span>
-<span class="w">  </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">capacity</span><span class="p">());</span><span class="w"></span>
-
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">hello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&quot;Hello &quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="c1">// Get length</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Length: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">len</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">  </span><span class="c1">// Push char</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">  </span><span class="n">hello</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="sc">&#39;W&#39;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">  </span><span class="c1">// Push string</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">  </span><span class="n">hello</span><span class="p">.</span><span class="n">push_str</span><span class="p">(</span><span class="s">&quot;orld!&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">  </span><span class="c1">// Capacity in bytes</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Capacity: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">capacity</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="w">  </span><span class="c1">// Check if empty</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Is Empty: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">is_empty</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a><span class="w">  </span><span class="c1">// Contains</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Contains &#39;World&#39; {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">&quot;World&quot;</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a><span class="w">  </span><span class="c1">// Replace</span>
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Replace: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&quot;World&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;There&quot;</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a>
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a><span class="w">  </span><span class="c1">// Loop through string by whitespace</span>
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">hello</span><span class="p">.</span><span class="n">split_whitespace</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a>
+<a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a><span class="w">  </span><span class="c1">// Create string with capacity</span>
+<a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">with_capacity</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a><span class="w">  </span><span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a><span class="w">  </span><span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="sc">&#39;b&#39;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a>
+<a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a><span class="w">  </span><span class="c1">// Assertion testing</span>
+<a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a><span class="w">  </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">len</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a><span class="w">  </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">capacity</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a>
+<a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h2 id="tuples">Tuples</h2>
+<h2 id="tuples">Tuples<a class="headerlink" href="#tuples" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Tuples group together values of different types</li>
 <li>Max 12 elements</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">person</span>: <span class="p">(</span><span class="o">&amp;</span><span class="kt">str</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="kt">str</span><span class="p">,</span><span class="w"> </span><span class="kt">i8</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Brad&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mass&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{} is from {} and is {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">person</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">person</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">person</span><span class="p">.</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">person</span>: <span class="p">(</span><span class="o">&amp;</span><span class="kt">str</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="kt">str</span><span class="p">,</span><span class="w"> </span><span class="kt">i8</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;Brad&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Mass&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{} is from {} and is {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">person</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">person</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">person</span><span class="p">.</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h2 id="arrays">Arrays</h2>
+<h2 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Arrays - Fixed list where elements are the same data types</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">mem</span><span class="p">;</span><span class="w"></span>
-
-<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">numbers</span>: <span class="p">[</span><span class="kt">i32</span><span class="p">;</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">];</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Re-assign value</span>
-<span class="w">  </span><span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Get single val</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Single Value: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Get array length</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Array Length: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">len</span><span class="p">());</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Arrays are stack allocated</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Array occupies {} bytes&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mem</span>::<span class="n">size_of_val</span><span class="p">(</span><span class="o">&amp;</span><span class="n">numbers</span><span class="p">));</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Get Slice</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">slice</span>: <span class="kp">&amp;</span><span class="p">[</span><span class="kt">i32</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Slice: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">slice</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">mem</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">numbers</span>: <span class="p">[</span><span class="kt">i32</span><span class="p">;</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">];</span><span class="w"></span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">  </span><span class="c1">// Re-assign value</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">  </span><span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="w">  </span><span class="c1">// Get single val</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Single Value: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="w">  </span><span class="c1">// Get array length</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Array Length: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">len</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="w">  </span><span class="c1">// Arrays are stack allocated</span>
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Array occupies {} bytes&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mem</span>::<span class="n">size_of_val</span><span class="p">(</span><span class="o">&amp;</span><span class="n">numbers</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="w">  </span><span class="c1">// Get Slice</span>
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">slice</span>: <span class="kp">&amp;</span><span class="p">[</span><span class="kt">i32</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Slice: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">slice</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h2 id="vectors">Vectors</h2>
+<h2 id="vectors">Vectors<a class="headerlink" href="#vectors" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Vectors - Resizable arrays</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">mem</span><span class="p">;</span><span class="w"></span>
-
-<span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">numbers</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">];</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Re-assign value</span>
-<span class="w">  </span><span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Add on to vector</span>
-<span class="w">  </span><span class="n">numbers</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">numbers</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Pop off last value</span>
-<span class="w">  </span><span class="n">numbers</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span><span class="w"></span>
-
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Get single val</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Single Value: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Get vector length</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Vector Length: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">len</span><span class="p">());</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Vectors are heap allocated</span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Vector occupies {} bytes&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mem</span>::<span class="n">size_of_val</span><span class="p">(</span><span class="o">&amp;</span><span class="n">numbers</span><span class="p">));</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Get Slice</span>
-<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">slice</span>: <span class="kp">&amp;</span><span class="p">[</span><span class="kt">i32</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Slice: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">slice</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Loop through vector values</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">iter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Number: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Loop &amp; mutate values</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">iter_mut</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Numbers Vec: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">mem</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span> <span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">numbers</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">];</span><span class="w"></span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">  </span><span class="c1">// Re-assign value</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">  </span><span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">  </span><span class="c1">// Add on to vector</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">  </span><span class="n">numbers</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">  </span><span class="n">numbers</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">  </span><span class="c1">// Pop off last value</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">  </span><span class="n">numbers</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>
+<a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="w">  </span><span class="c1">// Get single val</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Single Value: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a>
+<a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a><span class="w">  </span><span class="c1">// Get vector length</span>
+<a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Vector Length: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">len</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-19-23" name="__codelineno-19-23" href="#__codelineno-19-23"></a>
+<a id="__codelineno-19-24" name="__codelineno-19-24" href="#__codelineno-19-24"></a><span class="w">  </span><span class="c1">// Vectors are heap allocated</span>
+<a id="__codelineno-19-25" name="__codelineno-19-25" href="#__codelineno-19-25"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Vector occupies {} bytes&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">mem</span>::<span class="n">size_of_val</span><span class="p">(</span><span class="o">&amp;</span><span class="n">numbers</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-19-26" name="__codelineno-19-26" href="#__codelineno-19-26"></a>
+<a id="__codelineno-19-27" name="__codelineno-19-27" href="#__codelineno-19-27"></a><span class="w">  </span><span class="c1">// Get Slice</span>
+<a id="__codelineno-19-28" name="__codelineno-19-28" href="#__codelineno-19-28"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="n">slice</span>: <span class="kp">&amp;</span><span class="p">[</span><span class="kt">i32</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">numbers</span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+<a id="__codelineno-19-29" name="__codelineno-19-29" href="#__codelineno-19-29"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Slice: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">slice</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-30" name="__codelineno-19-30" href="#__codelineno-19-30"></a>
+<a id="__codelineno-19-31" name="__codelineno-19-31" href="#__codelineno-19-31"></a><span class="w">  </span><span class="c1">// Loop through vector values</span>
+<a id="__codelineno-19-32" name="__codelineno-19-32" href="#__codelineno-19-32"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">iter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-33" name="__codelineno-19-33" href="#__codelineno-19-33"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Number: {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-34" name="__codelineno-19-34" href="#__codelineno-19-34"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-19-35" name="__codelineno-19-35" href="#__codelineno-19-35"></a>
+<a id="__codelineno-19-36" name="__codelineno-19-36" href="#__codelineno-19-36"></a><span class="w">  </span><span class="c1">// Loop &amp; mutate values</span>
+<a id="__codelineno-19-37" name="__codelineno-19-37" href="#__codelineno-19-37"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">iter_mut</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-38" name="__codelineno-19-38" href="#__codelineno-19-38"></a><span class="w">    </span><span class="o">*</span><span class="n">x</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-19-39" name="__codelineno-19-39" href="#__codelineno-19-39"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-19-40" name="__codelineno-19-40" href="#__codelineno-19-40"></a>
+<a id="__codelineno-19-41" name="__codelineno-19-41" href="#__codelineno-19-41"></a><span class="w">  </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Numbers Vec: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">numbers</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-42" name="__codelineno-19-42" href="#__codelineno-19-42"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 
               

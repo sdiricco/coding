@@ -3862,19 +3862,19 @@
 </a>
 
 
-<h1 id="i-filtri-in-vuejs">I filtri in Vue.js</h1>
+<h1 id="i-filtri-in-vuejs">I filtri in Vue.js<a class="headerlink" href="#i-filtri-in-vuejs" title="Permanent link">&para;</a></h1>
 <p>In questa lezione parleremo brevemente dei filtri che rappresentano una soluzione per trasformare e formattare dei dati dinamici di un componente.</p>
 <p>Prima di continuare è bene fare due precisazioni importanti:
 - <strong>i filtri non modificano i dati originali, ma restituiscono una 'copia' formattata dei dati in ingresso</strong>
 - <strong>A partire dalla versione 3 di Vue.js i filtri sono stati rimossi ed è consigliato sostituirli con dei metodi</strong>. Tuttavia può essere utile capire cosa sono e come funzionano visto che si possono trovare all'interno del codice di applicazioni che utilizzano la versione 1 o 2 di Vue.js</p>
-<h2 id="definire-ed-usare-dei-filtri">Definire ed usare dei filtri</h2>
+<h2 id="definire-ed-usare-dei-filtri">Definire ed usare dei filtri<a class="headerlink" href="#definire-ed-usare-dei-filtri" title="Permanent link">&para;</a></h2>
 <p>I filtri possono essere usati essenzialmente in due circostanze: all'interno di un'espressione di interpolazione e nelle espressioni passate alla direttiva <code>v-bind</code>.</p>
 <p>Per usare un filtro basta appendere il carattere <code>'|' (pipe)</code> e il nome del filtro ad una certa espressione.</p>
 <p>Per esempio, all'interno del template di un certo componente potremmo avere un frammento di codice come quello riportato nel riquadro sottostante.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">--</span> <span class="na">usare</span> <span class="na">un</span> <span class="na">filtro</span> <span class="na">all</span><span class="err">&#39;</span><span class="na">interno</span> <span class="na">di</span> <span class="na">un</span><span class="err">&#39;</span><span class="na">espressione</span> <span class="na">di</span> <span class="na">interpolazione</span> <span class="na">--</span><span class="p">&gt;</span>
-{{ name | uppercase}}
-<span class="p">&lt;</span><span class="nt">--</span> <span class="na">usare</span> <span class="na">un</span> <span class="na">filtro</span> <span class="na">nell</span><span class="err">&#39;</span><span class="na">espressione</span> <span class="na">della</span> <span class="na">direttiva</span> <span class="na">v-bind</span> <span class="na">--</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">User</span> <span class="na">v-bind:name</span><span class="o">=</span><span class="s">&quot;usersArray | lastElement&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">--</span> <span class="na">usare</span> <span class="na">un</span> <span class="na">filtro</span> <span class="na">all</span><span class="err">&#39;</span><span class="na">interno</span> <span class="na">di</span> <span class="na">un</span><span class="err">&#39;</span><span class="na">espressione</span> <span class="na">di</span> <span class="na">interpolazione</span> <span class="na">--</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>{{ name | uppercase}}
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;</span><span class="nt">--</span> <span class="na">usare</span> <span class="na">un</span> <span class="na">filtro</span> <span class="na">nell</span><span class="err">&#39;</span><span class="na">espressione</span> <span class="na">della</span> <span class="na">direttiva</span> <span class="na">v-bind</span> <span class="na">--</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">&lt;</span><span class="nt">User</span> <span class="na">v-bind:name</span><span class="o">=</span><span class="s">&quot;usersArray | lastElement&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Come per le direttive ed i componenti, anche per la registrazione dei filtri abbiamo due possibilità:
 - registrazione globale

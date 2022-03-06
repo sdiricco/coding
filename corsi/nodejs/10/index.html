@@ -3862,25 +3862,25 @@
 </a>
 
 
-<h1 id="modulo-events">Modulo Events</h1>
+<h1 id="modulo-events">Modulo Events<a class="headerlink" href="#modulo-events" title="Permanent link">&para;</a></h1>
 <p>Il modulo <code>events</code> ti consente di generare eventi o di estendere moduli software che già utilizzano eventi.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;events&quot;</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">eventEmitter</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">events</span><span class="p">.</span><span class="nx">EventEmitter</span><span class="p">();</span>
-<span class="nx">eventEmitter</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;my-event&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;data received successfully.&quot;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-<span class="p">});</span>
-<span class="nx">eventEmitter</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;my-event&quot;</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">success</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nx">code</span><span class="o">:</span> <span class="mf">12</span><span class="p">,</span>
-  <span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;right-mode&quot;</span><span class="p">,</span>
-<span class="p">});</span>
-
-<span class="cm">/*</span>
-<span class="cm">output</span>
-<span class="cm">data received successfully. { success: true, code: 12, message: &#39;right-mode&#39; }</span>
-<span class="cm">*/</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span> <span class="nx">events</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;events&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">const</span> <span class="nx">eventEmitter</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">events</span><span class="p">.</span><span class="nx">EventEmitter</span><span class="p">();</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">eventEmitter</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;my-event&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;data received successfully.&quot;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">});</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nx">eventEmitter</span><span class="p">.</span><span class="nx">emit</span><span class="p">(</span><span class="s2">&quot;my-event&quot;</span><span class="p">,</span> <span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="nx">success</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="nx">code</span><span class="o">:</span> <span class="mf">12</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="nx">message</span><span class="o">:</span> <span class="s2">&quot;right-mode&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">});</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="cm">/*</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="cm">output</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="cm">data received successfully. { success: true, code: 12, message: &#39;right-mode&#39; }</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="cm">*/</span>
 </code></pre></div>
-<h2 id="stream">Stream</h2>
+<h2 id="stream">Stream<a class="headerlink" href="#stream" title="Permanent link">&para;</a></h2>
 <p>Attraverso lo stream, sarai in grado di leggere un flusso di dati continuo in modo efficiente. Per capire il concetto di stream immagina di voler vedere un film da internet. Hai due opzioni:</p>
 <ul>
 <li>Ti colleghi a un sito di streaming come <a href="">Netflix</a> o <a href="">Amazon prime video</a>, scegli un film e lo esegui</li>
@@ -3890,26 +3890,26 @@
 Scegliendo invece di voler scaricare l'intero film in locale, avrai bisogno di aspettare del tempo prima di poterlo eseguire.</p>
 <p>Vediamo un esempio molto simile con la lettura di un file di testo.</p>
 <p>No stream, lettura completa
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;fs/promises&quot;</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">main</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="k">try</span> <span class="p">{</span>
-    <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">&quot;./file.txt&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">encoding</span><span class="o">:</span> <span class="s2">&quot;utf8&quot;</span> <span class="p">});</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
-  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">};</span>
-
-<span class="nx">main</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;fs/promises&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">const</span> <span class="nx">main</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s2">&quot;./file.txt&quot;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">encoding</span><span class="o">:</span> <span class="s2">&quot;utf8&quot;</span> <span class="p">});</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  <span class="p">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">};</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nx">main</span><span class="p">();</span>
 </code></pre></div></p>
 <p>Utilizzo lo stream
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
-
-<span class="kd">const</span> <span class="nx">stream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">);</span>
-<span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="c1">//stampa buffer da 64Kbyte</span>
-<span class="p">})</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kd">const</span> <span class="nx">stream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">);</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="c1">//stampa buffer da 64Kbyte</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">})</span>
 </code></pre></div></p>
 
               

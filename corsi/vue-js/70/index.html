@@ -3859,36 +3859,36 @@
   <h1>70</h1>
 
 <p>Torniamo a concentrare al nostra attenzione su Vuex e vediamo quali configurazioni sono state già realizzate da Vue CLI per il corretto funzionamento di Vuex.</p>
-<h2 id="creare-un-nuovo-store-in-vuex">Creare un nuovo Store in Vuex</h2>
+<h2 id="creare-un-nuovo-store-in-vuex">Creare un nuovo Store in Vuex<a class="headerlink" href="#creare-un-nuovo-store-in-vuex" title="Permanent link">&para;</a></h2>
 <p>Partiamo dal file <code>main.js</code> ed analizziamo quali sono le differenze rispetto ad un'applicazione che non usa Vuex.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// file: main.js</span>
-  <span class="k">import</span> <span class="nx">Vue</span> <span class="kr">from</span> <span class="s1">&#39;vue&#39;</span><span class="p">;</span>
-  <span class="k">import</span> <span class="nx">App</span> <span class="kr">from</span> <span class="s1">&#39;./App.vue&#39;</span><span class="p">;</span>
-  <span class="k">import</span> <span class="nx">store</span> <span class="kr">from</span> <span class="s1">&#39;./store&#39;</span><span class="p">;</span>
-
-  <span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-
-  <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
-    <span class="nx">store</span><span class="p">,</span>
-    <span class="nx">render</span><span class="o">:</span> <span class="p">(</span><span class="nx">h</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
-  <span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// file: main.js</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="k">import</span> <span class="nx">Vue</span> <span class="kr">from</span> <span class="s1">&#39;vue&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="k">import</span> <span class="nx">App</span> <span class="kr">from</span> <span class="s1">&#39;./App.vue&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="k">import</span> <span class="nx">store</span> <span class="kr">from</span> <span class="s1">&#39;./store&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="nx">store</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="nx">render</span><span class="o">:</span> <span class="p">(</span><span class="nx">h</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">);</span>
 </code></pre></div>
 <p>Notiamo che viene importato lo store dal file <code>./store/index.js</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// file: store/index.js</span>
-<span class="k">import</span> <span class="nx">Vue</span> <span class="kr">from</span> <span class="s1">&#39;vue&#39;</span><span class="p">;</span>
-<span class="k">import</span> <span class="nx">Vuex</span> <span class="kr">from</span> <span class="s1">&#39;vuex&#39;</span><span class="p">;</span>
-
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">);</span>
-
-<span class="k">export</span> <span class="k">default</span> <span class="ow">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
-  <span class="nx">state</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">num</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-    <span class="nx">loading</span><span class="o">:</span> <span class="kc">false</span>
-  <span class="p">},</span>
-  <span class="nx">mutations</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">actions</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">getters</span><span class="o">:</span> <span class="p">{}</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// file: store/index.js</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">import</span> <span class="nx">Vue</span> <span class="kr">from</span> <span class="s1">&#39;vue&#39;</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">import</span> <span class="nx">Vuex</span> <span class="kr">from</span> <span class="s1">&#39;vuex&#39;</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">Vuex</span><span class="p">);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">export</span> <span class="k">default</span> <span class="ow">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  <span class="nx">state</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="nx">num</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="nx">loading</span><span class="o">:</span> <span class="kc">false</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  <span class="p">},</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  <span class="nx">mutations</span><span class="o">:</span> <span class="p">{},</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  <span class="nx">actions</span><span class="o">:</span> <span class="p">{},</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  <span class="nx">getters</span><span class="o">:</span> <span class="p">{}</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">});</span>
 </code></pre></div>
 <p>Nel file <code>store/index.js</code> viene creato il nuovo store che configuriamo tramite un oggetto di proprietà. Per il momento abbiamo definito solo due proprietà dell'opzione <code>state</code> che rappresenta lo stato della nostra applicazione. Abbiamo quindi un valore numerico inizializzato a 0 a cui in seguito assegneremo dei valori. È presente poi una proprietà booleana <code>loading</code> che useremo per segnalare quando è in corso una richiesta al server. In questo modo, prima di ricevere un nuovo valore, potremo mostrare un componente per segnalare che l'applicazione sta effettuando un'operazione che richiede un certo tempo di attesa.</p>
 

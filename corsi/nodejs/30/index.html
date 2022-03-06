@@ -3862,50 +3862,50 @@
 </a>
 
 
-<h1 id="mongodb">Mongodb</h1>
+<h1 id="mongodb">Mongodb<a class="headerlink" href="#mongodb" title="Permanent link">&para;</a></h1>
 <p>Per l'installazione di <a href="">mongodb</a> su linux segui la <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/">guida ufficiale</a>.
 Installa anche <a href="https://docs.mongodb.com/compass/current/install/">compass</a>, ti servirà per una gestione da GUI di mongo db</p>
 <p>Per far partire mongo db:</p>
-<div class="highlight"><pre><span></span><code>sudo systemctl start mongod
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo systemctl start mongod
 </code></pre></div>
 <p>Per stoppare il processo</p>
-<div class="highlight"><pre><span></span><code>sudo systemctl stop mongod
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo systemctl stop mongod
 </code></pre></div>
 <p>Per verificare lo stato di mongodb</p>
-<div class="highlight"><pre><span></span><code>sudo systemctl status mongod
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo systemctl status mongod
 </code></pre></div>
 <p>Per far partire una sessione</p>
-<div class="highlight"><pre><span></span><code>mongosh
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mongosh
 </code></pre></div>
-<h2 id="comandi">Comandi</h2>
+<h2 id="comandi">Comandi<a class="headerlink" href="#comandi" title="Permanent link">&para;</a></h2>
 <p>Mostra i database locali
-<div class="highlight"><pre><span></span><code>test&gt; show dbs
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>test&gt; show dbs
 </code></pre></div></p>
 <p>Crea un database
-<div class="highlight"><pre><span></span><code>test&gt; use mydb
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>test&gt; use mydb
 </code></pre></div></p>
 <p>Crea una collection
-<div class="highlight"><pre><span></span><code>mydb&gt; db.utenti
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>mydb&gt; db.utenti
 </code></pre></div></p>
 <p>Aggiundi un documento, un oggetto</p>
-<div class="highlight"><pre><span></span><code>db.utenti.insertOne<span class="o">({</span><span class="s2">&quot;nome&quot;</span>: <span class="s2">&quot;Luca&quot;</span>, <span class="s2">&quot;cognome&quot;</span>: <span class="s2">&quot;Rossi&quot;</span>, <span class="s2">&quot;citta&quot;</span>: <span class="s2">&quot;Lucca&quot;</span>, <span class="s2">&quot;eta&quot;</span>: <span class="m">41</span><span class="o">})</span>
-
-
-<span class="o">{</span>
-  acknowledged: true,
-  insertedId: ObjectId<span class="o">(</span><span class="s2">&quot;61c9e5bede4c093ee7fa6b67&quot;</span><span class="o">)</span>
-<span class="o">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>db.utenti.insertOne<span class="o">({</span><span class="s2">&quot;nome&quot;</span>: <span class="s2">&quot;Luca&quot;</span>, <span class="s2">&quot;cognome&quot;</span>: <span class="s2">&quot;Rossi&quot;</span>, <span class="s2">&quot;citta&quot;</span>: <span class="s2">&quot;Lucca&quot;</span>, <span class="s2">&quot;eta&quot;</span>: <span class="m">41</span><span class="o">})</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="o">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  acknowledged: true,
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  insertedId: ObjectId<span class="o">(</span><span class="s2">&quot;61c9e5bede4c093ee7fa6b67&quot;</span><span class="o">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="o">}</span>
 </code></pre></div>
 <p>Inserisci più oggetti, documenti</p>
-<div class="highlight"><pre><span></span><code>db.utenti.insertMany<span class="o">([{</span><span class="s2">&quot;nome&quot;</span>: <span class="s2">&quot;Luca&quot;</span>, <span class="s2">&quot;cognome&quot;</span>: <span class="s2">&quot;Rossi&quot;</span>, <span class="s2">&quot;citta&quot;</span>: <span class="s2">&quot;Lucca&quot;</span>, <span class="s2">&quot;eta&quot;</span>: <span class="m">41</span><span class="o">}</span>, <span class="o">{</span><span class="s2">&quot;nome&quot;</span>: <span class="s2">&quot;Matteo&quot;</span>, <span class="s2">&quot;cognome&quot;</span>: <span class="s2">&quot;Andrei&quot;</span>, <span class="s2">&quot;citta&quot;</span>: <span class="s2">&quot;Padova&quot;</span><span class="o">}])</span>
-
-<span class="o">{</span>
-  acknowledged: true,
-  insertedIds: <span class="o">{</span>
-    <span class="s1">&#39;0&#39;</span>: ObjectId<span class="o">(</span><span class="s2">&quot;61c9e64dde4c093ee7fa6b68&quot;</span><span class="o">)</span>,
-    <span class="s1">&#39;1&#39;</span>: ObjectId<span class="o">(</span><span class="s2">&quot;61c9e64dde4c093ee7fa6b69&quot;</span><span class="o">)</span>
-  <span class="o">}</span>
-<span class="o">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>db.utenti.insertMany<span class="o">([{</span><span class="s2">&quot;nome&quot;</span>: <span class="s2">&quot;Luca&quot;</span>, <span class="s2">&quot;cognome&quot;</span>: <span class="s2">&quot;Rossi&quot;</span>, <span class="s2">&quot;citta&quot;</span>: <span class="s2">&quot;Lucca&quot;</span>, <span class="s2">&quot;eta&quot;</span>: <span class="m">41</span><span class="o">}</span>, <span class="o">{</span><span class="s2">&quot;nome&quot;</span>: <span class="s2">&quot;Matteo&quot;</span>, <span class="s2">&quot;cognome&quot;</span>: <span class="s2">&quot;Andrei&quot;</span>, <span class="s2">&quot;citta&quot;</span>: <span class="s2">&quot;Padova&quot;</span><span class="o">}])</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="o">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  acknowledged: true,
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>  insertedIds: <span class="o">{</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="s1">&#39;0&#39;</span>: ObjectId<span class="o">(</span><span class="s2">&quot;61c9e64dde4c093ee7fa6b68&quot;</span><span class="o">)</span>,
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="s1">&#39;1&#39;</span>: ObjectId<span class="o">(</span><span class="s2">&quot;61c9e64dde4c093ee7fa6b69&quot;</span><span class="o">)</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  <span class="o">}</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="o">}</span>
 </code></pre></div>
 <p>Posso vedere questo database su <code>compass</code>.</p>
 <p>Come puoi notare posso inserire qualsiasi tipo oggetto json-like senza nessun controllo dello schema.</p>

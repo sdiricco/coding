@@ -161,6 +161,10 @@ html {
 
 }
 
+.md-typeset .tabbed-labels{
+  box-shadow: none;
+}
+
 .md-footer-meta__inner.md-grid {
   flex-direction: column;
   justify-content: center;

@@ -3816,7 +3816,7 @@
 </a>
 
 
-<h1 id="lifecycle-hooks-e-setup">Lifecycle hooks e setup()</h1>
+<h1 id="lifecycle-hooks-e-setup">Lifecycle hooks e setup()<a class="headerlink" href="#lifecycle-hooks-e-setup" title="Permanent link">&para;</a></h1>
 <p>Dopo questa breve introduzione, potremmo domandarci quando viene invocato il metodo <code>migliorare le prestazioni dell'app</code> e come fare per definire i metodi del ciclo di vita del componente con la nuova <strong>Composition API</strong>.</p>
 <p>I metodi del ciclo di vita di un componente restano quelli già visti nelle lezioni precedenti ad eccezione di <code>beforeCreate</code> e <code>created</code> al posto dei quali dovremo invece usare proprio il metodo <code>setup()</code> che è quindi il primo ad essere eseguito dopo che è stato completato il processo di risoluzione delle <code>props</code> e l'istanza del componente è stata opportunamente creata.</p>
 <p>Infatti, a voler essere più precisi, <code>setup()</code> riceve in ingresso due argomenti: il primo contiene eventuali props passate al componente, il secondo è un oggetto a cui ci si riferisce solitamente con il nome context. Quest'ultimo consente di ottenere le proprietà e i metodi che in Vue 2 erano prima accessibili tramite <code>this</code>, per esempio attrs, slots, refs emit.</p>

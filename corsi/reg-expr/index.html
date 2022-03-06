@@ -4040,14 +4040,14 @@
 </a>
 
 
-<h1 id="regular-expression">Regular Expression</h1>
+<h1 id="regular-expression">Regular Expression<a class="headerlink" href="#regular-expression" title="Permanent link">&para;</a></h1>
 <p>Un' espressione regolare è una stringa di caratteri opportunamente codificata che filtra un'insieme di stringhe. E' possibile, con un'espressione regolare creare dei filtri per le ricerche di testo all'interno di un file o un determinato modello.</p>
-<h2 id="strumenti-necessari">Strumenti necessari</h2>
+<h2 id="strumenti-necessari">Strumenti necessari<a class="headerlink" href="#strumenti-necessari" title="Permanent link">&para;</a></h2>
 <p>Puoi imparare la sintassi delle espressioni regolari su un motore online come <a href="https://regexr.com/">RegExpr</a>.</p>
 <p><img alt="RegExpr" src="images/RegExpr.PNG" /></p>
 <p>E' un ottimo strumento poichè oltre ad evidenziare nel testo l'insieme di caratteri filtrati dall'espressione regolare fornisce anche una spiegazione per ogni costrutto utilizzato nell'espressione regolare.</p>
-<h2 id="qualche-esempio">Qualche esempio</h2>
-<h3 id="selezione-1">Selezione 1</h3>
+<h2 id="qualche-esempio">Qualche esempio<a class="headerlink" href="#qualche-esempio" title="Permanent link">&para;</a></h2>
+<h3 id="selezione-1">Selezione 1<a class="headerlink" href="#selezione-1" title="Permanent link">&para;</a></h3>
 <p>Vediamo subito un esempio. La seguente è un'espressione regolare che seleziona tutte le lettere maiuscole e minuscole</p>
 <table>
 <thead>
@@ -4068,7 +4068,7 @@
 </tbody>
 </table>
 <p><strong>Nota:</strong> Ho utato la <code>,</code> per separare la selezione.  Con questo si vuol evidenziare che gli spazi vengono ignorati</p>
-<h3 id="selezione-2">Selezione 2</h3>
+<h3 id="selezione-2">Selezione 2<a class="headerlink" href="#selezione-2" title="Permanent link">&para;</a></h3>
 <p>La seguente espressione regolare invece selezionerà soltanto i caratteri numerici</p>
 <table>
 <thead>
@@ -4088,8 +4088,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="partiamo-dallinizio">Partiamo dall'inizio</h2>
-<h2 id="i-metacaratteri">I metacaratteri</h2>
+<h2 id="partiamo-dallinizio">Partiamo dall'inizio<a class="headerlink" href="#partiamo-dallinizio" title="Permanent link">&para;</a></h2>
+<h2 id="i-metacaratteri">I metacaratteri<a class="headerlink" href="#i-metacaratteri" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -4128,7 +4128,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="i-quantificatori">I quantificatori</h2>
+<h2 id="i-quantificatori">I quantificatori<a class="headerlink" href="#i-quantificatori" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -4155,7 +4155,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="qualche-esempio_1">Qualche esempio</h3>
+<h3 id="qualche-esempio_1">Qualche esempio<a class="headerlink" href="#qualche-esempio_1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -4336,7 +4336,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="le-classi-di-caratteri-e-i-posix">Le classi di caratteri e i POSIX</h2>
+<h2 id="le-classi-di-caratteri-e-i-posix">Le classi di caratteri e i POSIX<a class="headerlink" href="#le-classi-di-caratteri-e-i-posix" title="Permanent link">&para;</a></h2>
 <p>Le classi di caratteri e i POSIX servono per specificare una serie di caratteri allo stesso tempo, senza dover scomodare i gruppi.</p>
 <table>
 <thead>
@@ -4434,7 +4434,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="esercizio-ricerca-di-una-email-semplice-1">Esercizio - ricerca di una email semplice 1</h2>
+<h2 id="esercizio-ricerca-di-una-email-semplice-1">Esercizio - ricerca di una email semplice 1<a class="headerlink" href="#esercizio-ricerca-di-una-email-semplice-1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -4445,17 +4445,17 @@
 <tbody>
 <tr>
 <td>Input</td>
-<td>Ciao, ricordati di scrivermi alla mia email personale per l'acconto articolo DKR#123, qt.2, ID@12901, email: prova@gmail.com</td>
+<td>Ciao, ricordati di scrivermi alla mia email personale per l'acconto articolo <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/DKR/issues/123" title="GitHub Issue: squidfunk/DKR #123">DKR#123</a>, qt.2, ID@12901, email: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#112;&#114;&#111;&#118;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#112;&#114;&#111;&#118;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></td>
 </tr>
 <tr>
 <td>Output</td>
-<td>prova@gmail.com</td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#112;&#114;&#111;&#118;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#112;&#114;&#111;&#118;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></td>
 </tr>
 </tbody>
 </table>
 <p>Nell'espressione regolare sto cercando uno o più caratteri seguiti dal simbolo <code>@</code> seguiti da uno o più caratteri, seguiti da <code>.</code> seguito da uno o più caratteri. Ricordo che <code>\w</code> ricerca tutte le lettere maiuscole/minuscole compreso il carattere <code>_</code> e le cifre.</p>
 <p><strong>Nota:</strong> Per quanto possa sembrare semplice e completo, questo esempio non include le email del tipo <code>prova.prova@gmail.com</code></p>
-<h2 id="esercizio-ricerca-di-una-email-semplice-2">Esercizio - ricerca di una email semplice 2</h2>
+<h2 id="esercizio-ricerca-di-una-email-semplice-2">Esercizio - ricerca di una email semplice 2<a class="headerlink" href="#esercizio-ricerca-di-una-email-semplice-2" title="Permanent link">&para;</a></h2>
 <p>L'esempio precedente non raccoglie email del tipo <code>prova.prova@gmail.com</code>, infatti:</p>
 <table>
 <thead>
@@ -4467,11 +4467,11 @@
 <tbody>
 <tr>
 <td>Input</td>
-<td>Ciao, ricordati di scrivermi alla mia email personale per l'acconto articolo DKR#123, qt.2, ID@12901, email1: mario.rossi78@gmail.com</td>
+<td>Ciao, ricordati di scrivermi alla mia email personale per l'acconto articolo <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/DKR/issues/123" title="GitHub Issue: squidfunk/DKR #123">DKR#123</a>, qt.2, ID@12901, email1: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#114;&#105;&#111;&#46;&#114;&#111;&#115;&#115;&#105;&#55;&#56;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#109;&#97;&#114;&#105;&#111;&#46;&#114;&#111;&#115;&#115;&#105;&#55;&#56;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></td>
 </tr>
 <tr>
 <td>Output</td>
-<td>rossi78@gmail.com</td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#114;&#111;&#115;&#115;&#105;&#55;&#56;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#114;&#111;&#115;&#115;&#105;&#55;&#56;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></td>
 </tr>
 </tbody>
 </table>
@@ -4486,15 +4486,15 @@
 <tbody>
 <tr>
 <td>Input</td>
-<td>Ciao, ricordati di scrivermi alla mia email personale per l'acconto articolo DKR#123, qt.2, ID@12901, email1: mario.rossi78@gmail.com</td>
+<td>Ciao, ricordati di scrivermi alla mia email personale per l'acconto articolo <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/DKR/issues/123" title="GitHub Issue: squidfunk/DKR #123">DKR#123</a>, qt.2, ID@12901, email1: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#114;&#105;&#111;&#46;&#114;&#111;&#115;&#115;&#105;&#55;&#56;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#109;&#97;&#114;&#105;&#111;&#46;&#114;&#111;&#115;&#115;&#105;&#55;&#56;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></td>
 </tr>
 <tr>
 <td>Output</td>
-<td>mario.rossi78@gmail.com</td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#114;&#105;&#111;&#46;&#114;&#111;&#115;&#115;&#105;&#55;&#56;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#109;&#97;&#114;&#105;&#111;&#46;&#114;&#111;&#115;&#115;&#105;&#55;&#56;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></td>
 </tr>
 </tbody>
 </table>
-<h2 id="esercizio-ricerca-di-una-url">Esercizio - ricerca di una url</h2>
+<h2 id="esercizio-ricerca-di-una-url">Esercizio - ricerca di una url<a class="headerlink" href="#esercizio-ricerca-di-una-url" title="Permanent link">&para;</a></h2>
 <p>Questo esercizio ricerca una url semplice ma non completa</p>
 <table>
 <thead>
@@ -4506,11 +4506,11 @@
 <tbody>
 <tr>
 <td>Input</td>
-<td>Ciao, ricordati di visualizzare i seguenti link, link: https://regexr.com, link: http://regexr.com/5mpk9, link: https://it.wikipedia.org/wiki/Posta_elettronica, link: https://github.com/CodeCoagious19, link: https://webmail.intecs.it/mail#1, link: https://github.com/CodeCoagious19/corsi-programmazione/blob/master/README.md#programmazione-desktop</td>
+<td>Ciao, ricordati di visualizzare i seguenti link, link: <a href="https://regexr.com">https://regexr.com</a>, link: <a href="http://regexr.com/5mpk9">http://regexr.com/5mpk9</a>, link: <a href="https://it.wikipedia.org/wiki/Posta_elettronica">https://it.wikipedia.org/wiki/Posta_elettronica</a>, link: <a href="https://github.com/CodeCoagious19">https://github.com/CodeCoagious19</a>, link: <a href="https://webmail.intecs.it/mail#1">https://webmail.intecs.it/mail#1</a>, link: <a href="https://github.com/CodeCoagious19/corsi-programmazione/blob/master/README.md#programmazione-desktop">https://github.com/CodeCoagious19/corsi-programmazione/blob/master/README.md#programmazione-desktop</a></td>
 </tr>
 <tr>
 <td>Output</td>
-<td>https://regexr.com,http://regexr.com/5mpk9,https://it.wikipedia.org/wiki/Posta_elettronica,https://github.com/CodeCoagious19,https://webmail.intecs.it/mail#1,https://github.com/CodeCoagious19/corsi-programmazione/blob/master/README.md#programmazione-desktop</td>
+<td><a href="https://regexr.com,http://regexr.com/5mpk9,https://it.wikipedia.org/wiki/Posta_elettronica,https://github.com/CodeCoagious19,https://webmail.intecs.it/mail#1,https://github.com/CodeCoagious19/corsi-programmazione/blob/master/README.md#programmazione-desktop">https://regexr.com,http://regexr.com/5mpk9,https://it.wikipedia.org/wiki/Posta_elettronica,https://github.com/CodeCoagious19,https://webmail.intecs.it/mail#1,https://github.com/CodeCoagious19/corsi-programmazione/blob/master/README.md#programmazione-desktop</a></td>
 </tr>
 </tbody>
 </table>

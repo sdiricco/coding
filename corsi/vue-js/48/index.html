@@ -3876,95 +3876,95 @@
 </a>
 
 
-<h1 id="i-form-in-vuejs-parte-3">I form in Vue.js parte 3</h1>
-<h2 id="checkbox">Checkbox</h2>
+<h1 id="i-form-in-vuejs-parte-3">I form in Vue.js parte 3<a class="headerlink" href="#i-form-in-vuejs-parte-3" title="Permanent link">&para;</a></h1>
+<h2 id="checkbox">Checkbox<a class="headerlink" href="#checkbox" title="Permanent link">&para;</a></h2>
 <p>In modo del tutto simile a quanto visto negli esempi precedenti, possiamo usare la direttiva <code>v-model</code> con uno o più <code>checkbox</code>. Nel primo caso dovremo associare una singola proprietà, nel secondo ci affideremo ad un array di valori booleani.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;checked&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span><span class="p">&gt;</span>{{ checked }}<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="nx">checked</span><span class="o">:</span> <span class="kc">false</span>
-    <span class="p">}</span>   
-  <span class="p">}</span>
-<span class="p">}</span> 
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;checked&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span><span class="p">&gt;</span>{{ checked }}<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="k">return</span> <span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      <span class="nx">checked</span><span class="o">:</span> <span class="kc">false</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="p">}</span>   
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  <span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span> 
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">template</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;option in options&quot;</span> <span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> 
-        <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> 
-        <span class="na">:id</span><span class="o">=</span><span class="s">&quot;option + &#39;-checkbox&#39;&quot;</span> 
-        <span class="na">:value</span><span class="o">=</span><span class="s">&quot;option&quot;</span> 
-        <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;checked&quot;</span> 
-        <span class="na">:key</span><span class="o">=</span><span class="s">&quot;option&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">:for</span><span class="o">=</span><span class="s">&quot;option + &#39;-checkbox&#39;&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;option + &#39;-label&#39;&quot;</span><span class="p">&gt;</span>
-        {{ option.charAt(0).toUpperCase() + option.slice(1) }}
-      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-      Hai selezionato:<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span> {{ checked }}
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="nx">checked</span><span class="o">:</span> <span class="p">[],</span>
-      <span class="nx">options</span><span class="o">:</span> <span class="p">[</span>
-        <span class="s1">&#39;angular&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;react&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;vue&#39;</span>
-      <span class="p">]</span>
-    <span class="p">}</span>   
-  <span class="p">}</span>
-<span class="p">}</span> 
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">&lt;</span><span class="nt">template</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;option in options&quot;</span> <span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> 
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="na">:id</span><span class="o">=</span><span class="s">&quot;option + &#39;-checkbox&#39;&quot;</span> 
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="na">:value</span><span class="o">=</span><span class="s">&quot;option&quot;</span> 
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;checked&quot;</span> 
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="na">:key</span><span class="o">=</span><span class="s">&quot;option&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">:for</span><span class="o">=</span><span class="s">&quot;option + &#39;-checkbox&#39;&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;option + &#39;-label&#39;&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        {{ option.charAt(0).toUpperCase() + option.slice(1) }}
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>      Hai selezionato:<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span> {{ checked }}
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="k">return</span> <span class="p">{</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>      <span class="nx">checked</span><span class="o">:</span> <span class="p">[],</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>      <span class="nx">options</span><span class="o">:</span> <span class="p">[</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>        <span class="s1">&#39;angular&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>        <span class="s1">&#39;react&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>        <span class="s1">&#39;vue&#39;</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>      <span class="p">]</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>    <span class="p">}</span>   
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>  <span class="p">}</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="p">}</span> 
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-<h2 id="pulsanti-radio">Pulsanti Radio</h2>
+<h2 id="pulsanti-radio">Pulsanti Radio<a class="headerlink" href="#pulsanti-radio" title="Permanent link">&para;</a></h2>
 <p>Per i pulsanti di tipo radio possiamo invece utilizzare la direttiva <code>v-model</code> come mostrato nel seguente esempio.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">template</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;option in options&quot;</span> <span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> 
-        <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> 
-        <span class="na">:id</span><span class="o">=</span><span class="s">&quot;option + &#39;-checkbox&#39;&quot;</span> 
-        <span class="na">:value</span><span class="o">=</span><span class="s">&quot;option&quot;</span> 
-        <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;selected&quot;</span> 
-        <span class="na">:key</span><span class="o">=</span><span class="s">&quot;option&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">:for</span><span class="o">=</span><span class="s">&quot;option + &#39;-checkbox&#39;&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;option + &#39;-label&#39;&quot;</span><span class="p">&gt;</span>
-        {{ option.charAt(0).toUpperCase() + option.slice(1) }}
-      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-      Hai selezionato:<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span> {{ selected }}
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="nx">selected</span><span class="o">:</span> <span class="s1">&#39;vue&#39;</span><span class="p">,</span>
-      <span class="nx">options</span><span class="o">:</span> <span class="p">[</span>
-        <span class="s1">&#39;angular&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;react&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;vue&#39;</span>
-      <span class="p">]</span>
-    <span class="p">}</span>   
-  <span class="p">}</span>
-<span class="p">}</span> 
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="p">&lt;</span><span class="nt">template</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;option in options&quot;</span> <span class="p">&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>      <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> 
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="na">:id</span><span class="o">=</span><span class="s">&quot;option + &#39;-checkbox&#39;&quot;</span> 
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        <span class="na">:value</span><span class="o">=</span><span class="s">&quot;option&quot;</span> 
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;selected&quot;</span> 
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="na">:key</span><span class="o">=</span><span class="s">&quot;option&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">:for</span><span class="o">=</span><span class="s">&quot;option + &#39;-checkbox&#39;&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;option + &#39;-label&#39;&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        {{ option.charAt(0).toUpperCase() + option.slice(1) }}
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>      Hai selezionato:<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span> {{ selected }}
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    <span class="k">return</span> <span class="p">{</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>      <span class="nx">selected</span><span class="o">:</span> <span class="s1">&#39;vue&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>      <span class="nx">options</span><span class="o">:</span> <span class="p">[</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>        <span class="s1">&#39;angular&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>        <span class="s1">&#39;react&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>        <span class="s1">&#39;vue&#39;</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>      <span class="p">]</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    <span class="p">}</span>   
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>  <span class="p">}</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="p">}</span> 
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Nell'esempio riportato sopra, i diversi pulsanti di tipo radio sono collegati tutti alla stessa proprietà <code>selected</code> che è inizializzata al valore 'vue'. In questo modo il pulsante radio con value pari a 'vue' sarà quello predefinito. Ogni volta che selezioniamo un diverso pulsante, la proprietà selected assumerà di volta in volta un nuovo valore.</p>
 

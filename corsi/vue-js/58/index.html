@@ -3816,9 +3816,9 @@
 </a>
 
 
-<h1 id="concatenare-dei-filtri">Concatenare dei filtri</h1>
+<h1 id="concatenare-dei-filtri">Concatenare dei filtri<a class="headerlink" href="#concatenare-dei-filtri" title="Permanent link">&para;</a></h1>
 <p>Due o più filtri possono essere facilmente concatenati sempre attraverso il carattere <code>'|'</code>.</p>
-<div class="highlight"><pre><span></span><code>{{ piloti | first | capitalize | prefix(&#39;Sig.&#39;) }}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{{ piloti | first | capitalize | prefix(&#39;Sig.&#39;) }}
 </code></pre></div>
 <p>I filtri vengono applicati in ordine da sinistra verso destra. Nell'esempio riportato sopra, il filtro <code>first</code> sarebbe il primo ad essere invocato mentre al termine della trasformazione verrebbe eseguito <code>prefix('Sig.')</code>.</p>
 

@@ -3816,98 +3816,98 @@
 </a>
 
 
-<h1 id="components-in-vue-app-qrcode-part-4-">Components in vue - app qrcode part 4 -</h1>
+<h1 id="components-in-vue-app-qrcode-part-4-">Components in vue - app qrcode part 4 -<a class="headerlink" href="#components-in-vue-app-qrcode-part-4-" title="Permanent link">&para;</a></h1>
 <p>Analizziamo il componente <code>QrDisplay</code></p>
-<div class="highlight"><pre><span></span><code><span class="c1">// file: components: QrDisplay.js</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">QrDownloadButtons</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;./QrDownloadButtons.js&quot;</span><span class="p">;</span>
-
-<span class="k">export</span> <span class="kd">const</span> <span class="nx">QrDisplay</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;qr-display&quot;</span><span class="p">,</span>
-  <span class="nx">components</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">QrDownloadButtons</span>
-  <span class="p">},</span>
-  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">value</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-      <span class="k">default</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="nx">hasError</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="nx">imgSrc</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nx">svgSrc</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="nx">dataUrlOpts</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">errorCorrectionLevel</span><span class="o">:</span> <span class="s2">&quot;H&quot;</span><span class="p">,</span>
-        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;image/jpeg&quot;</span><span class="p">,</span>
-        <span class="nx">quality</span><span class="o">:</span> <span class="mf">0.8</span><span class="p">,</span>
-        <span class="nx">margin</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
-        <span class="nx">width</span><span class="o">:</span> <span class="mf">256</span>
-      <span class="p">},</span>
-      <span class="nx">stringOpts</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;svg&quot;</span>
-      <span class="p">}</span>
-    <span class="p">};</span>
-  <span class="p">},</span>
-  <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">value</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">immediate</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nx">handler</span><span class="p">(</span><span class="nx">newVal</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">newVal</span><span class="p">)</span> <span class="p">{</span>
-          <span class="nx">QRCode</span><span class="p">.</span><span class="nx">toDataURL</span><span class="p">(</span><span class="nx">newVal</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataUrlOpts</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-              <span class="k">this</span><span class="p">.</span><span class="nx">hasError</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-              <span class="k">this</span><span class="p">.</span><span class="nx">imgSrc</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
-            <span class="p">}</span>
-          <span class="p">});</span>
-
-          <span class="nx">QRCode</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="nx">newVal</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">stringOpts</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">string</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-              <span class="k">this</span><span class="p">.</span><span class="nx">hasError</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-              <span class="k">this</span><span class="p">.</span><span class="nx">svgSrc</span> <span class="o">=</span> <span class="sb">`data:image/svg+xml;base64,</span><span class="si">${</span><span class="nx">btoa</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-            <span class="p">}</span>
-          <span class="p">});</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">template</span><span class="o">:</span> <span class="sb">`</span>
-<span class="sb">    &lt;div class=&quot;display-container&quot;&gt;</span>
-<span class="sb">      &lt;div class=&quot;display&quot;&gt;</span>
-<span class="sb">        &lt;div class=&quot;qr-code&quot;&gt;</span>
-<span class="sb">          &lt;p class=&quot;error&quot; v-if=&quot;hasError&quot;&gt;</span>
-<span class="sb">            &lt;span class=&quot;error-icon&quot;&gt;</span>
-<span class="sb">              &lt;!-- icona di avviso associata al messaggio di errore --&gt;</span>
-<span class="sb">              &lt;svg </span>
-<span class="sb">                height=&quot;24&quot;</span>
-<span class="sb">                viewBox=&quot;0 0 24 24&quot; </span>
-<span class="sb">                width=&quot;24&quot; </span>
-<span class="sb">                xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;</span>
-<span class="sb">                  &lt;path d=&quot;m0 0h24v24h-24z&quot; fill=&quot;none&quot;/&gt;</span>
-<span class="sb">                  &lt;path </span>
-<span class="sb">                    fill=&quot;currentColor&quot; </span>
-<span class="sb">                    d=&quot;m1 21h22l-11-19zm12-3h-2v-2h2zm0-4h-2v-4h2z&quot;/&gt;</span>
-<span class="sb">              &lt;/svg&gt;</span>
-<span class="sb">            &lt;/span&gt;</span>
-<span class="sb">            Impossibile generare il codice QR.</span>
-<span class="sb">            &lt;br&gt;Si &amp;egrave; verificato un errore.</span>
-<span class="sb">          &lt;/p&gt;</span>
-<span class="sb">          &lt;img v-else :src=&quot;imgSrc&quot; alt=&quot;&quot;&gt;</span>
-<span class="sb">        &lt;/div&gt;</span>
-<span class="sb">      &lt;/div&gt;</span>
-<span class="sb">      &lt;QrDownloadButtons :imgSrc=&quot;imgSrc&quot; :svgSrc=&quot;svgSrc&quot; /&gt;</span>
-<span class="sb">    &lt;/div&gt;</span>
-<span class="sb">  `</span>
-<span class="p">};</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// file: components: QrDisplay.js</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">import</span> <span class="p">{</span> <span class="nx">QrDownloadButtons</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&quot;./QrDownloadButtons.js&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">export</span> <span class="kd">const</span> <span class="nx">QrDisplay</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;qr-display&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="nx">components</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="nx">QrDownloadButtons</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="p">},</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="nx">value</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      <span class="k">default</span><span class="o">:</span> <span class="s2">&quot;&quot;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="p">}</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  <span class="p">},</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="k">return</span> <span class="p">{</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      <span class="nx">hasError</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>      <span class="nx">imgSrc</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      <span class="nx">svgSrc</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>      <span class="nx">dataUrlOpts</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        <span class="nx">errorCorrectionLevel</span><span class="o">:</span> <span class="s2">&quot;H&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;image/jpeg&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="nx">quality</span><span class="o">:</span> <span class="mf">0.8</span><span class="p">,</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        <span class="nx">margin</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        <span class="nx">width</span><span class="o">:</span> <span class="mf">256</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>      <span class="p">},</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>      <span class="nx">stringOpts</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;svg&quot;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>      <span class="p">}</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="p">};</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>  <span class="p">},</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>  <span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    <span class="nx">value</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>      <span class="nx">immediate</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>      <span class="nx">handler</span><span class="p">(</span><span class="nx">newVal</span><span class="p">,</span> <span class="nx">oldVal</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>        <span class="k">if</span> <span class="p">(</span><span class="nx">newVal</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>          <span class="nx">QRCode</span><span class="p">.</span><span class="nx">toDataURL</span><span class="p">(</span><span class="nx">newVal</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">dataUrlOpts</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>            <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>              <span class="k">this</span><span class="p">.</span><span class="nx">hasError</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>              <span class="k">this</span><span class="p">.</span><span class="nx">imgSrc</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>            <span class="p">}</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>          <span class="p">});</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>          <span class="nx">QRCode</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="nx">newVal</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">stringOpts</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">string</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>            <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>              <span class="k">this</span><span class="p">.</span><span class="nx">hasError</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>              <span class="k">this</span><span class="p">.</span><span class="nx">svgSrc</span> <span class="o">=</span> <span class="sb">`data:image/svg+xml;base64,</span><span class="si">${</span><span class="nx">btoa</span><span class="p">(</span><span class="nx">string</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>            <span class="p">}</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>          <span class="p">});</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>        <span class="p">}</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>      <span class="p">}</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>    <span class="p">}</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>  <span class="p">},</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>  <span class="nx">template</span><span class="o">:</span> <span class="sb">`</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="sb">    &lt;div class=&quot;display-container&quot;&gt;</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="sb">      &lt;div class=&quot;display&quot;&gt;</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="sb">        &lt;div class=&quot;qr-code&quot;&gt;</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="sb">          &lt;p class=&quot;error&quot; v-if=&quot;hasError&quot;&gt;</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="sb">            &lt;span class=&quot;error-icon&quot;&gt;</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="sb">              &lt;!-- icona di avviso associata al messaggio di errore --&gt;</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="sb">              &lt;svg </span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="sb">                height=&quot;24&quot;</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="sb">                viewBox=&quot;0 0 24 24&quot; </span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="sb">                width=&quot;24&quot; </span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="sb">                xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="sb">                  &lt;path d=&quot;m0 0h24v24h-24z&quot; fill=&quot;none&quot;/&gt;</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="sb">                  &lt;path </span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="sb">                    fill=&quot;currentColor&quot; </span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="sb">                    d=&quot;m1 21h22l-11-19zm12-3h-2v-2h2zm0-4h-2v-4h2z&quot;/&gt;</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="sb">              &lt;/svg&gt;</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="sb">            &lt;/span&gt;</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="sb">            Impossibile generare il codice QR.</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="sb">            &lt;br&gt;Si &amp;egrave; verificato un errore.</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="sb">          &lt;/p&gt;</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a><span class="sb">          &lt;img v-else :src=&quot;imgSrc&quot; alt=&quot;&quot;&gt;</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="sb">        &lt;/div&gt;</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="sb">      &lt;/div&gt;</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="sb">      &lt;QrDownloadButtons :imgSrc=&quot;imgSrc&quot; :svgSrc=&quot;svgSrc&quot; /&gt;</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="sb">    &lt;/div&gt;</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a><span class="sb">  `</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="p">};</span>
 </code></pre></div>
 <p>Notiamo:</p>
 <ul>
 <li>La registrazione e l'importazione del modulo <code>QrDownloadButtons</code></li>
 <li>La prop <code>value</code> viene passata dal componente padre presente nella pagina html con binding al valore <code>textValue</code></li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">qr-display</span> <span class="na">v-else</span> <span class="na">:value</span><span class="o">=</span><span class="s">&quot;textValue&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">qr-display</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">qr-display</span> <span class="na">v-else</span> <span class="na">:value</span><span class="o">=</span><span class="s">&quot;textValue&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">qr-display</span><span class="p">&gt;</span>
 </code></pre></div>
 <ul>
 <li>

@@ -3862,7 +3862,7 @@
 </a>
 
 
-<h1 id="funzioni-speciali-per-le-direttive-hooks">Funzioni speciali per le direttive (Hooks)</h1>
+<h1 id="funzioni-speciali-per-le-direttive-hooks">Funzioni speciali per le direttive (Hooks)<a class="headerlink" href="#funzioni-speciali-per-le-direttive-hooks" title="Permanent link">&para;</a></h1>
 <p>Per definire il comportamento di una direttiva, Vue mette a disposizione una serie di metodi speciali e opzionali simili ai Lifecycle hooks dei componenti. In questi metodi avremo accesso al valore, all'argomento e ai modificatori passati alla direttiva. I metodi in questione sono i seguenti:</p>
 <ul>
 <li><code>bind()</code> viene invocato una sola volta quando la direttiva viene associata all'elemento su cui è stata applicata. Viene solitamente usato per le operazioni di inizializzazione della direttiva.</li>
@@ -3886,30 +3886,30 @@
 <li><code>vnode</code> rappresenta il nodo del Virtual Node prodotto dal compilatore di Vue.js. (Il compilatore passa in rassegna tutti i template dei componenti e genera il Virtual DOM che è una rappresentazione in memoria - un oggetto javascript - del DOM corrente.) </li>
 </ul>
 <p>Ai metodi <code>update()</code> e <code>componentUpdated()</code>, oltre agli argomenti appena elencati, viene anche passato un quarto argomento <code>oldVnode</code> che rappresenta il nodo del Virtual DOM relativo all'elemento su cui è applicata la direttiva prima dell'ultimo aggiornamento.</p>
-<h2 id="metodo-semplificato-per-definire-una-direttiva">Metodo semplificato per definire una direttiva</h2>
+<h2 id="metodo-semplificato-per-definire-una-direttiva">Metodo semplificato per definire una direttiva<a class="headerlink" href="#metodo-semplificato-per-definire-una-direttiva" title="Permanent link">&para;</a></h2>
 <p>I due <strong>hooks</strong> più utili e usati più frequentemente sono <code>bind()</code> e <code>update()</code>, ma, quando il loro comportamento è il medesimo e non abbiamo neanche bisogno degli altri metodi descritti sopra, possiamo allora definire una direttiva utilizzando semplicamente una funzione</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">input</span> 
-    <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> 
-    <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Inserisci del testo...&quot;</span> 
-    <span class="na">v-fat-border</span><span class="o">=</span><span class="s">&quot;color&quot;</span>
-  <span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-    <span class="nx">directives</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">fatBorder</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">border</span> <span class="o">=</span> <span class="sb">`4px solid </span><span class="si">${</span><span class="nx">binding</span><span class="p">.</span><span class="nx">value</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="p">{</span>
-        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;hsl(86, 60%, 50%)&#39;</span> <span class="c1">// green</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> 
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Inserisci del testo...&quot;</span> 
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="na">v-fat-border</span><span class="o">=</span><span class="s">&quot;color&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="p">&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  <span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="nx">directives</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      <span class="nx">fatBorder</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">border</span> <span class="o">=</span> <span class="sb">`4px solid </span><span class="si">${</span><span class="nx">binding</span><span class="p">.</span><span class="nx">value</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>      <span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="p">},</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      <span class="k">return</span> <span class="p">{</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;hsl(86, 60%, 50%)&#39;</span> <span class="c1">// green</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      <span class="p">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="p">}</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>  <span class="p">}</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 
               

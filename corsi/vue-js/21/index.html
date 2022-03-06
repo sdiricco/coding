@@ -3816,30 +3816,30 @@
 </a>
 
 
-<h1 id="la-direttiva-v-for-e-gli-oggetti">La direttiva v-for e gli oggetti</h1>
+<h1 id="la-direttiva-v-for-e-gli-oggetti">La direttiva v-for e gli oggetti<a class="headerlink" href="#la-direttiva-v-for-e-gli-oggetti" title="Permanent link">&para;</a></h1>
 <p>Con la direttiva v-for possiamo anche iterare oggetti con più proprietà.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#root&#39;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">list</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">item1</span><span class="o">:</span> <span class="s1">&#39;pinza&#39;</span><span class="p">,</span>
-      <span class="nx">item2</span><span class="o">:</span> <span class="s1">&#39;cacciavite&#39;</span><span class="p">,</span>
-      <span class="nx">item3</span><span class="o">:</span> <span class="s1">&#39;ventosa&#39;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#root&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="nx">list</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      <span class="nx">item1</span><span class="o">:</span> <span class="s1">&#39;pinza&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      <span class="nx">item2</span><span class="o">:</span> <span class="s1">&#39;cacciavite&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      <span class="nx">item3</span><span class="o">:</span> <span class="s1">&#39;ventosa&#39;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">});</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;value in list&quot;</span><span class="p">&gt;</span>{{ value }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;value in list&quot;</span><span class="p">&gt;</span>{{ value }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Nell'esempio riportato sopra, <code>value</code> si riferisce al valore di una proprietà. </p>
 <p>E' possibile accedere anche all' indice e alla chiave passando due parametri addizionali nell'espressione della direttiva v-for.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;(value, key, index) in list&quot;</span><span class="p">&gt;</span>
-  {{ index }}. {{ key }}: {{ value }}
-<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;(value, key, index) in list&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  {{ index }}. {{ key }}: {{ value }}
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
 </code></pre></div>
 
               

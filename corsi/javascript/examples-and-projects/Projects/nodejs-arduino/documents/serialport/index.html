@@ -3884,7 +3884,7 @@
 </a>
 
 
-<h1 id="libreria-nodejs-serialport">Libreria node.js SerialPort</h1>
+<h1 id="libreria-nodejs-serialport">Libreria node.js SerialPort<a class="headerlink" href="#libreria-nodejs-serialport" title="Permanent link">&para;</a></h1>
 <ul>
 <li><a href="#libreria-nodejs-serialport">Libreria node.js SerialPort</a></li>
 <li><a href="#link-utili">Link utili</a></li>
@@ -3915,261 +3915,261 @@
 </ul>
 </li>
 </ul>
-<h2 id="link-utili">Link utili</h2>
+<h2 id="link-utili">Link utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://serialport.io/docs/">Documentazione ufficiale</a></li>
 <li><a href="https://serialport.io/docs/api-stream">Stream Interface</a></li>
 <li><a href="https://github.com/codeadamca/arduino-to-nodejs">Arduino &amp; nodejs</a></li>
 </ul>
-<h2 id="primo-script">Primo script</h2>
+<h2 id="primo-script">Primo script<a class="headerlink" href="#primo-script" title="Permanent link">&para;</a></h2>
 <p>Il seguente script stamperà una lista delle porte disponibili</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">)</span>
-<span class="c1">//Il metodo SerialPort.list() ritorna una promise che restituisce un array di PortInfo</span>
-<span class="c1">//SerialPort.list(): Promise&lt;PortInfo[]&gt;</span>
-<span class="kd">const</span> <span class="nx">USBarray</span> <span class="o">=</span> <span class="nx">SerialPort</span><span class="p">.</span><span class="nx">list</span><span class="p">();</span>
-
-<span class="nx">USBarray</span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
-<span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">//Il metodo SerialPort.list() ritorna una promise che restituisce un array di PortInfo</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">//SerialPort.list(): Promise&lt;PortInfo[]&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">const</span> <span class="nx">USBarray</span> <span class="o">=</span> <span class="nx">SerialPort</span><span class="p">.</span><span class="nx">list</span><span class="p">();</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nx">USBarray</span><span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}).</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">});</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">[</span>
-  <span class="o">{</span>
-      path: <span class="s1">&#39;COM3&#39;</span>,
-      manufacturer: <span class="s1">&#39;Arduino LLC (www.arduino.cc)&#39;</span>,
-      serialNumber: <span class="s1">&#39;A413937353035101F0E0&#39;</span>,
-      pnpId: <span class="s1">&#39;USB\\VID_2341&amp;PID_0042\\A413937353035101F0E0&#39;</span>,
-      locationId: <span class="s1">&#39;Port_#0001.Hub_#0002&#39;</span>,
-      vendorId: <span class="s1">&#39;2341&#39;</span>,
-      productId: <span class="s1">&#39;0042&#39;</span>
-  <span class="o">}</span>
-<span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">[</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="o">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      path: <span class="s1">&#39;COM3&#39;</span>,
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      manufacturer: <span class="s1">&#39;Arduino LLC (www.arduino.cc)&#39;</span>,
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      serialNumber: <span class="s1">&#39;A413937353035101F0E0&#39;</span>,
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      pnpId: <span class="s1">&#39;USB\\VID_2341&amp;PID_0042\\A413937353035101F0E0&#39;</span>,
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      locationId: <span class="s1">&#39;Port_#0001.Hub_#0002&#39;</span>,
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      vendorId: <span class="s1">&#39;2341&#39;</span>,
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>      productId: <span class="s1">&#39;0042&#39;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  <span class="o">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="o">]</span>
 </code></pre></div>
 <p>Potrebbe essere utilizzato per verificare che sia collegato arduino alla porta USB</p>
-<h1 id="leggere-dati-dalla-seriale-con-serialport">Leggere dati dalla seriale con SerialPort</h1>
+<h1 id="leggere-dati-dalla-seriale-con-serialport">Leggere dati dalla seriale con SerialPort<a class="headerlink" href="#leggere-dati-dalla-seriale-con-serialport" title="Permanent link">&para;</a></h1>
 <p>Uno script semplice per leggere dati dalla seriale è il seguente:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
-<span class="p">});</span>
-
-<span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">var</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">);</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">});</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">});</span>
 </code></pre></div>
 <p>Come trasmettitore uso Arduino con il seguente sketch:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_8</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
-
-<span class="kt">uint16_t</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xA031</span><span class="p">;</span><span class="w"></span>
-
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w">  </span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
-<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">number_16</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">number_8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_8</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xA031</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span><span class="w">  </span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">number_16</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">number_8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Il risultato che vedrai sarà:</p>
-<p><div class="highlight"><pre><span></span><code>Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-..
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>..
 </code></pre></div>
 Anche se a volte potrai vedere una cosa del tipo:</p>
-<div class="highlight"><pre><span></span><code>Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span>&gt;
-Data: &lt;Buffer a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Data: &lt;Buffer <span class="m">31</span>&gt;
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Data: &lt;Buffer a0&gt;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
 </code></pre></div>
 <p>Spieghierò tutto in dettaglio qui sotto</p>
-<h2 id="script-lato-nodejs">Script lato nodejs</h2>
+<h2 id="script-lato-nodejs">Script lato nodejs<a class="headerlink" href="#script-lato-nodejs" title="Permanent link">&para;</a></h2>
 <p>Riprendiamo lo script</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
-<span class="p">});</span>
-
-<span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">var</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">);</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">});</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="p">});</span>
 </code></pre></div>
-<h3 id="costruttore-serialport">Costruttore SerialPort()</h3>
+<h3 id="costruttore-serialport">Costruttore SerialPort()<a class="headerlink" href="#costruttore-serialport" title="Permanent link">&para;</a></h3>
 <p>In questo script chiamo il costruttore <code>SerialPort()</code> che ha una sintassi del tipo:</p>
-<div class="highlight"><pre><span></span><code><span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="nx">path</span> <span class="p">[,</span> <span class="nx">openOptions</span><span class="p">]</span> <span class="p">[,</span> <span class="nx">openCallback</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="nx">path</span> <span class="p">[,</span> <span class="nx">openOptions</span><span class="p">]</span> <span class="p">[,</span> <span class="nx">openCallback</span><span class="p">])</span>
 </code></pre></div>
-<h4 id="parametro-path">parametro <code>path</code></h4>
+<h4 id="parametro-path">parametro <code>path</code><a class="headerlink" href="#parametro-path" title="Permanent link">&para;</a></h4>
 <p>E' una <code>string</code> che rappresenta la porta che vuoi aprire. Nei sistemi Linux o Mac sarà qualcosa del tipo <code>/dev/tty.XXX</code> mentre nei sistemi Windows sarà qualcosa del tipo <code>COM1</code>.</p>
 <p>Nel nostro caso, la porta è <code>COM3</code>. Per verificare quale sia la porta puoi usare <code>SerialPort.list()</code> e trovi uno script funzionante <a href="#primo-script">qui</a> oppure puoi verificarla all'interno dell'IDE arduino in <code>Strumenti/porta</code> oppure ancora dallo strumento <code>Gestione dispositivi</code> di windows</p>
-<h4 id="parametro-openoptions">parametro [, openOptions]</h4>
+<h4 id="parametro-openoptions">parametro [, openOptions]<a class="headerlink" href="#parametro-openoptions" title="Permanent link">&para;</a></h4>
 <p>E' un oggetto con le seguenti proprietà:</p>
-<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
-<span class="cm"> * @typedef {Object} openOptions</span>
-<span class="cm"> * @property {boolean} [autoOpen=true] Automatically opens the port on `nextTick`.</span>
-<span class="cm"> * @property {number=} [baudRate=9600] The baud rate of the port to be opened. This should match one of the commonly available baud rates, such as 110, 300, 1200, 2400, 4800, 9600, 14400, 19200, 38400, 57600, or 115200. Custom rates are supported best effort per platform. The device connected to the serial port is not guaranteed to support the requested baud rate, even if the port itself supports that baud rate.</span>
-<span class="cm"> * @property {number} [dataBits=8] Must be one of these: 8, 7, 6, or 5.</span>
-<span class="cm"> * @property {number} [highWaterMark=65536] The size of the read and write buffers defaults to 64k.</span>
-<span class="cm"> * @property {boolean} [lock=true] Prevent other processes from opening the port. Windows does not currently support `false`.</span>
-<span class="cm"> * @property {number} [stopBits=1] Must be one of these: 1 or 2.</span>
-<span class="cm"> * @property {string} [parity=none] Must be one of these: &#39;none&#39;, &#39;even&#39;, &#39;mark&#39;, &#39;odd&#39;, &#39;space&#39;.</span>
-<span class="cm"> * @property {boolean} [rtscts=false] flow control setting</span>
-<span class="cm"> * @property {boolean} [xon=false] flow control setting</span>
-<span class="cm"> * @property {boolean} [xoff=false] flow control setting</span>
-<span class="cm"> * @property {boolean} [xany=false] flow control setting</span>
-<span class="cm"> * @property {object=} bindingOptions sets binding-specific options</span>
-<span class="cm"> * @property {Binding=} Binding The hardware access binding. `Bindings` are how Node-Serialport talks to the underlying system. Will default to the static property `Serialport.Binding`.</span>
-<span class="cm"> * @property {number} [bindingOptions.vmin=1] see [`man termios`](http://linux.die.net/man/3/termios) LinuxBinding and DarwinBinding</span>
-<span class="cm"> * @property {number} [bindingOptions.vtime=0] see [`man termios`](http://linux.die.net/man/3/termios) LinuxBinding and DarwinBinding</span>
-<span class="cm"> */</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cm">/**</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="cm"> * @typedef {Object} openOptions</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="cm"> * @property {boolean} [autoOpen=true] Automatically opens the port on `nextTick`.</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="cm"> * @property {number=} [baudRate=9600] The baud rate of the port to be opened. This should match one of the commonly available baud rates, such as 110, 300, 1200, 2400, 4800, 9600, 14400, 19200, 38400, 57600, or 115200. Custom rates are supported best effort per platform. The device connected to the serial port is not guaranteed to support the requested baud rate, even if the port itself supports that baud rate.</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="cm"> * @property {number} [dataBits=8] Must be one of these: 8, 7, 6, or 5.</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="cm"> * @property {number} [highWaterMark=65536] The size of the read and write buffers defaults to 64k.</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="cm"> * @property {boolean} [lock=true] Prevent other processes from opening the port. Windows does not currently support `false`.</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="cm"> * @property {number} [stopBits=1] Must be one of these: 1 or 2.</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="cm"> * @property {string} [parity=none] Must be one of these: &#39;none&#39;, &#39;even&#39;, &#39;mark&#39;, &#39;odd&#39;, &#39;space&#39;.</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="cm"> * @property {boolean} [rtscts=false] flow control setting</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="cm"> * @property {boolean} [xon=false] flow control setting</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="cm"> * @property {boolean} [xoff=false] flow control setting</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="cm"> * @property {boolean} [xany=false] flow control setting</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="cm"> * @property {object=} bindingOptions sets binding-specific options</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="cm"> * @property {Binding=} Binding The hardware access binding. `Bindings` are how Node-Serialport talks to the underlying system. Will default to the static property `Serialport.Binding`.</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="cm"> * @property {number} [bindingOptions.vmin=1] see [`man termios`](http://linux.die.net/man/3/termios) LinuxBinding and DarwinBinding</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="cm"> * @property {number} [bindingOptions.vtime=0] see [`man termios`](http://linux.die.net/man/3/termios) LinuxBinding and DarwinBinding</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="cm"> */</span>
 </code></pre></div>
 <p>A noi interessa in questa fase solo la propietà: <code>baudRate</code>, quindi dovrò passare un oggetto che sarà fatto in questo modo:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="p">}</span>
 </code></pre></div>
 <p>Naturalmente il baud rate dovrà essere sincronizzato con quello impostato lato trasmettitore che in questo caso è Arduino.</p>
-<h4 id="parametro-opencallback">parametro [, openCallback]</h4>
+<h4 id="parametro-opencallback">parametro [, openCallback]<a class="headerlink" href="#parametro-opencallback" title="Permanent link">&para;</a></h4>
 <p>E' una callback che è chiamata quando è stabilità la conessione. Noi non utilizziamo in questo momento la callback ma più avanti prevedo di utilizzarla per segnalare che la connessione è stabilita</p>
-<div class="highlight"><pre><span></span><code><span class="nx">type</span> <span class="nx">openCallback</span> <span class="o">=</span> <span class="p">(</span><span class="ne">Error</span><span class="o">|</span><span class="kc">null</span><span class="p">)</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nx">type</span> <span class="nx">openCallback</span> <span class="o">=</span> <span class="p">(</span><span class="ne">Error</span><span class="o">|</span><span class="kc">null</span><span class="p">)</span> <span class="o">=</span> <span class="p">{}</span>
 </code></pre></div>
-<h3 id="eventi-serialport">Eventi SerialPort</h3>
+<h3 id="eventi-serialport">Eventi SerialPort<a class="headerlink" href="#eventi-serialport" title="Permanent link">&para;</a></h3>
 <p>La libreria SerialPort espone gli eventi <code>open</code>, <code>error</code>, <code>close</code>, <code>data</code>, <code>drain</code>. In node.js per mettersi in ascolto di un evento si utilizza il metodo <code>.on()</code> applicato alla classe <code>EventEmitter</code>. Nell'esempio, che riporto qui sotto mi metto in ascolto dell'evento <code>data</code> che restituisce come parametro della callback un <code>Buffer</code> che è un array di dati.</p>
-<div class="highlight"><pre><span></span><code><span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="p">});</span>
 </code></pre></div>
 <p>Vediamo adesso in dettaglio gli eventi utili come <code>open</code> e <code>data</code></p>
-<h4 id="evento-open">Evento open</h4>
+<h4 id="evento-open">Evento open<a class="headerlink" href="#evento-open" title="Permanent link">&para;</a></h4>
 <p>L'evento <code>open</code> si verifica quando la porta è aperta e quest si può verificare subito dopo l'invocazione del costruttore <code>SerialPort()</code> attraverso l'opzione <code>autoOpen</code> che di default è impostata a <code>true</code> oppure dopo il metodo manuale <code>open()</code> in caso <code>autoOpen</code> sia <code>false</code></p>
-<h4 id="evento-data">Evento data</h4>
+<h4 id="evento-data">Evento data<a class="headerlink" href="#evento-data" title="Permanent link">&para;</a></h4>
 <p>Scatta questo evento quando vengono ricevuti dei dati. I dati sono un oggetto <code>Buffer</code></p>
-<h2 id="sketch-lato-arduino">Sketch lato Arduino</h2>
+<h2 id="sketch-lato-arduino">Sketch lato Arduino<a class="headerlink" href="#sketch-lato-arduino" title="Permanent link">&para;</a></h2>
 <p>Riporto lo sketch</p>
-<div class="highlight"><pre><span></span><code><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_8</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
-
-<span class="kt">uint16_t</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xA031</span><span class="p">;</span><span class="w"></span>
-
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w">  </span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
-<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">number_16</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">number_8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_8</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xA031</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">}</span><span class="w">  </span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a><span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">number_16</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">number_8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <p>Lato Arduino viene inizializzata la porta seriale con un <code>baud rate</code> di <code>115200</code> e vengono trasmessi una coppia di byte attraverso <code>Serial.write()</code>. Avrei potuto inviare una stringa tramite <code>Serial.print()</code> ma per questa applicazione ho la necessità di trattare i dati di basso livello. Inoltre ho simulato una situazione in cui devo poter inviare dati numerici con una rappresentazione maggiore di 8 bit. In questo caso ho inviato un dato a 16 bit come un array di due byte</p>
-<h2 id="serialport-parser">SerialPort parser</h2>
+<h2 id="serialport-parser">SerialPort parser<a class="headerlink" href="#serialport-parser" title="Permanent link">&para;</a></h2>
 <p>Riporto lo script lato node.js</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
-<span class="p">});</span>
-
-<span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">var</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">);</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">});</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="nx">port</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="p">});</span>
 </code></pre></div>
 <p>A volte può capitare di vedere una cosa del tipo:</p>
-<div class="highlight"><pre><span></span><code>Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span>&gt;
-Data: &lt;Buffer a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Data: &lt;Buffer <span class="m">31</span>&gt;
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>Data: &lt;Buffer a0&gt;
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
 </code></pre></div>
 <p>Questo accade perchè lato ricezione non si conosce quanto è lungo il frame.
 Il seguente script, fa uso di un <code>parser</code> che raggruppa i byte con una lunghezza stabilita attraverso <code>ByteLenght</code></p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">)</span>
-<span class="kd">const</span> <span class="nx">ByteLength</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@serialport/parser-byte-length&#39;</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
-<span class="p">});</span>
-
-<span class="kd">const</span> <span class="nx">parser</span> <span class="o">=</span> <span class="nx">port</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="ow">new</span> <span class="nx">ByteLength</span><span class="p">({</span><span class="nx">length</span><span class="o">:</span> <span class="mf">2</span><span class="p">}))</span>
-<span class="nx">parser</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">const</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">)</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">const</span> <span class="nx">ByteLength</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@serialport/parser-byte-length&#39;</span><span class="p">)</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">});</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="kd">const</span> <span class="nx">parser</span> <span class="o">=</span> <span class="nx">port</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="ow">new</span> <span class="nx">ByteLength</span><span class="p">({</span><span class="nx">length</span><span class="o">:</span> <span class="mf">2</span><span class="p">}))</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="nx">parser</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="p">});</span>
 </code></pre></div>
 <p>In questo modo si è sicuri si quanti byte si attendono e il risultato all'interno del Buffer sarà quello atteso:</p>
-<div class="highlight"><pre><span></span><code>Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>Data: &lt;Buffer <span class="m">31</span> a0&gt;
 </code></pre></div>
 <p>Se provi a cambiare la proprietà <code>lenght</code> e metti ad esempio <code>8</code> vedrai:</p>
-<div class="highlight"><pre><span></span><code>Data: &lt;Buffer <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0&gt;
-Data: &lt;Buffer <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Data: &lt;Buffer <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0&gt;
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Data: &lt;Buffer <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0&gt;
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>Data: &lt;Buffer <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0 <span class="m">31</span> a0&gt;
 </code></pre></div>
 <p>Attenzione però che riceverai i dati ogni <code>4</code> secondi dal momento che Arduino invia due byte ogni secondo</p>
-<h2 id="parseint-applicato-al-buffer-serialport">parseInt applicato al Buffer SerialPort</h2>
+<h2 id="parseint-applicato-al-buffer-serialport">parseInt applicato al Buffer SerialPort<a class="headerlink" href="#parseint-applicato-al-buffer-serialport" title="Permanent link">&para;</a></h2>
 <p>Abbiamo visto come inviare e ricevere dei byte Arduino/node.js.
 Adesso voglio inviare da Arduino un numero intero a 16bit <code>50321</code> e voglio interpretarlo come intero lato nodejs, in pratica voglio inviare e ricevere un intero a 16 bit.</p>
-<h3 id="lato-arduino">Lato Arduino</h3>
+<h3 id="lato-arduino">Lato Arduino<a class="headerlink" href="#lato-arduino" title="Permanent link">&para;</a></h3>
 <p>Lato Arduino non cambia quasi niente. 
 - Ho sostituito <code>number_16</code> con un numero rappresentato in decimale anzichè in esadecimle.
 - Ho invertito la codifica della parte alta e della parte bassa, questo per motivi di endianess che spiegherò più avanti</p>
-<div class="highlight"><pre><span></span><code><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_8</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
-
-<span class="kt">uint16_t</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50321</span><span class="p">;</span><span class="w"></span>
-
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w">  </span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
-<span class="w">  </span><span class="c1">//number_8[0] = number_16 &amp; 0xFF;</span>
-<span class="w">  </span><span class="c1">//number_8[1] = (number_16 &gt;&gt; 8);</span>
-<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">number_16</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">number_8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">uint8_t</span><span class="w"> </span><span class="n">number_8</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="kt">uint16_t</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50321</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="p">}</span><span class="w">  </span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="w">  </span><span class="c1">//number_8[0] = number_16 &amp; 0xFF;</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="w">  </span><span class="c1">//number_8[1] = (number_16 &gt;&gt; 8);</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">number_16</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="w">  </span><span class="n">number_8</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">number_16</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">number_8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h3 id="lato-nodejs">Lato node.js</h3>
+<h3 id="lato-nodejs">Lato node.js<a class="headerlink" href="#lato-nodejs" title="Permanent link">&para;</a></h3>
 <p>Lato node.js ho applicato il metodo <code>parseInt</code> al buffer.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">)</span>
-<span class="kd">const</span> <span class="nx">ByteLength</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@serialport/parser-byte-length&#39;</span><span class="p">)</span>
-<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
-<span class="p">});</span>
-
-<span class="kd">const</span> <span class="nx">parser</span> <span class="o">=</span> <span class="nx">port</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="ow">new</span> <span class="nx">ByteLength</span><span class="p">({</span><span class="nx">length</span><span class="o">:</span> <span class="mf">2</span><span class="p">}))</span>
-<span class="nx">parser</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">),</span> <span class="mf">16</span><span class="p">));</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">const</span> <span class="nx">SerialPort</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;serialport&#39;</span><span class="p">)</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kd">const</span> <span class="nx">ByteLength</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@serialport/parser-byte-length&#39;</span><span class="p">)</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SerialPort</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="p">});</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="kd">const</span> <span class="nx">parser</span> <span class="o">=</span> <span class="nx">port</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="ow">new</span> <span class="nx">ByteLength</span><span class="p">({</span><span class="nx">length</span><span class="o">:</span> <span class="mf">2</span><span class="p">}))</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="nx">parser</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Data:&#39;</span><span class="p">,</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">),</span> <span class="mf">16</span><span class="p">));</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="p">});</span>
 </code></pre></div>
 <p>Adesso vedrai stampato:</p>
-<div class="highlight"><pre><span></span><code>Data: <span class="m">50321</span>
-Data: <span class="m">50321</span>
-Data: <span class="m">50321</span>
-Data: <span class="m">50321</span>
-Data: <span class="m">50321</span>
-Data: <span class="m">50321</span>
-Data: <span class="m">50321</span>
-Data: <span class="m">50321</span>
-Data: <span class="m">50321</span>
-Data: <span class="m">50321</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Data: <span class="m">50321</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>Data: <span class="m">50321</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>Data: <span class="m">50321</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>Data: <span class="m">50321</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>Data: <span class="m">50321</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>Data: <span class="m">50321</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>Data: <span class="m">50321</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>Data: <span class="m">50321</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>Data: <span class="m">50321</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>Data: <span class="m">50321</span>
 </code></pre></div>
 <p>Ovvero il valore trasmesso da Arduino.</p>
-<h3 id="endianess">Endianess?</h3>
+<h3 id="endianess">Endianess?<a class="headerlink" href="#endianess" title="Permanent link">&para;</a></h3>
 <p>Quando trasmetti e ricevi dei byte su un canale di trasmissione devi sempre assicurarti di fare le cose in maniera corretta. Mi riferisco all'ordine dei byte in trasmissione e di conseguenza di ricezione. E' naturale pensare che l'ordine debba essere coerente altrimenti in ricezione non è possibile ricostruire i dati.</p>
 <p>Per questo mi sono reso conto, sbagliando (per fortuna!) che l'endianess era sbagliato solo inviando un intero e reinterpretandolo. Ho dovuto invertire quindi (lato Arduino) la parte bassa con la parte alta</p>
-<h1 id="trasmettere-dati-dalla-seriale-con-serialport">Trasmettere dati dalla seriale con SerialPort</h1>
+<h1 id="trasmettere-dati-dalla-seriale-con-serialport">Trasmettere dati dalla seriale con SerialPort<a class="headerlink" href="#trasmettere-dati-dalla-seriale-con-serialport" title="Permanent link">&para;</a></h1>
 <p>Per la trasmissione dati, si usa il metodo <code>.write()</code>.</p>
 <p><code>.write()</code> scrive i dati sulla porta seriale specificata. Memorizza i dati scritti se la porta non è aperta e li scrive dopo l'apertura della porta. L'operazione di scrittura non è bloccante. Quando ritorna, i dati potrebbero non essere ancora stati scritti sulla porta seriale.</p>
 <p><strong>Nota 1 - Apertura di una connessione e Arduino</strong>
@@ -4178,9 +4178,9 @@ Molti dispositivi come Arduino si ripristinano quando apri una connessione ad es
 Se una porta viene disconnessa durante una scrittura, la scrittura produrrà un errore oltre all'evento <code>close</code></p>
 <p><strong>Nota 3 - Gestione degli errori</strong>
 Se si verifica un errore, il callback può o meno essere chiamato con l'errore come primo argomento. Per rilevare in modo affidabile gli errori di scrittura, aggiungi un listener per l'evento "errore".</p>
-<h2 id="serialportwrite">SerialPort.write()</h2>
+<h2 id="serialportwrite">SerialPort.write()<a class="headerlink" href="#serialportwrite" title="Permanent link">&para;</a></h2>
 <p>Prototipo del metodo <code>.write()</code>:
-<div class="highlight"><pre><span></span><code><span class="nx">serialport</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="o">:</span> <span class="nx">string</span><span class="o">|</span><span class="nx">Buffer</span><span class="o">|</span><span class="nb">Array</span><span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">encoding</span><span class="o">?:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">callback</span><span class="o">?:</span> <span class="nx">error</span> <span class="p">=&gt;</span> <span class="p">{})</span><span class="o">:</span> <span class="kr">boolean</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nx">serialport</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="o">:</span> <span class="nx">string</span><span class="o">|</span><span class="nx">Buffer</span><span class="o">|</span><span class="nb">Array</span><span class="o">&lt;</span><span class="nx">number</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">encoding</span><span class="o">?:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">callback</span><span class="o">?:</span> <span class="nx">error</span> <span class="p">=&gt;</span> <span class="p">{})</span><span class="o">:</span> <span class="kr">boolean</span>
 </code></pre></div></p>
 <p><strong>Parametri:</strong></p>
 <ul>
@@ -4190,109 +4190,109 @@ Se si verifica un errore, il callback può o meno essere chiamato con l'errore c
 </ul>
 <p><strong>Tipo di ritorno</strong></p>
 <p>Restituisce <code>false</code> se lo stream desidera che il codice chiamante attenda l'emissione dell'evento drain prima di continuare a scrivere dati aggiuntivi; altrimenti <code>vero</code>.</p>
-<h3 id="esempio-semplice-di-trasmissione-dati-con-serialport">Esempio semplice di trasmissione dati con SerialPort</h3>
+<h3 id="esempio-semplice-di-trasmissione-dati-con-serialport">Esempio semplice di trasmissione dati con SerialPort<a class="headerlink" href="#esempio-semplice-di-trasmissione-dati-con-serialport" title="Permanent link">&para;</a></h3>
 <p>Vediamo un esempio semplice di trasmissione dati con SerialPort. 
 - Creo un <code>Buffer</code> che contiene un solo <code>byte</code> del valore di <code>65</code>.
 - Per aggirare il problema del <strong>reset di Arduino all'apertura della connessione</strong>, vedi anche <a href="#trasmettere-dati-dalla-seriale-con-serialport">qui</a>, mi metto in ascolto di un <em>qualsiasi</em> dato da Arduino aspettando l'evento <code>data</code> che poi stampo a video.
 - Solo in questo momento posso considerare stabilita la connessione quindi scrivo un dato, o meglio un byte dell'oggetto <code>Buffer</code></p>
 <p>Naturalmente non è una gestione ottimale ma volevo mantenere uno script semplice lato node.js</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">serialport</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;serialport&quot;</span><span class="p">);</span>
-<span class="kd">const</span> <span class="nx">buf</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">([</span><span class="mf">65</span><span class="p">]);</span>
-
-<span class="kd">var</span> <span class="nx">sp</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">serialport</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span><span class="p">,</span>
-<span class="p">});</span>
-
-<span class="nx">sp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;connection estabilished&#39;</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">),</span> <span class="mf">16</span><span class="p">));</span>
-    <span class="nx">sp</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">buf</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">var</span> <span class="nx">serialport</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;serialport&quot;</span><span class="p">);</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="kd">const</span> <span class="nx">buf</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">([</span><span class="mf">65</span><span class="p">]);</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="kd">var</span> <span class="nx">sp</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">serialport</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>  <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span><span class="p">,</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="p">});</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="nx">sp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="nx">data</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;connection estabilished&#39;</span><span class="p">);</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">),</span> <span class="mf">16</span><span class="p">));</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>    <span class="nx">sp</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">buf</span><span class="p">);</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="p">});</span>
 </code></pre></div>
 <p>Lato Arduino invece trasmetto il dato <code>233</code> finchè non verrà letto da node.js che rappresenta lo stato <code>READY</code> di Arduino. Quando node.js legge il dato mandato da Arduino e invia il byte <code>65</code>. Arduino riceve il dato, smette di trasmettere il dato <code>233</code> e valuta il dato ricevuto da node.js. Se è <code>65</code> accende il LED, se non è <code>65</code> spegna il LED</p>
-<div class="highlight"><pre><span></span><code><span class="n">byte</span><span class="w"> </span><span class="n">incomingByte</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// for incoming serial data</span>
-<span class="kt">bool</span><span class="w"> </span><span class="n">isReadyTransimetted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"> </span><span class="c1">// opens serial port, sets data rate to 9600 bps</span>
-<span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// send data only when you receive data:</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">isReadyTransimetted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// read the incoming byte:</span>
-<span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">readBytes</span><span class="p">(</span><span class="n">incomingByte</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">incomingByte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">65</span><span class="p">){</span><span class="w"></span>
-<span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="k">else</span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isReadyTransimetted</span><span class="p">){</span><span class="w"></span>
-<span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">233</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">byte</span><span class="w"> </span><span class="n">incomingByte</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="c1">// for incoming serial data</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="kt">bool</span><span class="w"> </span><span class="n">isReadyTransimetted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"> </span><span class="c1">// opens serial port, sets data rate to 9600 bps</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">  </span><span class="n">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">  </span><span class="c1">// send data only when you receive data:</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Serial</span><span class="p">.</span><span class="n">available</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">    </span><span class="n">isReadyTransimetted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">    </span><span class="c1">// read the incoming byte:</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">readBytes</span><span class="p">(</span><span class="n">incomingByte</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">incomingByte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">65</span><span class="p">){</span><span class="w"></span>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a><span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a><span class="w">    </span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a><span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a><span class="w">  </span><span class="k">else</span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">isReadyTransimetted</span><span class="p">){</span><span class="w"></span>
+<a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a><span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">233</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a><span class="w">      </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-23-27" name="__codelineno-23-27" href="#__codelineno-23-27"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-28" name="__codelineno-23-28" href="#__codelineno-23-28"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-29" name="__codelineno-23-29" href="#__codelineno-23-29"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h3 id="esempio-avanzato-di-trasmissione-dati-con-serialport">Esempio avanzato di trasmissione dati con SerialPort</h3>
+<h3 id="esempio-avanzato-di-trasmissione-dati-con-serialport">Esempio avanzato di trasmissione dati con SerialPort<a class="headerlink" href="#esempio-avanzato-di-trasmissione-dati-con-serialport" title="Permanent link">&para;</a></h3>
 <p>Questo esempio sarà un po' più interessante rispetto all'esempio precedente. Con node.js farò blinkare il LED di Arduino.
 Lato node.js ho creato due funzioni...</p>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">serialport</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;serialport&quot;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">byteFromArduino</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">connectionEstabilished</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">varToggle</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="kd">const</span> <span class="nx">buf</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">([</span><span class="mf">65</span><span class="p">]);</span>
-<span class="kd">const</span> <span class="nx">buf2</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">([</span><span class="mf">66</span><span class="p">]);</span>
-
-<span class="kd">var</span> <span class="nx">sp</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">serialport</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span><span class="p">,</span>
-<span class="p">});</span>
-
-<span class="kd">function</span> <span class="nx">write</span><span class="p">()</span> <span class="c1">//for writing</span>
-<span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">connectionEstabilished</span><span class="p">){</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">varToggle</span><span class="p">){</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;LED ON, pin 13&#39;</span><span class="p">);</span>
-      <span class="nx">sp</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">buf</span><span class="p">);</span>
-      <span class="nx">varToggle</span> <span class="o">=</span> <span class="o">!</span><span class="nx">varToggle</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">else</span><span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;LED OFF, pin 13&#39;</span><span class="p">);</span>
-      <span class="nx">sp</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">buf2</span><span class="p">);</span>
-      <span class="nx">varToggle</span> <span class="o">=</span> <span class="o">!</span><span class="nx">varToggle</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">waitForConnection</span><span class="p">(){</span>
-  <span class="nx">sp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> 
-  <span class="p">{</span>
-    <span class="nx">byteFromArduino</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">),</span> <span class="mf">16</span><span class="p">);</span> 
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">byteFromArduino</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">byteFromArduino</span> <span class="o">===</span> <span class="mf">233</span><span class="p">){</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;connection estabilished&#39;</span><span class="p">);</span>
-      <span class="nx">connectionEstabilished</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">else</span><span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;connection not estabilished&#39;</span><span class="p">);</span>
-      <span class="nx">connectionEstabilished</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
-
-  <span class="p">});</span>
-<span class="p">}</span>
-
-<span class="nx">sp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;open&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> 
-<span class="p">{</span>
-    <span class="c1">// execute your functions</span>
-    <span class="nx">waitForConnection</span><span class="p">();</span>
-    <span class="nx">setInterval</span><span class="p">(</span><span class="nx">write</span><span class="p">,</span><span class="mf">1000</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kd">var</span> <span class="nx">serialport</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;serialport&quot;</span><span class="p">);</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="kd">var</span> <span class="nx">byteFromArduino</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="kd">let</span> <span class="nx">connectionEstabilished</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="kd">let</span> <span class="nx">varToggle</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="kd">const</span> <span class="nx">buf</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">([</span><span class="mf">65</span><span class="p">]);</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="kd">const</span> <span class="nx">buf2</span> <span class="o">=</span> <span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">([</span><span class="mf">66</span><span class="p">]);</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="kd">var</span> <span class="nx">sp</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">serialport</span><span class="p">(</span><span class="s1">&#39;COM3&#39;</span><span class="p">,</span> <span class="p">{</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>  <span class="nx">baudRate</span><span class="o">:</span> <span class="mf">115200</span><span class="p">,</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="p">});</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="kd">function</span> <span class="nx">write</span><span class="p">()</span> <span class="c1">//for writing</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="p">{</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>  <span class="k">if</span> <span class="p">(</span><span class="nx">connectionEstabilished</span><span class="p">){</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a>    <span class="k">if</span> <span class="p">(</span><span class="nx">varToggle</span><span class="p">){</span>
+<a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;LED ON, pin 13&#39;</span><span class="p">);</span>
+<a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a>      <span class="nx">sp</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">buf</span><span class="p">);</span>
+<a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a>      <span class="nx">varToggle</span> <span class="o">=</span> <span class="o">!</span><span class="nx">varToggle</span><span class="p">;</span>
+<a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a>    <span class="p">}</span>
+<a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a>    <span class="k">else</span><span class="p">{</span>
+<a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;LED OFF, pin 13&#39;</span><span class="p">);</span>
+<a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a>      <span class="nx">sp</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">buf2</span><span class="p">);</span>
+<a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a>      <span class="nx">varToggle</span> <span class="o">=</span> <span class="o">!</span><span class="nx">varToggle</span><span class="p">;</span>
+<a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a>    <span class="p">}</span>
+<a id="__codelineno-24-25" name="__codelineno-24-25" href="#__codelineno-24-25"></a>  <span class="p">}</span>
+<a id="__codelineno-24-26" name="__codelineno-24-26" href="#__codelineno-24-26"></a><span class="p">}</span>
+<a id="__codelineno-24-27" name="__codelineno-24-27" href="#__codelineno-24-27"></a>
+<a id="__codelineno-24-28" name="__codelineno-24-28" href="#__codelineno-24-28"></a><span class="kd">function</span> <span class="nx">waitForConnection</span><span class="p">(){</span>
+<a id="__codelineno-24-29" name="__codelineno-24-29" href="#__codelineno-24-29"></a>  <span class="nx">sp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> 
+<a id="__codelineno-24-30" name="__codelineno-24-30" href="#__codelineno-24-30"></a>  <span class="p">{</span>
+<a id="__codelineno-24-31" name="__codelineno-24-31" href="#__codelineno-24-31"></a>    <span class="nx">byteFromArduino</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">),</span> <span class="mf">16</span><span class="p">);</span> 
+<a id="__codelineno-24-32" name="__codelineno-24-32" href="#__codelineno-24-32"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">byteFromArduino</span><span class="p">);</span>
+<a id="__codelineno-24-33" name="__codelineno-24-33" href="#__codelineno-24-33"></a>    <span class="k">if</span> <span class="p">(</span><span class="nx">byteFromArduino</span> <span class="o">===</span> <span class="mf">233</span><span class="p">){</span>
+<a id="__codelineno-24-34" name="__codelineno-24-34" href="#__codelineno-24-34"></a>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;connection estabilished&#39;</span><span class="p">);</span>
+<a id="__codelineno-24-35" name="__codelineno-24-35" href="#__codelineno-24-35"></a>      <span class="nx">connectionEstabilished</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-24-36" name="__codelineno-24-36" href="#__codelineno-24-36"></a>    <span class="p">}</span>
+<a id="__codelineno-24-37" name="__codelineno-24-37" href="#__codelineno-24-37"></a>    <span class="k">else</span><span class="p">{</span>
+<a id="__codelineno-24-38" name="__codelineno-24-38" href="#__codelineno-24-38"></a>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;connection not estabilished&#39;</span><span class="p">);</span>
+<a id="__codelineno-24-39" name="__codelineno-24-39" href="#__codelineno-24-39"></a>      <span class="nx">connectionEstabilished</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-24-40" name="__codelineno-24-40" href="#__codelineno-24-40"></a>    <span class="p">}</span>
+<a id="__codelineno-24-41" name="__codelineno-24-41" href="#__codelineno-24-41"></a>
+<a id="__codelineno-24-42" name="__codelineno-24-42" href="#__codelineno-24-42"></a>  <span class="p">});</span>
+<a id="__codelineno-24-43" name="__codelineno-24-43" href="#__codelineno-24-43"></a><span class="p">}</span>
+<a id="__codelineno-24-44" name="__codelineno-24-44" href="#__codelineno-24-44"></a>
+<a id="__codelineno-24-45" name="__codelineno-24-45" href="#__codelineno-24-45"></a><span class="nx">sp</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;open&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> 
+<a id="__codelineno-24-46" name="__codelineno-24-46" href="#__codelineno-24-46"></a><span class="p">{</span>
+<a id="__codelineno-24-47" name="__codelineno-24-47" href="#__codelineno-24-47"></a>    <span class="c1">// execute your functions</span>
+<a id="__codelineno-24-48" name="__codelineno-24-48" href="#__codelineno-24-48"></a>    <span class="nx">waitForConnection</span><span class="p">();</span>
+<a id="__codelineno-24-49" name="__codelineno-24-49" href="#__codelineno-24-49"></a>    <span class="nx">setInterval</span><span class="p">(</span><span class="nx">write</span><span class="p">,</span><span class="mf">1000</span><span class="p">);</span>
+<a id="__codelineno-24-50" name="__codelineno-24-50" href="#__codelineno-24-50"></a><span class="p">});</span>
 </code></pre></div>
 
               

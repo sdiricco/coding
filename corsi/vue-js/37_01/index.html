@@ -3816,81 +3816,81 @@
 </a>
 
 
-<h1 id="composizione-di-componenti-con-gli-slot">Composizione di componenti con gli Slot</h1>
+<h1 id="composizione-di-componenti-con-gli-slot">Composizione di componenti con gli Slot<a class="headerlink" href="#composizione-di-componenti-con-gli-slot" title="Permanent link">&para;</a></h1>
 <p>Nelle precedenti lezioni abbiamo visto come passare delle informazioni ad un componente tramite le cosiddette <code>props</code> che rappresentano infatti un mezzo di comunicazione attraverso il quale un componente padre trasferisce dati agli immediati discendenti presenti nel suo template.</p>
 <p>Nel template di un componente è anche possibile aggiungere dei segnaposto in cui iniettare qualsiasi tipo di contenuto quando il componente viene utilizzato nel template di un altro componente padre.</p>
 <p>Infatti, nel linguaggio HTML standard posizioniamo fra i tag di apertura e chiusura di certi elementi i loro diretti discendenti che, allo stesso modo, possono avere altri elementi figli.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Giuseppe Verdi<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Front-end Developer and Web Designer<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Giuseppe Verdi<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Front-end Developer and Web Designer<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Vogliamo ottenere lo stesso risultato per i componenti Vue da noi definiti.</p>
 <p>Vue fornisce l'elemento:</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">slot</span><span class="p">&gt;&lt;/</span><span class="nt">slot</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">slot</span><span class="p">&gt;&lt;/</span><span class="nt">slot</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>grazie al quale potremo indicare in quale punto del template di un componente vogliamo ritagliare uno spazio riservato agli elementi  iniettati dall'esterno.</p>
-<div class="highlight"><pre><span></span><code>// App.vue
-<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="cm">&lt;!-- Elementi inseriti fra i tag di apertura e chiusura --&gt;</span>
-  <span class="cm">&lt;!-- del componente Card --&gt;</span>
-  <span class="p">&lt;</span><span class="nt">Card</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://source.unsplash.com/26vBUtlufFo/96x96&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;immagine profilo&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Giuseppe Verdi<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Front-end Developer <span class="err">&amp;</span> Web Designer<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">Card</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="k">import</span> <span class="nx">Card</span> <span class="kr">from</span> <span class="s1">&#39;./Card.vue&#39;</span><span class="p">;</span>
-
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;App&#39;</span><span class="p">,</span>
-  <span class="nx">components</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">Card</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>// App.vue
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="cm">&lt;!-- Elementi inseriti fra i tag di apertura e chiusura --&gt;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="cm">&lt;!-- del componente Card --&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  <span class="p">&lt;</span><span class="nt">Card</span><span class="p">&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://source.unsplash.com/26vBUtlufFo/96x96&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;immagine profilo&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>      <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Giuseppe Verdi<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Front-end Developer <span class="err">&amp;</span> Web Designer<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  <span class="p">&lt;/</span><span class="nt">Card</span><span class="p">&gt;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="k">import</span> <span class="nx">Card</span> <span class="kr">from</span> <span class="s1">&#39;./Card.vue&#39;</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;App&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>  <span class="nx">components</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="nx">Card</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>  <span class="p">}</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="p">}</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>// Card.vue
-<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-container&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">slot</span><span class="p">&gt;&lt;/</span><span class="nt">slot</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">style</span> <span class="na">scoped</span><span class="p">&gt;</span><span class="w"></span>
-<span class="p">.</span><span class="nc">card-container</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">min-height</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="nb">hsla</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mf">.14</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Poppins&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="n">Helvetica</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="nt">h2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nb">hsl</span><span class="p">(</span><span class="mi">206</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="kt">%</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nb">hsl</span><span class="p">(</span><span class="mi">206</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mi">54</span><span class="kt">%</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mf">.2</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="nt">img</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">margin-right</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>    
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>// Card.vue
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-container&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="p">&lt;</span><span class="nt">slot</span><span class="p">&gt;&lt;/</span><span class="nt">slot</span><span class="p">&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">&lt;</span><span class="nt">style</span> <span class="na">scoped</span><span class="p">&gt;</span><span class="w"></span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">.</span><span class="nc">card-container</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">480</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="k">min-height</span><span class="p">:</span><span class="w"> </span><span class="mi">64</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="nb">hsla</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mf">.14</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Poppins&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">Arial</span><span class="p">,</span><span class="w"> </span><span class="n">Helvetica</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="k">align-items</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="nt">h2</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nb">hsl</span><span class="p">(</span><span class="mi">206</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="kt">%</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nb">hsl</span><span class="p">(</span><span class="mi">206</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mi">54</span><span class="kt">%</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mf">.2</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="nt">img</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">  </span><span class="k">margin-right</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">96</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>    
 </code></pre></div>
 <p>Il componente <code>&lt;Card&gt;</code> può quindi essere visto come un contenitore all'interno del quale inseririamo successivamente gli elementi predefiniti o personalizzati che preferiamo.</p>
 <p>Nell'esempio appena mostrato, abbiamo anche abbozzato delle regole CSS per evidenziare il fatto che queste vengono comunque applicate agli elementi disposti fra i tag di apertura e chiusura del componente <code>&lt;Card&gt;</code> anche se utilizziamo l'attributo scoped sul tag <code>&lt;style&gt;</code> presente nel file <code>Card.vue</code></p>

@@ -3930,17 +3930,17 @@
 </a>
 
 
-<h1 id="raspberry-pi-pico-e-micropython">Raspberry pi pico e Micropython</h1>
+<h1 id="raspberry-pi-pico-e-micropython">Raspberry pi pico e Micropython<a class="headerlink" href="#raspberry-pi-pico-e-micropython" title="Permanent link">&para;</a></h1>
 <p><img alt="" src="../images/raspberry-preview.jpg" /></p>
-<h2 id="pinout">Pinout</h2>
+<h2 id="pinout">Pinout<a class="headerlink" href="#pinout" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="../images/raspberry-pinout.png" /></p>
-<h2 id="strumenti-necessari">Strumenti necessari</h2>
+<h2 id="strumenti-necessari">Strumenti necessari<a class="headerlink" href="#strumenti-necessari" title="Permanent link">&para;</a></h2>
 <p>Per iniziare con il primo programma e micropython vai su <a href="https://www.raspberrypi.org/documentation/pico/getting-started/">Getting started with MicroPython</a> e segui le istruzioni, sono complete e fatte bene. </p>
 <p>In pratica dovrai collegare raspberry pi pico al PC in modalità "Mass storage" cioè come una normale chiavetta USB e copiare un particolare file in formato <code>UF2</code> che trovi su <a href="https://www.raspberrypi.org/documentation/pico/getting-started/">Getting started with MicroPython</a>.</p>
 <p>Per collegare raspberry pi pico al PC in modalità "Mass Storage" dovrai prima premere il tasto presente sulla board poi collegare raspberry all'USB come suggerito dall'immagine</p>
 <p><img src="./images/MicroPython-FINAL.webp" alt="" width="400"></p>
 <p>Se sei curioso di conoscere qualcosa di più sul formato <code>UF2</code> vai su <a href="https://github.com/microsoft/uf2">uf2</a></p>
-<h2 id="link-utili">Link Utili</h2>
+<h2 id="link-utili">Link Utili<a class="headerlink" href="#link-utili" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Pagina ufficiale <a href="https://www.raspberrypi.org/documentation/pico/getting-started/">raspberry pi pico</a></li>
 <li>Esempi di programmazione in <a href="https://github.com/raspberrypi/pico-examples">c/c++</a></li>
@@ -3949,110 +3949,110 @@
 <li>Python <a href="https://docs.python.org/3/library/">documentazione ufficiale</a></li>
 <li>Python asincrono <a href="https://docs.python.org/3/library/asyncio-task.html">Coroutines and Tasks</a></li>
 </ul>
-<h2 id="primo-script">Primo script</h2>
-<div class="highlight"><pre><span></span><code><span class="k">async</span> <span class="k">def</span> <span class="nf">blink</span><span class="p">(</span><span class="n">led</span><span class="p">,</span> <span class="n">period_ms</span><span class="p">):</span>
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">led</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
-        <span class="k">await</span> <span class="n">uasyncio</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
-        <span class="n">led</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
-        <span class="k">await</span> <span class="n">uasyncio</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="n">period_ms</span><span class="p">)</span>
-
-<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">led1</span><span class="p">,</span> <span class="n">led2</span><span class="p">):</span>
-    <span class="n">uasyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">blink</span><span class="p">(</span><span class="n">led1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>
-    <span class="n">uasyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">blink</span><span class="p">(</span><span class="n">led2</span><span class="p">,</span> <span class="mi">2000</span><span class="p">))</span>
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="k">await</span> <span class="n">uasyncio</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">20_000</span><span class="p">)</span>
-
-
-
-<span class="c1"># Running on a generic board</span>
-<span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
-<span class="n">uasyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">),</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)))</span>
+<h2 id="primo-script">Primo script<a class="headerlink" href="#primo-script" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">blink</span><span class="p">(</span><span class="n">led</span><span class="p">,</span> <span class="n">period_ms</span><span class="p">):</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="n">led</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="k">await</span> <span class="n">uasyncio</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="n">led</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="k">await</span> <span class="n">uasyncio</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="n">period_ms</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">led1</span><span class="p">,</span> <span class="n">led2</span><span class="p">):</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">uasyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">blink</span><span class="p">(</span><span class="n">led1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">))</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">uasyncio</span><span class="o">.</span><span class="n">create_task</span><span class="p">(</span><span class="n">blink</span><span class="p">(</span><span class="n">led2</span><span class="p">,</span> <span class="mi">2000</span><span class="p">))</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="k">await</span> <span class="n">uasyncio</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">20_000</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1"># Running on a generic board</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">uasyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">),</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)))</span>
 </code></pre></div>
-<h3 id="binary-clock">Binary Clock</h3>
+<h3 id="binary-clock">Binary Clock<a class="headerlink" href="#binary-clock" title="Permanent link">&para;</a></h3>
 <p>Per l'orologio binario avrai bisogno della libreria <a href="https://github.com/FideliusFalcon/rpi_pico_max7219">max7219</a>. A questo punto devi caricare lo script max7219.py su raspberry pi pico. Se usi Thonny puoi farlo con il tasto "salva", ricordando di specificare "salva su dispositivo". Una volta che lo script è all'interno di raspberry pico puoi scrivere il seguente script ed eseguirlo.</p>
 <p>Se vuoi rendere lo script funzionante stand alone, ovvero senza eseguirlo necessariamente da Thonny puoi salvare questo script all'interno della memoria di raspberry pico chiamandolo boot.py</p>
-<div class="highlight"><pre><span></span><code><span class="c1">#Binary CLOCK</span>
-<span class="c1">#V1.00</span>
-
-<span class="kn">import</span> <span class="nn">max7219</span>
-<span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">SPI</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="c1"># https://github.com/FideliusFalcon/rpi_pico_max7219</span>
-<span class="c1"># VCC -&gt; VBUS, pico number: 40</span>
-<span class="c1"># GND -&gt; GND,  pico number: 38</span>
-<span class="c1"># DIN -&gt; MOSI (SPI0 TX) GP7, pico number: 10</span>
-<span class="c1"># CS  -&gt; SPI0 CSn GP5, pico number: 7</span>
-<span class="c1"># CLK -&gt; SCK GP6, pico number: 9</span>
-
-<span class="n">MAX7219_NUM</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">cs_pin</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">spi</span> <span class="o">=</span> <span class="n">SPI</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">display</span> <span class="o">=</span> <span class="n">max7219</span><span class="o">.</span><span class="n">Matrix8x8</span><span class="p">(</span><span class="n">spi</span><span class="o">=</span><span class="n">spi</span><span class="p">,</span> <span class="n">cs</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">cs_pin</span><span class="p">),</span> <span class="n">num</span><span class="o">=</span><span class="n">MAX7219_NUM</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">seconds_unit</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">seconds_dozens</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>  
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">minutes_unit</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">minutes_dozens</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>  
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">hours_unit</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">hours_dozens</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>  
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">seconds</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="n">minutes</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">hours</span> <span class="o">=</span> <span class="mi">23</span>
-
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-
-    <span class="n">seconds_unit</span><span class="p">(</span><span class="n">seconds</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
-    <span class="n">seconds_dozens</span><span class="p">(</span><span class="n">seconds</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
-
-    <span class="n">minutes_unit</span><span class="p">(</span><span class="n">minutes</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
-    <span class="n">minutes_dozens</span><span class="p">(</span><span class="n">minutes</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
-
-    <span class="n">hours_unit</span><span class="p">(</span><span class="n">hours</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
-    <span class="n">hours_dozens</span><span class="p">(</span><span class="n">hours</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
-
-    <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-    <span class="n">seconds</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">+</span> <span class="mi">1</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">seconds</span> <span class="o">==</span> <span class="mi">60</span><span class="p">):</span>
-        <span class="n">seconds</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">minutes</span> <span class="o">=</span> <span class="n">minutes</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">minutes</span> <span class="o">==</span> <span class="mi">60</span><span class="p">):</span>
-        <span class="n">minutes</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">hours</span> <span class="o">=</span> <span class="n">hours</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">hours</span> <span class="o">==</span> <span class="mi">24</span><span class="p">):</span>
-        <span class="n">hours</span> <span class="o">=</span> <span class="mi">0</span>
-
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>      <span class="c1"># sleep for 500 milliseconds</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#Binary CLOCK</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">#V1.00</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">import</span> <span class="nn">max7219</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span><span class="p">,</span> <span class="n">SPI</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="kn">import</span> <span class="nn">time</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1"># https://github.com/FideliusFalcon/rpi_pico_max7219</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># VCC -&gt; VBUS, pico number: 40</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1"># GND -&gt; GND,  pico number: 38</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="c1"># DIN -&gt; MOSI (SPI0 TX) GP7, pico number: 10</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># CS  -&gt; SPI0 CSn GP5, pico number: 7</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1"># CLK -&gt; SCK GP6, pico number: 9</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">MAX7219_NUM</span> <span class="o">=</span> <span class="mi">4</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">cs_pin</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="n">spi</span> <span class="o">=</span> <span class="n">SPI</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="n">display</span> <span class="o">=</span> <span class="n">max7219</span><span class="o">.</span><span class="n">Matrix8x8</span><span class="p">(</span><span class="n">spi</span><span class="o">=</span><span class="n">spi</span><span class="p">,</span> <span class="n">cs</span><span class="o">=</span><span class="n">Pin</span><span class="p">(</span><span class="n">cs_pin</span><span class="p">),</span> <span class="n">num</span><span class="o">=</span><span class="n">MAX7219_NUM</span><span class="p">)</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="k">def</span> <span class="nf">seconds_unit</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="k">def</span> <span class="nf">seconds_dozens</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>  
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="k">def</span> <span class="nf">minutes_unit</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="k">def</span> <span class="nf">minutes_dozens</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>  
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="k">def</span> <span class="nf">hours_unit</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="k">def</span> <span class="nf">hours_dozens</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>  
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">2</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>  <span class="n">display</span><span class="o">.</span><span class="n">pixel</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,(</span><span class="n">i</span><span class="o">&gt;&gt;</span><span class="mi">3</span><span class="p">)</span><span class="o">&amp;</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="n">seconds</span> <span class="o">=</span> <span class="mi">30</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="n">minutes</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="n">hours</span> <span class="o">=</span> <span class="mi">23</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>    <span class="n">seconds_unit</span><span class="p">(</span><span class="n">seconds</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>    <span class="n">seconds_dozens</span><span class="p">(</span><span class="n">seconds</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>    <span class="n">minutes_unit</span><span class="p">(</span><span class="n">minutes</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>    <span class="n">minutes_dozens</span><span class="p">(</span><span class="n">minutes</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>    <span class="n">hours_unit</span><span class="p">(</span><span class="n">hours</span><span class="o">%</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>    <span class="n">hours_dozens</span><span class="p">(</span><span class="n">hours</span><span class="o">//</span><span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>    <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>    <span class="n">seconds</span> <span class="o">=</span> <span class="n">seconds</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">seconds</span> <span class="o">==</span> <span class="mi">60</span><span class="p">):</span>
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>        <span class="n">seconds</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>        <span class="n">minutes</span> <span class="o">=</span> <span class="n">minutes</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">minutes</span> <span class="o">==</span> <span class="mi">60</span><span class="p">):</span>
+<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>        <span class="n">minutes</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>        <span class="n">hours</span> <span class="o">=</span> <span class="n">hours</span> <span class="o">+</span> <span class="mi">1</span>
+<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">hours</span> <span class="o">==</span> <span class="mi">24</span><span class="p">):</span>
+<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>        <span class="n">hours</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>
+<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>    <span class="n">time</span><span class="o">.</span><span class="n">sleep_ms</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>      <span class="c1"># sleep for 500 milliseconds</span>
 </code></pre></div>
 
               

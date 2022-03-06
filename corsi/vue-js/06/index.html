@@ -3816,12 +3816,12 @@
 </a>
 
 
-<h1 id="modificatore-di-eventi">Modificatore di eventi</h1>
+<h1 id="modificatore-di-eventi">Modificatore di eventi<a class="headerlink" href="#modificatore-di-eventi" title="Permanent link">&para;</a></h1>
 <p>I modificatori di eventi rappresentano un modo alternativo e più veloce per semplificare la definizione dei metodi dell'istanza.</p>
 <p>Capita piuttosto frequentemente di dover invocare <code>event.preventDefault()</code> all'interno di un metodo. Il caso tipico è per bloccare il normale invio di un form ed eseguire invece delle chiamate AJAX.</p>
-<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- usiamo il modificatore .prevent invece di invocare --&gt;</span>
-<span class="cm">&lt;!-- event.preventDefault() nel metodo handleFormSubmission() --&gt;</span>
-<span class="p">&lt;</span><span class="nt">form</span> <span class="err">@</span><span class="na">submit</span><span class="err">.</span><span class="na">prevent</span><span class="o">=</span><span class="s">&quot;handleFormSubmission&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">&lt;!-- usiamo il modificatore .prevent invece di invocare --&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm">&lt;!-- event.preventDefault() nel metodo handleFormSubmission() --&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="err">@</span><span class="na">submit</span><span class="err">.</span><span class="na">prevent</span><span class="o">=</span><span class="s">&quot;handleFormSubmission&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Altri modificatori sono:</p>
 <ul>
@@ -3830,8 +3830,8 @@
 <li><code>.self</code>: invoca la funzione che gestisce l'evento solo se <code>event.target</code> coincide con l'elemento su cui è applicata la direttiva <code>v-on</code>. Vengono scartati gli eventi che si propagano dagli elementi discendenti</li>
 </ul>
 <p>E' possibile concatenare più modificatori</p>
-<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- concatenare i modificatori --&gt;</span>
-<span class="p">&lt;</span><span class="nt">a</span> <span class="err">@</span><span class="na">click</span><span class="err">.</span><span class="na">stop</span><span class="err">.</span><span class="na">prevent</span><span class="o">=</span><span class="s">&quot;handleClick&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">&lt;!-- concatenare i modificatori --&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="err">@</span><span class="na">click</span><span class="err">.</span><span class="na">stop</span><span class="err">.</span><span class="na">prevent</span><span class="o">=</span><span class="s">&quot;handleClick&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 
               
