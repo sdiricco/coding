@@ -1,8 +1,8 @@
-html {
+/* html {
   overflow-y: overlay;
-}
+} */
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   background: transparent;
   width: 12px;
 }
@@ -13,7 +13,23 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-color);
+} */
+
+
+
+
+/* .md-nav__list::-webkit-scrollbar {
+  background: transparent;
+  width: 4px;
 }
+
+.md-nav__list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.md-nav__list::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+} */
 
 :root {
 
@@ -104,6 +120,12 @@ html {
   .md-nav--primary .md-nav__item {
     border-top: none;
     padding: 0;
+  }
+}
+
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__item .md-nav__link {
+    padding: 0.6rem 0.6rem;
   }
 }
 
