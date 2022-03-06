@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3862,54 +3862,54 @@
 </a>
 
 
-<h1 id="vue-cli-scaffolder">Vue cli scaffolder</h1>
+<h1 id="vue-cli-scaffolder">Vue cli scaffolder<a class="headerlink" href="#vue-cli-scaffolder" title="Permanent link">&para;</a></h1>
 <p>Analizziamo i componenti creati da <code>vue create</code></p>
-<div class="highlight"><pre><span></span><code>tree -aF --dirsfirst -I node_modules 
-.
-├── public/
-│   ├── favicon.ico
-│   └── index.html
-├── src/
-│   ├── assets/
-│   │   └── logo.png
-│   ├── components/
-│   │   └── HelloWorld.vue
-│   ├── App.vue
-│   └── main.js
-├── .gitignore
-├── README.md
-├── babel.config.js
-├── package-lock.json
-└── package.json
-
-<span class="m">4</span> directories, <span class="m">11</span> files
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>tree -aF --dirsfirst -I node_modules 
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>.
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── public/
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   ├── favicon.ico
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   └── index.html
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── src/
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   ├── assets/
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│   │   └── logo.png
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│   ├── components/
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│   │   └── HelloWorld.vue
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│   ├── App.vue
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│   └── main.js
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── .gitignore
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>├── README.md
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>├── babel.config.js
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├── package-lock.json
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>└── package.json
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="m">4</span> directories, <span class="m">11</span> files
 </code></pre></div>
-<h2 id="mainjs">Main.js</h2>
+<h2 id="mainjs">Main.js<a class="headerlink" href="#mainjs" title="Permanent link">&para;</a></h2>
 <p>Analizziamo il file <code>src/main.js</code></p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span> <span class="nx">Vue</span> <span class="kr">from</span> <span class="s1">&#39;vue&#39;</span>
-<span class="k">import</span> <span class="nx">App</span> <span class="kr">from</span> <span class="s1">&#39;./App.vue&#39;</span>
-
-<span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span>
-
-<span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="nx">render</span><span class="o">:</span> <span class="nx">h</span> <span class="p">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">),</span>
-<span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span> <span class="nx">Vue</span> <span class="kr">from</span> <span class="s1">&#39;vue&#39;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">import</span> <span class="nx">App</span> <span class="kr">from</span> <span class="s1">&#39;./App.vue&#39;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  <span class="nx">render</span><span class="o">:</span> <span class="nx">h</span> <span class="p">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">),</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>Con:</p>
-<div class="highlight"><pre><span></span><code><span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">Vue</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">productionTip</span> <span class="o">=</span> <span class="kc">false</span>
 </code></pre></div>
 <p>Evita di stampare nella console, all'avvio dell'applicazione, il messaggio che ricorda che siamo in development mode</p>
 <p>Creiamo quindi una nuova istanza base di Vue, ma, al contrario di quanto visto nelle precedenti lezioni, in questo caso non usiamo un oggetto di opzioni per la configurazione. Invece ci serviamo della funzione <code>render()</code>. Può forse risultare poco intuitivo qual è il ruolo di questa funzione e cosa fa esattamente. La funzione <code>render()</code> riceve in ingresso una funzione, che viene eseguita, e restituisce il suo risultato. Il nome della funzione che <code>render()</code> riceve come argomento è semplicemente 'h' che sta per <code>Hyperscript</code>, ovvero "Script che genera una struttura in formato HTML".</p>
-<div class="highlight"><pre><span></span><code><span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="nx">render</span><span class="o">:</span> <span class="nx">h</span> <span class="p">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">),</span>
-<span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="nx">render</span><span class="o">:</span> <span class="nx">h</span> <span class="p">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">),</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>Può essere riscritta in</p>
-<div class="highlight"><pre><span></span><code><span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">createElement</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">createElement</span><span class="p">(</span><span class="nx">App</span><span class="p">);</span>
-    <span class="p">},</span>
-<span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">createElement</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="k">return</span> <span class="nx">createElement</span><span class="p">(</span><span class="nx">App</span><span class="p">);</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">},</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>A questo punto è forse più chiaro qual è il ruolo della funzione <code>render()</code> a cui Vue passa un argomento che per maggiore chiarezza abbiamo rinominato <code>createElement</code> in quanto si occupa di creare un nuovo elemento base ed i relativi elementi discendenti a partire dal modello fornito dal componente App.</p>
 <p>Abbiamo quindi creato una nuova istanza base di Vue, ma dobbiamo indicare qual è l'elemento base sul quale deve avere il controllo l'applicazione. Nelle precedenti lezioni avevamo usato la proprietà el dell'oggetto delle opzioni. In questo caso viene invece usato il metodo predefinito <code>$mount()</code> a cui passiamo come argomento il selettore CSS '#app' relativo all'elemento <code>&lt;div id="app"&gt;</code> che è presente nel file <code>index.html</code> all'interno della cartella public.</p>

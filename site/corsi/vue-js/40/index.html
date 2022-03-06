@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3890,46 +3890,46 @@
 </a>
 
 
-<h1 id="life-cycle-beforemount-mounted">life cycle - beforeMount(), mounted()</h1>
-<h2 id="beforemount">beforeMount()</h2>
+<h1 id="life-cycle-beforemount-mounted">life cycle - beforeMount(), mounted()<a class="headerlink" href="#life-cycle-beforemount-mounted" title="Permanent link">&para;</a></h1>
+<h2 id="beforemount">beforeMount()<a class="headerlink" href="#beforemount" title="Permanent link">&para;</a></h2>
 <p>Nel momento in cui viene invocato il lifecycle hook <code>beforeMount()</code> il template del componente è stato già compilato ma non è stata ancora effettuato il primo rendering. A questo punto la proprietà <code>$el</code> non è ancora definita</p>
 <p>Questo metodo non viene invocato in caso di rendering lato server</p>
-<h2 id="mounted">mounted()</h2>
+<h2 id="mounted">mounted()<a class="headerlink" href="#mounted" title="Permanent link">&para;</a></h2>
 <p>Questo metodo viene invocato dopo <code>beforeMount()</code>. A questo punto un componente è stato montato nel DOM. La proprietà <code>$el</code> viene opportunamente settata.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My component<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>  
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;MyComponent&#39;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="p">{</span>
-      <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Test&#39;</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">upperCaseName</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
-    <span class="p">}</span> 
-  <span class="p">},</span>
-  <span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">group</span><span class="p">(</span><span class="s1">&#39;### mounted() hook ###&#39;</span><span class="p">);</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;this.$el: &#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">);</span> <span class="c1">// &lt;div&gt;My component&lt;/div&gt; </span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;data.name è pari a: &#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// Test</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;computed property upperCaseName è pari a: &#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">upperCaseName</span><span class="p">);</span> <span class="c1">// TEST</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;il metodo foo restituisce: &#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">foo</span><span class="p">());</span> <span class="c1">// I am foo()</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">groupEnd</span><span class="p">();</span>
-  <span class="p">},</span>
-  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="s1">&#39;I am foo()&#39;</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>My component<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>  
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;MyComponent&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="k">return</span> <span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Test&#39;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  <span class="p">},</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  <span class="nx">computed</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="nx">upperCaseName</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">();</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="p">}</span> 
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  <span class="p">},</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>  <span class="nx">mounted</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">group</span><span class="p">(</span><span class="s1">&#39;### mounted() hook ###&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;this.$el: &#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">);</span> <span class="c1">// &lt;div&gt;My component&lt;/div&gt; </span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;data.name è pari a: &#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// Test</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;computed property upperCaseName è pari a: &#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">upperCaseName</span><span class="p">);</span> <span class="c1">// TEST</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;il metodo foo restituisce: &#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">.</span><span class="nx">foo</span><span class="p">());</span> <span class="c1">// I am foo()</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="nx">console</span><span class="p">.</span><span class="nx">groupEnd</span><span class="p">();</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>  <span class="p">},</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="nx">foo</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>      <span class="k">return</span> <span class="s1">&#39;I am foo()&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="p">}</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>  <span class="p">}</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="p">}</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
-<h2 id="renderizzazione-dei-componenti-figli">Renderizzazione dei componenti figli</h2>
+<h2 id="renderizzazione-dei-componenti-figli">Renderizzazione dei componenti figli<a class="headerlink" href="#renderizzazione-dei-componenti-figli" title="Permanent link">&para;</a></h2>
 <p>Se un componente ha dei figli, non è detto che questi sono anche stati completamente inseriti nel DOM. Per questo motivo, per eseguire delle operazioni sul DOM ed assicurarsi che l'intero albero di elementi sia pronto, è possibile eseguire delle operazioni all'interno di una funzione callback che passiamo al metodo <code>this.$nextTick(callback)</code>. Quest'ultimo posticipa l'esecuzione della funzione callback che sarà invocata quando è stato completato il processo di rendering dell'intera view</p>
 
               

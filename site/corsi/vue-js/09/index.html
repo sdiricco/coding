@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,12 +3816,12 @@
 </a>
 
 
-<h1 id="modificatori-speciali-da-tastiera">Modificatori speciali da tastiera</h1>
+<h1 id="modificatori-speciali-da-tastiera">Modificatori speciali da tastiera<a class="headerlink" href="#modificatori-speciali-da-tastiera" title="Permanent link">&para;</a></h1>
 <p>Possiamo anche registrare un gestore di eventi nel caso in cui vengano premuti altri tasti come il tasto <code>Invio</code> o i tasti freccia. Anche per questi occorre usare l'opportuno modificatore come mostrato sotto.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;</span>
-   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="err">@</span><span class="na">keyup</span><span class="err">.</span><span class="na">enter</span><span class="err">.</span><span class="na">arrow-up</span><span class="o">=</span><span class="s">&quot;onKeyUp&quot;</span><span class="p">&gt;</span>
-   <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Ultimo tasto premuto: {{ key }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="err">@</span><span class="na">keyup</span><span class="err">.</span><span class="na">enter</span><span class="err">.</span><span class="na">arrow-up</span><span class="o">=</span><span class="s">&quot;onKeyUp&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>   <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Ultimo tasto premuto: {{ key }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Altri modificatori speciali sono:</p>
 <ul>
@@ -3832,14 +3832,14 @@
 <li><code>.exact</code>: permette di specificare l'esatta combinazione dei modificatori di sistema che generano un evento</li>
 </ul>
 <p>Questi modificatori consentono di invocare un gestore di eventi quando vengono premuti insieme ad altri tasti della tastiera o del mouse</p>
-<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- Ctrl + Click --&gt;</span>
-<span class="p">&lt;</span><span class="nt">span</span> <span class="na">v-on:click</span><span class="err">.</span><span class="na">ctrl</span><span class="o">=</span><span class="s">&quot;onClick&quot;</span><span class="p">&gt;</span>Lorem Ipsum<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-
-<span class="cm">&lt;!-- Alt + a --&gt;</span>
-<span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-on:keydown</span><span class="err">.</span><span class="na">alt</span><span class="err">.</span><span class="na">a</span><span class="o">=</span><span class="s">&quot;onKeyDown&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">&lt;!-- Ctrl + Click --&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">&lt;</span><span class="nt">span</span> <span class="na">v-on:click</span><span class="err">.</span><span class="na">ctrl</span><span class="o">=</span><span class="s">&quot;onClick&quot;</span><span class="p">&gt;</span>Lorem Ipsum<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cm">&lt;!-- Alt + a --&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-on:keydown</span><span class="err">.</span><span class="na">alt</span><span class="err">.</span><span class="na">a</span><span class="o">=</span><span class="s">&quot;onKeyDown&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Vediamo un esempio di utilizzo del modificatore <code>.exact</code></p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="err">.</span><span class="na">alt</span><span class="err">.</span><span class="na">exact</span><span class="o">=</span><span class="s">&quot;handler&quot;</span><span class="p">&gt;</span>A<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="err">.</span><span class="na">alt</span><span class="err">.</span><span class="na">exact</span><span class="o">=</span><span class="s">&quot;handler&quot;</span><span class="p">&gt;</span>A<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Rircoda che: <code>@</code> è un alias per <code>v-on</code> in questo contesto</p>
 

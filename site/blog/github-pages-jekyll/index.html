@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3916,56 +3916,56 @@
 </a>
 
 
-<h1 id="crea-il-tuo-sito-tramite-github-pages-e-jekyll">Crea il tuo sito tramite GitHub Pages e jekyll</h1>
+<h1 id="crea-il-tuo-sito-tramite-github-pages-e-jekyll">Crea il tuo sito tramite GitHub Pages e jekyll<a class="headerlink" href="#crea-il-tuo-sito-tramite-github-pages-e-jekyll" title="Permanent link">&para;</a></h1>
 <p>Jekyll è un semplice generatore di siti statici, compatibile con i blog, per siti personali, di progetto o di organizzazione. Scritto in Ruby da Tom Preston-Werner, co-fondatore di GitHub, è distribuito con licenza open source MIT.</p>
 <p>Consente di creare un sito statico grazie alla sola conoscenza del linguaggio <code>markdown</code> supportato nativamente da GitHub. Non è quindi richiesta una conoscenza dei linguaggi <code>html</code> e <code>css</code>. Dispone di una enorme quantità di temi gratuiti i quali consentono personalizzazioni più o meno avanzate. Per chi conosce i linguaggi <code>html</code> e <code>css</code> sarà possibile aggiungere elementi o modificare lo stile a piacimento.</p>
-<h2 id="prerequisiti-e-installazione">Prerequisiti e installazione</h2>
+<h2 id="prerequisiti-e-installazione">Prerequisiti e installazione<a class="headerlink" href="#prerequisiti-e-installazione" title="Permanent link">&para;</a></h2>
 <p>Come ho già detto, non è richiesta una conoscenza dei linguaggi <code>html</code> e <code>css</code> a patto che tu conosca il linguaggio <code>markdown</code>. Jekyll si occuperà di convertire, tra le altre cose, la tue pagine <code>markdown</code> in pagine <code>html</code>. Per chi avesse la necessità di modificare il layout standard aggiungendo elementi o modificando lo stile nativo del tema al di fuori delle possibilità offerte dal creatore del tema sarà tuttavia richiesta una conoscenza intermedia dei linguaggi <code>html</code> e <code>css</code>. E' inoltre necessaria la conoscenza di <code>git</code> per la comunicazione con GitHUb</p>
 <p>Sei pronto? </p>
 <p>Per prima cosa devi installare <a href="https://jekyllrb.com/docs/installation">jekyll</a> e <a href="">git</a> per il tuo sistema operativo.</p>
-<h3 id="installazione-di-jekyll-su-ubuntu">Installazione di jekyll su Ubuntu</h3>
+<h3 id="installazione-di-jekyll-su-ubuntu">Installazione di jekyll su Ubuntu<a class="headerlink" href="#installazione-di-jekyll-su-ubuntu" title="Permanent link">&para;</a></h3>
 <p>Devi installare tutte le dipendenze:
 - <a href="https://www.ruby-lang.org/en/downloads/">ruby</a>
 - <a href="https://rubygems.org/pages/download">rubygems</a>
 - <a href="https://gcc.gnu.org/install/">gcc</a>
 - <a href="https://www.gnu.org/software/make/">make</a></p>
 <p>Il seguente comando installa tutte le dipendenze necessarie:</p>
-<div class="highlight"><pre><span></span><code>sudo apt-get install ruby-full build-essential zlib1g-dev
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo apt-get install ruby-full build-essential zlib1g-dev
 </code></pre></div>
 <p>Evita di installare i pacchetti RubyGems (chiamati gems) come utente root. Invece, imposta una directory di installazione gem per il tuo account utente. I seguenti comandi aggiungeranno variabili d'ambiente al tuo file <code>~ / .bashrc</code> per configurare il percorso di installazione di gem:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span> <span class="s1">&#39;# Install Ruby Gems to ~/gems&#39;</span> &gt;&gt; ~/.bashrc
-<span class="nb">echo</span> <span class="s1">&#39;export GEM_HOME=&quot;$HOME/gems&quot;&#39;</span> &gt;&gt; ~/.bashrc
-<span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/gems/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bashrc
-<span class="nb">source</span> ~/.bashrc
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">echo</span> <span class="s1">&#39;# Install Ruby Gems to ~/gems&#39;</span> &gt;&gt; ~/.bashrc
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">echo</span> <span class="s1">&#39;export GEM_HOME=&quot;$HOME/gems&quot;&#39;</span> &gt;&gt; ~/.bashrc
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/gems/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bashrc
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">source</span> ~/.bashrc
 </code></pre></div>
 <p>Installa jekyll e bundler</p>
-<div class="highlight"><pre><span></span><code>gem install jekyll bundler
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>gem install jekyll bundler
 </code></pre></div>
 <p><a href="https://jekyllrb.com/docs/installation/ubuntu/">Jekyll on Ubuntu</a></p>
 <p>Con questa procedura installerai l'ultima versione di jekyll. Per verificare la versione installata digita: </p>
-<div class="highlight"><pre><span></span><code>jekyll -v
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>jekyll -v
 </code></pre></div>
 <p>In generale la versione di jekyll appena installata differisce da quella utilizzata da GitHub Pages per il deploy (pubblicazione) di una pagina web. Per verificare la versione utilizzata da GitHub Pages, visita <a href="https://pages.github.com/versions/">GitHub pages - Dependency versions</a>.</p>
 <p>Per evitare problemi consiglio di allinearsi alla versione di jekyll utilizzata da GitHub Pages ma solo in fase di creazione di un nuovo sito, quindi con un'installazione locale alla directory contente il progetto. Nei prossimi passaggi vedremo come fare..</p>
-<h2 id="crea-il-tuo-primo-sito">Crea il tuo primo sito</h2>
+<h2 id="crea-il-tuo-primo-sito">Crea il tuo primo sito<a class="headerlink" href="#crea-il-tuo-primo-sito" title="Permanent link">&para;</a></h2>
 <p>Crea una nuova directory con un nome a piacere, ad esempio <code>myWebPage</code>. </p>
 <p>Apri il terminale all'interno della repository appena creata e digita il comando per creare una nuova base per il sito.</p>
-<div class="highlight"><pre><span></span><code>jekyll new .
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>jekyll new .
 </code></pre></div>
 <p>Adesso, lanciando il comando:</p>
-<div class="highlight"><pre><span></span><code>jekyll serve
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>jekyll serve
 </code></pre></div>
 <p>Dovrebbe rispondere con qualcosa del genere:</p>
-<div class="highlight"><pre><span></span><code>Configuration file: /home/s/Repository/myWebPage/_config.yml
-            Source: /home/s/Repository/myWebPage
-       Destination: /home/s/Repository/myWebPage/_site
- Incremental build: disabled. Enable with --incremental
-      Generating... 
-       Jekyll Feed: Generating feed <span class="k">for</span> posts
-                    <span class="k">done</span> <span class="k">in</span> <span class="m">0</span>.211 seconds.
- Auto-regeneration: enabled <span class="k">for</span> <span class="s1">&#39;/home/s/Repository/myWebPage&#39;</span>
-    Server address: http://127.0.0.1:4000/
-  Server running... press ctrl-c to stop.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Configuration file: /home/s/Repository/myWebPage/_config.yml
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>            Source: /home/s/Repository/myWebPage
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>       Destination: /home/s/Repository/myWebPage/_site
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a> Incremental build: disabled. Enable with --incremental
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>      Generating... 
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>       Jekyll Feed: Generating feed <span class="k">for</span> posts
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>                    <span class="k">done</span> <span class="k">in</span> <span class="m">0</span>.211 seconds.
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a> Auto-regeneration: enabled <span class="k">for</span> <span class="s1">&#39;/home/s/Repository/myWebPage&#39;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    Server address: http://127.0.0.1:4000/
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  Server running... press ctrl-c to stop.
 </code></pre></div>
 <p>Raggiungi l'indirizzo indicato dal campo <code>Server address</code>, nel mio caso <code>http://127.0.0.1:4000/</code>, da terminale è sufficiente un <code>Ctrl + click</code> o semplicemente copiando l'indirizzo su browser web.</p>
 <p>A questo punto dovresti vedere l'anteprima del tuo sito. Di default verrà impostato un tema dal nome <code>minima</code></p>
@@ -3975,128 +3975,128 @@
 <p><img alt="" src="images/folder-initial-jekyll.png" /> </p>
 <p>La nostra concentrazione per adesso va ai file <code>Gemfile</code>, <code>Gemfile.lock</code> e <code>_config.yml</code>. 
 Apri il file <code>Gemfile</code>, troverai questo contenuto scritto nel linguaggio <code>Ruby</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
-<span class="c1"># Hello! This is where you manage which Jekyll version is used to run.</span>
-<span class="c1"># When you want to use a different version, change it below, save the</span>
-<span class="c1"># file and run `bundle install`. Run Jekyll with `bundle exec`, like so:</span>
-<span class="c1">#</span>
-<span class="c1">#     bundle exec jekyll serve</span>
-<span class="c1">#</span>
-<span class="c1"># This will help ensure the proper Jekyll version is running.</span>
-<span class="c1"># Happy Jekylling!</span>
-<span class="n">gem</span> <span class="s2">&quot;jekyll&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 4.1.1&quot;</span>
-<span class="c1"># This is the default theme for new Jekyll sites. You may change this to anything you like.</span>
-<span class="n">gem</span> <span class="s2">&quot;minima&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 2.5&quot;</span>
-<span class="c1"># If you want to use GitHub Pages, remove the &quot;gem &quot;jekyll&quot;&quot; above and</span>
-<span class="c1"># uncomment the line below. To upgrade, run `bundle update github-pages`.</span>
-<span class="c1"># gem &quot;github-pages&quot;, group: :jekyll_plugins</span>
-<span class="c1"># If you have any plugins, put them here!</span>
-<span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s2">&quot;jekyll-feed&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 0.12&quot;</span>
-<span class="k">end</span>
-
-<span class="c1"># Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem</span>
-<span class="c1"># and associated library.</span>
-<span class="n">platforms</span> <span class="ss">:mingw</span><span class="p">,</span> <span class="ss">:x64_mingw</span><span class="p">,</span> <span class="ss">:mswin</span><span class="p">,</span> <span class="ss">:jruby</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s2">&quot;tzinfo&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 1.2&quot;</span>
-  <span class="n">gem</span> <span class="s2">&quot;tzinfo-data&quot;</span>
-<span class="k">end</span>
-
-<span class="c1"># Performance-booster for watching directories on Windows</span>
-<span class="n">gem</span> <span class="s2">&quot;wdm&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 0.1.1&quot;</span><span class="p">,</span> <span class="ss">:platforms</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:mingw</span><span class="p">,</span> <span class="ss">:x64_mingw</span><span class="p">,</span> <span class="ss">:mswin</span><span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="c1"># Hello! This is where you manage which Jekyll version is used to run.</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="c1"># When you want to use a different version, change it below, save the</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># file and run `bundle install`. Run Jekyll with `bundle exec`, like so:</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">#</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="c1">#     bundle exec jekyll serve</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1">#</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="c1"># This will help ensure the proper Jekyll version is running.</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="c1"># Happy Jekylling!</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="n">gem</span> <span class="s2">&quot;jekyll&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 4.1.1&quot;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="c1"># This is the default theme for new Jekyll sites. You may change this to anything you like.</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="n">gem</span> <span class="s2">&quot;minima&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 2.5&quot;</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="c1"># If you want to use GitHub Pages, remove the &quot;gem &quot;jekyll&quot;&quot; above and</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="c1"># uncomment the line below. To upgrade, run `bundle update github-pages`.</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="c1"># gem &quot;github-pages&quot;, group: :jekyll_plugins</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="c1"># If you have any plugins, put them here!</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>  <span class="n">gem</span> <span class="s2">&quot;jekyll-feed&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 0.12&quot;</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="k">end</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="c1"># Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="c1"># and associated library.</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="n">platforms</span> <span class="ss">:mingw</span><span class="p">,</span> <span class="ss">:x64_mingw</span><span class="p">,</span> <span class="ss">:mswin</span><span class="p">,</span> <span class="ss">:jruby</span> <span class="k">do</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>  <span class="n">gem</span> <span class="s2">&quot;tzinfo&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 1.2&quot;</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>  <span class="n">gem</span> <span class="s2">&quot;tzinfo-data&quot;</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="k">end</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="c1"># Performance-booster for watching directories on Windows</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="n">gem</span> <span class="s2">&quot;wdm&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 0.1.1&quot;</span><span class="p">,</span> <span class="ss">:platforms</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:mingw</span><span class="p">,</span> <span class="ss">:x64_mingw</span><span class="p">,</span> <span class="ss">:mswin</span><span class="o">]</span>
 </code></pre></div>
 <p>Tra i commenti del file troviamo diverse indicazioni su come procedere per utilizzare GitHub Pages. In particolare devi impostare la versione di jekyll utilizzata da GitHub, nel mio caso <code>3.9.0</code>, consultabile da <a href="https://pages.github.com/versions/">GitHub pages - Dependency versions</a>. </p>
-<div class="highlight"><pre><span></span><code><span class="n">gem</span> <span class="s2">&quot;jekyll&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 3.9.0&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">gem</span> <span class="s2">&quot;jekyll&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 3.9.0&quot;</span>
 </code></pre></div>
 <p>e devi inserire anche la direttiva giusta per github-pages con l'attuale versione di GitHub Pages consultabile sempre da <a href="https://pages.github.com/versions/">GitHub pages - Dependency versions</a>. Nel mio caso la versione è la <code>209</code></p>
-<div class="highlight"><pre><span></span><code><span class="n">gem</span> <span class="s2">&quot;github-pages&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 209&quot;</span><span class="p">,</span>  <span class="ss">group</span><span class="p">:</span> <span class="ss">:jekyll_plugins</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">gem</span> <span class="s2">&quot;github-pages&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 209&quot;</span><span class="p">,</span>  <span class="ss">group</span><span class="p">:</span> <span class="ss">:jekyll_plugins</span>
 </code></pre></div>
 <p>Il file completo sarà:</p>
-<div class="highlight"><pre><span></span><code><span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
-<span class="c1"># Hello! This is where you manage which Jekyll version is used to run.</span>
-<span class="c1"># When you want to use a different version, change it below, save the</span>
-<span class="c1"># file and run `bundle install`. Run Jekyll with `bundle exec`, like so:</span>
-<span class="c1">#</span>
-<span class="c1">#     bundle exec jekyll serve</span>
-<span class="c1">#</span>
-<span class="c1"># This will help ensure the proper Jekyll version is running.</span>
-<span class="c1"># Happy Jekylling!</span>
-
-<span class="n">gem</span> <span class="s2">&quot;jekyll&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 3.9.0&quot;</span>
-<span class="c1"># This is the default theme for new Jekyll sites. You may change this to anything you like.</span>
-<span class="n">gem</span> <span class="s2">&quot;minima&quot;</span>
-<span class="c1">#gem &quot;minima&quot;, &quot;~&gt; 2.5&quot;</span>
-<span class="c1"># If you want to use GitHub Pages, remove the &quot;gem &quot;jekyll&quot;&quot; above and</span>
-<span class="c1"># uncomment the line below. To upgrade, run `bundle update github-pages`.</span>
-<span class="n">gem</span> <span class="s2">&quot;github-pages&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 209&quot;</span><span class="p">,</span>  <span class="ss">group</span><span class="p">:</span> <span class="ss">:jekyll_plugins</span>
-<span class="c1"># If you have any plugins, put them here!</span>
-<span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s2">&quot;jekyll-feed&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 0.12&quot;</span>
-<span class="k">end</span>
-
-<span class="c1"># Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem</span>
-<span class="c1"># and associated library.</span>
-<span class="n">platforms</span> <span class="ss">:mingw</span><span class="p">,</span> <span class="ss">:x64_mingw</span><span class="p">,</span> <span class="ss">:mswin</span><span class="p">,</span> <span class="ss">:jruby</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s2">&quot;tzinfo&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 1.2&quot;</span>
-  <span class="n">gem</span> <span class="s2">&quot;tzinfo-data&quot;</span>
-<span class="k">end</span>
-
-<span class="c1"># Performance-booster for watching directories on Windows</span>
-<span class="n">gem</span> <span class="s2">&quot;wdm&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 0.1.1&quot;</span><span class="p">,</span> <span class="ss">:platforms</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:mingw</span><span class="p">,</span> <span class="ss">:x64_mingw</span><span class="p">,</span> <span class="ss">:mswin</span><span class="o">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">source</span> <span class="s2">&quot;https://rubygems.org&quot;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1"># Hello! This is where you manage which Jekyll version is used to run.</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1"># When you want to use a different version, change it below, save the</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1"># file and run `bundle install`. Run Jekyll with `bundle exec`, like so:</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1">#</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c1">#     bundle exec jekyll serve</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1">#</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="c1"># This will help ensure the proper Jekyll version is running.</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1"># Happy Jekylling!</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="n">gem</span> <span class="s2">&quot;jekyll&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 3.9.0&quot;</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="c1"># This is the default theme for new Jekyll sites. You may change this to anything you like.</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="n">gem</span> <span class="s2">&quot;minima&quot;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="c1">#gem &quot;minima&quot;, &quot;~&gt; 2.5&quot;</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="c1"># If you want to use GitHub Pages, remove the &quot;gem &quot;jekyll&quot;&quot; above and</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="c1"># uncomment the line below. To upgrade, run `bundle update github-pages`.</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="n">gem</span> <span class="s2">&quot;github-pages&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 209&quot;</span><span class="p">,</span>  <span class="ss">group</span><span class="p">:</span> <span class="ss">:jekyll_plugins</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="c1"># If you have any plugins, put them here!</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>  <span class="n">gem</span> <span class="s2">&quot;jekyll-feed&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 0.12&quot;</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="k">end</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="c1"># Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="c1"># and associated library.</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="n">platforms</span> <span class="ss">:mingw</span><span class="p">,</span> <span class="ss">:x64_mingw</span><span class="p">,</span> <span class="ss">:mswin</span><span class="p">,</span> <span class="ss">:jruby</span> <span class="k">do</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>  <span class="n">gem</span> <span class="s2">&quot;tzinfo&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 1.2&quot;</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>  <span class="n">gem</span> <span class="s2">&quot;tzinfo-data&quot;</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="k">end</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a><span class="c1"># Performance-booster for watching directories on Windows</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="n">gem</span> <span class="s2">&quot;wdm&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 0.1.1&quot;</span><span class="p">,</span> <span class="ss">:platforms</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:mingw</span><span class="p">,</span> <span class="ss">:x64_mingw</span><span class="p">,</span> <span class="ss">:mswin</span><span class="o">]</span>
 </code></pre></div>
 <p>A questo punto puoi salvare ed eliminare il file <code>Gemfile.lock</code>. Questo file infatti contiene tutte le dipendenze ed è generato a partire dal file <code>Gemfile</code>. Ne dovrai generare uno nuovo.</p>
 <p>Da terminale, all'interno della directory del progetto digita:</p>
-<div class="highlight"><pre><span></span><code>bundle install
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>bundle install
 </code></pre></div>
 <p>Verrà generato un nuovo <code>Gemfile.lock</code> con tutte le dipendenze necessarie per GitHub Pages.</p>
 <p>Adesso, per lanciare l'anteprima della pagina, non puoi più utilizzare il comando <code>jekyll serve</code> poichè tale comando invocherà la versione di jekyll installata globalmente sul tuo PC e quindi risulteresti non allineato. Dovrai lanciare il comando <code>bundle exec jekyll serve</code> come suggerito dal file <code>Gemfile</code> in modo da garantire che venga eseguita la versione di jekyll indicata dal file <code>Gemfile</code> e non quella installata su PC.</p>
 <p>Digita quindi:</p>
-<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> jekyll serve
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>bundle <span class="nb">exec</span> jekyll serve
 </code></pre></div>
 <p>A questo punto sei quasi pronto per pubblicare il tuo sito tramite GitHub Pages.</p>
-<h2 id="pubblica-il-sito-su-github-pages">Pubblica il sito su GitHub Pages</h2>
+<h2 id="pubblica-il-sito-su-github-pages">Pubblica il sito su GitHub Pages<a class="headerlink" href="#pubblica-il-sito-su-github-pages" title="Permanent link">&para;</a></h2>
 <p>Crea una repository vuota e pubblica su GitHub. Ti consiglio di dare lo stesso nome della directory utilizzata nel progetto, nel mio caso <code>myWebPage</code>. Il nome appena creato coinciderà con la subdirectory dell'indirizzo della propria pagina web che nel mio caso sarà: <code>https://sidiri-8bit.github.io/myWebPage/</code>.</p>
 <p>Adesso torna alla directory del progetto e aggiungiamo quindi il subpath <code>myWebPage</code> all'interno del file <code>_config.yml</code>, </p>
-<div class="highlight"><pre><span></span><code>baseurl: &quot;/myWebPage&quot; # the subpath of your site, e.g. /blog
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>baseurl: &quot;/myWebPage&quot; # the subpath of your site, e.g. /blog
 </code></pre></div>
 <p>Il file completo sarà una cosa del genere:</p>
-<div class="highlight"><pre><span></span><code># Welcome to Jekyll!
-
-title: Your awesome title
-email: your-email@example.com
-description: &gt;- # this means to ignore newlines until &quot;baseurl:&quot;
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: &quot;/myWebPage&quot; # the subpath of your site, e.g. /blog
-url: &quot;&quot; # the base hostname &amp; protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
-# Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a># Welcome to Jekyll!
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>title: Your awesome title
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>email: your-email@example.com
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>description: &gt;- # this means to ignore newlines until &quot;baseurl:&quot;
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>  Write an awesome description for your new site here. You can edit this
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>  line in _config.yml. It will appear in your document head meta (for
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>  Google search results) and in your feed.xml site description.
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>baseurl: &quot;/myWebPage&quot; # the subpath of your site, e.g. /blog
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>url: &quot;&quot; # the base hostname &amp; protocol for your site, e.g. http://example.com
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>twitter_username: jekyllrb
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>github_username:  jekyll
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a># Build settings
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>theme: minima
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>plugins:
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>  - jekyll-feed
 </code></pre></div>
 <p>A questo punto lancia nuovamente il comando:</p>
-<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> jekyll serve
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>bundle <span class="nb">exec</span> jekyll serve
 </code></pre></div>
 <p>Bene, sei pronto a trasformare la directory nella repository GitHub che ospiterà la tua pagina web.
 Tramite git digita:</p>
-<p><div class="highlight"><pre><span></span><code>git init
-git add .
-git commit -m <span class="s2">&quot;initial&quot;</span>
-git branch -M master
-git remote add origin git@github.com:sidiri-8bit/myWebPage.git
-git push -u origin master
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git init
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>git add .
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>git commit -m <span class="s2">&quot;initial&quot;</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>git branch -M master
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>git remote add origin git@github.com:sidiri-8bit/myWebPage.git
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>git push -u origin master
 </code></pre></div>
 e search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog</p>
-<h1 id="url-the-base-hostname-protocol-for-your-site-eg-httpexamplecom">url: "" # the base hostname &amp; protocol for your site, e.g. http://example.com</h1>
+<h1 id="url-the-base-hostname-protocol-for-your-site-eg-httpexamplecom">url: "" # the base hostname &amp; protocol for your site, e.g. <a href="http://example.com">http://example.com</a><a class="headerlink" href="#url-the-base-hostname-protocol-for-your-site-eg-httpexamplecom" title="Permanent link">&para;</a></h1>
 <p>twitter_username: jekyllrb
 github_username:  jekyll
 ina web. Apri la Repository e vai su <code>Settings</code>, sezione <code>GitHub Pages</code>. Seleziona il branch <code>master</code>, premi il tasto <code>Save</code>, una volta aggiornata la pagina, se torni alla sezione <code>GitHub Pages</code> dovresti trovare:</p>
-<div class="highlight"><pre><span></span><code>Your site is published at https://sidiri-8bit.github.io/myWebPage/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Your site is published at https://sidiri-8bit.github.io/myWebPage/
 </code></pre></div>
 <p>Cliccando sul link dovresti visualizzare la tua pagina. Sei online!</p>
 <p><strong>Attenzione al branch!</strong> Fintanto che farai le modifiche al sito ed eseguirai push sul branch <code>master</code>, GitHub effettuerà il deploy in automatico della tua pagina. Per evitare il deploy puoi utilizzare un altro branch, un branch di lavoro  qualsiasi ad esempio <code>changes</code> ma ricorda che affinchè la pagina possa essere caricata dovrai effettuare il merge del tuo branch <code>changes</code> con il branch <code>master</code></p>
@@ -4104,103 +4104,103 @@ ina web. Apri la Repository e vai su <code>Settings</code>, sezione <code>GitHub
 Se non vuoi specificare un subpath e pubblicare il sito come "https://[username].github.io/" la procedura è semplificata.
 Crea una repository con il nome <code>[username].github.io</code>. Nel mio caso sarà <code>sidiri-8bit.github.io</code>.
 La repository <code>[username].github.io</code> è <em>speciale</em>, infatti GitHub la identifica già come una repository pronta ad ospitare una pagina web e ad effettuare il deploy in automatico sul branch <code>master</code>. L'unica cosa che dovrai fare è caricare il contenuto del tuo sito su questa repository togliendo dal file <code>_config.yml</code> il subpath indicato attraverso parametro <code>baseurl</code>. Riporto il file <code>_config.yml</code> completo:</p>
-<div class="highlight"><pre><span></span><code># Welcome to Jekyll!
-
-title: Your awesome title
-email: your-email@example.com
-description: &gt;- # this means to ignore newlines until &quot;baseurl:&quot;
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: &quot;&quot; # the subpath of your site, e.g. /blog
-#url: &quot;&quot; # the base hostname &amp; protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
-# Build settings
-theme: minima# Exclude from processing.
-
-plugins:
-  - jekyll-feed
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a># Welcome to Jekyll!
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>title: Your awesome title
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>email: your-email@example.com
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>description: &gt;- # this means to ignore newlines until &quot;baseurl:&quot;
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>  Write an awesome description for your new site here. You can edit this
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>  line in _config.yml. It will appear in your document head meta (for
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>  Google search results) and in your feed.xml site description.
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>baseurl: &quot;&quot; # the subpath of your site, e.g. /blog
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>#url: &quot;&quot; # the base hostname &amp; protocol for your site, e.g. http://example.com
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>twitter_username: jekyllrb
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>github_username:  jekyll
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a># Build settings
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>theme: minima# Exclude from processing.
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>plugins:
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a>  - jekyll-feed
 </code></pre></div>
-<h2 id="temi-jekyll">Temi jekyll</h2>
+<h2 id="temi-jekyll">Temi jekyll<a class="headerlink" href="#temi-jekyll" title="Permanent link">&para;</a></h2>
 <p>Adesso vedrai come impostare il tema <a href="https://github.com/pmarsceill/just-the-docs/">just-the-docs</a> . Questo tema, non essendo tra quelli ufficialmente supportati da GitHub va aggiunto in un atro modo. Ovviamente questa guida vale anche per altri temi.</p>
 <p>Modifica il <code>Gemfile</code> inserendo al posto di:</p>
-<div class="highlight"><pre><span></span><code>gem <span class="s2">&quot;minima&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>gem <span class="s2">&quot;minima&quot;</span>
 </code></pre></div>
 <p>Il tema <code>just-the-docs</code>:</p>
-<div class="highlight"><pre><span></span><code>gem <span class="s2">&quot;just-the-docs&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>gem <span class="s2">&quot;just-the-docs&quot;</span>
 </code></pre></div>
 <p>Modifica file <code>_config.yml</code> inserendo al posto di:</p>
-<div class="highlight"><pre><span></span><code>theme: minima
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>theme: minima
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>remote_theme: pmarsceill/just-the-docs
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>remote_theme: pmarsceill/just-the-docs
 </code></pre></div>
 <p>Adesso cancella il file <code>Gemfile.lock</code> e lancia nuovamente:</p>
-<div class="highlight"><pre><span></span><code>bundle install
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>bundle install
 </code></pre></div>
 <p>Per vedere l'anteprima lancia nuovamente il comando:</p>
-<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> jekyll serve
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>bundle <span class="nb">exec</span> jekyll serve
 </code></pre></div>
 <p>A questo punto esegui il commit e il push delle modifiche.</p>
-<div class="highlight"><pre><span></span><code>git add .
-git commit -m <span class="s2">&quot;add other theme&quot;</span>
-git push
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>git add .
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>git commit -m <span class="s2">&quot;add other theme&quot;</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>git push
 </code></pre></div>
 <p>Verrà eseguito il deploy in automatico. </p>
 <p><img alt="" src="images/deploy.png" /></p>
 <p>L'anteprima di questo tema è una cosa del genere:</p>
 <p><img alt="" src="images/just-the-docs.png" /></p>
-<h2 id="come-personalizzare-un-tema-jekyll">Come personalizzare un tema jekyll</h2>
+<h2 id="come-personalizzare-un-tema-jekyll">Come personalizzare un tema jekyll<a class="headerlink" href="#come-personalizzare-un-tema-jekyll" title="Permanent link">&para;</a></h2>
 <p>Stai utilizzando un tema ma vorresti personalizzarlo a tuo piacimento aggiungendo stile <code>css</code> o elelmenti <code>html</code>?</p>
 <p>Normalmente ogni tema dispone di una documentazione per la personalizzazione della propria pagina. Si tratta in generale di impostare certi parametri di <em>alto livello</em> nel file <code>_config.yml</code> o definire alcune variabili in qualche file ad un  path particolare. Ad esempio per il tema <em>just-the-docs</em> è possibile creare un file con un nome a piacimento ad esempio <code>my_schema.scss</code> ad un percorso specifico, <code>_sass/color_schemes/my_schema.scss</code> e settare certe variabili (definite dal tema) come:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">$link-color</span><span class="o">:</span><span class="w"> </span><span class="nv">$purple-100</span><span class="p">;</span><span class="w"></span>
-<span class="nv">$sidebar-color</span><span class="o">:</span><span class="w"> </span><span class="nv">$grey-lt-100</span><span class="p">;</span><span class="w"></span>
-<span class="nv">$content-width</span><span class="o">:</span><span class="w"> </span><span class="mi">1000</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nv">$link-color</span><span class="o">:</span><span class="w"> </span><span class="nv">$purple-100</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nv">$sidebar-color</span><span class="o">:</span><span class="w"> </span><span class="nv">$grey-lt-100</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="nv">$content-width</span><span class="o">:</span><span class="w"> </span><span class="mi">1000</span><span class="kt">px</span><span class="p">;</span><span class="w"></span>
 </code></pre></div>
 <p>consentendo di cambiare certi colori o ridefinire alcuni margini o proporzioni. Questo file deve essere aggiunto come <code>build settings</code> inserendo la seguente riga nel file <code>_config.yml</code>:</p>
-<div class="highlight"><pre><span></span><code>color_scheme: my_schema
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>color_scheme: my_schema
 </code></pre></div>
 <p>Ovviamente queste modifiche sono limitate alle possibilità definite dal creatore del tema.</p>
-<h3 id="aggiunta-css">Aggiunta css</h3>
+<h3 id="aggiunta-css">Aggiunta css<a class="headerlink" href="#aggiunta-css" title="Permanent link">&para;</a></h3>
 <p>Per aver accesso ad una personalizzazione più profonda in genere viene data la possibilità di ridefinire completamente lo stile <code>css</code> sovraiscrivendo solo gli attributi che ci interessano. Nel caso del tema <em>just-the-docs</em> viene data la possibilità di creare un file con il nome specifico <code>custom.scss</code> al path <code>_sass/custom/custom.scss</code>. In questo modo utilizzando le regole <code>css</code> è possibile cambiare lo stile di ogni elemento della pagina.
 Purtroppo, essendo un'operazione di <em>basso livello</em> richiede una conoscenza approfondita del linguaggio <code>css</code> e di comprendere la logica di layout con cui è stata progettata la pagina. Ti dovrai armare di pazienza e dello strumento <code>Ispeziona</code> del  browser per risalire al selettore giusto per ottenere la modifica che ti serve. Potrete trovare inoltre lo stile completo <code>css</code> all'interno della cartella <code>_site</code>, nel mio caso si trova al path <code>_site/assets/css/just-the-docs-default.css</code>. Personalmente ho modificato abbondantemente lo stile <code>css</code></p>
-<h3 id="aggiunta-html">Aggiunta html</h3>
+<h3 id="aggiunta-html">Aggiunta html<a class="headerlink" href="#aggiunta-html" title="Permanent link">&para;</a></h3>
 <p>Se non ti basta modificare lo stile <code>css</code> e vuoi aggiungere anche elementi <code>html</code> si può fare come sempre con una procedura di <em>basso livello</em> cioè sovraiscrivendo la pagina <code>html</code> che dovrebbe occuparsi di aggiungere questi elementi.</p>
 <p>Da terminale, all'interno della root del tuo progetto digita <code>bundle info [nome-tema]</code>. In questo caso utilizzando il tema <em>just-the-docs</em> sarà:</p>
-<div class="highlight"><pre><span></span><code>bundle info just-the-docs
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>bundle info just-the-docs
 </code></pre></div>
 <p>Risponderà con il path di installazione del tema</p>
-<div class="highlight"><pre><span></span><code>* just-the-docs <span class="o">(</span><span class="m">0</span>.3.3<span class="o">)</span>
-    Summary: A modern, highly customizable, and responsive Jekyll theme <span class="k">for</span> documention with built-in search.
-    Homepage: https://github.com/pmarsceill/just-the-docs
-    Path: /home/s/gems/gems/just-the-docs-0.3.3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>* just-the-docs <span class="o">(</span><span class="m">0</span>.3.3<span class="o">)</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    Summary: A modern, highly customizable, and responsive Jekyll theme <span class="k">for</span> documention with built-in search.
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>    Homepage: https://github.com/pmarsceill/just-the-docs
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>    Path: /home/s/gems/gems/just-the-docs-0.3.3
 </code></pre></div>
 <p>Raggiungi questa posizione e naviga tra le directory. Troverai le pagine <code>html</code> che generano il tuo sito. Devi copiare la pagina che ti interessa all'interno del tuo progetto allo stesso path.</p>
 <p>Personalmente, per il tema <em>just-the-docs</em>, ho copiato la pagina <code>default.html</code> all'interno della directory <code>_layouts</code> e le pagine <code>footer.html</code>, <code>head.html</code>, <code>nav.html</code> all'interno della directory <code>_includes</code>. Dopo averle incollate localmente rispettando i path ho iniziato ad apportre delle modifiche, aggiungendo social-link o un logo, modificando il footer di default o la nav-bar. Per caricare le nuove modifiche è sufficiente lanciare il comando:</p>
-<div class="highlight"><pre><span></span><code>bundle <span class="nb">exec</span> jekyll serve
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>bundle <span class="nb">exec</span> jekyll serve
 </code></pre></div>
-<h2 id="personalizzazioni-avanzate">Personalizzazioni avanzate</h2>
+<h2 id="personalizzazioni-avanzate">Personalizzazioni avanzate<a class="headerlink" href="#personalizzazioni-avanzate" title="Permanent link">&para;</a></h2>
 <p>Nel file <code>yml</code> come abbiamo già visto, sono definite delle variabili come <code>title</code>, <code>description</code>, <code>github_username</code> richiamate dalle pagine html attraverso la sintassi:</p>
 <p><img alt="" src="images/codeescape1.png" /></p>
 <p>Ho dovuto usare un'immagine perchè jekyll cercherebbe di applicare la valorizzazione</p>
-<div class="highlight"><pre><span></span><code># Welcome to Jekyll!
-
-title: Your awesome title
-email: your-email@example.com
-description: &gt;- # this means to ignore newlines until &quot;baseurl:&quot;
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: &quot;&quot; # the subpath of your site, e.g. /blog
-#url: &quot;&quot; # the base hostname &amp; protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
-# Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a># Welcome to Jekyll!
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>title: Your awesome title
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>email: your-email@example.com
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a>description: &gt;- # this means to ignore newlines until &quot;baseurl:&quot;
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>  Write an awesome description for your new site here. You can edit this
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a>  line in _config.yml. It will appear in your document head meta (for
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a>  Google search results) and in your feed.xml site description.
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a>baseurl: &quot;&quot; # the subpath of your site, e.g. /blog
+<a id="__codelineno-31-10" name="__codelineno-31-10" href="#__codelineno-31-10"></a>#url: &quot;&quot; # the base hostname &amp; protocol for your site, e.g. http://example.com
+<a id="__codelineno-31-11" name="__codelineno-31-11" href="#__codelineno-31-11"></a>twitter_username: jekyllrb
+<a id="__codelineno-31-12" name="__codelineno-31-12" href="#__codelineno-31-12"></a>github_username:  jekyll
+<a id="__codelineno-31-13" name="__codelineno-31-13" href="#__codelineno-31-13"></a>
+<a id="__codelineno-31-14" name="__codelineno-31-14" href="#__codelineno-31-14"></a># Build settings
+<a id="__codelineno-31-15" name="__codelineno-31-15" href="#__codelineno-31-15"></a>theme: minima
+<a id="__codelineno-31-16" name="__codelineno-31-16" href="#__codelineno-31-16"></a>plugins:
+<a id="__codelineno-31-17" name="__codelineno-31-17" href="#__codelineno-31-17"></a>  - jekyll-feed
 </code></pre></div>
 <p>Io ad esempio ho utilizzato la variabile <code>github_username</code> per aggiungere un icona che punti al mio account github:</p>
 <p><img alt="" src="images/codeescpe2.png" /></p>

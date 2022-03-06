@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3916,42 +3916,42 @@
 </a>
 
 
-<h1 id="i-form-in-vuejs-parte-1">I form in Vue.js parte 1</h1>
+<h1 id="i-form-in-vuejs-parte-1">I form in Vue.js parte 1<a class="headerlink" href="#i-form-in-vuejs-parte-1" title="Permanent link">&para;</a></h1>
 <p>Nelle precedenti lezioni abbiamo illustrato vari esempi in cui è stata utilizzata la direttiva <code>v-model</code> per associare, in modo bidirezionale (<strong>two-way data binding</strong>), una proprietà dell'oggetto data di un componente al valore di un campo di input. Così facendo, ogni volta che una proprietà cambia, viene automaticamente aggiornato il valore del campo di input e viceversa.</p>
 <p>Abbiamo visto che per i campi di testo <code>&lt;input type="text"&gt;</code> e <code>&lt;textarea&gt;</code> al posto della direttiva <code>v-model</code> potremmo implementare la tecnica di <strong>two-way data binding</strong> combinando la proprietà value dell'elemento e l'evento input.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> 
-<span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> 
-<span class="err">@</span><span class="na">input</span><span class="o">=</span><span class="s">&quot;value = $event.target.value&quot;</span> 
-<span class="na">:value</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> 
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="err">@</span><span class="na">input</span><span class="o">=</span><span class="s">&quot;value = $event.target.value&quot;</span> 
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="na">:value</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Grazie alla direttiva <code>v-model</code> possiamo infatti semplificare l'esempio precedente nel seguente modo.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> 
-<span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>  
-<span class="na">v-model</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>  
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="na">v-model</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-<h2 id="i-modificatori-di-v-model">I modificatori di v-model</h2>
+<h2 id="i-modificatori-di-v-model">I modificatori di v-model<a class="headerlink" href="#i-modificatori-di-v-model" title="Permanent link">&para;</a></h2>
 <p>In questa lezione illustreremo come utilizzare la direttiva <code>v-model</code> con altri elementi di input e descriveremo altre interessanti funzionalità.</p>
-<h3 id="trim">trim</h3>
+<h3 id="trim">trim<a class="headerlink" href="#trim" title="Permanent link">&para;</a></h3>
 <p>Rimuove automaticamente eventuali spazi bianchi superflui dal valore di un campo di testo.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> 
-<span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>  
-<span class="na">v-model</span><span class="err">.</span><span class="na">trim</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>  
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">v-model</span><span class="err">.</span><span class="na">trim</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Ciò significa che se viene inserito il valore <code>ciao</code>, la proprietà <code>value</code> conterrà soltanto <code>ciao</code> dato che tutti gli spazi in eccesso vengono automaticamente eliminati.</p>
-<h3 id="number">number</h3>
+<h3 id="number">number<a class="headerlink" href="#number" title="Permanent link">&para;</a></h3>
 <p>Convertire automaticamente in tipo <code>Number</code> il valore di un campo di input che altrimenti sarebbe di tipo <code>String</code>. Se il valore non può essere convertito, viene restituito il valore originale.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Nonostante abbiamo usato l'attributo <code>type="number"</code>, la proprietà value viene comunque convertita in una stringa.</p>
 <p>Al contrario, grazie al modificatore <code>.number</code>, la proprietà <code>value</code> conterrà sempre dei valori di tipo <code>Number</code> (vale anche per i campi di input con attributo <code>type="text"</code>).</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">v-model</span><span class="err">.</span><span class="na">number</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span> <span class="na">v-model</span><span class="err">.</span><span class="na">number</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-<h3 id="lazy">lazy</h3>
+<h3 id="lazy">lazy<a class="headerlink" href="#lazy" title="Permanent link">&para;</a></h3>
 <p>Se poi vogliamo sincronizzare il valore di un campo con la rispettiva proprietà meno frequentemente, possiamo allora usare il modificatore <code>.lazy</code>.
 In questo caso <code>v-model</code> userà l'evento <code>change</code> al posto di <code>input</code> (l'evento <code>change</code> viene emesso solo al termine della modifica dell'elemento. Per i campi di testo l'evento <code>change</code> si verifica solo quando l'elemento perde il focus e il suo valore è stato modificato).</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> 
-<span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>  
-<span class="na">v-model</span><span class="err">.</span><span class="na">lazy</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>  
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="na">v-model</span><span class="err">.</span><span class="na">lazy</span><span class="o">=</span><span class="s">&quot;value&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 
               

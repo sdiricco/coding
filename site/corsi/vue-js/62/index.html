@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3904,18 +3904,18 @@
 </a>
 
 
-<h1 id="vuejs-introduzione-alla-composition-api">Vue.js: introduzione alla Composition API</h1>
+<h1 id="vuejs-introduzione-alla-composition-api">Vue.js: introduzione alla Composition API<a class="headerlink" href="#vuejs-introduzione-alla-composition-api" title="Permanent link">&para;</a></h1>
 <p>In questa lezione parleremo della nuova <strong>Composition API</strong> introdotta a partire dalla versione 3 di Vue.js, ma che è possibile provare già nella versione 2 del framework attraverso il plugin <code>@vue/composition-api</code>.</p>
 <p>Prima di proseguire è bene sottolineare che la <strong>Composition API</strong> è del tutto opzionale ed è possibile continuare ad usare le tecniche viste nelle lezioni precedenti per definire i componenti.</p>
 <p>I cambiamenti introdotti a partire da Vue 3 sono per lo più interni al framework con l'obiettivo di rendere le applicazioni ancora più performanti sia in termini di velocità che di gestione delle risorse.</p>
 <p>Con la nuova versione di Vue.js non si corre quindi il rischio di rivivere quanto accaduto con l'introduzione di Angular 2.</p>
-<h2 id="cose-la-composition-api">Cos'è la Composition API</h2>
+<h2 id="cose-la-composition-api">Cos'è la Composition API<a class="headerlink" href="#cose-la-composition-api" title="Permanent link">&para;</a></h2>
 <p>La <strong>Composition API</strong> rappresenta un modo alternativo per definire i componenti, diverso da quello visto nelle precedenti lezioni in cui usavamo un oggetto di opzioni (Options API). Quest'ultimo rappresenta per certi aspetti il vero punto di forza di Vue.js perché consente di definire dei componenti in modo intuitivo, semplice e veloce. Presenta però delle limitazioni che diventano evidenti man mano che si realizzano delle applicazioni più complesse. Vediamo allora quali sono i limiti dell'Options API e in che modo vengono superati dalla nuova Composition API.</p>
-<h2 id="perche-e-stata-introdotta-la-composition-api">Perché è stata introdotta la composition API</h2>
+<h2 id="perche-e-stata-introdotta-la-composition-api">Perché è stata introdotta la composition API<a class="headerlink" href="#perche-e-stata-introdotta-la-composition-api" title="Permanent link">&para;</a></h2>
 <p>Abbiamo visto che con l'<strong>Options API</strong> è estremamente semplice definire dei componenti, ma, al crescere delle dimensioni e della complessità di questi ultimi, risulta <strong>difficile leggere ed organizzare il codice di un componente</strong>. Nello stesso tempo diventa necessario adottare dei meccanismi per <strong>riutilizzare delle funzionalità comuni</strong> in componenti diversi.</p>
 <p>Un altro problema è legato al modo in cui vengono definiti i componenti con l'Options API e al fatto che <strong>Vue modifica il <code>this</code> per rendere possibile l'accesso a tutti i membri dell'oggetto delle opzioni</strong>. Per le ragioni appena esposte, in Vue 2 il supporto a TypeScript è limitato.</p>
 <p>Analizziamo allora in maggior dettaglio le prime due limitazioni appena elencate e vediamo attraverso un semplice esempio in che modo Vue cerca di risolverle con l'introduzione della <em>Composition API</em> (In questa lezione presentaremo degli esempi semplici al fine di capire al meglio il funzionamento della Composition API, ma i benefici dell'uso di quest'ultima diventano evidenti al crescere delle dimensioni e della complessità dei componenti).</p>
-<h2 id="organizzare-un-componente-per-funzionalita">Organizzare un componente per funzionalità</h2>
+<h2 id="organizzare-un-componente-per-funzionalita">Organizzare un componente per funzionalità<a class="headerlink" href="#organizzare-un-componente-per-funzionalita" title="Permanent link">&para;</a></h2>
 <p>Se volessimo creare un componente con l'<em>Options API</em> andremmo a definirlo attraverso un oggetto che presenta dei dati, dei metodi ed eventualmente delle <strong>computed properties</strong>, dei <strong>watchers</strong>, dei <strong>lifecycle hooks</strong> e così via.</p>
 <p>Man mano che espandiamo un componente, finiamo per distribuire i vari pezzi di ciascuna funzionalità fra le diverse opzioni.</p>
 <p>Può dunque capitare di avere i dati, i metodi e le <strong>computed properties</strong> di ogni funzionalità sparsi in punti diversi dell'oggetto di opzioni. Organizzando il componente per opzioni, finiamo allora per mescolare e distribuire in sezioni separate i diversi pezzi delle varie funzionalità di un componente.</p>
@@ -3923,7 +3923,7 @@
 <p>Al contrario, la <strong>Composition API</strong> mira ad organizzare e strutturare un componente in base alle sue funzionalità che non saranno distribuite in vari oggetti separati come accade con l'<strong>Option API</strong>.</p>
 <p>L'intento è invece quello di raggruppare insieme ed isolare le diverse parti di ciascuna funzionalità in modo da avere alla fine dei frammenti di codice più leggibili e semplici da rivisitare ed aggiornare.</p>
 <p>Sostituiamo le diverse opzioni con un unico metodo <code>setup()</code> in cui andremo ad usare la nuova sintassi della <strong>Composition API</strong>.</p>
-<h2 id="riutilizzare-funzionalita-comuni-in-piu-componenti">Riutilizzare funzionalità comuni in più componenti</h2>
+<h2 id="riutilizzare-funzionalita-comuni-in-piu-componenti">Riutilizzare funzionalità comuni in più componenti<a class="headerlink" href="#riutilizzare-funzionalita-comuni-in-piu-componenti" title="Permanent link">&para;</a></h2>
 <p>Per evitare di creare un metodo <code>setup()</code> lungo e di difficile lettura, andiamo poi ad estrarre in una nuova funzione (spesso in un diverso file) il codice relativo a ciascuna funzionalità. Successivamente possiamo procedere ad importare nei vari componenti le funzioni necessarie. E visto che si tratta di semplici funzioni, abbiamo anche la possibilità di passare di volta in volta dei diversi argomenti per personalizzare una data funzionalità come meglio preferiamo.</p>
 
               

@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,127 +3816,127 @@
 </a>
 
 
-<h1 id="ref-vs-reactive">Ref vs Reactive</h1>
+<h1 id="ref-vs-reactive">Ref vs Reactive<a class="headerlink" href="#ref-vs-reactive" title="Permanent link">&para;</a></h1>
 <p>Per aggiungere dei dati al sistema di reattività, abbiamo utilizzato la funzione <code>ref()</code> che ha come limite la necessità di dover ogni volta accedere al valore del ref attraverso la sua proprietà <code>.value</code>.</p>
 <p>È importante osservare che quando si fa uso dei <code>refs</code>, abbiamo solitamente una serie di tipi di dato primitivo salvati in singole variabili.</p>
 <p>Se vogliamo invece utilizzare un oggetto per raggruppare insieme ed isolare i vari dati, Vue mette a disposizione una diversa funzione, ovvero <code>reactive()</code>. Riscriviamo allora l'esempio precedente usando ora la funzione <code>reactive()</code> e vediamo in dettaglio cosa cambia rispetto a <code>ref()</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;min&quot;</span><span class="p">&gt;</span>Valore minimo<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> 
-        <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> 
-        <span class="na">name</span><span class="o">=</span><span class="s">&quot;min&quot;</span> 
-        <span class="na">id</span><span class="o">=</span><span class="s">&quot;min&quot;</span> 
-        <span class="na">v-model</span><span class="err">.</span><span class="na">number</span><span class="o">=</span><span class="s">&quot;data.min&quot;</span> 
-        <span class="na">min</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;10&quot;</span><span class="p">&gt;</span>
-      {{ data.min }}
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;max&quot;</span><span class="p">&gt;</span>Valore massimo<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> 
-        <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> 
-        <span class="na">name</span><span class="o">=</span><span class="s">&quot;max&quot;</span> 
-        <span class="na">id</span><span class="o">=</span><span class="s">&quot;max&quot;</span> 
-        <span class="na">v-model</span><span class="err">.</span><span class="na">number</span><span class="o">=</span><span class="s">&quot;data.max&quot;</span> 
-        <span class="na">min</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;20&quot;</span><span class="p">&gt;</span>
-      {{ data.max }}
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-      {{ data.randomNumber }} - {{ data.double }}
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;getRandomNumber&quot;</span><span class="p">&gt;</span>Get a new Number<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="c1">// in Vue 2 importiamo da &#39;@vue/composition-api&#39;</span>
-<span class="c1">// in Vue 3 importiamo semplicemente da &#39;vue&#39;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">reactive</span><span class="p">,</span> <span class="nx">computed</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@vue/composition-api&#39;</span><span class="p">;</span>
-
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;RandomNumber&#39;</span><span class="p">,</span>
-  <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">reactive</span><span class="p">({</span>
-      <span class="nx">min</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-      <span class="nx">max</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-      <span class="nx">randomNumber</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-      <span class="kr">double</span><span class="o">:</span> <span class="nx">computed</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">randomNumber</span> <span class="o">*</span> <span class="mf">2</span><span class="p">)</span>
-    <span class="p">});</span>
-
-    <span class="kd">function</span> <span class="nx">getRandomNumber</span><span class="p">()</span> <span class="p">{</span>
-      <span class="kd">const</span> <span class="p">{</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">}</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
-      <span class="nx">data</span><span class="p">.</span><span class="nx">randomNumber</span> <span class="o">=</span> 
-        <span class="o">+</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span><span class="p">)</span> <span class="o">+</span> <span class="nx">min</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="p">{</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">getRandomNumber</span> <span class="p">};</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;min&quot;</span><span class="p">&gt;</span>Valore minimo<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> 
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="na">name</span><span class="o">=</span><span class="s">&quot;min&quot;</span> 
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="na">id</span><span class="o">=</span><span class="s">&quot;min&quot;</span> 
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="na">v-model</span><span class="err">.</span><span class="na">number</span><span class="o">=</span><span class="s">&quot;data.min&quot;</span> 
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="na">min</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;10&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      {{ data.min }}
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;max&quot;</span><span class="p">&gt;</span>Valore massimo<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> 
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        <span class="na">name</span><span class="o">=</span><span class="s">&quot;max&quot;</span> 
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="na">id</span><span class="o">=</span><span class="s">&quot;max&quot;</span> 
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="na">v-model</span><span class="err">.</span><span class="na">number</span><span class="o">=</span><span class="s">&quot;data.max&quot;</span> 
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="na">min</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;20&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>      {{ data.max }}
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>      {{ data.randomNumber }} - {{ data.double }}
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;getRandomNumber&quot;</span><span class="p">&gt;</span>Get a new Number<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c1">// in Vue 2 importiamo da &#39;@vue/composition-api&#39;</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="c1">// in Vue 3 importiamo semplicemente da &#39;vue&#39;</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="k">import</span> <span class="p">{</span> <span class="nx">reactive</span><span class="p">,</span> <span class="nx">computed</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@vue/composition-api&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;RandomNumber&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>  <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">reactive</span><span class="p">({</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>      <span class="nx">min</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>      <span class="nx">max</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>      <span class="nx">randomNumber</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>      <span class="kr">double</span><span class="o">:</span> <span class="nx">computed</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">randomNumber</span> <span class="o">*</span> <span class="mf">2</span><span class="p">)</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    <span class="p">});</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    <span class="kd">function</span> <span class="nx">getRandomNumber</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>      <span class="kd">const</span> <span class="p">{</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">}</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>      <span class="nx">data</span><span class="p">.</span><span class="nx">randomNumber</span> <span class="o">=</span> 
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>        <span class="o">+</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span><span class="p">)</span> <span class="o">+</span> <span class="nx">min</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    <span class="p">}</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>    <span class="k">return</span> <span class="p">{</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">getRandomNumber</span> <span class="p">};</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>  <span class="p">}</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="p">}</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Partiamo da <code>setup()</code> e notiamo che in questo caso alla funzione <code>reactive()</code> passiamo un intero oggetto di proprietà. La variabile, che abbiamo deciso di nominare <code>data</code>, contiene tutti i dati del nostro componente. All'interno dell'oggetto abbiamo anche usato la funzione <code>computed()</code> per fare in modo che la proprietà <code>data.double</code> sia dipendente da <code>data.randomNumber</code> e venga automaticamente ricalcolata ogni volta che quest'ultima subisce delle modifiche.</p>
 <p>L'aspetto negativo di <code>reactive()</code> è legato alla necessità di dover esportare l'intero oggetto <code>data</code> e non poter estrarre le singole proprietà per non perdere la funzione di reattività. Per questo motivo, nel template facciamo riferimento ai dati dell'oggetto usando la sintassi <code>data.property</code>, per esempio <code>data.min</code>.</p>
 <p>Vue offre una soluzione a questo inconveniente, possiamo infatti importare la funzione <code>toRefs()</code> che converte l'oggetto passato alla funzione reactive in un oggetto di <code>refs</code>. Usando poi l'operatore <strong>spread</strong> <code>(...object)</code>, possiamo rendere visibili nel template le singole variabili come mostrato nell'esempio aggiornato che riportiamo sotto.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;min&quot;</span><span class="p">&gt;</span>Valore minimo<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> 
-        <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> 
-        <span class="na">name</span><span class="o">=</span><span class="s">&quot;min&quot;</span> 
-        <span class="na">id</span><span class="o">=</span><span class="s">&quot;min&quot;</span> 
-        <span class="na">v-model</span><span class="err">.</span><span class="na">number</span><span class="o">=</span><span class="s">&quot;min&quot;</span> 
-        <span class="na">min</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;10&quot;</span><span class="p">&gt;</span>
-      {{ min }}
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;max&quot;</span><span class="p">&gt;</span>Valore massimo<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> 
-        <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> 
-        <span class="na">name</span><span class="o">=</span><span class="s">&quot;max&quot;</span> 
-        <span class="na">id</span><span class="o">=</span><span class="s">&quot;max&quot;</span> 
-        <span class="na">v-model</span><span class="err">.</span><span class="na">number</span><span class="o">=</span><span class="s">&quot;max&quot;</span> 
-        <span class="na">min</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;20&quot;</span><span class="p">&gt;</span>
-      {{ max }}
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-      {{ randomNumber }} - {{ double }}
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;getRandomNumber&quot;</span><span class="p">&gt;</span>Get a new Number<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="c1">// in Vue 2 importiamo da &#39;@vue/composition-api&#39;</span>
-<span class="c1">// in Vue 3 importiamo semplicemente da &#39;vue&#39;</span>
-<span class="k">import</span> <span class="p">{</span> <span class="nx">reactive</span><span class="p">,</span> <span class="nx">toRefs</span><span class="p">,</span> <span class="nx">computed</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@vue/composition-api&#39;</span><span class="p">;</span>
-
-<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;RandomNumber&#39;</span><span class="p">,</span>
-  <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">reactive</span><span class="p">({</span>
-      <span class="nx">min</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-      <span class="nx">max</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-      <span class="nx">randomNumber</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-      <span class="kr">double</span><span class="o">:</span> <span class="nx">computed</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">randomNumber</span> <span class="o">*</span> <span class="mf">2</span><span class="p">)</span>
-    <span class="p">});</span>
-
-    <span class="kd">function</span> <span class="nx">getRandomNumber</span><span class="p">()</span> <span class="p">{</span>
-      <span class="kd">const</span> <span class="p">{</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">}</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
-      <span class="nx">data</span><span class="p">.</span><span class="nx">randomNumber</span> <span class="o">=</span> 
-        <span class="o">+</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span><span class="p">)</span> <span class="o">+</span> <span class="nx">min</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="c1">// convertiamo in un oggetto di `refs`</span>
-    <span class="c1">// ed estraiamo le singole proprietà</span>
-    <span class="c1">// con l&#39;operatore spread (...object)</span>
-    <span class="c1">// In questo modo avremo accesso diretto nel template</span>
-    <span class="c1">// senza dover far riferimento all&#39;oggetto `data`</span>
-    <span class="c1">// Invece di `data.min`, useremo semplicemente `min` ecc...</span>
-    <span class="k">return</span> <span class="p">{</span> <span class="p">...</span><span class="nx">toRefs</span><span class="p">(</span><span class="nx">data</span><span class="p">),</span> <span class="nx">getRandomNumber</span> <span class="p">};</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;min&quot;</span><span class="p">&gt;</span>Valore minimo<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> 
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        <span class="na">name</span><span class="o">=</span><span class="s">&quot;min&quot;</span> 
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        <span class="na">id</span><span class="o">=</span><span class="s">&quot;min&quot;</span> 
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        <span class="na">v-model</span><span class="err">.</span><span class="na">number</span><span class="o">=</span><span class="s">&quot;min&quot;</span> 
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="na">min</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;10&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>      {{ min }}
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;max&quot;</span><span class="p">&gt;</span>Valore massimo<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>      <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>        <span class="na">type</span><span class="o">=</span><span class="s">&quot;range&quot;</span> 
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        <span class="na">name</span><span class="o">=</span><span class="s">&quot;max&quot;</span> 
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        <span class="na">id</span><span class="o">=</span><span class="s">&quot;max&quot;</span> 
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        <span class="na">v-model</span><span class="err">.</span><span class="na">number</span><span class="o">=</span><span class="s">&quot;max&quot;</span> 
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        <span class="na">min</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;20&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>      {{ max }}
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>      {{ randomNumber }} - {{ double }}
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;getRandomNumber&quot;</span><span class="p">&gt;</span>Get a new Number<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="c1">// in Vue 2 importiamo da &#39;@vue/composition-api&#39;</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="c1">// in Vue 3 importiamo semplicemente da &#39;vue&#39;</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="k">import</span> <span class="p">{</span> <span class="nx">reactive</span><span class="p">,</span> <span class="nx">toRefs</span><span class="p">,</span> <span class="nx">computed</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;@vue/composition-api&#39;</span><span class="p">;</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;RandomNumber&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>  <span class="nx">setup</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>    <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">reactive</span><span class="p">({</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>      <span class="nx">min</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>      <span class="nx">max</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>      <span class="nx">randomNumber</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>      <span class="kr">double</span><span class="o">:</span> <span class="nx">computed</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">randomNumber</span> <span class="o">*</span> <span class="mf">2</span><span class="p">)</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>    <span class="p">});</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>    <span class="kd">function</span> <span class="nx">getRandomNumber</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>      <span class="kd">const</span> <span class="p">{</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">}</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>      <span class="nx">data</span><span class="p">.</span><span class="nx">randomNumber</span> <span class="o">=</span> 
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>        <span class="o">+</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">min</span><span class="p">)</span> <span class="o">+</span> <span class="nx">min</span><span class="p">).</span><span class="nx">toFixed</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>    <span class="p">}</span>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>    <span class="c1">// convertiamo in un oggetto di `refs`</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>    <span class="c1">// ed estraiamo le singole proprietà</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>    <span class="c1">// con l&#39;operatore spread (...object)</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>    <span class="c1">// In questo modo avremo accesso diretto nel template</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>    <span class="c1">// senza dover far riferimento all&#39;oggetto `data`</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>    <span class="c1">// Invece di `data.min`, useremo semplicemente `min` ecc...</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>    <span class="k">return</span> <span class="p">{</span> <span class="p">...</span><span class="nx">toRefs</span><span class="p">(</span><span class="nx">data</span><span class="p">),</span> <span class="nx">getRandomNumber</span> <span class="p">};</span>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>  <span class="p">}</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="p">}</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Non esiste quindi una netta differenza fra <code>ref()</code> e <code>reactive()</code>. Entrambe servono per aggiungere delle informazioni al sistema di reattività del framework. Come abbiamo potuto notare dagli esempi, ognuna ha dei vantaggi e degli svantaggi. Al momento il team di Vue non sembra suggerire quale sia la soluzione migliore, ma molti sviluppatori preferiscono utilizzare <code>ref()</code> rispetto a <code>reactive().</code></p>
 

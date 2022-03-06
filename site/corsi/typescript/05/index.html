@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,35 +3816,35 @@
 </a>
 
 
-<h1 id="tsc-config">tsc config</h1>
+<h1 id="tsc-config">tsc config<a class="headerlink" href="#tsc-config" title="Permanent link">&para;</a></h1>
 <p>Creeremo un <code>tsconfig.json</code> semplice, configurando:
 - un unico file typescript: <code>index.js</code>
 - standard Javascript: <code>ES6</code>
 - cartella di destinazione file transpilati Javascript: <code>dist</code></p>
 <p>Puoi quindi creare <code>tsconfig.json</code> vuoto e compilarlo in questo modo: 
-<div class="highlight"><pre><span></span><code><span class="err">//</span><span class="kc">ts</span><span class="err">co</span><span class="kc">nf</span><span class="err">ig.jso</span><span class="kc">n</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;compilerOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ES6&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;outDir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dist&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;index.ts&quot;</span><span class="p">]</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="err">//</span><span class="kc">ts</span><span class="err">co</span><span class="kc">nf</span><span class="err">ig.jso</span><span class="kc">n</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;compilerOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ES6&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;outDir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dist&quot;</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;index.ts&quot;</span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div></p>
 <p>A questo punto puoi creare un file <code>index.ts</code></p>
-<div class="highlight"><pre><span></span><code><span class="c1">//index.ts</span>
-<span class="kd">const</span> <span class="nx">helloworld</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="s1">&#39;Hello wolrd!!!&#39;</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">helloworld</span><span class="p">());</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">//index.ts</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">const</span> <span class="nx">helloworld</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="s1">&#39;Hello wolrd!!!&#39;</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">helloworld</span><span class="p">());</span>
 </code></pre></div>
 <p>Lanciare il comando di transcompilazione</p>
-<div class="highlight"><pre><span></span><code>tsc
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tsc
 </code></pre></div>
 <p>Verrà creata la folder <code>dist</code> con i file transcompilati Javascript.</p>
 <p>Per lanciare il file</p>
-<div class="highlight"><pre><span></span><code>node /dist/index.js 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>node /dist/index.js 
 </code></pre></div>
 <p>O più semplicemente</p>
-<div class="highlight"><pre><span></span><code>node /dist
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>node /dist
 </code></pre></div>
 <p>Dal momento che implicitamente cercherà il file <code>index.js</code> come entry point</p>
 

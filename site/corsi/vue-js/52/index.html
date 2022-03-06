@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,108 +3816,108 @@
 </a>
 
 
-<h1 id="esempio-di-direttiva-personalizzata">Esempio di direttiva personalizzata</h1>
+<h1 id="esempio-di-direttiva-personalizzata">Esempio di direttiva personalizzata<a class="headerlink" href="#esempio-di-direttiva-personalizzata" title="Permanent link">&para;</a></h1>
 <p>Vediamo allora come creare una semplice direttiva da applicare ad un campo di testo. La direttiva aggiunge un bordo all'elemento. Il colore del bordo viene definito tramite un gradiente lineare. La direttiva si occuperà quindi di modificare l'angolo del gradiente man mano che vengono digitati dei caratteri.</p>
 <p>Per semplicità registriamo la direttiva localmente con il nome <strong>border</strong>. La direttiva sarà quindi applicata ad un elemento aggiungendo il prefisso <code>'v-'</code> al suo nome.</p>
 <p>Al fine di illustrare le diverse funzioni disponibili, la nostra direttiva supporterà un argomento per indicare la direzione del gradiente. Tale argomento può assumere uno di tre valori: 'vertical', 'horizontal' e 'diagonal'. La direttiva supporta anche un modificatore <code>'.invert'</code> per invertire la direzione del gradiente lungo l'asse stabilito dall'argomento. Il valore passato alla direttiva deve essere nella forma <code>'color1:color2'</code>. La direttiva si occuperà di prelevare i due colori dalla stringa e di utilizzarli per costruire un gradiente lineare. </p>
 <p>Possiamo poi applicare la direttiva nel seguente formato.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-border:vertical</span><span class="err">.</span><span class="na">invert</span><span class="o">=</span><span class="s">&quot;gradient&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-border:vertical</span><span class="err">.</span><span class="na">invert</span><span class="o">=</span><span class="s">&quot;gradient&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Procediamo allora a creare un nuovo file con estensione <code>.vue</code> contenente il seguente frammento di codice per definire un componente che utilizza la direttiva appena descritta la quale viene registrata localmente.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> 
-      <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> 
-      <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Inserisci del testo...&quot;</span> 
-      <span class="na">v-border:horizontal</span><span class="err">.</span><span class="na">invert</span><span class="o">=</span><span class="s">&quot;gradient&quot;</span>
-    <span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-    <span class="nx">directives</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">border</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">bind</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
-
-          <span class="kd">const</span> <span class="nx">initialAngle</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="nx">diagonal</span><span class="o">:</span> <span class="s1">&#39;45deg&#39;</span><span class="p">,</span>
-            <span class="nx">horizontal</span><span class="o">:</span> <span class="s1">&#39;90deg&#39;</span><span class="p">,</span>
-            <span class="nx">vertical</span><span class="o">:</span> <span class="s1">&#39;0deg&#39;</span>
-          <span class="p">}</span>
-
-          <span class="kd">let</span> <span class="nx">defaultBorder</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;4px&#39;</span><span class="p">,</span>
-            <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;solid&#39;</span><span class="p">,</span>
-            <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#000&#39;</span>
-          <span class="p">};</span>
-
-          <span class="kd">const</span> <span class="nx">getGradient</span> <span class="o">=</span> <span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="nx">color1</span><span class="p">,</span> <span class="nx">color2</span><span class="p">)</span> <span class="p">=&gt;</span> 
-            <span class="sb">`linear-gradient(</span><span class="si">${</span><span class="nx">angle</span><span class="si">}</span><span class="sb">, </span><span class="si">${</span><span class="nx">color1</span><span class="si">}</span><span class="sb">, </span><span class="si">${</span><span class="nx">color2</span><span class="si">}</span><span class="sb">)`</span><span class="p">;</span>
-
-          <span class="c1">// incrementa l&#39;angolo e riparte da capo ogni 360 gradi</span>
-          <span class="c1">// 360%360 === 0  400 % 360 === 40</span>
-          <span class="kd">const</span> <span class="nx">incrementAngle</span> <span class="o">=</span> <span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="nx">increment</span><span class="p">)</span> <span class="p">=&gt;</span>
-            <span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">angle</span><span class="p">)</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">increment</span><span class="p">))</span> <span class="o">%</span> <span class="mf">360</span> <span class="o">+</span> <span class="s1">&#39;deg&#39;</span><span class="p">;</span>
-
-          <span class="kd">let</span> <span class="nx">gradient</span> <span class="o">=</span> <span class="nx">getGradient</span><span class="p">(</span><span class="s1">&#39;0deg&#39;</span><span class="p">,</span> <span class="s1">&#39;#000&#39;</span><span class="p">,</span> <span class="s1">&#39;#000&#39;</span><span class="p">);</span>
-
-          <span class="c1">// un array di colori a partire da una stringa</span>
-          <span class="c1">// es. &#39;090979:00d4ff&#39; =&gt; [&#39;#090979&#39;,&#39;#00d4ff&#39;]</span>
-          <span class="kd">const</span> <span class="nx">colors</span> <span class="o">=</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
-            <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">color</span> <span class="p">=&gt;</span> <span class="nx">color</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span> <span class="o">!==</span> <span class="s1">&#39;#&#39;</span> <span class="o">?</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">color</span> <span class="o">:</span> <span class="nx">color</span><span class="p">);</span>
-
-          <span class="c1">// angolo iniziale del gradiente</span>
-          <span class="kd">let</span> <span class="nx">angle</span> <span class="o">=</span> <span class="nx">initialAngle</span><span class="p">[</span><span class="nx">binding</span><span class="p">.</span><span class="nx">arg</span><span class="p">]</span> <span class="o">||</span> <span class="nx">initialAngle</span><span class="p">.</span><span class="nx">vertical</span><span class="p">;</span>
-
-          <span class="c1">// inverte la direzione del gradiente se richiesto</span>
-          <span class="k">if</span> <span class="p">(</span><span class="nx">binding</span><span class="p">.</span><span class="nx">modifiers</span> <span class="o">&amp;&amp;</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">modifiers</span><span class="p">.</span><span class="nx">invert</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">angle</span> <span class="o">=</span> <span class="nx">incrementAngle</span><span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="mf">180</span><span class="p">);</span>
-          <span class="p">}</span>
-          <span class="c1">// setta spessore e stile del bordo</span>
-          <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">border</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">defaultBorder</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">);</span>
-
-          <span class="k">if</span> <span class="p">(</span><span class="nx">colors</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mf">2</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">gradient</span> <span class="o">=</span> <span class="nx">getGradient</span><span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="nx">colors</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="nx">colors</span><span class="p">[</span><span class="mf">1</span><span class="p">]);</span>
-
-            <span class="c1">// impostazioni per colorare il bordo</span>
-            <span class="c1">// usando un gradiente</span>
-            <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderImageSlice</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
-            <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderImageSource</span> <span class="o">=</span> <span class="nx">gradient</span><span class="p">;</span>
-
-            <span class="c1">// ogni volta che viene digitato un carattere nel campo &lt;input&gt;</span>
-            <span class="c1">// viene incrementato l&#39;angolo di 45 gradi</span>
-            <span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-
-              <span class="nx">angle</span> <span class="o">=</span> <span class="nx">incrementAngle</span><span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="mf">45</span><span class="p">);</span>
-
-              <span class="c1">// aggiorna la direzione del gradiente secondo il nuovo angolo</span>
-              <span class="nx">gradient</span> <span class="o">=</span> <span class="nx">getGradient</span><span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="nx">colors</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="nx">colors</span><span class="p">[</span><span class="mf">1</span><span class="p">]);</span>
-
-              <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderImageSource</span> <span class="o">=</span> <span class="nx">gradient</span><span class="p">;</span>
-            <span class="p">});</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="p">{</span>
-        <span class="nx">gradient</span><span class="o">:</span> <span class="s1">&#39;090979:00d4ff&#39;</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-  <span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">style</span> <span class="na">scoped</span><span class="p">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">input</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">  </span><span class="nt">input</span><span class="p">:</span><span class="nd">active</span><span class="o">,</span><span class="w"> </span><span class="nt">input</span><span class="p">:</span><span class="nd">focus</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">outline</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">.26</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> 
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Inserisci del testo...&quot;</span> 
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      <span class="na">v-border:horizontal</span><span class="err">.</span><span class="na">invert</span><span class="o">=</span><span class="s">&quot;gradient&quot;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="p">&gt;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  <span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="nx">directives</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>      <span class="nx">border</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>        <span class="nx">bind</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>          <span class="kd">const</span> <span class="nx">initialAngle</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            <span class="nx">diagonal</span><span class="o">:</span> <span class="s1">&#39;45deg&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>            <span class="nx">horizontal</span><span class="o">:</span> <span class="s1">&#39;90deg&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>            <span class="nx">vertical</span><span class="o">:</span> <span class="s1">&#39;0deg&#39;</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>          <span class="p">}</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>          <span class="kd">let</span> <span class="nx">defaultBorder</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>            <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;4px&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>            <span class="nx">style</span><span class="o">:</span> <span class="s1">&#39;solid&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>            <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#000&#39;</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>          <span class="p">};</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>          <span class="kd">const</span> <span class="nx">getGradient</span> <span class="o">=</span> <span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="nx">color1</span><span class="p">,</span> <span class="nx">color2</span><span class="p">)</span> <span class="p">=&gt;</span> 
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>            <span class="sb">`linear-gradient(</span><span class="si">${</span><span class="nx">angle</span><span class="si">}</span><span class="sb">, </span><span class="si">${</span><span class="nx">color1</span><span class="si">}</span><span class="sb">, </span><span class="si">${</span><span class="nx">color2</span><span class="si">}</span><span class="sb">)`</span><span class="p">;</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>          <span class="c1">// incrementa l&#39;angolo e riparte da capo ogni 360 gradi</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>          <span class="c1">// 360%360 === 0  400 % 360 === 40</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>          <span class="kd">const</span> <span class="nx">incrementAngle</span> <span class="o">=</span> <span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="nx">increment</span><span class="p">)</span> <span class="p">=&gt;</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>            <span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">angle</span><span class="p">)</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">increment</span><span class="p">))</span> <span class="o">%</span> <span class="mf">360</span> <span class="o">+</span> <span class="s1">&#39;deg&#39;</span><span class="p">;</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>          <span class="kd">let</span> <span class="nx">gradient</span> <span class="o">=</span> <span class="nx">getGradient</span><span class="p">(</span><span class="s1">&#39;0deg&#39;</span><span class="p">,</span> <span class="s1">&#39;#000&#39;</span><span class="p">,</span> <span class="s1">&#39;#000&#39;</span><span class="p">);</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>          <span class="c1">// un array di colori a partire da una stringa</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>          <span class="c1">// es. &#39;090979:00d4ff&#39; =&gt; [&#39;#090979&#39;,&#39;#00d4ff&#39;]</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>          <span class="kd">const</span> <span class="nx">colors</span> <span class="o">=</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>            <span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">color</span> <span class="p">=&gt;</span> <span class="nx">color</span><span class="p">.</span><span class="nx">charAt</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span> <span class="o">!==</span> <span class="s1">&#39;#&#39;</span> <span class="o">?</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">color</span> <span class="o">:</span> <span class="nx">color</span><span class="p">);</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>          <span class="c1">// angolo iniziale del gradiente</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>          <span class="kd">let</span> <span class="nx">angle</span> <span class="o">=</span> <span class="nx">initialAngle</span><span class="p">[</span><span class="nx">binding</span><span class="p">.</span><span class="nx">arg</span><span class="p">]</span> <span class="o">||</span> <span class="nx">initialAngle</span><span class="p">.</span><span class="nx">vertical</span><span class="p">;</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>          <span class="c1">// inverte la direzione del gradiente se richiesto</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>          <span class="k">if</span> <span class="p">(</span><span class="nx">binding</span><span class="p">.</span><span class="nx">modifiers</span> <span class="o">&amp;&amp;</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">modifiers</span><span class="p">.</span><span class="nx">invert</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>            <span class="nx">angle</span> <span class="o">=</span> <span class="nx">incrementAngle</span><span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="mf">180</span><span class="p">);</span>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>          <span class="p">}</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>          <span class="c1">// setta spessore e stile del bordo</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>          <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">border</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">values</span><span class="p">(</span><span class="nx">defaultBorder</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">);</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>          <span class="k">if</span> <span class="p">(</span><span class="nx">colors</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mf">2</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>            <span class="nx">gradient</span> <span class="o">=</span> <span class="nx">getGradient</span><span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="nx">colors</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="nx">colors</span><span class="p">[</span><span class="mf">1</span><span class="p">]);</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>            <span class="c1">// impostazioni per colorare il bordo</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>            <span class="c1">// usando un gradiente</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>            <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderImageSlice</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>            <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderImageSource</span> <span class="o">=</span> <span class="nx">gradient</span><span class="p">;</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>            <span class="c1">// ogni volta che viene digitato un carattere nel campo &lt;input&gt;</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>            <span class="c1">// viene incrementato l&#39;angolo di 45 gradi</span>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>            <span class="nx">el</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>              <span class="nx">angle</span> <span class="o">=</span> <span class="nx">incrementAngle</span><span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="mf">45</span><span class="p">);</span>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>              <span class="c1">// aggiorna la direzione del gradiente secondo il nuovo angolo</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>              <span class="nx">gradient</span> <span class="o">=</span> <span class="nx">getGradient</span><span class="p">(</span><span class="nx">angle</span><span class="p">,</span> <span class="nx">colors</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="nx">colors</span><span class="p">[</span><span class="mf">1</span><span class="p">]);</span>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>              <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">borderImageSource</span> <span class="o">=</span> <span class="nx">gradient</span><span class="p">;</span>
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>            <span class="p">});</span>
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>          <span class="p">}</span>
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>        <span class="p">}</span>
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>      <span class="p">}</span>
+<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>    <span class="p">},</span>
+<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>      <span class="k">return</span> <span class="p">{</span>
+<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>        <span class="nx">gradient</span><span class="o">:</span> <span class="s1">&#39;090979:00d4ff&#39;</span>
+<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>      <span class="p">}</span>
+<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>    <span class="p">},</span>
+<a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a>  <span class="p">}</span>
+<a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a>
+<a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a><span class="p">&lt;</span><span class="nt">style</span> <span class="na">scoped</span><span class="p">&gt;</span><span class="w"></span>
+<a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a><span class="w">  </span><span class="nt">input</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a><span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>
+<a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a><span class="w">  </span><span class="nt">input</span><span class="p">:</span><span class="nd">active</span><span class="o">,</span><span class="w"> </span><span class="nt">input</span><span class="p">:</span><span class="nd">focus</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a><span class="w">    </span><span class="k">outline</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a><span class="w">    </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="mi">8</span><span class="kt">px</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">.26</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div>
 
               

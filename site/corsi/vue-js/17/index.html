@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,38 +3816,38 @@
 </a>
 
 
-<h1 id="v-for-con-array">v-for con array</h1>
+<h1 id="v-for-con-array">v-for con array<a class="headerlink" href="#v-for-con-array" title="Permanent link">&para;</a></h1>
 <p>Possiamo utilizzare la direttiva <code>v-for</code> per iterare su elementi di un array.</p>
-<div class="highlight"><pre><span></span><code>elemento <span class="k">in</span> array
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>elemento <span class="k">in</span> array
 </code></pre></div>
 <p>In cui <code>array</code> è una proprietà d'istanza ed <code>elemento</code> è il nome della variabile che contiene, ad ogni iterazione, un diverso elemento dell'array</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;item in shoppingListItems&quot;</span><span class="p">&gt;</span>
-      {{ item.name }} - {{ item.price }}
-    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;item in shoppingListItems&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      {{ item.name }} - {{ item.price }}
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#root&#39;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">shoppingListItems</span><span class="o">:</span> <span class="p">[</span>
-      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;farina&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;1.00&#39;</span><span class="p">},</span>
-      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;olio&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;5.50&#39;</span> <span class="p">},</span>
-      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;sale&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;0.50&#39;</span> <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">}</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#root&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="nx">shoppingListItems</span><span class="o">:</span> <span class="p">[</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;farina&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;1.00&#39;</span><span class="p">},</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;olio&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;5.50&#39;</span> <span class="p">},</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;sale&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;0.50&#39;</span> <span class="p">}</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="p">]</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  <span class="p">}</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">});</span>
 </code></pre></div>
 <p>Applicata agli array, consente di avere nell'espressione un secondo argomento (opzionale) riferito all'indice dell'elemento corrente.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;(item, index) in shoppingListItems&quot;</span><span class="p">&gt;</span>
-      {{ index }}. {{ item.name }} - {{ item.price }}
-    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;(item, index) in shoppingListItems&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>      {{ index }}. {{ item.name }} - {{ item.price }}
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
 </code></pre></div>
 
               

@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,7 +3816,7 @@
 </a>
 
 
-<h1 id="lattributo-key-per-evitare-comportamenti-indesiderati">L'attributo key per evitare comportamenti indesiderati</h1>
+<h1 id="lattributo-key-per-evitare-comportamenti-indesiderati">L'attributo key per evitare comportamenti indesiderati<a class="headerlink" href="#lattributo-key-per-evitare-comportamenti-indesiderati" title="Permanent link">&para;</a></h1>
 <p>Vue.js non rimuove o aggiunge gli elementi, ma provvede ad apportare solo le modifiche necessarie cercando di riutilizzare le parti che non hanno subito variazioni. In questo modo gli aggiornamenti avvengono in maniera rapida e migliorano considerevolmente le prestazioni della renderizzazione di elementi html</p>
 <p>In questo esempio verranno renderizzati due pulsanti:</p>
 <ul>
@@ -3828,52 +3828,52 @@
 <li>E-mail: Se premuto il pulsante 'Utenti privati'</li>
 <li>Codice aziendale: Se premuto il pulsante 'Aziende'</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> 
-    <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;selectUserType(&#39;privato&#39;)&quot;</span>
-    <span class="na">:disabled</span><span class="o">=</span><span class="s">&quot;userType === &#39;privato&#39;&quot;</span>
-  <span class="p">&gt;</span>Utenti Privati<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> 
-    <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;selectUserType(&#39;azienda&#39;)&quot;</span>
-    <span class="na">:disabled</span><span class="o">=</span><span class="s">&quot;userType === &#39;azienda&#39;&quot;</span>
-  <span class="p">&gt;</span>Aziende<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;userType === &#39;privato&#39;&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>E-mail<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;inserisci la tua email&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Codice Aziendale<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;inserisci il tuo codice identificativo&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">button</span> 
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;selectUserType(&#39;privato&#39;)&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="na">:disabled</span><span class="o">=</span><span class="s">&quot;userType === &#39;privato&#39;&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  <span class="p">&gt;</span>Utenti Privati<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="p">&lt;</span><span class="nt">button</span> 
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;selectUserType(&#39;azienda&#39;)&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="na">:disabled</span><span class="o">=</span><span class="s">&quot;userType === &#39;azienda&#39;&quot;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="p">&gt;</span>Aziende<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;userType === &#39;privato&#39;&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>E-mail<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;inserisci la tua email&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span><span class="p">&gt;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Codice Aziendale<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;inserisci il tuo codice identificativo&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="nx">el</span><span class="o">:</span> <span class="s2">&quot;#root&quot;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">userType</span><span class="o">:</span> <span class="s1">&#39;privato&#39;</span>
-  <span class="p">},</span>
-  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">selectUserType</span><span class="p">(</span><span class="nx">userType</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">userType</span> <span class="o">=</span> <span class="nx">userType</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="nx">el</span><span class="o">:</span> <span class="s2">&quot;#root&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="nx">userType</span><span class="o">:</span> <span class="s1">&#39;privato&#39;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="p">},</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="nx">selectUserType</span><span class="p">(</span><span class="nx">userType</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      <span class="k">this</span><span class="p">.</span><span class="nx">userType</span> <span class="o">=</span> <span class="nx">userType</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="p">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  <span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">});</span>
 </code></pre></div>
 <p>Modificando il valore della proprietà <code>userType</code> presente nello stato <code>data</code>, quindi cliccando sul pulante 'Utenti privati' o 'Aziende' Vue cercherà di riutilizzare lo stesso campo di input e di aggiornare solo l'attributo <code>placeholder</code> con il risultato che i caratteri inseriti nel campo input per 'Utenti privati' verrà riportato anche all'intput 'Aziende' generando un errore</p>
 <p>Per evitare questo tipo di comportamento, in generale non desiderato, possiamo indicare a Vue che si tratta effettivamente di due distinti input e che quindi non dovrà riutilizzare lo stesso elemento <code>&lt;input&gt;</code>.</p>
 <p>E' sufficiente aggiungere l'attributo <code>key</code> con valore univoco agli elementi <input></p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;userType === &#39;privato&#39;&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>E-mail<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">input</span> 
-    <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;inserisci la tua email&quot;</span>
-    <span class="na">key</span><span class="o">=</span><span class="s">&quot;privato&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Codice Aziendale<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">input</span> 
-    <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;inserisci il tuo codice identificativo&quot;</span>
-    <span class="na">key</span><span class="o">=</span><span class="s">&quot;azienda&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;userType === &#39;privato&#39;&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>E-mail<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;inserisci la tua email&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="na">key</span><span class="o">=</span><span class="s">&quot;privato&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span><span class="p">&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Codice Aziendale<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;inserisci il tuo codice identificativo&quot;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="na">key</span><span class="o">=</span><span class="s">&quot;azienda&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 
               

@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,24 +3816,24 @@
 </a>
 
 
-<h1 id="vue-cli-template">Vue cli - template</h1>
+<h1 id="vue-cli-template">Vue cli - template<a class="headerlink" href="#vue-cli-template" title="Permanent link">&para;</a></h1>
 <p>La sezione <template> consente di definire la struttura di un componente utilizzando il linguaggio HTML. In alternativa possiamo usare un'estensione di quest'ultimo, come Pug, specificando l'opportuno attributo lang="pug". Prima della versione 3 di Vue.js non è consentito avere più di un elemento base nei template. Per questo motivo due o più elementi adiacenti devono essere inseriti in un solo elemento base come mostrato sotto.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>La logica di un componente sarà racchiusa fra tag <code>&lt;script&gt;</code>. In questo caso <strong>è possibile sostituire Javascript con TypeScript</strong> specificando l'attributo <code>lang="ts"</code> sull'elemento <code>&lt;script&gt;</code>. Sempre tra i tag <code>&lt;script&gt;</code> possiamo importare altri componenti o funzioni esterne. Esportiamo poi un oggetto di opzioni del tutto identico a quello che nelle precedenti lezioni abbiamo passato al metodo <code>Vue.component()</code>.</p>
 <p>Rispetto all'approccio visto in esempi passati, abbiamo un elemento <code>&lt;style&gt;</code> nel quale andremo a specificare delle regole CSS. La loro visibilità può essere ristretta al singolo componente attraverso l'attributo scoped. In questo modo le regole CSS avranno valore solo per il singolo componente e non influenzeranno minimamente neanche i componenti discendenti.</p>
 <p>Sempre tramite l'attributo <code>lang</code> è possibile indicare che si ha intenzione di utilizzare un preprocessore come <strong>SASS</strong> o <strong>Less</strong> oppure uno strumento come <strong>PostCSS</strong>.</p>
 <p>Vue CLI permette di lavorare con i file con estensione <code>.vue</code> occupandosi di tutte le operazioni di elaborazione e compilazione. Possiamo anche visualizzare un solo file grazie ad una funzione che prende il nome di Instant Prototyping per la quale dovremo però installare un package aggiuntivo.</p>
 <p>Procediamo quindi con l'installazione e vediamo come visualizzare un'anteprima del file creato sopra nel browser. Per questo motivo apriamo la shell dei comandi ed installiamo i package necessari.</p>
-<div class="highlight"><pre><span></span><code>npm install -g @vue/cli @vue/cli-service-global
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npm install -g @vue/cli @vue/cli-service-global
 </code></pre></div>
 <p>A questo punto possiamo visualizzare il contatore visto in precedenza spostandoci nella cartella in cui è presente il file <code>Counter.vue</code> ed eseguendo il seguente comando.</p>
-<div class="highlight"><pre><span></span><code>vue serve Counter.vue
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vue serve Counter.vue
 </code></pre></div>
 
               

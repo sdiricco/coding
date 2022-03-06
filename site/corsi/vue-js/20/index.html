@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,33 +3816,33 @@
 </a>
 
 
-<h1 id="usare-lattributo-key-per-evitare-effetti-indesiderati">Usare l'attributo key per evitare effetti indesiderati</h1>
+<h1 id="usare-lattributo-key-per-evitare-effetti-indesiderati">Usare l'attributo key per evitare effetti indesiderati<a class="headerlink" href="#usare-lattributo-key-per-evitare-effetti-indesiderati" title="Permanent link">&para;</a></h1>
 <p>Vue raccomanda di utilizzare un attributo <code>key</code> univoco quando si applica la direttiva <code>v-for</code>. Come vedremo successivamente <code>key</code> è obbligatorio quando <code>v-for</code> viene applicata a componenti da noi definiti al fine di mantenere lo stato interno del componente e dei suoi discendenti.</p>
 <p>Anche per gli elementi HTML predefiniti è fortemente consigliato usare <code>key</code> specie quando <code>v-for</code> è applicata ad elementi che mantengono uno stato interno come avviene per gli elementi di tipo <code>&lt;input&gt;</code> dei <code>form</code>.</p>
 <p>Le ragioni sono simili a quelle già esposte nella precedentemente quando abbiamo illustrato il funzionamento della direttiva <code>v-if</code>.</p>
 <p>Infatti, al fine di aggiornare gli elementi di una lista costruita con <code>v-for</code>, Vue usa una strategia definta "in-place patch". Ciò vuol dire che <strong>se l'ordine degli elementi di un array cambia, invece di spostare gli elementi del DOM secondo il nuovo ordine, Vue cerca di riutilizzare gli elementi già presenti nel DOM apportando solo le modifiche specifiche alle sezioni che sono state aggiornate</strong>.</p>
 <p>Questo comportamento permette di ottenere miglioramenti in termini di prestazioni, ma crea comportamenti indesiderati nel caso di elementi che mantengono uno stato interno come i valori dei campi di input di un form. </p>
 <p>Per permettere a Vue di identificare e tenere traccia di ciascun nodo del DOM ed evitare malfunzionamenti inattesi, sarà sufficiente specificare un attributo <code>key</code> sugli elementi.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#root&#39;</span><span class="p">,</span>
-  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">shoppingListItems</span><span class="o">:</span> <span class="p">[</span>
-      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;farina&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;1.00&#39;</span><span class="p">},</span>
-      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;olio&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;5.50&#39;</span> <span class="p">},</span>
-      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;sale&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;0.50&#39;</span> <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">}</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#root&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="nx">shoppingListItems</span><span class="o">:</span> <span class="p">[</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;farina&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;1.00&#39;</span><span class="p">},</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;olio&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;5.50&#39;</span> <span class="p">},</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;sale&#39;</span><span class="p">,</span> <span class="nx">price</span><span class="o">:</span> <span class="s1">&#39;0.50&#39;</span> <span class="p">}</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="p">]</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">});</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-  <span class="cm">&lt;!-- RICORDA che :key è la forma sintetica di v-bind:key --&gt;</span>
-  <span class="p">&lt;</span><span class="nt">li</span> 
-    <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;item in shoppingListItems&quot;</span>
-    <span class="na">:key</span><span class="o">=</span><span class="s">&quot;item.id&quot;</span>
-  <span class="p">&gt;</span>
-    {{ item.name }} - {{ item.price }}
-  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="cm">&lt;!-- RICORDA che :key è la forma sintetica di v-bind:key --&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="p">&lt;</span><span class="nt">li</span> 
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;item in shoppingListItems&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="na">:key</span><span class="o">=</span><span class="s">&quot;item.id&quot;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="p">&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    {{ item.name }} - {{ item.price }}
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </code></pre></div>
 
               

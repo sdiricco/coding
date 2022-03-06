@@ -1,61 +1,75 @@
 # Rust
 
+![rust](./images/rust.jpg)
+
 ## Installa Rust
 
-Dalla [pagina ufficiale](https://www.rust-lang.org/it/tools/install), installa rust per il tuo sistema operativo.
+Puoi installare rust per il tuo sistema operativo dalla [pagina ufficiale](https://www.rust-lang.org/it/tools/install)
 
 Una volta installato verifica che la toolchain, il compilatore e il package manager siano raggiungibili da terminale
 
-- **rustup**: Rust toolchain manager
-
-```sh
-rustup --version
-```
-
+- **rustup**: Rust toolchain
 - **rustc**: Rust compiler
+- **cargo**: package manager
 
-```sh
-rustc --version
-```
+=== ":octicons-terminal-16: rustup"
 
-- **cargo**: Rust package manager
+    ```javascript
+    rustup --version
+    ```
 
-```sh
-cargo --version
-```
+=== ":octicons-terminal-16: rustc"
+
+    ```javascript
+    rustc --version
+    ```
+
+=== ":octicons-terminal-16: cargo"
+
+    ```javascript
+    cargo --version
+    ```
+
 
 ## Hello Rust!
 
-Ecco il primo programma `rust`. Crea un file con estensione `.rs` e stampa il tuo primo **hello world**
+Stampa il tuo primo **Hello World** con Rust.
 
-```rs
-//hello.rs
-fn main(){
-    println!("hello world")
-}
-```
+=== ":fontawesome-brands-rust: main.rs"
 
-Compila con:
+    ```rs
+    fn main(){
+        println!("Hello World!")
+    }
+    ```
 
-```sh
-rustc .\hello.rs
-```
+=== ":octicons-terminal-16: compila"
 
-Ed esegui il binario
+    ```sh
+    rustc ./main.rs
+    ```
 
-```sh
-.\hello
-```
+=== ":octicons-terminal-16: esegui"
+
+    ```sh
+    ./main
+    ```
+
+=== ":octicons-terminal-16: output"
+
+    ```sh
+    Hello World
+    ```
 
 ## Inizializza un progetto con cargo
 
-Per inizializzare un progetto `rust` digita 
+Puoi inizializzare un progetto `rust` con: 
 
 ```sh
 cargo init
 ```
 
-Creerà un file `Cargo.toml` con il seguente contenuto
+Creerà un file `Cargo.toml`
 
 ```toml
 [package]
@@ -70,7 +84,7 @@ edition = "2021"
 
 E una cartella `src` con l'entry file rust `main.rs`
 
-Per lanciare l'applicazione con il comando
+Puoi lanciare l'applicazione di esempio con il comando
 
 ```sh
 cargo run
@@ -359,4 +373,93 @@ pub fn run() {
 
   println!("Numbers Vec: {:?}", numbers);
 }
+```
+
+## Costrutti condizionali
+
+- Used to check the condition of something and act on the result
+
+```rs
+pub fn run() {
+  let age: u8 = 22;
+  let check_id: bool = true;
+  let knows_person_of_age = true;
+
+  // If/Else
+  if age >= 21 && check_id || knows_person_of_age {
+    println!("Bartender: What would you like to drink?");
+  } else if age < 21 && check_id {
+    println!("Bartender: Sorry, you have to leave");
+  } else {
+    println!("Bartender: I'll need to see your ID");
+  }
+
+  // Shorthand If
+  let is_of_age = if age >= 21 { true } else { false };
+  println!("Is Of Age: {}", is_of_age)
+}
+```
+
+## Loops
+
+Used to iterate until a condition is met
+
+### Infinite Loop
+
+```rs
+pub fn run() {
+  let mut count = 0;
+
+  // Infinite Loop
+  loop {
+    count += 1;
+    println!("Number: {}", count);
+
+    if count == 20 {
+      break;
+    }
+  }
+```
+
+### While Loop
+
+```rs
+pub fn run() {
+  let mut count = 0;
+
+  // While Loop (FizzBuzz)
+  while count <= 100 {
+    if count % 15 == 0 {
+      println!("fizzbuzz");
+    } else if count % 3 == 0 {
+      println!("fizz");
+    } else if count % 5 == 0 {
+      println!("buzz")
+    } else {
+      println!("{}", count);
+    }
+
+    // Inc
+    count += 1;
+  }
+```
+
+### For Range
+
+```rs
+pub fn run() {
+  // For Range
+  for x in 0..100 {
+    if x % 15 == 0 {
+      println!("fizzbuzz");
+    } else if x % 3 == 0 {
+      println!("fizz");
+    } else if x % 5 == 0 {
+      println!("buzz")
+    } else {
+      println!("{}", x);
+    }
+  }
+}
+
 ```

@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3862,35 +3862,35 @@
 </a>
 
 
-<h1 id="components-in-vue-app-qrcode-part-5-">Components in vue - app qrcode part 5 -</h1>
+<h1 id="components-in-vue-app-qrcode-part-5-">Components in vue - app qrcode part 5 -<a class="headerlink" href="#components-in-vue-app-qrcode-part-5-" title="Permanent link">&para;</a></h1>
 <p>Analizziamo il componente <code>QrDownloadButtons</code></p>
-<div class="highlight"><pre><span></span><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">QrDownloadButtons</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;qr-download-buttons&quot;</span><span class="p">,</span>
-  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">imgSrc</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
-    <span class="nx">svgSrc</span><span class="o">:</span> <span class="nb">String</span>
-  <span class="p">},</span>
-  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">timestamp</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">template</span><span class="o">:</span> <span class="sb">`</span>
-<span class="sb">    &lt;div class=&quot;download-area&quot;&gt;</span>
-<span class="sb">      &lt;div class=&quot;buttons&quot;&gt;</span>
-<span class="sb">        &lt;a class=&quot;btn&quot; :href=&quot;imgSrc&quot; :download=&quot;&#39;qr_code_&#39; + timestamp() + &#39;.jpeg&#39;&quot;&gt;</span>
-<span class="sb">          Download &lt;br&gt;&lt;small&gt;jpeg&lt;/small&gt;</span>
-<span class="sb">        &lt;/a&gt;</span>
-<span class="sb">        &lt;a class=&quot;btn&quot; :href=&quot;svgSrc&quot; :download=&quot;&#39;qr_code_&#39; + timestamp() + &#39;.svg&#39;&quot;&gt;</span>
-<span class="sb">          Download &lt;br&gt;&lt;small&gt;svg&lt;/small&gt;</span>
-<span class="sb">        &lt;/a&gt;</span>
-<span class="sb">      &lt;/div&gt;</span>
-<span class="sb">    &lt;/div&gt;</span>
-<span class="sb">  `</span>
-<span class="p">};</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">export</span> <span class="kd">const</span> <span class="nx">QrDownloadButtons</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;qr-download-buttons&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="nx">imgSrc</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="nx">svgSrc</span><span class="o">:</span> <span class="nb">String</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="p">},</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="nx">timestamp</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>      <span class="k">return</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  <span class="p">},</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  <span class="nx">template</span><span class="o">:</span> <span class="sb">`</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="sb">    &lt;div class=&quot;download-area&quot;&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="sb">      &lt;div class=&quot;buttons&quot;&gt;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="sb">        &lt;a class=&quot;btn&quot; :href=&quot;imgSrc&quot; :download=&quot;&#39;qr_code_&#39; + timestamp() + &#39;.jpeg&#39;&quot;&gt;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="sb">          Download &lt;br&gt;&lt;small&gt;jpeg&lt;/small&gt;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="sb">        &lt;/a&gt;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="sb">        &lt;a class=&quot;btn&quot; :href=&quot;svgSrc&quot; :download=&quot;&#39;qr_code_&#39; + timestamp() + &#39;.svg&#39;&quot;&gt;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="sb">          Download &lt;br&gt;&lt;small&gt;svg&lt;/small&gt;</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="sb">        &lt;/a&gt;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="sb">      &lt;/div&gt;</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="sb">    &lt;/div&gt;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="sb">  `</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">};</span>
 </code></pre></div>
 <p>Per questo componente non c'è granchè da notare tranne la renderizzazione e l'uso delle prop <code>imgSrc</code> e <code>svgSrc</code></p>
-<h2 id="conclusioni">Conclusioni</h2>
+<h2 id="conclusioni">Conclusioni<a class="headerlink" href="#conclusioni" title="Permanent link">&para;</a></h2>
 <p>Il metodo utilizzato per la creazione di questa app in generale non viene utilizzato ma permette di capire come interagire con i concetti base di Vue.
 Normalmente viene utilizzato uno strumento <strong>Vue CLI</strong> che permette di organizzare in modo più pulito l'applicazione in componenti con estensione <code>.vue</code> </p>
 

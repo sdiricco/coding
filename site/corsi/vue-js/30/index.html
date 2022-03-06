@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,41 +3816,41 @@
 </a>
 
 
-<h1 id="vue-cli-inizializzazione-di-un-progetto">Vue cli - Inizializzazione di un progetto</h1>
+<h1 id="vue-cli-inizializzazione-di-un-progetto">Vue cli - Inizializzazione di un progetto<a class="headerlink" href="#vue-cli-inizializzazione-di-un-progetto" title="Permanent link">&para;</a></h1>
 <p>Per inizializzare un progetto vue e l'ambiente necessario è sufficiente lanciare il comando:</p>
-<div class="highlight"><pre><span></span><code>vue create myApp
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>vue create myApp
 </code></pre></div>
 <p>Seguendo la procedura guidata, verrà configurato il progetto e creata la seguente struttura</p>
-<div class="highlight"><pre><span></span><code>tree -aF --dirsfirst -I node_modules 
-.
-├── public/
-│   ├── favicon.ico
-│   └── index.html
-├── src/
-│   ├── assets/
-│   │   └── logo.png
-│   ├── components/
-│   │   └── HelloWorld.vue
-│   ├── App.vue
-│   └── main.js
-├── .gitignore
-├── README.md
-├── babel.config.js
-├── package-lock.json
-└── package.json
-
-<span class="m">4</span> directories, <span class="m">11</span> files
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tree -aF --dirsfirst -I node_modules 
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>.
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── public/
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   ├── favicon.ico
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   └── index.html
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── src/
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   ├── assets/
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│   │   └── logo.png
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   ├── components/
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│   │   └── HelloWorld.vue
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│   ├── App.vue
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│   └── main.js
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>├── .gitignore
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>├── README.md
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>├── babel.config.js
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>├── package-lock.json
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>└── package.json
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="m">4</span> directories, <span class="m">11</span> files
 </code></pre></div>
 <p>E' possibile inizializzare il progetto anche utilizzando uno strumento da interfaccia grafica lanciando:</p>
-<div class="highlight"><pre><span></span><code>vue ui
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>vue ui
 </code></pre></div>
 <p>A questo punto puoi lanciare il progetto utilizzando:</p>
-<div class="highlight"><pre><span></span><code>npm run serve
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npm run serve
 </code></pre></div>
 <p>|Nota|
 |---|
 |Su dovrai impostare il parametro <code>fs.inotify.max_user_watches</code> lnaciando il comando:
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span> fs.inotify.max_user_watches<span class="o">=</span><span class="m">524288</span> <span class="p">|</span> sudo tee -a /etc/sysctl.conf <span class="o">&amp;&amp;</span> sudo sysctl -p
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span> fs.inotify.max_user_watches<span class="o">=</span><span class="m">524288</span> <span class="p">|</span> sudo tee -a /etc/sysctl.conf <span class="o">&amp;&amp;</span> sudo sysctl -p
 </code></pre></div>
 |</p>
 

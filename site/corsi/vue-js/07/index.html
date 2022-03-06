@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,31 +3816,31 @@
 </a>
 
 
-<h1 id="eventi-generati-dal-mouse">Eventi generati dal mouse</h1>
+<h1 id="eventi-generati-dal-mouse">Eventi generati dal mouse<a class="headerlink" href="#eventi-generati-dal-mouse" title="Permanent link">&para;</a></h1>
 <p>A partire dalla versione 2.2.0 sono stati introdotti tre modificatori per limitare il tipo di evento da gestire in seguito al click del mouse.</p>
 <ul>
 <li><code>left</code>: evento click tasto sinistro del mouse</li>
 <li><code>middle</code>: evento click tasto sinistro del mouse</li>
 <li><code>right</code>: evento click tasto sinistro del mouse</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="cm">&lt;!--index.html--&gt;</span>
-<span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="err">.</span><span class="na">prevent</span><span class="err">.</span><span class="na">right</span><span class="o">=</span><span class="s">&quot;onClick&quot;</span><span class="p">&gt;</span>click<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">&lt;!--index.html--&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">main</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;root&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="err">.</span><span class="na">prevent</span><span class="err">.</span><span class="na">right</span><span class="o">=</span><span class="s">&quot;onClick&quot;</span><span class="p">&gt;</span>click<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">//app.js</span>
-<span class="kd">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
-  <span class="nx">el</span><span class="o">:</span> <span class="s2">&quot;#root&quot;</span><span class="p">,</span>
-  <span class="c1">// definiamo i metodi dell&#39;istanza</span>
-  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">onClick</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// tramite modificatore .right</span>
-      <span class="c1">// onClick viene invocato solo al click</span>
-      <span class="c1">// del tasto destro del mouse</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">button</span><span class="p">);</span> <span class="c1">// stampa solo 2</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">});</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">//app.js</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">Vue</span><span class="p">({</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="nx">el</span><span class="o">:</span> <span class="s2">&quot;#root&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="c1">// definiamo i metodi dell&#39;istanza</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="nx">onClick</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      <span class="c1">// tramite modificatore .right</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      <span class="c1">// onClick viene invocato solo al click</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>      <span class="c1">// del tasto destro del mouse</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">button</span><span class="p">);</span> <span class="c1">// stampa solo 2</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  <span class="p">}</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">});</span>
 </code></pre></div>
 <p>Nell'esempio appena presentato, il metodo <code>onClick</code> viene invocato solo in seguito al click destro del mouse grazie all'uso del modificatore <code>.right</code>. Abbiamo anche utilizzato il modificatore <code>.prevent</code> per evitare che venga aperto un menù contestuale.</p>
 

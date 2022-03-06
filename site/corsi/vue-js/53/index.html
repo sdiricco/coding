@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,65 +3816,65 @@
 </a>
 
 
-<h1 id="argomenti-dinamici-per-le-direttive">Argomenti dinamici per le direttive</h1>
+<h1 id="argomenti-dinamici-per-le-direttive">Argomenti dinamici per le direttive<a class="headerlink" href="#argomenti-dinamici-per-le-direttive" title="Permanent link">&para;</a></h1>
 <p>Gli argomenti delle direttive possono essere dinamici e cambiare in base al valore di una certa proprietà di un componente.</p>
 <p>Per indicare che si tratta di un argomento dinamico, dovremo racchiudere quest'ultimo fra parentesi quadre, per esempio: <code>v-dir-name:[dynamic-argument]</code></p>
 <p>Creiamo allora un altro semplice esempio in cui sfruttiamo un argomento dinamico per decidere se colorare lo sfondo o il bordo di un elemento utilizzando il valore della direttiva.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-colorize:</span><span class="err">[</span><span class="na">selected</span><span class="err">]=&quot;</span><span class="na">color</span><span class="err">&quot;</span><span class="p">&gt;</span>
-      Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, 
-      vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. 
-      Nullam id dolor id nibh ultricies vehicula ut id elit. 
-      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> 
-        <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> 
-        <span class="na">name</span><span class="o">=</span><span class="s">&quot;background-color&quot;</span> 
-        <span class="na">id</span><span class="o">=</span><span class="s">&quot;background-color&quot;</span> 
-        <span class="na">value</span><span class="o">=</span><span class="s">&quot;background-color&quot;</span> 
-        <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;selected&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;background-color&quot;</span><span class="p">&gt;</span>Background<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">input</span> 
-        <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> 
-        <span class="na">name</span><span class="o">=</span><span class="s">&quot;border&quot;</span> 
-        <span class="na">id</span><span class="o">=</span><span class="s">&quot;border&quot;</span> 
-        <span class="na">value</span><span class="o">=</span><span class="s">&quot;border&quot;</span> 
-        <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;selected&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;border&quot;</span><span class="p">&gt;</span>Border<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
-    <span class="nx">directives</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">colorize</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">const</span> <span class="nx">cssProperty</span> <span class="o">=</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">arg</span> <span class="o">||</span> <span class="s1">&#39;background-color&#39;</span><span class="p">;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">cssProperty</span> <span class="o">===</span> <span class="s1">&#39;border&#39;</span><span class="p">)</span> <span class="p">{</span>
-          <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="sb">`2px solid </span><span class="si">${</span><span class="nx">binding</span><span class="p">.</span><span class="nx">value</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-          <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="s1">&#39;background-color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">cssProperty</span> <span class="o">===</span> <span class="s1">&#39;background-color&#39;</span><span class="p">)</span> <span class="p">{</span>
-          <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="s1">&#39;border&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> 
-        <span class="p">}</span>
-        <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="nx">cssProperty</span><span class="p">]</span> <span class="o">=</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="p">{</span>
-        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span>
-        <span class="nx">selected</span><span class="o">:</span> <span class="s1">&#39;background-color&#39;</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-  <span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">style</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;css&quot;</span> <span class="na">scoped</span><span class="p">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-colorize:</span><span class="err">[</span><span class="na">selected</span><span class="err">]=&quot;</span><span class="na">color</span><span class="err">&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, 
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. 
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      Nullam id dolor id nibh ultricies vehicula ut id elit. 
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> 
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="na">name</span><span class="o">=</span><span class="s">&quot;background-color&quot;</span> 
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="na">id</span><span class="o">=</span><span class="s">&quot;background-color&quot;</span> 
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        <span class="na">value</span><span class="o">=</span><span class="s">&quot;background-color&quot;</span> 
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;selected&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;background-color&quot;</span><span class="p">&gt;</span>Background<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      <span class="p">&lt;</span><span class="nt">input</span> 
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> 
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        <span class="na">name</span><span class="o">=</span><span class="s">&quot;border&quot;</span> 
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="na">id</span><span class="o">=</span><span class="s">&quot;border&quot;</span> 
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        <span class="na">value</span><span class="o">=</span><span class="s">&quot;border&quot;</span> 
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;selected&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;border&quot;</span><span class="p">&gt;</span>Border<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>  <span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="nx">directives</span><span class="o">:</span> <span class="p">{</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>      <span class="nx">colorize</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">binding</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>        <span class="kd">const</span> <span class="nx">cssProperty</span> <span class="o">=</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">arg</span> <span class="o">||</span> <span class="s1">&#39;background-color&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>        <span class="k">if</span> <span class="p">(</span><span class="nx">cssProperty</span> <span class="o">===</span> <span class="s1">&#39;border&#39;</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>          <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="sb">`2px solid </span><span class="si">${</span><span class="nx">binding</span><span class="p">.</span><span class="nx">value</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>          <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="s1">&#39;background-color&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">cssProperty</span> <span class="o">===</span> <span class="s1">&#39;background-color&#39;</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>          <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="s1">&#39;border&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> 
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>        <span class="p">}</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>        <span class="nx">el</span><span class="p">.</span><span class="nx">style</span><span class="p">[</span><span class="nx">cssProperty</span><span class="p">]</span> <span class="o">=</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>      <span class="p">}</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    <span class="p">},</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    <span class="nx">data</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>      <span class="k">return</span> <span class="p">{</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>        <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>        <span class="nx">selected</span><span class="o">:</span> <span class="s1">&#39;background-color&#39;</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>      <span class="p">}</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    <span class="p">},</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>  <span class="p">}</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="p">&lt;</span><span class="nt">style</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;css&quot;</span> <span class="na">scoped</span><span class="p">&gt;</span><span class="w"></span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">  </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Nell'esempio riportato sopra, creiamo una direttiva colorize che registriamo localmente ed applichiamo all'unico paragrafo presente nel template del componente. Attraverso dei pulsanti di tipo radio modifichiamo la proprietà selected la quale può assumere come valore 'background-color' o 'color'. Quando questa cambia, viene aggiornato il componente e viene passato il nuovo argomento alla direttiva. La direttiva sfrutta l'argomento dinamico per definire il colore dello sfondo o del bordo del paragrafo. Il colore da usare viene passato come valore della direttiva. Visto che il corpo delle funzioni bind() e update() è identico, definiamo il comportamento della direttiva attraverso una funzione.</p>
 <p>Prima di definire una nuova direttiva da zero, può essere utile cercare su NPM se ne esiste già una perché è possibile che qualcuno abbia dovuto risolvere uno stesso problema prima di noi.</p>

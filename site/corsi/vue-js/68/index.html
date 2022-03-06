@@ -195,7 +195,7 @@
 
   <li class="md-tabs__item">
     <a href="../../.." class="md-tabs__link">
-      Benvenuto!
+      Hello Coders
     </a>
   </li>
 
@@ -301,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Benvenuto!
+        Hello Coders
       </a>
     </li>
   
@@ -3816,7 +3816,7 @@
 </a>
 
 
-<h1 id="esempio-di-applicazione-in-vuex">Esempio di applicazione in Vuex</h1>
+<h1 id="esempio-di-applicazione-in-vuex">Esempio di applicazione in Vuex<a class="headerlink" href="#esempio-di-applicazione-in-vuex" title="Permanent link">&para;</a></h1>
 <p>Creiamo allora un semplice esempio per illustrare in pratica il funzionamento di Vuex. Si tratta di un'applicazione la cui interfaccia presenta tre pulsanti: uno consente di ottenere un nuovo numero casuale, gli altri due permettono di decrementarlo e incrementarlo rispettivamente.</p>
 <p><img alt="" src="../images/esempio-vuex-generatore-numeri-casuali.jpg" /></p>
 <p>Il numero casuale non viene generato dall'applicazione nel browser, bensì da un server al quale inviamo una richiesta di tipo GET per ottenere un nuovo valore.</p>
@@ -3839,62 +3839,62 @@
 </li>
 </ul>
 <p>Aspettiamo che Vue CLI completi la procedura di generazione dei file e dopo qualche minuto verrà creata una nuova cartella vuex-example con i seguenti file (omettiamo la cartella node_modules per semplicità).</p>
-<div class="highlight"><pre><span></span><code>tree vuex-example -aF --dirsfirst -I node_modules
-vuex-example
-├── public/
-│   ├── favicon.ico
-│   └── index.html
-├── src/
-│   ├── assets/
-│   │   └── logo.png
-│   ├── components/
-│   │   └── HelloWorld.vue
-│   ├── store/
-│   │   └── index.js
-│   ├── App.vue
-│   └── main.js
-├── .browserslistrc
-├── .eslintrc.js
-├── .gitignore
-├── .prettierrc.js
-├── README.md
-├── babel.config.js
-├── package-lock.json
-└── package.json
-
-<span class="m">5</span> directories, <span class="m">15</span> files
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>tree vuex-example -aF --dirsfirst -I node_modules
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>vuex-example
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── public/
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   ├── favicon.ico
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   └── index.html
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── src/
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│   ├── assets/
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│   │   └── logo.png
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│   ├── components/
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│   │   └── HelloWorld.vue
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│   ├── store/
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│   │   └── index.js
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│   ├── App.vue
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│   └── main.js
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>├── .browserslistrc
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├── .eslintrc.js
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>├── .gitignore
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>├── .prettierrc.js
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>├── README.md
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>├── babel.config.js
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>├── package-lock.json
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>└── package.json
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="m">5</span> directories, <span class="m">15</span> files
 </code></pre></div>
 <p>Procediamo eliminando i file non necessari ed aggiungendo quelli che poi useremo nel resto dell'applicazione. Otteniamo quindi la seguente struttura della cartella base del progetto.</p>
-<div class="highlight"><pre><span></span><code>tree vuex-example -aF --dirsfirst -I node_modules
-vuex-example
-├── public/
-│   ├── favicon.ico
-│   └── index.html
-├── src/
-│   ├── assets/
-│   │   └── logo.png
-│   ├── components/
-│   │   ├── CounterButtons.vue
-│   │   ├── CounterDisplay.vue
-│   │   └── LoadingSpinner.vue
-│   ├── services/
-│   │   └── RandomNumberService.js
-│   ├── store/
-│   │   └── index.js
-│   ├── App.vue
-│   └── main.js
-├── .browserslistrc
-├── .env.development
-├── .eslintrc.js
-├── .gitignore
-├── .prettierrc.js
-├── README.md
-├── babel.config.js
-├── package-lock.json
-├── package.json
-└── server.js
-
-<span class="m">6</span> directories, <span class="m">20</span> files
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tree vuex-example -aF --dirsfirst -I node_modules
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>vuex-example
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>├── public/
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   ├── favicon.ico
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   └── index.html
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── src/
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   ├── assets/
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│   │   └── logo.png
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│   ├── components/
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│   │   ├── CounterButtons.vue
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│   │   ├── CounterDisplay.vue
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>│   │   └── LoadingSpinner.vue
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>│   ├── services/
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>│   │   └── RandomNumberService.js
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>│   ├── store/
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>│   │   └── index.js
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>│   ├── App.vue
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>│   └── main.js
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>├── .browserslistrc
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>├── .env.development
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>├── .eslintrc.js
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>├── .gitignore
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>├── .prettierrc.js
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>├── README.md
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>├── babel.config.js
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>├── package-lock.json
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>├── package.json
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>└── server.js
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="m">6</span> directories, <span class="m">20</span> files
 </code></pre></div>
 
               
