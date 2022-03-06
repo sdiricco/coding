@@ -123,6 +123,11 @@ html {
 
 }
 
+.md-typeset pre>code::-webkit-scrollbar-thumb:hover {
+  background: var(--code-border-color); 
+
+}
+
 .md-typeset img{
   border-radius: 8px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4) !important; 
@@ -167,6 +172,11 @@ html {
 
 .md-typeset .tabbed-labels>label{
   border-bottom: none;
+}
+
+.js .md-typeset .tabbed-labels:before {
+  left: 1px;
+  border-radius: 4px;
 }
 
 .md-footer-meta__inner.md-grid {
