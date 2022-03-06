@@ -166,6 +166,14 @@ html {
 
 }
 
+@media screen and (max-width: 44.9375em){
+  .md-content__inner>.tabbed-set .tabbed-labels{
+    padding-left: 0px !important;
+    margin: 0px;
+  }
+} 
+
+
 .md-typeset .tabbed-labels{
   box-shadow: none;
 }
@@ -175,7 +183,6 @@ html {
 }
 
 .js .md-typeset .tabbed-labels:before {
-  left: 1px;
   border-radius: 4px;
 }
 
