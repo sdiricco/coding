@@ -119,7 +119,7 @@ html {
 /* Handle */
 .md-typeset pre>code::-webkit-scrollbar-thumb {
   background: var(--code-border-color); 
-  border-radius: 8px;
+  border-radius: 8px !important;
 
 }
 
@@ -145,6 +145,20 @@ html {
   .md-nav--primary .md-nav__title {
     color: var(--nav-color-header);
   }
+}
+
+
+@media screen and (max-width: 44.9375em){
+  .md-content__inner>.highlight{
+    display: contents;
+  }
+}
+
+@media screen and (max-width: 44.9375em){
+  .md-content__inner>.highlight code{
+    border-radius: 8px;
+  }
+
 }
 
 .md-footer-meta__inner.md-grid {
