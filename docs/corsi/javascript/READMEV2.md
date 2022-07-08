@@ -42,6 +42,7 @@ Come integro codice javascript all'interno di una pagina html?
 ### Javascript all'interno del tag `script`
 E' possibile inserire codice Javascript direttamente all'interno della pagina html tramite il tag `<script>`.
 
+
 ```html
 <!--File index.html-->
 <!DOCTYPE html>
@@ -334,6 +335,7 @@ Riscrivendo il codice abbiamo:
 </body>
 </html>
 ```
+ssassk
 
 Altri metodi equivalenti:
 
@@ -8886,3 +8888,8 @@ key1 1
 key2 2
 */
 ```
+
+
+
+
+ciaooo

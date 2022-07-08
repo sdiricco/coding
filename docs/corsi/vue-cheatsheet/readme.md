@@ -1,6 +1,21 @@
 # Vue cheatsheet
 
+![vue](./images/vue.jpg)
+
 Vue.js is an open-source Model–view–viewmodel JavaScript framework for building user interfaces and single-page applications.
+
+## Vue Cli
+
+### Installation
+```sh
+npm install -g @vue/cli
+```
+
+### Create vue project
+```sh
+vue create .
+```
+
 
 ## Basic template
 
@@ -46,27 +61,24 @@ export default {
 ```html
 <template>
   <div id="app">
-    <p>I have a {{ product }}</p>
-    <p>{{ product + 's' }}</p>
-    <p>{{ isWorking ? 'YES' : 'NO' }}</p>
+    <h2>Products</h2>
+    <p>Product: {{ product }}</p>
+    <p>Price: {{ price }}$</p>
+    <p>Available: {{ available ? "Yes" : "No" }}</p>
   </div>
 </template>
 
 <script>
 export default {
   name: "myCompName",
-  props:{
-    product:{
-      type: String,
-      default: "myProduct"
-    }
-  },
   data() {
     return {
-      isWorking: false
-    }
-  }
-}
+      product: "Personal computer",
+      price: 50,
+      available: true,
+    };
+  },
+};
 </script>
 
 <style>
@@ -74,15 +86,18 @@ export default {
 </style>
 ```
 
+[Edit in codesandbox.io](https://codesandbox.io/s/vue-expressions-j9et9d?file=/src/App.vue)
+
 ## Binding
 
 ```html
 <template>
   <div id="app">
-    <a :href="url">click me</a>
-    <button :disabled="isButtonDisabled"></button>
-    <div :class="{ active: isActive }"></div>
-    <div :style="{ color: activeColor }"></div>
+    <h2>Bindings</h2>
+    <a :href="url">Here</a>
+    <p :class="{ active: isActive }">You can learn bindings</p>
+    <p :style="{ color: activeColor }">and more ...</p>
+    <button :disabled="isButtonDisabled">Click</button>
   </div>
 </template>
 
@@ -94,18 +109,20 @@ export default {
       url: "https://vuejs.org/",
       disabled: false,
       isActive: true,
-      activeColor: "#C6C6C6"
-    }
-  }
-}
+      activeColor: "#00ff00",
+    };
+  },
+};
 </script>
 
 <style>
-.active{
+.active {
   background-color: #ff0000;
 }
 </style>
 ```
+
+[Edit in codesandbox.io](https://codesandbox.io/s/vue-binding-1uusix?file=/src/App.vue:0-539)
 
 ## Directives
 
