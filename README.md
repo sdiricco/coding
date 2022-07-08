@@ -42,6 +42,6 @@ mkdocs gh-deploy --force
 Or
 
 ```bash
-python -m mkdocs build
-python -m mkdocs gh-deploy --force
+python3 -m mkdocs build
+python3 -m mkdocs gh-deploy --force
 ```
