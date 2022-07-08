@@ -9,28 +9,29 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.7">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.12">
     
     
       
-        <title>Espruino - Wiki programming notes</title>
+        <title>Espruino. Cos'è e come si installa - Wiki programming notes</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.cd566b2a.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.27ad92d8.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
     
     
       
+        
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700%7C&display=fallback">
-        <style>:root{--md-text-font:"Open Sans";--md-code-font:""}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -64,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#espruino" class="md-skip">
+        <a href="#espruino-cose-e-come-si-installa" class="md-skip">
           Skip to content
         </a>
       
@@ -81,11 +82,11 @@
     <a href="../.." title="Wiki programming notes" class="md-header__button md-logo" aria-label="Wiki programming notes" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -97,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Espruino
+              Espruino. Cos'è e come si installa
             
           </span>
         </div>
@@ -120,7 +121,7 @@
           <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
           
             <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
             </label>
           
         
@@ -129,7 +130,7 @@
     
     
       <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -137,13 +138,13 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
       
@@ -163,10 +164,10 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/sdiricco/wiki-programming-notes/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/sdiricco/wiki-programming-notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -195,7 +196,7 @@
 
   <li class="md-tabs__item">
     <a href="../.." class="md-tabs__link">
-      Hello Coders
+      Indice
     </a>
   </li>
 
@@ -272,17 +273,17 @@
     <a href="../.." title="Wiki programming notes" class="md-nav__button md-logo" aria-label="Wiki programming notes" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
     Wiki programming notes
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/sdiricco/wiki-programming-notes/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/sdiricco/wiki-programming-notes" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -301,7 +302,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Hello Coders
+        Indice
       </a>
     </li>
   
@@ -555,12 +556,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Espruino
+          Espruino. Cos'è e come si installa
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Espruino
+        Espruino. Cos'è e come si installa
       </a>
       
         
@@ -2653,12 +2654,59 @@
       
       
         <label class="md-nav__link" for="__nav_3_15">
+          Vue cheatsheet
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Vue cheatsheet" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_15">
+          <span class="md-nav__icon md-icon"></span>
+          Vue cheatsheet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../corsi/vue-cheatsheet/readme/" class="md-nav__link">
+        Vue cheatsheet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_16" type="checkbox" id="__nav_3_16" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_16">
           Vue js
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Vue js" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_15">
+        <label class="md-nav__title" for="__nav_3_16">
           <span class="md-nav__icon md-icon"></span>
           Vue js
         </label>
@@ -3967,12 +4015,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/sdiricco/wiki-programming-notes/edit/master/docs/blog/espruino/README.md" title="Edit this page" class="md-content__button md-icon">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-</a>
+  <a href="https://github.com/sdiricco/wiki-programming-notes/edit/master/docs/blog/espruino/README.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
 
 
-<h1 id="espruino">Espruino<a class="headerlink" href="#espruino" title="Permanent link">&para;</a></h1>
+
+<h1 id="espruino-cose-e-come-si-installa">Espruino. Cos'è e come si installa<a class="headerlink" href="#espruino-cose-e-come-si-installa" title="Permanent link">&para;</a></h1>
 <p><img alt="espruino" src="images/espruino.png" /></p>
 <p><a href="https://www.espruino.com/">Espruino</a> è un interprete JavaScript open source per microcontrollori.</p>
 <p>Le board ufficialmente sviluppate da espruino le puoi trovare su <a href="https://shop.espruino.com/espruino-boards">Espruino - shop</a>.</p>
@@ -4253,89 +4302,89 @@
 <h2 id="primi-passi-con-javascript-ed-espruino">Primi passi con javascript ed espruino<a class="headerlink" href="#primi-passi-con-javascript-ed-espruino" title="Permanent link">&para;</a></h2>
 <p>Puoi dare un'occhiata al <a href="https://www.espruino.com/Quick+Start+Code">tutorial</a></p>
 <h2 id="comandi-basilari">Comandi basilari<a class="headerlink" href="#comandi-basilari" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="mf">1</span><span class="o">+</span><span class="mf">2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="mf">1</span><span class="o">+</span><span class="mf">2</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">//set D16 pin to high</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">//set D16 pin to high</span><span class="w"></span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">//read D16 pin</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nx">digitalRead</span><span class="p">(</span><span class="nx">D16</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1">//read D16 pin</span><span class="w"></span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="nx">digitalRead</span><span class="p">(</span><span class="nx">D16</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>  <span class="c1">//Set D16 to high</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  <span class="c1">//after 200ms Set D16 to low</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  <span class="kd">function</span> <span class="nx">flash</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>      <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    <span class="p">},</span> <span class="mf">200</span><span class="p">);</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>  <span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">  </span><span class="c1">//Set D16 to high</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="c1">//after 200ms Set D16 to low</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">flash</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">    </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">      </span><span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mf">200</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>  <span class="nx">flash</span><span class="p">();</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">  </span><span class="nx">flash</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">function</span> <span class="nx">flash</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>  <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>    <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>  <span class="p">},</span> <span class="mf">200</span><span class="p">);</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">flash</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="mf">200</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
-<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="k">if</span> <span class="p">(</span><span class="nx">digitalRead</span><span class="p">(</span><span class="nx">D15</span><span class="p">))</span> <span class="nx">flash</span><span class="p">();</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">digitalRead</span><span class="p">(</span><span class="nx">D15</span><span class="p">))</span><span class="w"> </span><span class="nx">flash</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">//When press D15, flash will be executed  </span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">//When press D15, flash will be executed  </span><span class="w"></span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="kd">function</span> <span class="nx">flash</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>  <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>  <span class="p">},</span> <span class="mf">200</span><span class="p">);</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="p">}</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="kd">function</span><span class="w"> </span><span class="nx">flash</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">D16</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="mf">200</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
-<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>  <span class="k">if</span> <span class="p">(</span><span class="nx">digitalRead</span><span class="p">(</span><span class="nx">D15</span><span class="p">))</span> <span class="nx">flash</span><span class="p">();</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="p">},</span> <span class="mf">500</span><span class="p">);</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">digitalRead</span><span class="p">(</span><span class="nx">D15</span><span class="p">))</span><span class="w"> </span><span class="nx">flash</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="p">},</span><span class="w"> </span><span class="mf">500</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">var</span> <span class="nx">Hh</span><span class="p">,</span> <span class="nx">Mm</span><span class="p">,</span> <span class="nx">Ss</span><span class="p">,</span> <span class="nx">mm</span><span class="p">;</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kd">function</span> <span class="nx">initOLED</span><span class="p">(){</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>  <span class="nx">oled</span><span class="p">.</span><span class="nx">setFont8x12</span><span class="p">();</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>  <span class="nx">oled</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;init OLDED 789&quot;</span><span class="p">);</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>  <span class="nx">oled</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kd">var</span><span class="w"> </span><span class="nx">Hh</span><span class="p">,</span><span class="w"> </span><span class="nx">Mm</span><span class="p">,</span><span class="w"> </span><span class="nx">Ss</span><span class="p">,</span><span class="w"> </span><span class="nx">mm</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kd">function</span><span class="w"> </span><span class="nx">initOLED</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span><span class="nx">oled</span><span class="p">.</span><span class="nx">setFont8x12</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">  </span><span class="nx">oled</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;init OLDED 789&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w">  </span><span class="nx">oled</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;Font8x12&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">Graphics</span><span class="p">);</span>
-<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="nx">I2C1</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span> <span class="nx">scl</span><span class="o">:</span> <span class="nx">D5</span><span class="p">,</span> <span class="nx">sda</span><span class="o">:</span> <span class="nx">D4</span> <span class="p">});</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="kd">var</span> <span class="nx">oled</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;SSD1306&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">I2C1</span><span class="p">,</span> <span class="nx">initOLED</span><span class="p">,</span> <span class="p">{</span> <span class="nx">rst</span><span class="o">:</span> <span class="nx">D16</span><span class="p">,</span> <span class="nx">height</span> <span class="o">:</span> <span class="mf">32</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span><span class="mf">128</span> <span class="p">});</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;Font8x12&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">Graphics</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="nx">I2C1</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span><span class="w"> </span><span class="nx">scl</span><span class="o">:</span><span class="w"> </span><span class="nx">D5</span><span class="p">,</span><span class="w"> </span><span class="nx">sda</span><span class="o">:</span><span class="w"> </span><span class="nx">D4</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="kd">var</span><span class="w"> </span><span class="nx">oled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;SSD1306&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">I2C1</span><span class="p">,</span><span class="w"> </span><span class="nx">initOLED</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">rst</span><span class="o">:</span><span class="w"> </span><span class="nx">D16</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="o">:</span><span class="mf">128</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
 <a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>
-<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="kd">function</span> <span class="nx">orario</span><span class="p">(){</span>
-<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>  <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="ow">new</span> <span class="nb">Date</span><span class="p">();</span>
-<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>  <span class="nx">Hh</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">;</span>
-<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>  <span class="nx">Mm</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">;</span>
-<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>  <span class="nx">Ss</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">getSeconds</span><span class="p">();</span>
-<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>  <span class="nx">oled</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
-<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>  <span class="nx">oled</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;Ora:&quot;</span><span class="p">);</span> 
-<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>  <span class="nx">oled</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">Hh</span> <span class="o">+</span> <span class="nx">Mm</span> <span class="o">+</span> <span class="nx">Ss</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">16</span><span class="p">);</span> 
-<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>  <span class="nx">oled</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
-<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="p">}</span>
-<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="nx">setInterval</span><span class="p">(</span><span class="nx">orario</span><span class="p">,</span><span class="mf">1000</span><span class="p">);</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="kd">function</span><span class="w"> </span><span class="nx">orario</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="w">  </span><span class="nx">Hh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;:&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="w">  </span><span class="nx">Mm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;:&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="w">  </span><span class="nx">Ss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">getSeconds</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="w">  </span><span class="nx">oled</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="w">  </span><span class="nx">oled</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;Ora:&quot;</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="w">  </span><span class="nx">oled</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">Hh</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">Mm</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">Ss</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">16</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="w">  </span><span class="nx">oled</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="nx">setInterval</span><span class="p">(</span><span class="nx">orario</span><span class="p">,</span><span class="mf">1000</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
 <h2 id="led-blink">Led blink<a class="headerlink" href="#led-blink" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">var</span>  <span class="nx">on</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kd">var</span> <span class="nx">pin</span> <span class="o">=</span> <span class="nx">D16</span><span class="p">;</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>  <span class="nx">on</span> <span class="o">=</span> <span class="o">!</span><span class="nx">on</span><span class="p">;</span>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>  <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">pin</span><span class="p">,</span> <span class="nx">on</span><span class="p">);</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="p">},</span> <span class="mf">500</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kd">var</span><span class="w">  </span><span class="nx">on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">pin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">D16</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">  </span><span class="nx">on</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">on</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">  </span><span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">pin</span><span class="p">,</span><span class="w"> </span><span class="nx">on</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="p">},</span><span class="w"> </span><span class="mf">500</span><span class="p">);</span><span class="w"></span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">function</span> <span class="nx">start</span><span class="p">(){</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">setFont8x12</span><span class="p">();</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;Ciao mondo&quot;</span><span class="p">);</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getFonts</span><span class="p">());</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">start</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">setFont8x12</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;Ciao mondo&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getFonts</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;Font4x4Numeric&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">Graphics</span><span class="p">);</span>
-<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;Font8x12&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">Graphics</span><span class="p">);</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="nx">I2C1</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span> <span class="nx">scl</span><span class="o">:</span> <span class="nx">D5</span><span class="p">,</span> <span class="nx">sda</span><span class="o">:</span> <span class="nx">D4</span> <span class="p">});</span>
-<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;SSD1306&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">I2C1</span><span class="p">,</span> <span class="nx">start</span><span class="p">,</span> <span class="p">{</span> <span class="nx">rst</span><span class="o">:</span> <span class="nx">D16</span><span class="p">,</span> <span class="nx">height</span> <span class="o">:</span> <span class="mf">32</span><span class="p">,</span> <span class="nx">width</span><span class="o">:</span><span class="mf">128</span>   <span class="p">});</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;Font4x4Numeric&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">Graphics</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;Font8x12&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">Graphics</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="nx">I2C1</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span><span class="w"> </span><span class="nx">scl</span><span class="o">:</span><span class="w"> </span><span class="nx">D5</span><span class="p">,</span><span class="w"> </span><span class="nx">sda</span><span class="o">:</span><span class="w"> </span><span class="nx">D4</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="kd">var</span><span class="w"> </span><span class="nx">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;SSD1306&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">I2C1</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">rst</span><span class="o">:</span><span class="w"> </span><span class="nx">D16</span><span class="p">,</span><span class="w"> </span><span class="nx">height</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">32</span><span class="p">,</span><span class="w"> </span><span class="nx">width</span><span class="o">:</span><span class="mf">128</span><span class="w">   </span><span class="p">});</span><span class="w"></span>
 </code></pre></div>
 <h3 id="orologio-con-display-nokia-5110">Orologio con display NOKIA 5110<a class="headerlink" href="#orologio-con-display-nokia-5110" title="Permanent link">&para;</a></h3>
 <p>Puoi trovare il progetto <a href="https://www.espruino.com/Pico+Clock">qua</a>. Riporto comunque il codice completo che comprende l'adattamento NodeMCU.</p>
@@ -4348,211 +4397,211 @@
 <a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="cm">DC  Any D6</span>
 <a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="cm">CE  Any D7</span>
 <a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="cm">RST Any D8</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="cm">*/</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="cm">*/</span><span class="w"></span>
 <a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>
-<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="kd">var</span> <span class="nx">g</span><span class="p">;</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="kd">var</span><span class="w"> </span><span class="nx">g</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>
-<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="kd">var</span> <span class="nx">MONTHS</span> <span class="o">=</span> <span class="p">[</span>
-<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>  <span class="s2">&quot;Jan&quot;</span><span class="p">,</span><span class="s2">&quot;Feb&quot;</span><span class="p">,</span><span class="s2">&quot;Mar&quot;</span><span class="p">,</span><span class="s2">&quot;Apr&quot;</span><span class="p">,</span><span class="s2">&quot;May&quot;</span><span class="p">,</span><span class="s2">&quot;Jun&quot;</span><span class="p">,</span>
-<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>  <span class="s2">&quot;Jul&quot;</span><span class="p">,</span><span class="s2">&quot;Aug&quot;</span><span class="p">,</span><span class="s2">&quot;Sep&quot;</span><span class="p">,</span><span class="s2">&quot;Oct&quot;</span><span class="p">,</span><span class="s2">&quot;Nov&quot;</span><span class="p">,</span><span class="s2">&quot;Dec&quot;</span>
-<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>  <span class="p">];</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="kd">var</span><span class="w"> </span><span class="nx">MONTHS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="w">  </span><span class="s2">&quot;Jan&quot;</span><span class="p">,</span><span class="s2">&quot;Feb&quot;</span><span class="p">,</span><span class="s2">&quot;Mar&quot;</span><span class="p">,</span><span class="s2">&quot;Apr&quot;</span><span class="p">,</span><span class="s2">&quot;May&quot;</span><span class="p">,</span><span class="s2">&quot;Jun&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="w">  </span><span class="s2">&quot;Jul&quot;</span><span class="p">,</span><span class="s2">&quot;Aug&quot;</span><span class="p">,</span><span class="s2">&quot;Sep&quot;</span><span class="p">,</span><span class="s2">&quot;Oct&quot;</span><span class="p">,</span><span class="s2">&quot;Nov&quot;</span><span class="p">,</span><span class="s2">&quot;Dec&quot;</span><span class="w"></span>
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="w">  </span><span class="p">];</span><span class="w"></span>
 <a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>
-<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="kd">function</span> <span class="nx">draw</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
-<a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a>  <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="ow">new</span> <span class="nb">Date</span><span class="p">();</span>
-<a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a>  <span class="kd">var</span> <span class="nx">date</span> <span class="o">=</span> <span class="nx">t</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="nx">MONTHS</span><span class="p">[</span><span class="nx">t</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()]</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="nx">t</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">();</span>
-<a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a>  <span class="kd">var</span> <span class="nx">time</span> <span class="o">=</span> <span class="nx">t</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot;:&quot;</span> <span class="o">+</span>
-<a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a>       <span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="o">+</span><span class="nx">t</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">()).</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mf">2</span><span class="p">);</span>
-<a id="__codelineno-20-25" name="__codelineno-20-25" href="#__codelineno-20-25"></a>  <span class="kd">var</span> <span class="nx">secs</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="o">+</span><span class="nx">t</span><span class="p">.</span><span class="nx">getSeconds</span><span class="p">()).</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mf">2</span><span class="p">);</span>
-<a id="__codelineno-20-26" name="__codelineno-20-26" href="#__codelineno-20-26"></a>  <span class="c1">// top left date</span>
-<a id="__codelineno-20-27" name="__codelineno-20-27" href="#__codelineno-20-27"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">setFontBitmap</span><span class="p">();</span>
-<a id="__codelineno-20-28" name="__codelineno-20-28" href="#__codelineno-20-28"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span>
-<a id="__codelineno-20-29" name="__codelineno-20-29" href="#__codelineno-20-29"></a>  <span class="c1">// middle time</span>
-<a id="__codelineno-20-30" name="__codelineno-20-30" href="#__codelineno-20-30"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">setFontVector</span><span class="p">(</span><span class="mf">20</span><span class="p">);</span>
-<a id="__codelineno-20-31" name="__codelineno-20-31" href="#__codelineno-20-31"></a>  <span class="kd">var</span> <span class="nx">timeWidth</span> <span class="o">=</span> <span class="nx">g</span><span class="p">.</span><span class="nx">stringWidth</span><span class="p">(</span><span class="nx">time</span><span class="p">);</span>
-<a id="__codelineno-20-32" name="__codelineno-20-32" href="#__codelineno-20-32"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">time</span><span class="p">,(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">-</span><span class="nx">timeWidth</span><span class="o">-</span><span class="mf">12</span><span class="p">)</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="mf">10</span><span class="p">);</span>
-<a id="__codelineno-20-33" name="__codelineno-20-33" href="#__codelineno-20-33"></a>  <span class="c1">// seconds over to the right</span>
-<a id="__codelineno-20-34" name="__codelineno-20-34" href="#__codelineno-20-34"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">setFontBitmap</span><span class="p">();</span>
-<a id="__codelineno-20-35" name="__codelineno-20-35" href="#__codelineno-20-35"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">secs</span><span class="p">,(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">+</span><span class="nx">timeWidth</span><span class="o">-</span><span class="mf">8</span><span class="p">)</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="mf">26</span><span class="p">);</span>
-<a id="__codelineno-20-36" name="__codelineno-20-36" href="#__codelineno-20-36"></a>  <span class="c1">// send to LCD</span>
-<a id="__codelineno-20-37" name="__codelineno-20-37" href="#__codelineno-20-37"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
-<a id="__codelineno-20-38" name="__codelineno-20-38" href="#__codelineno-20-38"></a><span class="p">}</span>
+<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="kd">function</span><span class="w"> </span><span class="nx">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">t</span><span class="p">.</span><span class="nx">getDate</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="nx">MONTHS</span><span class="p">[</span><span class="nx">t</span><span class="p">.</span><span class="nx">getMonth</span><span class="p">()]</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="nx">t</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-20-23" name="__codelineno-20-23" href="#__codelineno-20-23"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">t</span><span class="p">.</span><span class="nx">getHours</span><span class="p">()</span><span class="o">+</span><span class="s2">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"></span>
+<a id="__codelineno-20-24" name="__codelineno-20-24" href="#__codelineno-20-24"></a><span class="w">       </span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="o">+</span><span class="nx">t</span><span class="p">.</span><span class="nx">getMinutes</span><span class="p">()).</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mf">2</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-20-25" name="__codelineno-20-25" href="#__codelineno-20-25"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">secs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="o">+</span><span class="nx">t</span><span class="p">.</span><span class="nx">getSeconds</span><span class="p">()).</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mf">2</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-20-26" name="__codelineno-20-26" href="#__codelineno-20-26"></a><span class="w">  </span><span class="c1">// top left date</span><span class="w"></span>
+<a id="__codelineno-20-27" name="__codelineno-20-27" href="#__codelineno-20-27"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">setFontBitmap</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-20-28" name="__codelineno-20-28" href="#__codelineno-20-28"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">date</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-20-29" name="__codelineno-20-29" href="#__codelineno-20-29"></a><span class="w">  </span><span class="c1">// middle time</span><span class="w"></span>
+<a id="__codelineno-20-30" name="__codelineno-20-30" href="#__codelineno-20-30"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">setFontVector</span><span class="p">(</span><span class="mf">20</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-20-31" name="__codelineno-20-31" href="#__codelineno-20-31"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">timeWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">g</span><span class="p">.</span><span class="nx">stringWidth</span><span class="p">(</span><span class="nx">time</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-20-32" name="__codelineno-20-32" href="#__codelineno-20-32"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">time</span><span class="p">,(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">-</span><span class="nx">timeWidth</span><span class="o">-</span><span class="mf">12</span><span class="p">)</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="mf">10</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-20-33" name="__codelineno-20-33" href="#__codelineno-20-33"></a><span class="w">  </span><span class="c1">// seconds over to the right</span><span class="w"></span>
+<a id="__codelineno-20-34" name="__codelineno-20-34" href="#__codelineno-20-34"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">setFontBitmap</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-20-35" name="__codelineno-20-35" href="#__codelineno-20-35"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">secs</span><span class="p">,(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">+</span><span class="nx">timeWidth</span><span class="o">-</span><span class="mf">8</span><span class="p">)</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="mf">26</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-20-36" name="__codelineno-20-36" href="#__codelineno-20-36"></a><span class="w">  </span><span class="c1">// send to LCD</span><span class="w"></span>
+<a id="__codelineno-20-37" name="__codelineno-20-37" href="#__codelineno-20-37"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-20-38" name="__codelineno-20-38" href="#__codelineno-20-38"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-20-39" name="__codelineno-20-39" href="#__codelineno-20-39"></a>
-<a id="__codelineno-20-40" name="__codelineno-20-40" href="#__codelineno-20-40"></a><span class="kd">function</span> <span class="nx">onInit</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-20-41" name="__codelineno-20-41" href="#__codelineno-20-41"></a>  <span class="nx">clearInterval</span><span class="p">();</span>
-<a id="__codelineno-20-42" name="__codelineno-20-42" href="#__codelineno-20-42"></a>  <span class="c1">// Setup SPI</span>
-<a id="__codelineno-20-43" name="__codelineno-20-43" href="#__codelineno-20-43"></a>  <span class="kd">var</span> <span class="nx">spi</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SPI</span><span class="p">();</span>
-<a id="__codelineno-20-44" name="__codelineno-20-44" href="#__codelineno-20-44"></a>  <span class="nx">spi</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span> <span class="nx">sck</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D3</span><span class="p">,</span> <span class="nx">mosi</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D5</span> <span class="p">});</span>
-<a id="__codelineno-20-45" name="__codelineno-20-45" href="#__codelineno-20-45"></a>  <span class="c1">// Initialise the LCD</span>
-<a id="__codelineno-20-46" name="__codelineno-20-46" href="#__codelineno-20-46"></a>  <span class="nx">g</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;PCD8544&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">spi</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D6</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D7</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D8</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-20-47" name="__codelineno-20-47" href="#__codelineno-20-47"></a>    <span class="c1">// When it&#39;s initialised, set up an animation at 20fps (50ms per frame)</span>
-<a id="__codelineno-20-48" name="__codelineno-20-48" href="#__codelineno-20-48"></a>    <span class="nx">setInterval</span><span class="p">(</span><span class="nx">draw</span><span class="p">,</span> <span class="mf">1000</span><span class="p">);</span>
-<a id="__codelineno-20-49" name="__codelineno-20-49" href="#__codelineno-20-49"></a>  <span class="p">});</span>
-<a id="__codelineno-20-50" name="__codelineno-20-50" href="#__codelineno-20-50"></a><span class="p">}</span>
+<a id="__codelineno-20-40" name="__codelineno-20-40" href="#__codelineno-20-40"></a><span class="kd">function</span><span class="w"> </span><span class="nx">onInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-41" name="__codelineno-20-41" href="#__codelineno-20-41"></a><span class="w">  </span><span class="nx">clearInterval</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-20-42" name="__codelineno-20-42" href="#__codelineno-20-42"></a><span class="w">  </span><span class="c1">// Setup SPI</span><span class="w"></span>
+<a id="__codelineno-20-43" name="__codelineno-20-43" href="#__codelineno-20-43"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">spi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SPI</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-20-44" name="__codelineno-20-44" href="#__codelineno-20-44"></a><span class="w">  </span><span class="nx">spi</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span><span class="w"> </span><span class="nx">sck</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D3</span><span class="p">,</span><span class="w"> </span><span class="nx">mosi</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D5</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-20-45" name="__codelineno-20-45" href="#__codelineno-20-45"></a><span class="w">  </span><span class="c1">// Initialise the LCD</span><span class="w"></span>
+<a id="__codelineno-20-46" name="__codelineno-20-46" href="#__codelineno-20-46"></a><span class="w">  </span><span class="nx">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;PCD8544&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">spi</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D6</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D7</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D8</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-20-47" name="__codelineno-20-47" href="#__codelineno-20-47"></a><span class="w">    </span><span class="c1">// When it&#39;s initialised, set up an animation at 20fps (50ms per frame)</span><span class="w"></span>
+<a id="__codelineno-20-48" name="__codelineno-20-48" href="#__codelineno-20-48"></a><span class="w">    </span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">draw</span><span class="p">,</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-20-49" name="__codelineno-20-49" href="#__codelineno-20-49"></a><span class="w">  </span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-20-50" name="__codelineno-20-50" href="#__codelineno-20-50"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-20-51" name="__codelineno-20-51" href="#__codelineno-20-51"></a>
-<a id="__codelineno-20-52" name="__codelineno-20-52" href="#__codelineno-20-52"></a><span class="nx">onInit</span><span class="p">();</span>
+<a id="__codelineno-20-52" name="__codelineno-20-52" href="#__codelineno-20-52"></a><span class="nx">onInit</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 <h3 id="snake">Snake<a class="headerlink" href="#snake" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1">// Setup SPI</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="kd">var</span> <span class="nx">spi</span> <span class="o">=</span> <span class="ow">new</span> <span class="nx">SPI</span><span class="p">();</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="c1">// Graphics</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="kd">var</span> <span class="nx">g</span><span class="p">;</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="c1">// Current score</span>
-<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="kd">var</span> <span class="nx">score</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="c1">// Snake position and direction</span>
-<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="kd">var</span> <span class="nx">pos</span><span class="p">,</span> <span class="nx">dir</span><span class="p">;</span>
-<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="c1">// previous snake positions</span>
-<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="kd">var</span> <span class="nx">history</span> <span class="o">=</span> <span class="p">[];</span>
-<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="c1">//initial snake lenght</span>
-<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="kd">var</span> <span class="nx">snakeLength</span> <span class="o">=</span> <span class="mf">5</span><span class="p">;</span>
-<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="c1">// a list of apple locations (that the snake can eat)</span>
-<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="kd">var</span> <span class="nx">apples</span> <span class="o">=</span> <span class="p">[];</span>
-<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="c1">//initial speed</span>
-<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="kd">var</span> <span class="nx">speed</span> <span class="o">=</span> <span class="mf">120</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="c1">// Setup SPI</span><span class="w"></span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">spi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">SPI</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="c1">// Graphics</span><span class="w"></span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="kd">var</span><span class="w"> </span><span class="nx">g</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="c1">// Current score</span><span class="w"></span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="kd">var</span><span class="w"> </span><span class="nx">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="c1">// Snake position and direction</span><span class="w"></span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="kd">var</span><span class="w"> </span><span class="nx">pos</span><span class="p">,</span><span class="w"> </span><span class="nx">dir</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="c1">// previous snake positions</span><span class="w"></span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="kd">var</span><span class="w"> </span><span class="nx">history</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="c1">//initial snake lenght</span><span class="w"></span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="kd">var</span><span class="w"> </span><span class="nx">snakeLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="c1">// a list of apple locations (that the snake can eat)</span><span class="w"></span>
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="kd">var</span><span class="w"> </span><span class="nx">apples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="c1">//initial speed</span><span class="w"></span>
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="kd">var</span><span class="w"> </span><span class="nx">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">120</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>
-<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="kd">var</span> <span class="nx">idOnFrame</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="kd">var</span><span class="w"> </span><span class="nx">idOnFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>
-<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a><span class="kd">function</span> <span class="nx">beep</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span>
-<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>  <span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D4</span><span class="p">,</span> <span class="nx">state</span><span class="p">);</span>
-<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a><span class="p">}</span>
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a><span class="kd">function</span><span class="w"> </span><span class="nx">beep</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span><span class="w"></span>
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="w">  </span><span class="nx">digitalWrite</span><span class="p">(</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D4</span><span class="p">,</span><span class="w"> </span><span class="nx">state</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>
-<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a><span class="kd">function</span> <span class="nx">updateSnake</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a>  <span class="c1">// remove old score...</span>
-<a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a>  <span class="nx">beep</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">setColor</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>  
-<a id="__codelineno-21-28" name="__codelineno-21-28" href="#__codelineno-21-28"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">fillRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">(),</span><span class="mf">5</span><span class="p">);</span>
-<a id="__codelineno-21-29" name="__codelineno-21-29" href="#__codelineno-21-29"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">setColor</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-21-30" name="__codelineno-21-30" href="#__codelineno-21-30"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">score</span><span class="p">);</span>
-<a id="__codelineno-21-31" name="__codelineno-21-31" href="#__codelineno-21-31"></a>  <span class="nx">beep</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
-<a id="__codelineno-21-32" name="__codelineno-21-32" href="#__codelineno-21-32"></a>  <span class="nx">clearInterval</span><span class="p">();</span>
-<a id="__codelineno-21-33" name="__codelineno-21-33" href="#__codelineno-21-33"></a>  <span class="nx">speed</span> <span class="o">=</span> <span class="p">(</span><span class="nx">speed</span> <span class="o">&lt;=</span> <span class="mf">20</span><span class="p">)</span> <span class="o">?</span> <span class="mf">20</span><span class="o">:</span> <span class="nx">speed</span><span class="o">-</span><span class="mf">5</span><span class="p">;</span>
-<a id="__codelineno-21-34" name="__codelineno-21-34" href="#__codelineno-21-34"></a>  <span class="nx">idOnFrame</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="nx">onFrame</span><span class="p">,</span> <span class="nx">speed</span><span class="p">);</span>
-<a id="__codelineno-21-35" name="__codelineno-21-35" href="#__codelineno-21-35"></a><span class="p">}</span>
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a><span class="kd">function</span><span class="w"> </span><span class="nx">updateSnake</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a><span class="w">  </span><span class="c1">// remove old score...</span><span class="w"></span>
+<a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a><span class="w">  </span><span class="nx">beep</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">setColor</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span><span class="w">  </span>
+<a id="__codelineno-21-28" name="__codelineno-21-28" href="#__codelineno-21-28"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">fillRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">(),</span><span class="mf">5</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-29" name="__codelineno-21-29" href="#__codelineno-21-29"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">setColor</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-30" name="__codelineno-21-30" href="#__codelineno-21-30"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">score</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-31" name="__codelineno-21-31" href="#__codelineno-21-31"></a><span class="w">  </span><span class="nx">beep</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-32" name="__codelineno-21-32" href="#__codelineno-21-32"></a><span class="w">  </span><span class="nx">clearInterval</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-33" name="__codelineno-21-33" href="#__codelineno-21-33"></a><span class="w">  </span><span class="nx">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">speed</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">20</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">20</span><span class="o">:</span><span class="w"> </span><span class="nx">speed</span><span class="o">-</span><span class="mf">5</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-34" name="__codelineno-21-34" href="#__codelineno-21-34"></a><span class="w">  </span><span class="nx">idOnFrame</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setInterval</span><span class="p">(</span><span class="nx">onFrame</span><span class="p">,</span><span class="w"> </span><span class="nx">speed</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-35" name="__codelineno-21-35" href="#__codelineno-21-35"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-21-36" name="__codelineno-21-36" href="#__codelineno-21-36"></a>
-<a id="__codelineno-21-37" name="__codelineno-21-37" href="#__codelineno-21-37"></a><span class="kd">function</span> <span class="nx">newApple</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-21-38" name="__codelineno-21-38" href="#__codelineno-21-38"></a>  <span class="kd">var</span> <span class="nx">p</span><span class="p">;</span>
-<a id="__codelineno-21-39" name="__codelineno-21-39" href="#__codelineno-21-39"></a>  <span class="c1">// keep coming up with random locations until there</span>
-<a id="__codelineno-21-40" name="__codelineno-21-40" href="#__codelineno-21-40"></a>  <span class="c1">// is nothing drawn where we want to put the apple</span>
-<a id="__codelineno-21-41" name="__codelineno-21-41" href="#__codelineno-21-41"></a>  <span class="k">do</span> <span class="p">{</span>
-<a id="__codelineno-21-42" name="__codelineno-21-42" href="#__codelineno-21-42"></a>    <span class="nx">p</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">x</span> <span class="o">:</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()),</span>
-<a id="__codelineno-21-43" name="__codelineno-21-43" href="#__codelineno-21-43"></a>          <span class="nx">y</span> <span class="o">:</span> <span class="mf">6</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">-</span><span class="mf">6</span><span class="p">))</span> <span class="p">};</span>
-<a id="__codelineno-21-44" name="__codelineno-21-44" href="#__codelineno-21-44"></a>  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getPixel</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">p</span><span class="p">.</span><span class="nx">y</span><span class="p">));</span>
-<a id="__codelineno-21-45" name="__codelineno-21-45" href="#__codelineno-21-45"></a>  <span class="c1">// draw the apple, and save it inthe array</span>
-<a id="__codelineno-21-46" name="__codelineno-21-46" href="#__codelineno-21-46"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">p</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
-<a id="__codelineno-21-47" name="__codelineno-21-47" href="#__codelineno-21-47"></a>  <span class="nx">apples</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span>
-<a id="__codelineno-21-48" name="__codelineno-21-48" href="#__codelineno-21-48"></a><span class="p">}</span>
+<a id="__codelineno-21-37" name="__codelineno-21-37" href="#__codelineno-21-37"></a><span class="kd">function</span><span class="w"> </span><span class="nx">newApple</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-38" name="__codelineno-21-38" href="#__codelineno-21-38"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">p</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-39" name="__codelineno-21-39" href="#__codelineno-21-39"></a><span class="w">  </span><span class="c1">// keep coming up with random locations until there</span><span class="w"></span>
+<a id="__codelineno-21-40" name="__codelineno-21-40" href="#__codelineno-21-40"></a><span class="w">  </span><span class="c1">// is nothing drawn where we want to put the apple</span><span class="w"></span>
+<a id="__codelineno-21-41" name="__codelineno-21-41" href="#__codelineno-21-41"></a><span class="w">  </span><span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-42" name="__codelineno-21-42" href="#__codelineno-21-42"></a><span class="w">    </span><span class="nx">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()),</span><span class="w"></span>
+<a id="__codelineno-21-43" name="__codelineno-21-43" href="#__codelineno-21-43"></a><span class="w">          </span><span class="nx">y</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">6</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">-</span><span class="mf">6</span><span class="p">))</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<a id="__codelineno-21-44" name="__codelineno-21-44" href="#__codelineno-21-44"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getPixel</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">y</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-21-45" name="__codelineno-21-45" href="#__codelineno-21-45"></a><span class="w">  </span><span class="c1">// draw the apple, and save it inthe array</span><span class="w"></span>
+<a id="__codelineno-21-46" name="__codelineno-21-46" href="#__codelineno-21-46"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-47" name="__codelineno-21-47" href="#__codelineno-21-47"></a><span class="w">  </span><span class="nx">apples</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">p</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-48" name="__codelineno-21-48" href="#__codelineno-21-48"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-21-49" name="__codelineno-21-49" href="#__codelineno-21-49"></a>
-<a id="__codelineno-21-50" name="__codelineno-21-50" href="#__codelineno-21-50"></a><span class="kd">function</span> <span class="nx">start</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-21-51" name="__codelineno-21-51" href="#__codelineno-21-51"></a>  <span class="c1">// clear screen</span>
-<a id="__codelineno-21-52" name="__codelineno-21-52" href="#__codelineno-21-52"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
-<a id="__codelineno-21-53" name="__codelineno-21-53" href="#__codelineno-21-53"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">drawRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">-</span><span class="mf">1</span><span class="p">,</span> <span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span>
+<a id="__codelineno-21-50" name="__codelineno-21-50" href="#__codelineno-21-50"></a><span class="kd">function</span><span class="w"> </span><span class="nx">start</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-51" name="__codelineno-21-51" href="#__codelineno-21-51"></a><span class="w">  </span><span class="c1">// clear screen</span><span class="w"></span>
+<a id="__codelineno-21-52" name="__codelineno-21-52" href="#__codelineno-21-52"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-53" name="__codelineno-21-53" href="#__codelineno-21-53"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">drawRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="mf">6</span><span class="p">,</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
 <a id="__codelineno-21-54" name="__codelineno-21-54" href="#__codelineno-21-54"></a>
-<a id="__codelineno-21-55" name="__codelineno-21-55" href="#__codelineno-21-55"></a>  <span class="nx">speed</span> <span class="o">=</span> <span class="mf">150</span><span class="p">;</span>
-<a id="__codelineno-21-56" name="__codelineno-21-56" href="#__codelineno-21-56"></a>  <span class="c1">// Setup snake position</span>
-<a id="__codelineno-21-57" name="__codelineno-21-57" href="#__codelineno-21-57"></a>  <span class="nx">pos</span> <span class="o">=</span> <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">/</span><span class="mf">2</span><span class="p">};</span> <span class="c1">// centre of the screen</span>
-<a id="__codelineno-21-58" name="__codelineno-21-58" href="#__codelineno-21-58"></a>  <span class="nx">history</span> <span class="o">=</span> <span class="p">[[</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">]];</span> <span class="c1">// reset the &#39;history&#39; list</span>
-<a id="__codelineno-21-59" name="__codelineno-21-59" href="#__codelineno-21-59"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
-<a id="__codelineno-21-60" name="__codelineno-21-60" href="#__codelineno-21-60"></a>  <span class="nx">dir</span> <span class="o">=</span> <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="mf">0</span><span class="p">};</span> <span class="c1">// the direction of the snake</span>
-<a id="__codelineno-21-61" name="__codelineno-21-61" href="#__codelineno-21-61"></a>  <span class="c1">// Now add randomly positioned apples</span>
-<a id="__codelineno-21-62" name="__codelineno-21-62" href="#__codelineno-21-62"></a>  <span class="nx">apples</span> <span class="o">=</span> <span class="p">[];</span>
-<a id="__codelineno-21-63" name="__codelineno-21-63" href="#__codelineno-21-63"></a>  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="mf">10</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span>
-<a id="__codelineno-21-64" name="__codelineno-21-64" href="#__codelineno-21-64"></a>    <span class="nx">newApple</span><span class="p">();</span>
-<a id="__codelineno-21-65" name="__codelineno-21-65" href="#__codelineno-21-65"></a>  <span class="c1">// update the screen  </span>
-<a id="__codelineno-21-66" name="__codelineno-21-66" href="#__codelineno-21-66"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
+<a id="__codelineno-21-55" name="__codelineno-21-55" href="#__codelineno-21-55"></a><span class="w">  </span><span class="nx">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">150</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-56" name="__codelineno-21-56" href="#__codelineno-21-56"></a><span class="w">  </span><span class="c1">// Setup snake position</span><span class="w"></span>
+<a id="__codelineno-21-57" name="__codelineno-21-57" href="#__codelineno-21-57"></a><span class="w">  </span><span class="nx">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">/</span><span class="mf">2</span><span class="p">};</span><span class="w"> </span><span class="c1">// centre of the screen</span><span class="w"></span>
+<a id="__codelineno-21-58" name="__codelineno-21-58" href="#__codelineno-21-58"></a><span class="w">  </span><span class="nx">history</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">]];</span><span class="w"> </span><span class="c1">// reset the &#39;history&#39; list</span><span class="w"></span>
+<a id="__codelineno-21-59" name="__codelineno-21-59" href="#__codelineno-21-59"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-60" name="__codelineno-21-60" href="#__codelineno-21-60"></a><span class="w">  </span><span class="nx">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">1</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="mf">0</span><span class="p">};</span><span class="w"> </span><span class="c1">// the direction of the snake</span><span class="w"></span>
+<a id="__codelineno-21-61" name="__codelineno-21-61" href="#__codelineno-21-61"></a><span class="w">  </span><span class="c1">// Now add randomly positioned apples</span><span class="w"></span>
+<a id="__codelineno-21-62" name="__codelineno-21-62" href="#__codelineno-21-62"></a><span class="w">  </span><span class="nx">apples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+<a id="__codelineno-21-63" name="__codelineno-21-63" href="#__codelineno-21-63"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="mf">10</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-21-64" name="__codelineno-21-64" href="#__codelineno-21-64"></a><span class="w">    </span><span class="nx">newApple</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-65" name="__codelineno-21-65" href="#__codelineno-21-65"></a><span class="w">  </span><span class="c1">// update the screen  </span><span class="w"></span>
+<a id="__codelineno-21-66" name="__codelineno-21-66" href="#__codelineno-21-66"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span><span class="w"></span>
 <a id="__codelineno-21-67" name="__codelineno-21-67" href="#__codelineno-21-67"></a>
-<a id="__codelineno-21-68" name="__codelineno-21-68" href="#__codelineno-21-68"></a>  <span class="c1">// reset score</span>
-<a id="__codelineno-21-69" name="__codelineno-21-69" href="#__codelineno-21-69"></a>  <span class="nx">score</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-21-70" name="__codelineno-21-70" href="#__codelineno-21-70"></a>  <span class="nx">updateSnake</span><span class="p">();</span> 
-<a id="__codelineno-21-71" name="__codelineno-21-71" href="#__codelineno-21-71"></a>  <span class="c1">// When a button is pressed, rotate the snake</span>
-<a id="__codelineno-21-72" name="__codelineno-21-72" href="#__codelineno-21-72"></a>  <span class="nx">setWatch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-21-73" name="__codelineno-21-73" href="#__codelineno-21-73"></a>      <span class="nx">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-21-74" name="__codelineno-21-74" href="#__codelineno-21-74"></a>  <span class="p">},</span> <span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D1</span><span class="p">,</span> <span class="p">{</span> <span class="nx">repeat</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span> <span class="nx">edge</span><span class="o">:</span><span class="s2">&quot;rising&quot;</span><span class="p">,</span> <span class="nx">debounce</span><span class="o">:</span> <span class="mf">10</span><span class="p">});</span>
-<a id="__codelineno-21-75" name="__codelineno-21-75" href="#__codelineno-21-75"></a>  <span class="nx">setWatch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-21-76" name="__codelineno-21-76" href="#__codelineno-21-76"></a>      <span class="nx">rotate</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-21-77" name="__codelineno-21-77" href="#__codelineno-21-77"></a>  <span class="p">},</span> <span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D2</span><span class="p">,</span> <span class="p">{</span> <span class="nx">repeat</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span> <span class="nx">edge</span><span class="o">:</span><span class="s2">&quot;rising&quot;</span><span class="p">,</span> <span class="nx">debounce</span><span class="o">:</span> <span class="mf">10</span><span class="p">});</span>
-<a id="__codelineno-21-78" name="__codelineno-21-78" href="#__codelineno-21-78"></a><span class="p">}</span>
+<a id="__codelineno-21-68" name="__codelineno-21-68" href="#__codelineno-21-68"></a><span class="w">  </span><span class="c1">// reset score</span><span class="w"></span>
+<a id="__codelineno-21-69" name="__codelineno-21-69" href="#__codelineno-21-69"></a><span class="w">  </span><span class="nx">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-70" name="__codelineno-21-70" href="#__codelineno-21-70"></a><span class="w">  </span><span class="nx">updateSnake</span><span class="p">();</span><span class="w"> </span>
+<a id="__codelineno-21-71" name="__codelineno-21-71" href="#__codelineno-21-71"></a><span class="w">  </span><span class="c1">// When a button is pressed, rotate the snake</span><span class="w"></span>
+<a id="__codelineno-21-72" name="__codelineno-21-72" href="#__codelineno-21-72"></a><span class="w">  </span><span class="nx">setWatch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-73" name="__codelineno-21-73" href="#__codelineno-21-73"></a><span class="w">      </span><span class="nx">rotate</span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-74" name="__codelineno-21-74" href="#__codelineno-21-74"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D1</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">repeat</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">edge</span><span class="o">:</span><span class="s2">&quot;rising&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">debounce</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-21-75" name="__codelineno-21-75" href="#__codelineno-21-75"></a><span class="w">  </span><span class="nx">setWatch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-76" name="__codelineno-21-76" href="#__codelineno-21-76"></a><span class="w">      </span><span class="nx">rotate</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-77" name="__codelineno-21-77" href="#__codelineno-21-77"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">repeat</span><span class="o">:</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">edge</span><span class="o">:</span><span class="s2">&quot;rising&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">debounce</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-21-78" name="__codelineno-21-78" href="#__codelineno-21-78"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-21-79" name="__codelineno-21-79" href="#__codelineno-21-79"></a>
-<a id="__codelineno-21-80" name="__codelineno-21-80" href="#__codelineno-21-80"></a><span class="c1">// When Espruino starts up...</span>
-<a id="__codelineno-21-81" name="__codelineno-21-81" href="#__codelineno-21-81"></a><span class="kd">function</span> <span class="nx">onInit</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-21-82" name="__codelineno-21-82" href="#__codelineno-21-82"></a>  <span class="nx">clearInterval</span><span class="p">();</span>
-<a id="__codelineno-21-83" name="__codelineno-21-83" href="#__codelineno-21-83"></a>  <span class="nx">clearWatch</span><span class="p">();</span>
-<a id="__codelineno-21-84" name="__codelineno-21-84" href="#__codelineno-21-84"></a>  <span class="c1">// Setup SPI</span>
-<a id="__codelineno-21-85" name="__codelineno-21-85" href="#__codelineno-21-85"></a>  <span class="nx">spi</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span> <span class="nx">sck</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D3</span><span class="p">,</span> <span class="nx">mosi</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D5</span> <span class="p">});</span>
-<a id="__codelineno-21-86" name="__codelineno-21-86" href="#__codelineno-21-86"></a>  <span class="c1">// Initialise the LCD</span>
-<a id="__codelineno-21-87" name="__codelineno-21-87" href="#__codelineno-21-87"></a>  <span class="nx">g</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;PCD8544&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">spi</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D6</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D7</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D8</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
-<a id="__codelineno-21-88" name="__codelineno-21-88" href="#__codelineno-21-88"></a>    <span class="c1">// When it&#39;s initialised, clear it and write some text</span>
-<a id="__codelineno-21-89" name="__codelineno-21-89" href="#__codelineno-21-89"></a>    <span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
-<a id="__codelineno-21-90" name="__codelineno-21-90" href="#__codelineno-21-90"></a>    <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span>
-<a id="__codelineno-21-91" name="__codelineno-21-91" href="#__codelineno-21-91"></a>    <span class="c1">// send the graphics to the display</span>
-<a id="__codelineno-21-92" name="__codelineno-21-92" href="#__codelineno-21-92"></a>    <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
-<a id="__codelineno-21-93" name="__codelineno-21-93" href="#__codelineno-21-93"></a>    <span class="nx">start</span><span class="p">();</span>
-<a id="__codelineno-21-94" name="__codelineno-21-94" href="#__codelineno-21-94"></a>  <span class="p">});</span>
-<a id="__codelineno-21-95" name="__codelineno-21-95" href="#__codelineno-21-95"></a><span class="p">}</span>
+<a id="__codelineno-21-80" name="__codelineno-21-80" href="#__codelineno-21-80"></a><span class="c1">// When Espruino starts up...</span><span class="w"></span>
+<a id="__codelineno-21-81" name="__codelineno-21-81" href="#__codelineno-21-81"></a><span class="kd">function</span><span class="w"> </span><span class="nx">onInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-82" name="__codelineno-21-82" href="#__codelineno-21-82"></a><span class="w">  </span><span class="nx">clearInterval</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-83" name="__codelineno-21-83" href="#__codelineno-21-83"></a><span class="w">  </span><span class="nx">clearWatch</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-84" name="__codelineno-21-84" href="#__codelineno-21-84"></a><span class="w">  </span><span class="c1">// Setup SPI</span><span class="w"></span>
+<a id="__codelineno-21-85" name="__codelineno-21-85" href="#__codelineno-21-85"></a><span class="w">  </span><span class="nx">spi</span><span class="p">.</span><span class="nx">setup</span><span class="p">({</span><span class="w"> </span><span class="nx">sck</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D3</span><span class="p">,</span><span class="w"> </span><span class="nx">mosi</span><span class="o">:</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D5</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-21-86" name="__codelineno-21-86" href="#__codelineno-21-86"></a><span class="w">  </span><span class="c1">// Initialise the LCD</span><span class="w"></span>
+<a id="__codelineno-21-87" name="__codelineno-21-87" href="#__codelineno-21-87"></a><span class="w">  </span><span class="nx">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s2">&quot;PCD8544&quot;</span><span class="p">).</span><span class="nx">connect</span><span class="p">(</span><span class="nx">spi</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D6</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D7</span><span class="p">,</span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D8</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(){</span><span class="w"></span>
+<a id="__codelineno-21-88" name="__codelineno-21-88" href="#__codelineno-21-88"></a><span class="w">    </span><span class="c1">// When it&#39;s initialised, clear it and write some text</span><span class="w"></span>
+<a id="__codelineno-21-89" name="__codelineno-21-89" href="#__codelineno-21-89"></a><span class="w">    </span><span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-90" name="__codelineno-21-90" href="#__codelineno-21-90"></a><span class="w">    </span><span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span><span class="mf">0</span><span class="p">,</span><span class="mf">0</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-91" name="__codelineno-21-91" href="#__codelineno-21-91"></a><span class="w">    </span><span class="c1">// send the graphics to the display</span><span class="w"></span>
+<a id="__codelineno-21-92" name="__codelineno-21-92" href="#__codelineno-21-92"></a><span class="w">    </span><span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-93" name="__codelineno-21-93" href="#__codelineno-21-93"></a><span class="w">    </span><span class="nx">start</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-94" name="__codelineno-21-94" href="#__codelineno-21-94"></a><span class="w">  </span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-21-95" name="__codelineno-21-95" href="#__codelineno-21-95"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-21-96" name="__codelineno-21-96" href="#__codelineno-21-96"></a>
-<a id="__codelineno-21-97" name="__codelineno-21-97" href="#__codelineno-21-97"></a><span class="kd">function</span> <span class="nx">gameOver</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-21-98" name="__codelineno-21-98" href="#__codelineno-21-98"></a>  <span class="c1">// stop the game</span>
-<a id="__codelineno-21-99" name="__codelineno-21-99" href="#__codelineno-21-99"></a>  <span class="nx">beep</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-21-100" name="__codelineno-21-100" href="#__codelineno-21-100"></a>  <span class="nx">clearWatch</span><span class="p">();</span>
-<a id="__codelineno-21-101" name="__codelineno-21-101" href="#__codelineno-21-101"></a>  <span class="nx">clearInterval</span><span class="p">();</span>
-<a id="__codelineno-21-102" name="__codelineno-21-102" href="#__codelineno-21-102"></a>  <span class="c1">// write &#39;game over&#39; on the screen</span>
-<a id="__codelineno-21-103" name="__codelineno-21-103" href="#__codelineno-21-103"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
-<a id="__codelineno-21-104" name="__codelineno-21-104" href="#__codelineno-21-104"></a>  <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">&quot;Game Over!&quot;</span><span class="p">;</span>
-<a id="__codelineno-21-105" name="__codelineno-21-105" href="#__codelineno-21-105"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span> <span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">-</span><span class="nx">g</span><span class="p">.</span><span class="nx">stringWidth</span><span class="p">(</span><span class="nx">s</span><span class="p">))</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span> <span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">/</span><span class="mf">2</span><span class="o">-</span><span class="mf">4</span><span class="p">);</span>
-<a id="__codelineno-21-106" name="__codelineno-21-106" href="#__codelineno-21-106"></a>  <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
-<a id="__codelineno-21-107" name="__codelineno-21-107" href="#__codelineno-21-107"></a>  <span class="nx">beep</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
-<a id="__codelineno-21-108" name="__codelineno-21-108" href="#__codelineno-21-108"></a>  <span class="c1">// when the button is pressed, restart</span>
-<a id="__codelineno-21-109" name="__codelineno-21-109" href="#__codelineno-21-109"></a>  <span class="nx">setWatch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-21-110" name="__codelineno-21-110" href="#__codelineno-21-110"></a>    <span class="nx">start</span><span class="p">();</span>
-<a id="__codelineno-21-111" name="__codelineno-21-111" href="#__codelineno-21-111"></a>  <span class="p">},</span> <span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D2</span><span class="p">,</span> <span class="p">{</span> <span class="nx">edge</span><span class="o">:</span><span class="s2">&quot;rising&quot;</span><span class="p">,</span> <span class="nx">debounce</span><span class="o">:</span> <span class="mf">20</span><span class="p">});</span>
-<a id="__codelineno-21-112" name="__codelineno-21-112" href="#__codelineno-21-112"></a><span class="p">}</span>
+<a id="__codelineno-21-97" name="__codelineno-21-97" href="#__codelineno-21-97"></a><span class="kd">function</span><span class="w"> </span><span class="nx">gameOver</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-98" name="__codelineno-21-98" href="#__codelineno-21-98"></a><span class="w">  </span><span class="c1">// stop the game</span><span class="w"></span>
+<a id="__codelineno-21-99" name="__codelineno-21-99" href="#__codelineno-21-99"></a><span class="w">  </span><span class="nx">beep</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-100" name="__codelineno-21-100" href="#__codelineno-21-100"></a><span class="w">  </span><span class="nx">clearWatch</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-101" name="__codelineno-21-101" href="#__codelineno-21-101"></a><span class="w">  </span><span class="nx">clearInterval</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-102" name="__codelineno-21-102" href="#__codelineno-21-102"></a><span class="w">  </span><span class="c1">// write &#39;game over&#39; on the screen</span><span class="w"></span>
+<a id="__codelineno-21-103" name="__codelineno-21-103" href="#__codelineno-21-103"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-104" name="__codelineno-21-104" href="#__codelineno-21-104"></a><span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Game Over!&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-105" name="__codelineno-21-105" href="#__codelineno-21-105"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">drawString</span><span class="p">(</span><span class="nx">s</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getWidth</span><span class="p">()</span><span class="o">-</span><span class="nx">g</span><span class="p">.</span><span class="nx">stringWidth</span><span class="p">(</span><span class="nx">s</span><span class="p">))</span><span class="o">/</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">g</span><span class="p">.</span><span class="nx">getHeight</span><span class="p">()</span><span class="o">/</span><span class="mf">2</span><span class="o">-</span><span class="mf">4</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-106" name="__codelineno-21-106" href="#__codelineno-21-106"></a><span class="w">  </span><span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-107" name="__codelineno-21-107" href="#__codelineno-21-107"></a><span class="w">  </span><span class="nx">beep</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-108" name="__codelineno-21-108" href="#__codelineno-21-108"></a><span class="w">  </span><span class="c1">// when the button is pressed, restart</span><span class="w"></span>
+<a id="__codelineno-21-109" name="__codelineno-21-109" href="#__codelineno-21-109"></a><span class="w">  </span><span class="nx">setWatch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-110" name="__codelineno-21-110" href="#__codelineno-21-110"></a><span class="w">    </span><span class="nx">start</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-111" name="__codelineno-21-111" href="#__codelineno-21-111"></a><span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="nx">NodeMCU</span><span class="p">.</span><span class="nx">D2</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">edge</span><span class="o">:</span><span class="s2">&quot;rising&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">debounce</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="p">});</span><span class="w"></span>
+<a id="__codelineno-21-112" name="__codelineno-21-112" href="#__codelineno-21-112"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-21-113" name="__codelineno-21-113" href="#__codelineno-21-113"></a>
-<a id="__codelineno-21-114" name="__codelineno-21-114" href="#__codelineno-21-114"></a><span class="c1">// called every &#39;frame&#39; of the game</span>
-<a id="__codelineno-21-115" name="__codelineno-21-115" href="#__codelineno-21-115"></a><span class="kd">function</span> <span class="nx">onFrame</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-21-116" name="__codelineno-21-116" href="#__codelineno-21-116"></a>  <span class="nx">pos</span><span class="p">.</span><span class="nx">x</span> <span class="o">+=</span> <span class="nx">dir</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
-<a id="__codelineno-21-117" name="__codelineno-21-117" href="#__codelineno-21-117"></a>  <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span> <span class="o">+=</span> <span class="nx">dir</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span>
-<a id="__codelineno-21-118" name="__codelineno-21-118" href="#__codelineno-21-118"></a>  <span class="c1">// remove tail</span>
-<a id="__codelineno-21-119" name="__codelineno-21-119" href="#__codelineno-21-119"></a>  <span class="k">while</span> <span class="p">(</span><span class="nx">history</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;=</span><span class="nx">snakeLength</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-21-120" name="__codelineno-21-120" href="#__codelineno-21-120"></a>    <span class="kd">var</span> <span class="nx">p</span> <span class="o">=</span> <span class="nx">history</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span> <span class="c1">// remove first item from list</span>
-<a id="__codelineno-21-121" name="__codelineno-21-121" href="#__codelineno-21-121"></a>    <span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">p</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span> <span class="nx">p</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span> <span class="mf">0</span><span class="p">);</span> <span class="c1">// clear that pixel</span>
-<a id="__codelineno-21-122" name="__codelineno-21-122" href="#__codelineno-21-122"></a>  <span class="p">}</span>
-<a id="__codelineno-21-123" name="__codelineno-21-123" href="#__codelineno-21-123"></a>  <span class="c1">// add current position onto the end</span>
-<a id="__codelineno-21-124" name="__codelineno-21-124" href="#__codelineno-21-124"></a>  <span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">]);</span>
+<a id="__codelineno-21-114" name="__codelineno-21-114" href="#__codelineno-21-114"></a><span class="c1">// called every &#39;frame&#39; of the game</span><span class="w"></span>
+<a id="__codelineno-21-115" name="__codelineno-21-115" href="#__codelineno-21-115"></a><span class="kd">function</span><span class="w"> </span><span class="nx">onFrame</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-116" name="__codelineno-21-116" href="#__codelineno-21-116"></a><span class="w">  </span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">dir</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-117" name="__codelineno-21-117" href="#__codelineno-21-117"></a><span class="w">  </span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">dir</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-118" name="__codelineno-21-118" href="#__codelineno-21-118"></a><span class="w">  </span><span class="c1">// remove tail</span><span class="w"></span>
+<a id="__codelineno-21-119" name="__codelineno-21-119" href="#__codelineno-21-119"></a><span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nx">history</span><span class="p">.</span><span class="nx">length</span><span class="o">&gt;=</span><span class="nx">snakeLength</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-120" name="__codelineno-21-120" href="#__codelineno-21-120"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">history</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span><span class="w"> </span><span class="c1">// remove first item from list</span><span class="w"></span>
+<a id="__codelineno-21-121" name="__codelineno-21-121" href="#__codelineno-21-121"></a><span class="w">    </span><span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">p</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="nx">p</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// clear that pixel</span><span class="w"></span>
+<a id="__codelineno-21-122" name="__codelineno-21-122" href="#__codelineno-21-122"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-21-123" name="__codelineno-21-123" href="#__codelineno-21-123"></a><span class="w">  </span><span class="c1">// add current position onto the end</span><span class="w"></span>
+<a id="__codelineno-21-124" name="__codelineno-21-124" href="#__codelineno-21-124"></a><span class="w">  </span><span class="nx">history</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">]);</span><span class="w"></span>
 <a id="__codelineno-21-125" name="__codelineno-21-125" href="#__codelineno-21-125"></a>
-<a id="__codelineno-21-126" name="__codelineno-21-126" href="#__codelineno-21-126"></a>  <span class="k">if</span> <span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getPixel</span><span class="p">(</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">))</span> <span class="p">{</span>
-<a id="__codelineno-21-127" name="__codelineno-21-127" href="#__codelineno-21-127"></a>    <span class="c1">// check for apples</span>
-<a id="__codelineno-21-128" name="__codelineno-21-128" href="#__codelineno-21-128"></a>    <span class="kd">var</span> <span class="nx">wasApple</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-21-129" name="__codelineno-21-129" href="#__codelineno-21-129"></a>    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="ow">in</span> <span class="nx">apples</span><span class="p">)</span>
-<a id="__codelineno-21-130" name="__codelineno-21-130" href="#__codelineno-21-130"></a>      <span class="k">if</span> <span class="p">(</span><span class="nx">apples</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">x</span><span class="o">==</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span> <span class="o">&amp;&amp;</span> <span class="nx">apples</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">y</span><span class="o">==</span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-21-131" name="__codelineno-21-131" href="#__codelineno-21-131"></a>        <span class="nx">wasApple</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-<a id="__codelineno-21-132" name="__codelineno-21-132" href="#__codelineno-21-132"></a>        <span class="c1">// delete this apple</span>
-<a id="__codelineno-21-133" name="__codelineno-21-133" href="#__codelineno-21-133"></a>        <span class="nx">apples</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-21-134" name="__codelineno-21-134" href="#__codelineno-21-134"></a>        <span class="c1">// add a new apple</span>
-<a id="__codelineno-21-135" name="__codelineno-21-135" href="#__codelineno-21-135"></a>        <span class="nx">newApple</span><span class="p">();</span>
-<a id="__codelineno-21-136" name="__codelineno-21-136" href="#__codelineno-21-136"></a>        <span class="c1">// change score and increase snake length</span>
-<a id="__codelineno-21-137" name="__codelineno-21-137" href="#__codelineno-21-137"></a>        <span class="nx">snakeLength</span> <span class="o">+=</span> <span class="mf">1</span><span class="p">;</span>
-<a id="__codelineno-21-138" name="__codelineno-21-138" href="#__codelineno-21-138"></a>        <span class="nx">score</span> <span class="o">+=</span> <span class="mf">10</span><span class="p">;</span>
-<a id="__codelineno-21-139" name="__codelineno-21-139" href="#__codelineno-21-139"></a>        <span class="nx">updateSnake</span><span class="p">();</span>
-<a id="__codelineno-21-140" name="__codelineno-21-140" href="#__codelineno-21-140"></a>        <span class="c1">// break out so we don&#39;t check any more apples</span>
-<a id="__codelineno-21-141" name="__codelineno-21-141" href="#__codelineno-21-141"></a>        <span class="k">break</span><span class="p">;</span>
-<a id="__codelineno-21-142" name="__codelineno-21-142" href="#__codelineno-21-142"></a>      <span class="p">}</span>
-<a id="__codelineno-21-143" name="__codelineno-21-143" href="#__codelineno-21-143"></a>    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">wasApple</span><span class="p">)</span>
-<a id="__codelineno-21-144" name="__codelineno-21-144" href="#__codelineno-21-144"></a>      <span class="nx">gameOver</span><span class="p">();</span>
-<a id="__codelineno-21-145" name="__codelineno-21-145" href="#__codelineno-21-145"></a>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<a id="__codelineno-21-146" name="__codelineno-21-146" href="#__codelineno-21-146"></a>    <span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
-<a id="__codelineno-21-147" name="__codelineno-21-147" href="#__codelineno-21-147"></a>    <span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span>
-<a id="__codelineno-21-148" name="__codelineno-21-148" href="#__codelineno-21-148"></a>  <span class="p">}</span>
-<a id="__codelineno-21-149" name="__codelineno-21-149" href="#__codelineno-21-149"></a><span class="p">}</span>
+<a id="__codelineno-21-126" name="__codelineno-21-126" href="#__codelineno-21-126"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">g</span><span class="p">.</span><span class="nx">getPixel</span><span class="p">(</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-127" name="__codelineno-21-127" href="#__codelineno-21-127"></a><span class="w">    </span><span class="c1">// check for apples</span><span class="w"></span>
+<a id="__codelineno-21-128" name="__codelineno-21-128" href="#__codelineno-21-128"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">wasApple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-129" name="__codelineno-21-129" href="#__codelineno-21-129"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">apples</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-21-130" name="__codelineno-21-130" href="#__codelineno-21-130"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">apples</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">x</span><span class="o">==</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">apples</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">y</span><span class="o">==</span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-131" name="__codelineno-21-131" href="#__codelineno-21-131"></a><span class="w">        </span><span class="nx">wasApple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-132" name="__codelineno-21-132" href="#__codelineno-21-132"></a><span class="w">        </span><span class="c1">// delete this apple</span><span class="w"></span>
+<a id="__codelineno-21-133" name="__codelineno-21-133" href="#__codelineno-21-133"></a><span class="w">        </span><span class="nx">apples</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="mf">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-134" name="__codelineno-21-134" href="#__codelineno-21-134"></a><span class="w">        </span><span class="c1">// add a new apple</span><span class="w"></span>
+<a id="__codelineno-21-135" name="__codelineno-21-135" href="#__codelineno-21-135"></a><span class="w">        </span><span class="nx">newApple</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-136" name="__codelineno-21-136" href="#__codelineno-21-136"></a><span class="w">        </span><span class="c1">// change score and increase snake length</span><span class="w"></span>
+<a id="__codelineno-21-137" name="__codelineno-21-137" href="#__codelineno-21-137"></a><span class="w">        </span><span class="nx">snakeLength</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-138" name="__codelineno-21-138" href="#__codelineno-21-138"></a><span class="w">        </span><span class="nx">score</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-139" name="__codelineno-21-139" href="#__codelineno-21-139"></a><span class="w">        </span><span class="nx">updateSnake</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-140" name="__codelineno-21-140" href="#__codelineno-21-140"></a><span class="w">        </span><span class="c1">// break out so we don&#39;t check any more apples</span><span class="w"></span>
+<a id="__codelineno-21-141" name="__codelineno-21-141" href="#__codelineno-21-141"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-142" name="__codelineno-21-142" href="#__codelineno-21-142"></a><span class="w">      </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-21-143" name="__codelineno-21-143" href="#__codelineno-21-143"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">wasApple</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-21-144" name="__codelineno-21-144" href="#__codelineno-21-144"></a><span class="w">      </span><span class="nx">gameOver</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-145" name="__codelineno-21-145" href="#__codelineno-21-145"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-146" name="__codelineno-21-146" href="#__codelineno-21-146"></a><span class="w">    </span><span class="nx">g</span><span class="p">.</span><span class="nx">setPixel</span><span class="p">(</span><span class="nx">pos</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">pos</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-21-147" name="__codelineno-21-147" href="#__codelineno-21-147"></a><span class="w">    </span><span class="nx">g</span><span class="p">.</span><span class="nx">flip</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-21-148" name="__codelineno-21-148" href="#__codelineno-21-148"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-21-149" name="__codelineno-21-149" href="#__codelineno-21-149"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-21-150" name="__codelineno-21-150" href="#__codelineno-21-150"></a>
 <a id="__codelineno-21-151" name="__codelineno-21-151" href="#__codelineno-21-151"></a>
-<a id="__codelineno-21-152" name="__codelineno-21-152" href="#__codelineno-21-152"></a><span class="kd">function</span> <span class="nx">rotate</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-21-153" name="__codelineno-21-153" href="#__codelineno-21-153"></a>  <span class="k">if</span> <span class="p">(</span><span class="nx">dir</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-21-154" name="__codelineno-21-154" href="#__codelineno-21-154"></a>    <span class="nx">dir</span> <span class="o">=</span> <span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">0</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="nx">d</span><span class="o">*</span><span class="nx">dir</span><span class="p">.</span><span class="nx">x</span><span class="p">};</span>
-<a id="__codelineno-21-155" name="__codelineno-21-155" href="#__codelineno-21-155"></a>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<a id="__codelineno-21-156" name="__codelineno-21-156" href="#__codelineno-21-156"></a>    <span class="nx">dir</span> <span class="o">=</span> <span class="p">{</span><span class="nx">x</span><span class="o">:-</span><span class="nx">d</span><span class="o">*</span><span class="nx">dir</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="mf">0</span><span class="p">};</span>
-<a id="__codelineno-21-157" name="__codelineno-21-157" href="#__codelineno-21-157"></a>  <span class="p">}</span>
-<a id="__codelineno-21-158" name="__codelineno-21-158" href="#__codelineno-21-158"></a><span class="p">}</span>
+<a id="__codelineno-21-152" name="__codelineno-21-152" href="#__codelineno-21-152"></a><span class="kd">function</span><span class="w"> </span><span class="nx">rotate</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-153" name="__codelineno-21-153" href="#__codelineno-21-153"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">dir</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-154" name="__codelineno-21-154" href="#__codelineno-21-154"></a><span class="w">    </span><span class="nx">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="mf">0</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="nx">d</span><span class="o">*</span><span class="nx">dir</span><span class="p">.</span><span class="nx">x</span><span class="p">};</span><span class="w"></span>
+<a id="__codelineno-21-155" name="__codelineno-21-155" href="#__codelineno-21-155"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-21-156" name="__codelineno-21-156" href="#__codelineno-21-156"></a><span class="w">    </span><span class="nx">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:-</span><span class="nx">d</span><span class="o">*</span><span class="nx">dir</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span><span class="nx">y</span><span class="o">:</span><span class="mf">0</span><span class="p">};</span><span class="w"></span>
+<a id="__codelineno-21-157" name="__codelineno-21-157" href="#__codelineno-21-157"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-21-158" name="__codelineno-21-158" href="#__codelineno-21-158"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-21-159" name="__codelineno-21-159" href="#__codelineno-21-159"></a>
-<a id="__codelineno-21-160" name="__codelineno-21-160" href="#__codelineno-21-160"></a><span class="nx">onInit</span><span class="p">();</span>
+<a id="__codelineno-21-160" name="__codelineno-21-160" href="#__codelineno-21-160"></a><span class="nx">onInit</span><span class="p">();</span><span class="w"></span>
 </code></pre></div>
 
               
@@ -4569,7 +4618,7 @@
         
         <a href="../cloudReadyOs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Come installare CloudReady Os" rel="prev">
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
@@ -4593,7 +4642,7 @@
             </div>
           </div>
           <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
           </div>
         </a>
       
@@ -4623,7 +4672,7 @@
       
     
     <a href="https://github.com/sdiricco" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
 </div>
@@ -4636,10 +4685,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.01de222e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
       
     
   </body>

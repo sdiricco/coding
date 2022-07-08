@@ -2,7 +2,7 @@
 
 ![](./images/android.jpg)
 
-## Fix - Nexus 5x bootloop
+## Google nexus 5x bootloop fix
 
 ### Android 8.1
 

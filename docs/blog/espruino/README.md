@@ -1,4 +1,4 @@
-# Espruino
+# Espruino. Cos'è e come si installa
 
 ![espruino](./images/espruino.png)
 
